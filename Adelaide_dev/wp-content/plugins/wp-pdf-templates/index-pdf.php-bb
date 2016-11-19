@@ -1,0 +1,87 @@
+<?php
+/**
+ * Filename: index-pdf.php
+ * Project: WordPress PDF Templates
+ * Copyright: (c) 2014-2016 Antti Kuosmanen
+ * License: GPLv3
+ *
+ * Copy this file to your theme directory to start customising the PDF template.
+*/
+?>
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title><?php wp_title(); ?></title>
+  <?php wp_head(); ?>
+
+  <style>.post-header h1 {margin-bottom: 0;}</style>
+
+</head>
+
+<body>
+  <div class="container">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+if($_REQUEST['invoice']==1){
+?>
+
+    <table style="width:100%">
+        <tr>
+          <th>Invoice#:</th>
+          <td>00006940</td>
+        </tr>
+        <tr>
+          <th>Date:</th>
+          <td>24/12/2015</td>
+        </tr>
+        <tr>
+          <th>Page:</th>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>Ref:</th>
+          <td>TAXI-1551MV</td>
+        </tr>
+        <tr>
+          <th>Terms:</th>
+          <td>Net 30th after EOM</td>
+        </tr>
+      </table>
+
+  <?php
+}else{
+?>
+
+    <table style="width:100%">
+        <tr>
+          <th>Money Receipt#:</th>
+          <td>00006940</td>
+        </tr>
+        <tr>
+          <th>Date:</th>
+          <td>24/12/2015</td>
+        </tr>
+        <tr>
+          <th>Page:</th>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>Ref:</th>
+          <td>TAXI-1551MV</td>
+        </tr>
+        <tr>
+          <th>Terms:</th>
+          <td>Net 30th after EOM</td>
+        </tr>
+      </table>
+
+  <?php
+}
+echo '=========<br>';
+echo get_query_var( '?pdf&invoice');
+echo '<h1>xxxxxxxxxxxxx'.get_query_var("invoice").'</h1>';
+   endwhile; endif; ?>
+  </div>
+  <?php wp_footer(); ?>
+</body>
+</html>

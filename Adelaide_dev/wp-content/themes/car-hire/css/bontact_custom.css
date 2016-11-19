@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.dock-container #bonPowerExpd a
+{
+	display: none !important;
+}
+#bonPowerCol{
+	display:none !important;
+}

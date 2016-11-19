@@ -1,0 +1,149 @@
+$(document).ready(function(){
+//popup
+$('.submit-button').bind('click',showPopUp);
+$('button.no').bind('click',closePopUp)
+	console.log($('#header').height());
+	$('.responsiveMenu').bind('click',function(){
+		$('.menuForResponsive').stop().slideToggle();
+	});
+	$(window).scroll(function(){
+		if($(this).width() > 769){
+		var scrollPos = $(this).scrollTop();
+		var logo = 100,
+			logoWidth = logo - scrollPos/15;
+		var menuPad = 30,
+			menuWidth = menuPad - scrollPos/10;		
+		$('.logo').find('img').css({'width':logoWidth+'%'});
+		$('div.menu ul').css({'padding': menuWidth+'px 10px','margin-top':'10px'});
+		$('.chat-icon').css({'padding': menuWidth+'px 0px','margin-top':'10px'});
+		//$('#header').addClass('headerBorder');
+		console.log($('#header').height());
+		if($('#header').height() == 65){
+			$('#header').addClass('headerBorder');
+		}else{
+			$('#header').removeClass('headerBorder');
+		}
+		var headerHeight = $('#header').height();
+	$('.menuForResponsive').css({'top':headerHeight+'px'});
+	}
+	});
+	var headerHeight = $('#header').height();
+	$('.menuForResponsive').css({'top':headerHeight+'px'});
+	
+	
+/* --------------------- banner slider ----------------------- */
+
+var slide = $("div.slider").children("ul");
+$('div').data('slide', slide);
+var images = $("div.slider").find("div.image");
+//var currentPosition = 1;
+$('div').data('currentPosition', 1);
+var WidthOfImages = images.width();
+$('div').data('WidthOfImages', WidthOfImages);
+var totalImages = images.length;
+$('div').data('totalImages', totalImages);
+var totalWidth = totalImages * WidthOfImages;
+$('div').data('totalWidth', totalWidth);
+
+
+$("div.button").on("click", function() {
+	 var direction = $(this).data("dir");
+	sliderdivcontecnt(direction);
+	
+	});
+});
+setInterval(function () {
+        sliderdivcontecnt('next');
+    },18000);
+	
+function sliderdivcontecnt(direction){
+	var currentPosition = $('div').data('currentPosition');
+	var totalImages = $('div').data('totalImages');
+	var slide =  $('div').data('slide');
+	var WidthOfImages = $('div').data('WidthOfImages');
+	var totalWidth = $('div').data('totalWidth');
+	 
+if (direction == "next") {
+   currentPosition = currentPosition + 1;
+    if (currentPosition <= totalImages) {
+     slide.animate({
+      "margin-left": "-=" + WidthOfImages
+    });
+   } else {
+     currentPosition = 1;
+     slide.animate({
+     "margin-left": "0"
+    });
+   }
+ } else if (direction == "prev") {
+    currentPosition = currentPosition - 1;
+	if (currentPosition > 0) {
+    slide.animate({
+       "margin-left": "+=" + WidthOfImages
+     });
+   } else if (currentPosition == 0) {
+     currentPosition = totalImages;
+     slide.animate({
+       "margin-left": "-" + (totalWidth - WidthOfImages)
+      });
+   }
+  }
+$('div').data('currentPosition', currentPosition);
+
+	}
+
+
+function showPopUp(){
+	//alert("sdfsdf");
+	//e.preventDefault();
+	var firstName = $('.left-form #firstname').val();
+	var email = $('.left-form #email').val();
+	var date = $('.right-form #datepicker').val();
+	var drop_off = $( "#drop_off option:selected" ).val();
+	var pickup = $( "#pickup option:selected" ).val();
+	//alert(drop_off);
+	//var time = $('.right-form #timepicker').val();
+	//alert(firstName);
+	if(firstName == ''){
+		$('.left-form #firstname').css({'border':'2px solid red'});
+	}else{
+		$('.left-form #firstname').css({'border':'1px solid gainsboro'});
+		//$('.popUpHold').fadeIn();
+	}
+	if(email == ''){
+		$('.left-form #email').css({'border':'2px solid red'});
+	}else{
+		$('.left-form #email').css({'border':'1px solid gainsboro'});
+		//$('.popUpHold').fadeIn();
+	}
+	if(date == ''){
+		$('.right-form #datepicker').css({'border':'2px solid red'});
+	}else{
+		$('.right-form #datepicker').css({'border':'1px solid gainsboro'});
+		//$('.popUpHold').fadeIn();
+	}
+	if(drop_off == 'Text'){
+		$('#drop_off select').css({'border':'2px solid red'});
+	}else{
+		$('#drop_off select').css({'border':'1px solid gainsboro'});
+		//$('.popUpHold').fadeIn();
+	}
+	if(pickup == 'Text'){
+		$('#pickup select').css({'border':'2px solid red'});
+	}else{
+		$('#pickup select').css({'border':'1px solid gainsboro'});
+		//$('.popUpHold').fadeIn();
+	}
+	
+	
+	if(firstName != '' && email != '' && date != '' && drop_off != 'Text' && pickup != 'Text' ){
+		$('.popUpHold').fadeIn();
+	}
+	
+	//
+}
+function closePopUp(){
+	$('.popUpHold').fadeOut();
+	$('#geocomplete').val(' ');
+	$('#geocomplete1').val(' ');
+}

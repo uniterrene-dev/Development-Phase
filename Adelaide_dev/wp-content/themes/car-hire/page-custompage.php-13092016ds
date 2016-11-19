@@ -1,0 +1,83 @@
+<?php
+/*
+ * Template Name: Custom Page
+ * Description: Page template without sidebar
+ */
+get_header(); ?>
+<section id="Fleet">
+  <div class="container">
+    <div class="fleet-container1">
+      <h3 class="inner_header">Sydney Fleets</h3>
+    </div>
+    <div class="row odd_row clearfix">
+      <div class="fleet-img-inner"> 
+       <img src="<?php echo get_template_directory_uri(); ?>/images/Mercedes.png" alt="#"/> 
+      </div>
+      <div class="fleet-content-inner">
+        <h4>Mercedes 5 series</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue elit, porttitor a sapien ultrices, tincidunt convallis leo. Suspendisse a posuere enim. Aenean ullamcorper bibendum odio dapibus semper. Suspendisse potenti. Phasellus lobortis est vitae lectus pulvinar, non bibendum felis vestibulum. Praesent vitae purus non risus mollis bibendum vitae a risus. Aliquam vel lob</p>
+      </div>
+    </div>
+    <div class="inner_border"></div>
+    <div class="row even_row clearfix">
+      <div class="fleet-img-inner"> 
+       <img src="<?php echo get_template_directory_uri(); ?>/images/bmw.png" alt="#"/> 
+      </div>
+      <div class="fleet-content-inner">
+        <h4>BMW 7 series </h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue elit, porttitor a sapien ultrices, tincidunt convallis leo. Suspendisse a posuere enim. Aenean ullamcorper bibendum odio dapibus semper. Suspendisse potenti. Phasellus lobortis est vitae lectus pulvinar, non bibendum felis vestibulum. Praesent vitae purus non risus mollis bibendum vitae a risus. Aliquam vel lob</p>
+      </div>
+    </div>
+    <div class="inner_border"></div>
+    <div class="row odd_row clearfix">
+      <div class="fleet-img-inner"> 
+       <img src="<?php echo get_template_directory_uri(); ?>/images/Audi_Q7.png" alt="#"/> 
+      </div>
+      <div class="fleet-content-inner">
+        <h4>Audi Q7</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue elit, porttitor a sapien ultrices, tincidunt convallis leo. Suspendisse a posuere enim. Aenean ullamcorper bibendum odio dapibus semper. Suspendisse potenti. Phasellus lobortis est vitae lectus pulvinar, non bibendum felis vestibulum. Praesent vitae purus non risus mollis bibendum vitae a risus. Aliquam vel lob</p>
+      </div>
+    </div>
+    <div class="inner_border"></div>
+    <div class="row even_row clearfix">
+      <div class="fleet-img-inner"> 
+       <img src="<?php echo get_template_directory_uri(); ?>/images/Audi_a.png" alt="#"/> 
+      </div>
+      <div class="fleet-content-inner">
+        <h4>Audi A*Z</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue elit, porttitor a sapien ultrices, tincidunt convallis leo. Suspendisse a posuere enim. Aenean ullamcorper bibendum odio dapibus semper. Suspendisse potenti. Phasellus lobortis est vitae lectus pulvinar, non bibendum felis vestibulum. Praesent vitae purus non risus mollis bibendum vitae a risus. Aliquam vel lob</p>
+      </div>
+    </div>
+    <div class="inner_border"></div>
+    <div class="row odd_row clearfix">
+      <div class="fleet-img-inner"> 
+       <img src="<?php echo get_template_directory_uri(); ?>/images/holden_caprice.png" alt="#"/> 
+      </div>
+      <div class="fleet-content-inner">
+        <h4>Holden Caprice</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue elit, porttitor a sapien ultrices, tincidunt convallis leo. Suspendisse a posuere enim. Aenean ullamcorper bibendum odio dapibus semper. Suspendisse potenti. Phasellus lobortis est vitae lectus pulvinar, non bibendum felis vestibulum. Praesent vitae purus non risus mollis bibendum vitae a risus. Aliquam vel lob</p>
+      </div>
+    </div>
+    <div class="inner_border"></div>
+    <div class="row even_row clearfix">
+      <div class="fleet-img-inner"> 
+       <img src="<?php echo get_template_directory_uri(); ?>/images/Chrysler.png" alt="#"/> 
+      </div>
+      <div class="fleet-content-inner">
+        <h4>Chrysler 300 C</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue elit, porttitor a sapien ultrices, tincidunt convallis leo. Suspendisse a posuere enim. Aenean ullamcorper bibendum odio dapibus semper. Suspendisse potenti. Phasellus lobortis est vitae lectus pulvinar, non bibendum felis vestibulum. Praesent vitae purus non risus mollis bibendum vitae a risus. Aliquam vel lob</p>
+      </div>
+    </div>
+    <div class="inner_border"></div>
+    <div class="row odd_row clearfix">
+      <div class="fleet-img-inner"> 
+       <img src="<?php echo get_template_directory_uri(); ?>/images/Lexus.png" alt="#"/> 
+      </div>
+      <div class="fleet-content-inner">
+        <h4>Lexus 450H</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue elit, porttitor a sapien ultrices, tincidunt convallis leo. Suspendisse a posuere enim. Aenean ullamcorper bibendum odio dapibus semper. Suspendisse potenti. Phasellus lobortis est vitae lectus pulvinar, non bibendum felis vestibulum. Praesent vitae purus non risus mollis bibendum vitae a risus. Aliquam vel lob</p>
+      </div>
+    </div>
+  </div>
+</section>
+<?php get_footer(); ?>

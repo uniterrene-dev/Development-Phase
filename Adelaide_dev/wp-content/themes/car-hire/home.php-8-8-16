@@ -1,0 +1,313 @@
+<?php
+
+/*
+
+ * Template Name: Home Template
+
+ * Description: Page template without sidebar
+
+ */
+
+get_header(); ?>
+
+<div class="wrapper">
+  <div class="slider">
+    <ul>
+      <?php   
+
+	   $args = array('post_type' => 'slider');	 
+
+	   $loop = new WP_Query( $args );
+
+		while ( $loop->have_posts() ) : $loop->the_post();
+
+	?>
+      <li>
+        <div class="image"> 
+		<?php the_post_thumbnail('full'); ?>
+          <div class="overlay"></div>
+          <div class="sliderInfo">
+            <h1>
+              <?php the_title(); ?>
+            </h1>
+            <h2>
+              <?php the_excerpt(); ?>
+            </h2>
+          </div>
+        </div>
+      </li>
+      <?php endwhile;?>
+    </ul>
+  </div>
+  <?php //the_post_thumbnail(); ?>
+  <div class="navigation">
+    <div class="button" data-dir="prev"><img src="<?php echo get_template_directory_uri(); ?>/images/right_nav.png"></div>
+    <div class="button" data-dir="next"><img src="<?php echo get_template_directory_uri(); ?>/images/left_nav.png"></div>
+  </div>
+</div>
+</section>
+<section id="Fleet">
+  <div class="container clearfix">
+    <div class="fleet-container1 clearfix">
+      <h3>ABOUT OUR FLEET</h3>
+      <?php $recent1 = new WP_Query("page_id=54"); while($recent1->have_posts()) : $recent1->the_post();?>
+      <div class="fleet-img"> <?php the_post_thumbnail(); ?> </div>
+      <div class="fleet-content">
+        <h4>
+          <?php the_title(); ?>
+        </h4>
+        <p>
+          <?php the_content(); ?>
+        </p>
+      </div>
+    </div>
+    <?php endwhile;?>
+    <div class="fleet-container2 clearfix">
+      <?php $recent1 = new WP_Query("page_id=58"); while($recent1->have_posts()) : $recent1->the_post();?>
+      <div class="fleet-img"> <?php the_post_thumbnail(); ?> </div>
+      <div class="fleet-content">
+        <h4>
+          <?php the_title(); ?>
+        </h4>
+        <p>
+          <?php the_content(); ?>
+        </p>
+      </div>
+      <?php endwhile;?>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="services-cover clearfix">
+    <div class="container">
+      <h3>Our services</h3>
+      <div id="w">
+        <nav class="slidernav">
+          <div id="navbtns" class="clearfix"> <a href="#" class="previous"><img src="<?php echo get_template_directory_uri(); ?>/images/pre.png" alt="previous" title="previous"/></a> <a href="#" class="next"><img src="<?php echo get_template_directory_uri(); ?>/images/next.png" alt="next" title="next"/></a> </div>
+        </nav>
+        <div class="crsl-items" data-navigation="navbtns">
+          <div class="crsl-wrap">
+            <?php  
+
+				$parent_pages = get_pages( array( 'parent' => 39, 'post_type'=> 'page' ) );
+
+				foreach ( $parent_pages as $parent_page ) {
+
+				
+
+		  ?>
+            <div class="crsl-item">
+              <div class="thumbnail"> <img src="<?php echo $parent_page->post_thumbnail; ?>" alt="thumb01"> </div>
+              <h3><a href="#"><?php echo $parent_page->post_title; ?></a></h3>
+              <p><?php echo $parent_page->post_content; ?></p>
+            </div>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="car-book">
+  <div class="container clearfix">
+    <h3>BOOK A CAR</h3>
+    <div class="full-form clearfix">
+      <form>
+        <div class="main-left-form">
+          <div class="left-form">
+            <h5>PASSENGER DETAILS</h5>
+            <input type="text" placeholder="NAME" class="inputFields forMargin"/>
+            <input type="email" placeholder="EMAIL" class="inputFields forMargin"/>
+            <div class="selectFields" id="no_of_people">
+              <select name="cars1" class="inputFields">
+                <option value="Text" selected>No. of Adults</option>
+                <option value="Text1">1</option>
+                <option value="Text2">2</option>
+                <option value="Text3">3</option>
+                <option value="Text4">More than 3</option>
+              </select>
+            </div>
+            <div class="selectFields" id="no_of_suitcases">
+              <select name="cars2" class="inputFields">
+                <option value="Text" selected>No of suitcases </option>
+                <option value="Text1">1</option>
+                <option value="Text2">2</option>
+                <option value="Text3">3</option>
+                <option value="Text4">More than 3</option>
+              </select>
+            </div>
+            <div class="selectFields" id="no_of_child">
+              <select name="cars3" class="inputFields">
+                <option value="Text" selected>No of children’s</option>
+                <option value="Text1">1</option>
+                <option value="Text2">2</option>
+                <option value="Text3">3</option>
+                <option value="Text4">More than 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="right-form">
+          <h5>TRAVEL DETAILS</h5>
+          <input type="text"  id="datepicker" placeholder="DATE" class="inputFields forMargin"/>
+          <input type="text"  id='timepicker' placeholder="pickup time" class="inputFields forMargin"/>
+          <div class="selectFields" id="drop_off" onclick="show_hide()">
+            <select name="cars4" class="inputFields">
+              <option value="Text" selected>Drop off type </option>
+              <option value="Text1">Sydne Airport</option>
+              <option value="Text2">Synde City</option>
+              <option value="Text3">Adelaide Airport</option>
+              <option value="Text4">Adelaide City</option>
+              <option value="Text5">Choose manually</option>
+            </select>
+          </div>
+          <div class="selectFields" id="pickup" onclick="show_hide()">
+            <select name="cars5" class="inputFields">
+              <option value="Text" selected>Pickup type</option>
+              <option value="Text1">Sydne Airport</option>
+              <option value="Text2">Synde City</option>
+              <option value="Text3">Adelaide Airport</option>
+              <option value="Text4">Adelaide City</option>
+              <option value="Text5">Choose manually</option>
+            </select>
+          </div>
+          <div>
+          <input id="geocomplete" type="text" placeholder="Type in an address" size="90" style="display:none;"/>
+          <input id="geocomplete1" class="end_geo" type="text" placeholder="Type end address" size="90" style="display:none;"/>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="submitBtn">
+          <input type="button" value="GET STARTED" id="my_btn" class="mainInputFormBtn" onClick="emailClicked()">
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+</section>
+<section id="joinus">
+  <div class="joinus-cover clearfix">
+    <div class="container">
+      <div class="joinus-left">
+        <h2>JOIN <br/>
+          WITH US</h2>
+        <p>You can apply with us , with full his / her full details like CV & attachment of documents</p>
+      </div>
+      <div class="joinus-right">
+        <form>
+          <div class="joinus-form">
+            <input type="text" placeholder="FIRST NAME" class="inputFields forMargin" />
+            <input type="text" placeholder="LAST NAME"  class="inputFields forMargin"/>
+            <input type="text" placeholder="EMAIL ADDRESS"  class="inputFields forMargin"/>
+            <input type="text" placeholder="PHONE NUMBER"  class="inputFields forMargin"/>
+            <textarea name="comment" placeholder="FULL ADDRESS"  class="inputFields forMargin"></textarea>
+            <input type="text" placeholder="UPLOAD YOUR CV"  class="inputFields forMargin"/>
+            <div class="buttonHolder">
+              <input type="submit" value="submit" class="submit-button"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</section>
+<!--end of joinus section-->
+
+<section class="contactUs">
+  <div class="container">
+    <div class="formSection">
+      <form>
+        <div class="joinus-form">
+          <input type="text" placeholder="NAME" class="inputFields forMargin" />
+          <input type="text" placeholder="PHONE NUMBER"  class="inputFields forMargin"/>
+          <input type="text" placeholder="ENTER EMAIL"  class="inputFields forMargin"/>
+          <textarea name="comment" placeholder="WRITE DOWN A FEW WORDS..."  class="inputFields forMargin"></textarea>
+          <div class="buttonHolder">
+            <input type="submit" value="submit" class="submit-button"/>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="textSection">
+      <h2>Contact Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitNunc sit amet orci dui. Fusce lectus libero, viverra vel quam quis</p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</section>
+<section class="logoCarousel">
+<div class="container">
+  <div class="logosliderHolder">
+    <ul id="flexiselDemo3">
+      <?php   
+
+	   $args = array('post_type' => 'brands');	 
+
+	   $loop = new WP_Query( $args );
+
+		while ( $loop->have_posts() ) : $loop->the_post();
+
+	?>
+      <li>
+        <?php the_post_thumbnail(); ?>
+      </li>
+      <?php endwhile;?>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</div>
+<?php //get_sidebar(); ?>
+<?php get_footer(); ?>
+<script>
+function show_hide(){
+	var drop_off = $( "#drop_off option:selected" ).text();
+	var pickup = $( "#pickup option:selected" ).text();
+	
+	
+	
+	if(drop_off == "Choose manually" || pickup == "Choose manually" )
+	{
+	
+	$("#geocomplete").css("display", "block");
+$(".end_geo").css("display", "block");
+	}
+	else{
+	$("#geocomplete").css("display", "none");
+$(".end_geo").css("display", "none");
+		
+	}
+}
+</script>
+<script>
+
+function emailClicked() {
+	var ajaxurl='<?php echo admin_url('admin-ajax.php'); ?>';
+	
+
+	
+	var people_no = $( "#no_of_people option:selected" ).text();
+	var suitcases_no = $( "#no_of_suitcases option:selected" ).text();
+	var child_no = $( "#no_of_child option:selected" ).text();
+	
+	var drop_off = $( "#drop_off option:selected" ).text();
+	var pickup = $( "#pickup option:selected" ).text();
+	
+	
+	
+	
+	var location = $('#geocomplete').val();
+	var end = $('.end_geo').val();
+
+  var data = {
+        action: 'get_postal_code',
+        location: location,
+		end:end,
+		drop_off:drop_off,
+		pickup:pickup
+    };
+  $.post(ajaxurl, data, function(response) { alert(response); });
+}
+
+</script> 

@@ -1,0 +1,114 @@
+/* CSS Document */
+
+
+@media (max-width:767px) {
+.container {
+	width: 85%;
+	padding: 0 15px;
+}
+}
+ @media (min-width:768px) {
+.container {
+	width: 750px;
+	padding: 0 15px;
+}
+}
+ @media (min-width:991px) {
+.container {
+	width: 950px;
+	padding: 0 15px;
+}
+}
+ @media (min-width:1200px) {
+.container {
+	width: 1170px;
+	padding: 0 15px;
+}
+}
+ @media (min-width:1350px) {
+.container {
+	width: 1170px;
+	padding: 0 15px;
+}
+}
+ @media (min-width:1280px) {
+.container {
+	width: 1170px;
+	padding: 0 15px;
+}
+}
+@media (min-width:1366px) {
+.container {
+	width: 1170px;
+	padding: 0 15px;
+}
+}
+ @media (max-width:1365px) {
+}
+ @media (max-width:1280px) {
+}
+ @media (max-width:1200px) {
+}
+ @media (max-width:1140px) {
+}
+ @media (max-width:1095px) {
+}
+ @media (max-width:1061px) {
+}
+@media (max-width:991px) {
+.heading_left {
+	width: 36% !important;
+}
+}
+@media (max-width:880px) {
+}
+@media (max-width:815px) {
+}
+ @media (max-width:767px) {
+.heading_left {
+	width: 53% !important;
+}
+.heading_right {
+	width: 42% !important;
+}
+}
+@media (max-width:730px) {
+}
+ @media (max-width:660px) {
+}
+ @media (max-width:625px) {
+}
+@media (max-width:585px) {
+.heading_left {
+	width: 100% !important;
+	margin-bottom: 25px;
+}
+.heading_right {
+	width: 100% !important;
+}
+.cash_sale {
+	width: 100% !important;
+	margin-bottom: 25px;
+}
+.delivery {
+	width: 100% !important;
+}
+.total_detail {
+	padding: 10px 0 !important;
+}
+.sale {
+	padding: 25px 0 0px !important;
+}
+}
+@media (max-width:480px) {
+}
+@media (max-width:423px) {
+}
+ @media (max-width:390px) {
+}
+@media (max-width:365px) {
+}
+ @media (max-width:345px) {
+}
+@media (max-width:330px) {
+}

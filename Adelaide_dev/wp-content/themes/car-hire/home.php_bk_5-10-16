@@ -1,0 +1,837 @@
+<?php
+
+/*
+
+ * Template Name: Home Template
+
+ * Description: Page template without sidebar
+
+ */
+
+get_header(); ?>
+<section id="Fleet">
+  <div class="container clearfix">
+    <div class="fleet-container1 clearfix">
+      <h3>ABOUT OUR FLEET</h3>
+      <?php $recent1 = new WP_Query("page_id=54"); while($recent1->have_posts()) : $recent1->the_post();?>
+      <div class="fleet-img"> <?php the_post_thumbnail(); ?> </div>
+      <div class="fleet-content">
+        <h4>
+          <?php the_title(); ?>
+        </h4>
+        <p>
+          <?php the_content(); ?>
+          <a href="<?php echo get_permalink(54);?>" class="btn-read-more">Read More</a>
+        </p>
+      </div>
+    </div>
+    <?php endwhile;?>
+    <div class="fleet-container2 clearfix">
+      <?php $recent1 = new WP_Query("page_id=58"); while($recent1->have_posts()) : $recent1->the_post();?>
+      <div class="fleet-img"> <?php the_post_thumbnail(); ?> </div>
+      <div class="fleet-content">
+        <h4>
+          <?php the_title(); ?>
+        </h4>
+        <p>
+          <?php the_content(); ?>
+         <a href="<?php echo get_permalink(54);?>" class="btn-read-more">Read More</a>
+        </p>
+      </div>
+      <?php endwhile;?>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="services-cover clearfix">
+    <div class="container">
+      <h3>Our services</h3>
+      <div id="w">
+        <nav class="slidernav">
+          <div id="navbtns" class="clearfix"> 
+		  <a href="#" class="previous">
+		  <img src="<?php echo get_template_directory_uri(); ?>/images/pre.png" alt="previous" title="previous"/>
+		  </a> 
+		  <a href="#" class="next1">
+		  <img src="<?php echo get_template_directory_uri(); ?>/images/next.png" alt="next" title="next"/>
+		  </a> 
+		  </div>
+        </nav>
+        <div class="crsl-items" data-navigation="navbtns">
+          <div class="crsl-wrap">
+            <?php  
+
+				$parent_pages = get_pages( array( 'parent' => 39, 'post_type'=> 'page' ) );
+
+				foreach ( $parent_pages as $parent_page ) {
+
+				
+
+		  ?>
+		  <?php 
+			
+			 $url = wp_get_attachment_url( get_post_thumbnail_id($parent_page->ID) );
+			?>
+            <div class="crsl-item">
+			
+              <div class="thumbnail"> <img src="<?php echo $url;?>"/> </div>
+              <h3><a href="#"><?php echo $parent_page->post_title; ?></a></h3>
+              <p><?php echo $parent_page->post_content; ?></p>
+            </div>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="car-book">
+  <div class="container clearfix">
+    <h3>BOOK A CAR</h3>
+    
+    <div class="full-form clearfix">
+      
+      <ul>
+        <li class="left-form">
+           <h5>BOOKING PERSON DETAILS</h5>
+            <input type="text" id="txtNumHours" placeholder="NAME" class="inputFields forMargin" required="required"/>
+          <input type="email" id="txtEmail" placeholder="EMAIL" class="inputFields forMargin" required="required"/>
+          <input type="tel" id="txtPhone" placeholder="PHONE NO" class="inputFields forMargin" required="required"/>
+          <div class="row clearfix check">
+               <input type="checkbox" id="chkIsTeamLead" name="check"> <label>Please Check this if booking person and passenger are same! </label>
+          </div>
+       
+         
+        </li>
+        <li class="left-form">
+             <h5>PASSENGER DETAILS</h5>
+            <input type="text" id="firstname" name="firstname" placeholder="NAME" class="inputFields forMargin"/>
+            <input type="email" id="email" placeholder="EMAIL" class="inputFields forMargin"/>
+             <input type="tel" placeholder="PHONE NO" id="phn" class="inputFields forMargin" />
+            <div class="selectFields" id="no_of_people" onClick="showhide()">
+              <select name="cars1" class="inputFields">
+                <option value="Text" selected>No. of Adults</option>
+                <option value="Text1">1</option>
+                <option value="Text2">2</option>
+                <option value="Text3">3</option>
+                 <option value="Text4">4</option>
+               <option value="Text5">More than 4</option>
+              </select>
+            </div>
+             <div id="no_of_people_total_div" style="display:none;"><input type="text" id="no_of_people_total" placeholder="No. of Adults" class="inputFields forMargin"/></div>
+             <div class="selectFields" id="no_of_suitcases" onClick="showhide()">
+              <select name="cars2" class="inputFields">
+                <option value="Text" selected>No of suitcases </option>
+                <option value="Text1">1</option>
+                <option value="Text2">2</option>
+                <option value="Text3">3</option>
+                 <option value="Text4">4</option>
+               <option value="Text5">More than 4</option>
+              </select>
+              </div>
+               <div id="no_of_suit_total_div" style="display:none;"><input type="text" id="no_of_suit_total" placeholder="No. of Adults" class="inputFields forMargin"/></div>
+               <div class="selectFields" id="no_of_child" onClick="showhide()">
+            <select name="cars3" class="inputFields">
+              <option value="Text" selected>No of children’s</option>
+              <option value="Text1">1</option>
+              <option value="Text2">2</option>
+              <option value="Text3">3</option>
+              <option value="Text4">4</option>
+              <option value="Text5">More than 4</option>
+           </select>
+            </div>
+             <div id="no_of_child_total_div" style="display:none;"><input type="text" id="no_of_child_total" placeholder="No. of Adults" class="inputFields forMargin"/></div>
+        </li>
+        <li class="left-form">
+          <h5>TRAVEL DETAILS</h5>
+          <div class="date pull_left demo-1">
+                                   <input type="text" name="form" placeholder="Pick Up DATE" class="timing" 
+                                   style="width: 100%;
+    background-color: #fff;
+    border: 1px solid #dfdcdc;
+    margin-bottom: 5px;
+    font-size: 10px;
+    color: #545252 !important;
+    padding: 18px;"> 
+                                  </div>
+          
+         <input type="text"  id='timepicker' placeholder="Pick Up TIME" class="inputFields forMargin"/>
+                                 
+                                      
+          <div class="selectFields" id="pickup" onClick="showhide()">
+            <select name="cars5" class="inputFields">
+              <option id="pick_up_type" value="Text" selected>Pick up type</option>
+              <option id="syd_apt" value="Text1">Sydney International Airport</option>
+			  <option id="syd_dpt" value="Text6">Sydney Domestic Airport</option>
+              <option id="syd_cdn" value="Text2">Sydney City</option>
+              <option id="Ade_apt" value="Text3">Adelaide Airport</option>
+              <option id="Ade_cdn" value="Text4">Adelaide City</option>
+            </select>
+          </div>
+          <input id="geocomplete" type="text" class="inputFields forMargin" placeholder="Pick up address" size="90" style="display:none;" />
+          <input id="post_code" type="text" class="inputFields forMargin" placeholder="Pick up postal code" size="90" style="display:none;" />
+          <div class="selectFields" id="drop_off" onClick="showhide()">
+            <select name="cars4"  class="inputFields">
+              <option id="drop_off_type" value="Text" selected>Drop off type </option>
+              <option id="syd_apt_drp" value="Text1">Sydney International Airport</option>
+			  <option id="syd_dpt_drp" value="Text6">Sydney Domestic Airport</option>
+              <option id="syd_cdn_drp" value="Text2">Sydney City</option>
+              <option id="Ade_apt_drp" value="Text3">Adelaide Airport</option>
+              <option id="Ade_cdn_drp" value="Text4">Adelaide City</option>
+            </select>
+          </div>
+          <div>
+          
+          <input id="geocomplete1"  class="inputFields forMargin end_geo" type="text" placeholder="Drop off address" size="90" style="display:none;"/>
+              <input id="post_code2" type="text" class="inputFields forMargin" placeholder="Drop off postal code" size="90" style="display:none;" />
+          </div>
+          
+         
+        </li>
+      </ul>
+       
+    </div> 
+        <div class="submitBtn">
+          <input type="button" value="GET STARTED" id="my_btn" class="submit-button mainInputFormBtn" onClick="emailClicked();">
+        </div>
+  
+    </div>
+  </div>
+  </div>
+</section>
+<div id="addtocartds">
+	  
+	 
+    </div> 
+<section id="joinus">
+  <div class="joinus-cover clearfix">
+    <div class="container">
+      <div class="joinus-left">
+        <h2>JOIN <br/>
+          WITH US</h2>
+        <p>You can apply with us , with full his / her full details like CV & attachment of documents</p>
+      </div>
+      <div class="joinus-right">
+       <div class="joinus-form">
+        <?php echo do_shortcode('[contact-form-7 id="92" title="Upload cv"]');?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</section>
+<!--end of joinus section-->
+
+<section class="contactUs">
+  <div class="container">
+    <div class="formSection">
+        <div class="joinus-form">
+         <?php echo do_shortcode('[contact-form-7 id="675" title="Contact Us"]');?>          
+        </div>
+    </div>
+    <div class="textSection">
+      <h2>Contact Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitNunc sit amet orci dui. Fusce lectus libero, viverra vel quam quis</p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</section>
+<section class="logoCarousel">
+<div class="container">
+  <div class="logosliderHolder">
+    <ul id="flexiselDemo3">
+      <?php   
+
+	   $args = array('post_type' => 'brands');	 
+
+	   $loop = new WP_Query( $args );
+
+		while ( $loop->have_posts() ) : $loop->the_post();
+
+	?>
+      <li>
+        <?php the_post_thumbnail(); ?>
+      </li>
+      <?php endwhile;?>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</div>
+</section>
+<?php //get_sidebar(); ?>
+<?php get_footer(); ?>
+
+<script type="text/javascript">
+$('#terms').click(function(e) {
+	$('.wp-cart-button-form input[type="submit"]').prop('disabled', false);
+});
+
+function showhide()
+{
+	
+	var drop_off = $( "#drop_off option:selected" ).text();
+	var pickup = $( "#pickup option:selected" ).text();
+	
+	var location = $('#geocomplete').val();
+	var end = $('.end_geo').val();
+	
+	var post_code = $("#post_code").val();
+	var post_code2 = $("#post_code2").val();
+
+	var people_no = $( "#no_of_people option:selected" ).text();
+	var suitcases_no = $( "#no_of_suitcases option:selected" ).text();
+	var child_no = $( "#no_of_child option:selected" ).text();
+	
+	var car_type = $( "#car_type option:selected" ).text();
+	
+	//var adelaide_car = $("#adelaide_car").text();
+	//var sydney_car = $("#sydney_car").text();
+	
+    var type_services = $("#type_services option:selected" ).text();
+
+     
+	
+	if(people_no == "More than 4")
+	{
+		$("#no_of_people_total_div").css("display", "block");
+		$("#no_of_people").css("display", "none");
+		
+	}
+	
+	if(suitcases_no == "More than 4")
+	{
+		
+		$("#no_of_suit_total_div").css("display", "block");
+		$("#no_of_suitcases").css("display", "none");
+		
+	}
+	
+	if(child_no == "More than 4")
+	
+	{
+		$("#no_of_child_total_div").css("display", "block");
+		$("#no_of_child").css("display", "none");
+		
+	}
+	/*******************************************************************************************/
+	/*pickup type is Adelaide City*/
+	if(pickup == "Adelaide City")
+	{
+		
+		$("#ade_sub_drp").css("display", "block");
+		$("#Ade_cdn_drp").css("display", "block");
+		$("#Ade_apt_drp").css("display", "block");
+		
+		
+		$("#syd_apt_drp").css("display", "none");
+		$("#syd_dpt_drp").css("display", "none");
+		$("#syd_cdn_drp").css("display", "none");
+	}
+	/*Drop off type is Adelaide City*/
+	if(drop_off == "Adelaide City")
+	{
+		$("#Ade_sub").css("display", "block");
+		$("#Ade_cdn").css("display", "block");
+		$("#Ade_apt").css("display", "block");
+		
+		$("#syd_apt").css("display", "none");
+		$("#syd_dpt").css("display", "none");
+		$("#syd_cdn").css("display", "none");
+	}
+	
+	/*******************************************************************************************/
+	/*pickup type is Adelaide Airport*/
+	if(pickup == "Adelaide Airport")
+	{
+		$("#Ade_cdn_drp").css("display", "block");
+		$("#Ade_apt_drp").css("display", "none");
+
+		$("#syd_apt_drp").css("display", "none");
+		$("#syd_dpt_drp").css("display", "none");
+		$("#syd_cdn_drp").css("display", "none");
+	}
+	/*Drop off type is Adelaide Airport*/
+	if(drop_off == "Adelaide Airport")
+	{
+		$("#Ade_cdn").css("display", "block");
+		$("#Ade_apt_drp").css("display", "none");
+
+		$("#syd_apt").css("display", "none");
+		$("#syd_dpt").css("display", "none");
+		$("#syd_cdn").css("display", "none");
+	}
+	
+	/*******************************************************************************************/
+	
+		
+	/*******************************************************************************************/
+	
+	/*pickup type is Sydney International Airport*/
+	if(pickup == "Sydney International Airport")
+	{
+		
+		$("#syd_dpt_drp").css("display", "block");
+		$("#syd_cdn_drp").css("display", "block");
+		
+		$("#syd_apt_drp").css("display", "none");
+		$("#Ade_cdn_drp").css("display", "none");
+		$("#Ade_apt_drp").css("display", "none");
+	}
+
+
+	/*Drop off type is Sydney International Airport*/
+	if(drop_off == "Sydney International Airport")
+	{
+		
+		$("#syd_dpt").css("display", "block");
+		$("#syd_cdn").css("display", "block");
+		
+		$("#syd_apt").css("display", "none");
+		$("#Ade_cdn").css("display", "none");
+		$("#Ade_apt").css("display", "none");
+		
+	}
+	
+  /*******************************************************************************************/
+ 
+  /*******************************************************************************************/
+	
+	/*pickup type is Sydney Domestic Airport*/
+	if(pickup == "Sydney Domestic Airport")
+	{
+		$("#syd_apt_drp").css("display", "block");
+		$("#syd_cdn_drp").css("display", "block");
+		
+		$("#syd_dpt_drp").css("display", "none");
+		$("#Ade_cdn_drp").css("display", "none");
+		$("#Ade_apt_drp").css("display", "none");
+	}
+
+	/*Drop off type is Sydney Domestic Airport*/
+	if(drop_off == "Sydney Domestic Airport")
+	{
+		$("#syd_apt").css("display", "block");
+		$("#syd_cdn").css("display", "block");
+		
+		$("#syd_dpt").css("display", "none");
+		$("#Ade_cdn").css("display", "none");
+		$("#Ade_apt").css("display", "none");
+		
+	}
+  /*******************************************************************************************/
+  
+  /*******************************************************************************************/
+	
+	/*pickup type is Sydney City*/
+	if(pickup == "Sydney City")
+	{
+		$("#syd_dpt_drp").css("display", "block");
+		$("#syd_apt_drp").css("display", "block");
+		$("#syd_cdn_drp").css("display", "block");
+		
+		$("#Ade_cdn_drp").css("display", "none");
+		$("#Ade_apt_drp").css("display", "none");
+	}
+	
+
+	/*Drop off type is Sydney City*/
+	if(drop_off == "Sydney City")
+	{
+		$("#syd_dpt").css("display", "block");
+		$("#syd_apt").css("display", "block");
+	    $("#syd_cdn").css("display", "block");
+		
+		$("#Ade_cdn").css("display", "none");
+		$("#Ade_apt").css("display", "none");
+		
+	}
+	
+	
+	
+	
+	/*******************************************************************************************/
+	
+	if(pickup == "Sydney City" || pickup == "Adelaide City"  )
+	{
+	
+	$("#geocomplete").css("display", "block");
+	$("#post_code").css("display","block");
+	}
+	else
+	{
+	$("#geocomplete").css("display", "none");
+	$("#post_code").css("display", "none");
+
+	}
+	
+	
+	if(drop_off == "Sydney City" || drop_off == "Adelaide City"  )
+	{	
+	  $(".end_geo").css("display", "block");
+	  $("#post_code2").css("display","block");
+	}
+	else
+	{
+	 $(".end_geo").css("display", "none");
+     $("#post_code2").css("display","none");
+	}
+	
+	 /*** If Pick up and drop is empty***/
+	if(pickup == "Pick up type")
+	{	
+        $("#Ade_sub").show();
+		$("#Ade_cdn").show();
+		$("#Ade_apt").show();
+		
+		$("#syd_apt").show();
+		$("#syd_dpt").show();
+		$("#syd_cdn").show();
+		$("#syd_sub").show();
+		
+   }
+	if(drop_off == "Drop off type")
+	{
+ 		$("#ade_sub_drp").show();
+		$("#Ade_cdn_drp").show();
+		$("#Ade_apt_drp").show();
+		
+		$("#syd_apt_drp").show();
+		$("#syd_dpt_drp").show();
+		$("#syd_cdn_drp").show();
+		$("#syd_sub_drp").show();
+	}
+	/** end of pick up and droff**/
+	
+	/********************************************************************************************/
+	
+	if (location.indexOf("Sydney") >= 0)
+	{
+		$("#car_ald2").css("display", "none");
+		$("#car_ald1").css("display", "none");
+
+	}
+	
+	if (end.indexOf("Sydney") >= 0)
+	{
+		$("#car_ald2").css("display", "none");
+		$("#car_ald1").css("display", "none");
+
+	}
+	
+	if (location.indexOf("Adelaide") >= 0)
+	{
+		$("#car_syn1").css("display", "none");
+		$("#car_syn2").css("display", "none");
+
+	}
+	
+	if (end.indexOf("Adelaide") >= 0)
+	{
+		$("#car_syn1").css("display", "none");
+		$("#car_syn2").css("display", "none");
+
+	}
+	
+if(pickup=="Sydney International Airport" || pickup=="Sydney Domestic Airport" || pickup=="Sydney City" || pickup=="Sydney Suburb")
+	{
+	  $("#car_ald").prop("disabled", true);
+	  $("#car_syn").prop("disabled", false);
+	}
+if(drop_off=="Sydney International Airport" || drop_off=="Sydney Domestic Airport" || drop_off=="Sydney City" || drop_off=="Sydney Suburb")
+	{
+	  $("#car_ald").prop("disabled", true);
+	  $("#car_syn").prop("disabled", false);
+	}	
+	
+	if(pickup=="Adelaide Airport" || pickup=="Adelaide City" )
+	{
+	  $("#car_ald").prop("disabled", false);
+	  $("#car_syn").prop("disabled", true);
+
+	}
+  if(drop_off=="Adelaide Airport" || drop_off=="Adelaide City")
+	{
+      $("#car_ald").prop("disabled", false);
+	  $("#car_syn").prop("disabled", true);	
+	}	
+
+	if(car_type == "Adelaide")
+	{
+		$("#adelaide_car").css("display", "block");
+		
+	}
+	else
+	
+	{
+		$("#adelaide_car").css("display", "none");
+		
+	}
+	
+	if(car_type == "Sydney")
+	{
+		$("#sydney_car").css("display", "block");
+		
+	}
+	else
+	
+	{
+		$("#sydney_car").css("display", "none");
+		
+	}
+	
+}
+</script>
+
+<script type="text/javascript">
+function emailClicked() 
+{
+	
+	var ajaxurl='<?php echo admin_url('admin-ajax.php'); ?>';
+	
+
+	
+	var people_no = $( "#no_of_people option:selected" ).text();
+	var suitcases_no = $( "#no_of_suitcases option:selected" ).text();
+	var child_no = $( "#no_of_child option:selected" ).text();
+		
+	var drop_off = $( "#drop_off option:selected" ).text();
+	var pickup = $( "#pickup option:selected" ).text();
+	
+	var name = $("#firstname").val();
+	var email = $("#email").val();
+	
+	var date = $(".timing").val();
+	var time = $("#timepicker").val();
+
+	var location = $('#geocomplete').val();
+	var end = $('.end_geo').val();
+	
+	var post_code = $("#post_code").val();
+	var post_code2 = $("#post_code2").val();
+	
+	var book = $('#txtNumHours').val();
+	var email_bk = $('#txtEmail').val();
+	var phone =  $('#txtPhone').val();
+	
+	var psg_phone= $('#phn').val();
+	
+	var car_type = $( "#car_type option:selected" ).text();
+	//var adelaide_car = $("#adelaide_car").text();
+	//var sydney_car = $("#sydney_car").text();
+    var type_services = $("#type_services option:selected" ).text();
+	
+	
+	
+
+	if($('#ade_car1').is(':checked') == true)
+		{
+			var car= $('#ade_car1').val();
+		}
+	
+	 if($('#ade_car2').is(':checked') == true)
+		{
+			var car= $('#ade_car2').val();
+		}			
+		
+	/*** SYDNEY ***/
+		if($('#syd_car1').is(':checked') == true)
+		{
+			var car= $('#syd_car1').val();
+            
+		}
+		if($('#syd_car2').is(':checked') == true)
+		{
+			var car= $('#syd_car2').val();
+		}
+		
+
+	if ($('#chkIsTeamLead').is(':checked') == true)
+	{
+		var book = $("#firstname").val();
+		var email_bk = $("#email").val();
+		var phone = $('#phn').val();
+	}
+  var data = {
+        action: 'get_postal_code',
+		dataType: 'json',
+		name: name,
+		date: date,
+		time: time,
+		
+		car:car,
+		car_type:car_type,
+		type_services:type_services,
+		
+		
+		book:book,
+		email_bk:email_bk,
+		phone:phone,
+		
+		people_no:people_no,
+		suitcases_no:suitcases_no,
+		child_no:child_no,
+		
+		email: email,
+		psg_phone: psg_phone,
+        location: location,
+		end:end,
+		drop_off:drop_off,
+		pickup:pickup,
+		
+		post_code:post_code,
+	    post_code2:post_code2
+    };
+  $.post(ajaxurl, data, function(response) { 
+//alert(response);
+//$(".popUpInner h3").html(response);
+  var JSONObject = $.parseJSON(response);
+  //alert(JSONObject[2]["pid"]);
+  console.log(JSONObject);      // Dump all data of the Object in the console
+  var price_cart= JSONObject[1]["price"];
+  
+  $('.name').text(JSONObject[0]["name"]);
+  $('.price').text(JSONObject[0]["base_fare"]);
+  $('.distance').text(JSONObject[0]["distance"]);
+  $('.time1').text(JSONObject[0]["time"]);
+  $('.add_to_cart_div').html(JSONObject[1]["cart"]);
+   
+	var time=JSONObject[0]["time"];
+	
+	var pid = JSONObject[2]["pid"];
+	
+	var print = "http://onlinedevserver.biz/dev/Adelaide_limuisine/print/?pid="+pid;
+	
+	var pdf =  "http://onlinedevserver.biz/dev/Adelaide_limuisine/quatation/?pid="+pid;
+	
+	$('#print').attr("href",print );$('#pdf').attr("href",pdf );
+	 //alert(time);
+	if(time==''){
+		$('.qprice').hide();
+		$("#btn_yes").hide();
+		$('p.buttonHolderTEXT').hide();
+		$('.buttonHolderUl li > .Btns').css({'background':'transparent'});
+		$('#btn_no').html('<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/No_Cross.svg/120px-No_Cross.svg.png" width="50%">'); 
+   $('.price').html("");
+  $('.distance').html("");
+  $('.time1').html("");
+  $('.add_to_cart_div').html("");
+		}
+     
+   });
+}
+</script> 
+
+<script type="text/javascript">
+function hideDiv()
+{
+	$(".name").css("display", "none");
+	$(".price").css("display", "none");
+	$(".time1").css("display", "none");
+	$(".distance").css("display", "none");
+	$("#print").css("display", "none");
+	$("#pdf").css("display", "none");	
+	$(".add_to_cart_div").css("display", "block");
+	$(".terms").css("display", "block");
+	$(".buttonHolderTEXT").css("display", "none");
+	$(".buttonHolderUl").css("display", "none");
+	$(".terms_conditation").css("display", "block");
+	$('form.wp-cart-button-form input[type="submit"]').prop('disabled', true);
+}
+$(document).ready(function() 
+ {
+  $("#btn_yes").click(function()
+     {
+		 $(".buttonHolderTEXT").hide();
+		 $(".book").show();
+     });  
+});
+function hideDiv_inni()
+{
+//var blurred = false;
+window.onblur = function() { blurred = true; };
+window.onfocus = function() { blurred && (location.reload()); };
+	
+/*	$(".name").html("");
+	$(".price").html("");
+	$(".time1").html("");
+	$(".distance").html("");
+	$(".popUp").hide();
+	$(".popUpInner").hide();
+	$(".popUpHold").hide();
+	$(".name").css("display", "none");
+	$(".price").css("display", "none");
+	$(".time1").css("display", "none");
+	$(".distance").css("display", "none");
+	$(".add_to_cart_div").css("display", "block");
+	$(".buttonHolderUl").css("display", "none");
+*/}
+</script>
+
+
+<!-- end of code for hide text-->
+<script type="text/javascript">
+$('#chkIsTeamLead').change(function(){
+    if ($('#chkIsTeamLead').is(':checked') == true){
+		var name = $('#txtNumHours').val();
+		var email_psg = $('#txtEmail').val();
+		var phone = $('#txtPhone').val();
+        $('#txtNumHours').val('').prop('disabled', true);
+		$('#txtEmail').val('').prop('disabled', true);
+		$('#txtPhone').val('').prop('disabled', true);
+		 $('#firstname').val(name);
+		 $('#email').val(email_psg);
+		 $('#phn').val(phone);
+        console.log('checked');
+		
+    } else {
+        $('#txtNumHours').val('').prop('disabled', false);
+		$('#txtEmail').val('').prop('disabled', false);
+		$('#txtPhone').val('').prop('disabled', false);
+		 $('#firstname').val('');
+        console.log('unchecked');
+    }
+});
+</script>
+<link href="<?php echo get_template_directory_uri(); ?>/css/jquery.minical.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.adiSys ul li{
+	width: 100% !important;
+	display:block !important;
+    min-height: auto !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    text-align: left;
+    border: none !important;
+}
+#sydney_car li{
+	widith:100% !important; 
+}
+#adelaide_car li{
+	widith:100% !important; 
+}
+.adiSys{
+
+	display: block;
+    background: #fff;
+    border: 1px solid gainsboro;
+    padding: 10px;
+    margin-bottom: 5px;
+    }
+
+#bonPowerExpd{
+display:none !important;	
+}
+</style>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.minical.js"></script>
+<script type="text/javascript">
+$(".demo-1 :text").minical({
+	
+	});
+$(".demo-2 :text").minical({
+        inline: true
+      });
+   $(".demo-3 :text").minical({
+        trigger: "i.trigger-icon"
+      });
+</script>

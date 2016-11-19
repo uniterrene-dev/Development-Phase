@@ -1,0 +1,1522 @@
+/*
+	Theme Name: Adelaide	
+	Description: Adelaide hire cars
+	Version: 1
+	Tags: Adelaide, car, hire
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+
+@font-face {
+	font-family: 'Corbel' !important;
+	src: url(../fonts/CORBEL_0.TTF)
+}
+* {
+	box-sizing: border-box
+}
+body {
+	margin: 0;
+	padding: 0 !important;
+	font-family: Corbel;
+}
+body, html {
+	font-size: 16px;
+}
+div, table, tr, th, td, th, video, audio, h1, h2, h3, h4, h5, h6, aside, canvas, section, header, footer, nav, span, p, small, big, a, b, strong, img, hr, pre, button, input, textarea, optgroup, ul, li, ol, select, option, blockquote, nav {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	list-style-type: none;
+}
+.clear{
+	clear: both;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	font-size: 0;
+}
+.clear {
+	clear: both
+}
+.container {
+	margin: 0 auto;
+	padding: 0 0px;
+}
+.row {
+	width: 100%;
+	margin: 10px auto
+}
+img {
+	max-width: 100%;
+}
+h1, h2, h3 {
+	font-family: Corbel;
+	font-weight: normal;
+	word-spacing: 10px
+}
+h4, h5, h6 {
+	font-family: Corbel;
+}
+h1 {
+	font-size: 68px;
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-weight: normal
+}
+h2 {
+	font-size: 54px;
+	text-align: center;
+	line-height: 54px;
+	font-weight: bold;
+	text-transform: uppercase
+}
+h3 {
+	font-size: 54px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase
+}
+h4 {
+	font-size: 23px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: normal;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+}
+p {
+	font-size: 17px;
+	line-height: 28px;
+	font-weight: normal;
+	color: #575555;
+	text-align: center;
+	margin: 15px 0
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+		
+	
+::-moz-placeholder {
+ color:#f3f3f3;
+}
+::-ms-placeholder {
+ color:#f3f3f3
+}
+::-webkit-placeholder {
+ color:#f3f3f3
+}
+::-0-placeholder {
+ color:#f3f3f3
+}
+::selection {
+	background: #f8db3a;
+	color: #050006;
+}
+::-moz-selection {
+ background:#f8db3a;
+ color:#050006;
+}
+::-webkit-selection {
+ background:#f8db3a;
+ color:#050006;
+}
+::-o-selection {
+ background:#f8db3a;
+ color:#050006;
+}
+::-ms-selection {
+ background:#f8db3a;
+ color:#050006;
+}
+.f_left {
+	float: left;
+}
+.f_right {
+	float: right;
+}
+a.btn_bor {
+	background: transparent;
+	color: #ffffff;
+	text-align: center;
+	line-height: 45px;
+	font-size: 18px;
+	transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-radius: 25px;
+	border: 1px solid #acacac;
+}
+a.btn_bor:hover {
+	background: rgba(226,226,226,.3);
+}
+a.btn_without_bor {
+	background: #faa013;
+	border-radius: 25px;
+	font-family: Corbel;
+	font-size: 15px;
+	text-align: center;
+}
+.read_more {
+	color: #faa013;
+	font-size: 15px
+}
+.read_more:hover {
+	text-decoration: underline
+}
+/*===============================================================
+common portion end
+=================================================================
+*/
+
+
+
+/* *************************************************************
+************************** Header ******************************
+*************************************************************** */
+.aa {
+	background-color: rgba(255, 255, 255, 0.9);
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+}
+.headerBorder{
+	border-bottom: 2px solid gainsboro;
+	transition: all .3s ease;
+}
+.logo a {
+	width: 13%;
+	float: left;
+	text-align: center;
+}
+.logo img{
+	min-width: 65%;
+}
+.menu {
+	width: 82%;
+	float: left;
+}
+.menu ul {
+	padding: 30px 15px;
+}
+.menu ul li {
+	display: inline-block;
+}
+.menu ul li a {
+	display: block;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all .3s ease;
+	text-transform:uppercase
+}
+.menu ul li a:hover {
+	color: #fff;
+	background: #000;
+}
+.font-chat {
+	width: 22%;
+	float: left;
+	
+}
+.font-chat i {
+	font-size: 30px;
+}
+.chat-section {
+	width: 75%;
+	float: right;
+	
+}
+.right-header {
+	width: 80%;
+	float: right;
+}
+.chat-icon {
+	width: 16%;
+	float: left;
+	padding-top: 30px;
+}
+.chat-section h4 {
+	font-size: 20px;
+	color: #000;
+	text-align: left;
+	line-height: 10px;
+}
+.chat-section h5 {
+	font-size: 26px;
+	color: #000;
+	font-weight: bold;
+}
+/* *************************************************************
+************************** Banner ******************************
+*************************************************************** */
+.banner img {
+	top: 0;
+	position: absolute;
+}
+#banner {
+	width: 100%;
+	top: 0px;
+	left: 0;
+	border-bottom: 15px solid #191818;
+}
+#banner .banner_content .caption {
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	background: rgba(0,0,0,.6);
+	left: 58%;
+	margin-left: -30%;
+	padding: 20px 0;
+	transform: skew(-15deg);
+}
+.caption-text {
+	width: 100%;
+	position: absolute;
+	top: 300px;
+}
+#banner .banner_content .caption-text h1 {
+	color: #fff;
+	margin-top: 50px;
+	font-size: 68px;
+	font-weight: bold;
+}
+#banner .banner_content .caption-text h4 {
+	color: #fff;
+	font-size: 68px;
+}
+/* *************************************************************
+************************** About Our Fleet ******************************
+*************************************************************** */
+#Fleet {
+	width: 100%;
+	padding: 60px 0;
+}
+#Fleet h3 {
+	color: #000;
+	padding-bottom: 90px;
+	color: #2f2e2e;
+}
+#Fleet h4 {
+	text-align: right;
+	color: #292828;
+	font-size: 34px;
+}
+#Fleet p {
+	text-align: right;
+}
+.fleet-container1 {
+	width: 100%;
+	height: auto;
+	padding-bottom: 55px;
+}
+.fleet-container2 {
+	width: 100%;
+	height: auto;
+}
+.fleet-container1 .fleet-img img{
+	width: 95%;
+}
+.fleet-container1 .fleet-img {
+	padding-bottom: 20px;
+	width: 45%;
+	float: left;
+	position: relative;
+	background: url('images/fleet-img_bg.png') no-repeat right bottom;
+}
+.fleet-container2 .fleet-img {
+	width: 45%;
+	float: right;
+	padding-left: 20px;
+	position: relative;
+	padding-top: 20px;
+	background: url('images/fleet-img_bg2.png') no-repeat top left;
+}
+.fleet-container1 .fleet-content {
+	width: 53%;
+	float: right;
+	padding-top: 50px;
+}
+.fleet-container2 .fleet-content {
+	width: 49%;
+	float: left;
+	padding-top: 50px;
+}
+/* *************************************************************
+************************** Our Services ******************************
+*************************************************************** */
+
+#services {
+	background: url(images/services_img.png);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+}
+.services-cover {
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	padding: 75px 0;
+}
+.services-cover h3 {
+	color: #fff;
+}
+#w {
+	display: block;
+	max-width: 920px;
+	min-width: 300px;
+	margin: 0 auto;
+	padding: 2px 3px;
+	position: relative;
+	margin-top: 35px;
+}
+.crsl-items {
+	display: block;
+	padding: 5px;
+}
+.crsl-item {
+	background: #000;
+	padding: 30px 8px;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+}
+.crsl-item .thumbnail {
+	display: block;
+	position: relative;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.crsl-item .thumbnail img {
+	display: block; /* fix 1px image space http://stackoverflow.com/q/5804256/477958 */
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	margin: 0 auto;
+}
+.crsl-item .thumbnail:hover img {
+	opacity: 0.8;
+}
+.crsl-item h3 {
+	font-family: Corbel;
+	font-size: 1.95em;
+	line-height: 1.25em;
+	margin-bottom: 12px;
+}
+.crsl-item h3 a {
+	text-decoration: none !important;
+	color: #fff;
+	font-size: 27px;
+	font-family: Corbel;
+	text-transform: capitalize;
+}
+.crsl-item h3 a:hover {
+	text-decoration: underline;
+}
+.crsl-item .postdate {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 6px;
+	color: #fff;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+	font-size: 1.2em;
+	font-weight: bold;
+	background: #4e90da;
+}
+.crsl-item p {
+	font-size: 18px;
+	line-height: 1.55em;
+	margin-bottom: 5px;
+	color: #bababa;
+}
+.crsl-item p.readmore a {
+	display: block;
+	float: right;
+	color: #4e90da;
+	padding: 3px 5px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.crsl-item p.readmore a:hover {
+	background: #4b6caa;
+	color: #fff;
+}
+.slidernav {
+	display: block;
+	text-align: center;
+	margin-bottom: 5px;
+}
+#navbtns .previous {
+	position: absolute;
+	top: 152px;
+	right: -80px;
+}
+#navbtns .next1 {
+	position: absolute;
+	top: 152px;
+	left: -80px;
+}
+.slidernav a:active {
+	-webkit-box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+	-moz-box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+}
+/* *************************************************************
+************************** Book a Car ******************************
+*************************************************************** */
+
+#car-book {
+	width: 100%;
+	height: auto;
+	padding: 80px 0;
+}
+#car-book .full-form {
+	width: 100%;
+	height: auto;
+	background-color: #e8e8e8;
+	padding: 0px 0px 30px 0;
+	/*margin: 0 auto;*/
+	margin-top: 40px;
+	float:right;
+}
+
+#car-book .full-form ul{
+	 width:100%;
+	 text-align:center;
+}
+#car-book .full-form ul li{
+	 width:29%;
+	 display:inline-block;
+	 margin:30px 18px;
+	 border-right:1px solid #747272;
+	 min-height:265px;
+	 padding-right:36px;
+}
+#car-book .full-form ul li:last-child{
+	 border-right:none;
+}
+#car-book .full-form ul li:first-child{
+	 margin-left:50px;
+}
+#car-book .full-form ul li h5{
+	text-align:left;
+}
+#car-book input[type="checkbox"]{
+	 text-align:left !important;
+	 float:left;
+	 margin-right:10px;
+	 margin-top:5px;
+}
+#car-book input[disabled]{
+	 opacity:1.2;
+}
+#car-book label{
+	 float:left;
+	 width: 92%;
+     font-size: 13px;
+}
+#car-book .check{
+	text-align:left !important;
+}
+
+.left-form {
+	width: 80%;
+	float: left;
+	margin-bottom: 30px;
+}
+.right-form {
+	width: 40%;
+	float: right;
+	margin-bottom: 30px;
+}
+.right-form h5, .left-form h5 {
+	font-weight: bold;
+	color: #585757;
+	padding-bottom: 20px;
+}
+.left-form input[type="text"], .left-form select, .right-form input[type="text"], .right-form select , .left-form input[type="email"], .left-form input[type="tel"] {
+	background-color: #fff;
+	border: 1px solid #dfdcdc;
+	/*text-transform: uppercase;*/
+	font-size: 10px;
+	color: #545252 !important;
+}
+input:disabled::-webkit-input-placeholder {
+    color: red;
+}
+
+.left-form input[type="text"], .right-form input[type="text"] {
+	padding-left: 10px;
+}
+::-webkit-input-placeholder {
+ color:    #545252;
+}
+:-moz-placeholder {
+ color:    #545252;
+}
+::-moz-placeholder {
+ color:    #545252;
+}
+:-ms-input-placeholder {
+ color:   #545252;
+}
+/*
+.right-form .submit-button {
+	width: 20%;
+	margin: 0px auto;
+	text-align: center;
+	float: none;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #3a3939;
+	border-bottom: 4px solid #1a1a1a;
+	display: inherit;
+}*/
+.main-left-form {
+	width: 50%;
+	float: left;
+	border-right: 1px solid #a9a6a6;
+}
+/* *************************************************************
+************************** Join us ******************************
+*************************************************************** */
+#joinus {
+	background: url(images/join-us.png);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+}
+.joinus-cover {
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	padding: 75px 0;
+}
+.joinus-left {
+	width: 37%;
+	float: left;
+}
+.joinus-left h2 {
+	color: #fff;
+	font-size: 80px;
+	line-height: 80px;
+	font-weight: normal;
+	text-align: left;
+}
+.joinus-left p {
+	color: #fff;
+	text-align: left;
+}
+.joinus-right {
+	width: 50%;
+	float: right;
+}
+.joinus-form {
+	background-color: #cccbca;
+	padding: 40px;
+	width: 80%;
+	float: right;
+}
+/*
+.joinus-form input, .joinus-form textarea{
+	background:#fff;
+	margin-bottom: 8px;
+	font-size:10px;
+	color:#6d6b6b;
+	font-family:  Corbel;
+	padding-right:10px;
+	
+}
+
+.joinus-form .submit-button {
+	width: 20%;
+	margin: 0px auto;
+	text-align: center;
+	float: none;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #3a3939;
+	border-bottom: 4px solid #1a1a1a;
+	display: inherit;
+}*/
+
+/*------------------------ranit 2-08-26-----------------------------------*/
+
+.submitBtn{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.submit-button{
+	
+	height: auto;
+	background: #3a3939;
+	color: #fff;
+	cursor: pointer;
+    padding: 15px 60px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #1a1a1a;
+    transition: all .3s ease;
+    margin-top: 30px;
+}
+.submit-button:hover{
+	background: #747272;
+}
+.inputFields{
+	width: 100%;
+    padding: 18px;   
+}
+.forMargin{
+	margin-bottom: 5px;
+}
+.selectFields{
+	width: 100%;
+	height: auto;
+	background: url(images/option_select_down_arrow.png) #fff top right no-repeat;
+	background-size: contain;
+	margin-bottom: 5px;
+}
+.selectFields select{
+	background: transparent;
+	appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+.buttonHolder{
+	text-align: center;
+}
+.joinus-form textarea{
+	max-height: 120px;
+	height: 120px;
+}
+
+.contactUs{
+	padding: 40px;
+	height: auto;
+	background: #fff;
+}
+.formSection{
+	width: 50%;
+	float: left;
+}
+.textSection{
+	width: 50%;
+	float: right;
+	padding: 30px;
+}
+.textSection h2{
+	font-weight: 300;
+	font-size: 80px;
+	text-align: right;
+	line-height: 80px;
+}
+.textSection p{
+	    text-align: right;
+    line-height: 20px;
+}
+.logoCarousel{
+	padding: 40px;
+	background: #f5f5f5;
+}
+
+.topfooter{
+	width: 100%;
+	background: #161513;
+	padding: 40px;
+}
+.bottomfooter{
+	width: 100%;
+	background: #000000;
+	padding: 20px;
+	color: #fff;
+	text-align: center;
+}
+.bottomfooter p{
+	text-transform: uppercase;
+	color: #8c8c8c;
+	font-size: 16px;
+	text-align: center;
+}
+.footerLogo{
+	width: 20%;
+	float: left;
+	padding-top: 25px;
+}
+.footerLogo img{
+	max-width: 145px;
+	width: 100%;
+}
+.footerPayment{
+	width: 40%;
+	float: left;
+}
+.footerPayment .paymentUl{
+	list-style: none;
+	
+}
+ .paymentUl li{
+	display: inline-block;
+	margin:0 10px;
+}
+.footerPayment h4{
+	text-transform: uppercase;
+	color: #8c8c8c;
+	font-size: 20px;
+	text-align: left;
+	padding: 12px 5px;
+}
+ .paymentUl li img{
+ 	transition:  all .4s;
+ }
+.paymentUl li:hover img{
+	opacity: .3;
+
+}
+.menuForResponsive{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: none;
+}
+.menuForResponsive ul{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+.menuForResponsive ul li a{
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid gainsboro;
+	background: rgba(255,255,255, .8);
+}
+.responsiveMenu{
+	display: none;
+	width: 60px;
+	float: right;
+	cursor: pointer;
+}
+.fixedChat{
+	display: none;
+	z-index: 99;
+	position: fixed;
+	top: 20%;
+	right: -165px;
+	background: rgba(255,0,0, .8);
+	padding: 10px 12px;
+	font-size: 30px;
+	cursor: pointer;
+	border-radius: 5px 0 0 5px;
+	width: 215px;
+	transition: all .5s ease;
+}
+.fixedChat:hover{
+	right: 0;
+}
+.fixedChat h3{
+	line-height: 15px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+}
+.fixedChat h3 i{
+	font-size: 30px;
+	color: #fff;
+	float: left;
+}
+.myBanner{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.overlay{
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+	background: rgba(0,0,0, .5);
+	width: 50%;
+	margin:0 auto;
+	-ms-transform: skewX(-20deg); /* IE 9 */
+    -webkit-transform: skewX(-20deg); /* Safari */
+    transform: skewX(-20deg); /* Standard syntax */
+}
+.sliderInfo{
+	padding-top: 15%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.sliderInfo h1{
+	color: #fff;
+	z-index: 9;
+	text-transform: none;
+}
+.sliderInfo h2{
+	color: #fff;
+	font-size: 68px;
+	padding-top: 50px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+  width: 100%;
+  
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+
+.slider ul {
+  margin: 0px;
+  padding-left: 0px;
+  width: 500%;
+}
+
+.slider ul li {
+  width: 20%;
+  padding-left: 0px;
+  margin-left: 0px;
+  display: inline-block;
+  vertical-align:top;
+}
+
+.image {
+  width: 100%;
+  text-align: center;  
+  position: relative;
+  }
+
+.navigation {
+	z-index: 9;
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  padding-left: 40%;
+  padding-right: 40%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button {  
+  color: #fff;
+  font-size: 2em;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: .5%;
+}
+
+
+/*-------popup--------*/
+
+.popUpHold{
+	display: none;
+	z-index: 9999;
+	position: fixed;
+	padding-top: 15%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0, .6);
+}
+.popUp{
+	width: 530px;
+	height: 300px;
+	background: rgba(0,0,0,.3);
+	margin: 0 auto;
+	padding: 10px;
+}
+.popUpInner{
+	width: 100%;
+	height: 100%;
+	padding-top: 30px;
+	background: rgba(0,0,0, .8);
+	text-align: center;
+	color: #fff;
+}
+.popUpInner h3{
+	font-size: 23px;
+	color: #fff;
+}
+span.price{
+	/*font-size: 76px;*/
+	color: #fff;
+}
+.popUpInner p{
+	color: #fff
+}
+.buttonHolderUl{
+	text-align: center;
+}
+.buttonHolderUl li{
+	display: inline-block;
+	margin:10px;
+}
+button.Btns{
+	padding: 5px 16px;
+	background: #fff;
+	color: #000;
+	cursor: pointer;
+	margin-top: 0;
+}
+
+
+/*******19-08-16 ********/
+.add_to_cart_div input.wspsc_add_cart_submit{
+padding: 10px 20px;
+cursor:pointer;
+transition:all .3s ease-in-out;
+}
+.add_to_cart_div input.wspsc_add_cart_submit:hover{
+background:rgba(255,255,255, .8);
+
+}
+
+
+
+.shopping_cart h2{
+	font-size:20px !important;	
+}
+.shopping_cart{
+	padding:30px 0 !important;	
+}
+.shopping_cart table tr td{
+	padding:20px !important;
+	font-size:16px !important;
+	border:1px solid gainsboro;
+}
+
+.shopping_cart table tr th{
+	padding: 20px !important;
+	font-size:18px !important;
+	border:1px solid gainsboro;	
+}
+.shopping_cart table tr td span{
+	font-size:16px !important;
+}
+
+.shopping_cart table tr td span a{
+	color:#363535 !important;
+	letter-spacing:2px ;
+}
+tr.wpspsc_checkout_form td{
+	border:none !important;	
+}
+.sidebar
+{
+display:none;	
+}
+.post-edit-link
+{
+display:none;	
+}
+
+/*-----------------------  12.9.2016 santanu ----------------------------------------*/
+
+.fleet_btn{
+	float:right;
+	padding:0 20px;
+	line-height:42px;
+	background:#3a3939;
+	border-bottom:4px solid #1a1a1a;
+	color:#fff;
+	transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	font-size:14px
+	}
+.fleet_btn:hover{
+	background: #747272;
+	}
+.joinus-form input{
+	margin-bottom:5px;
+	}
+.slider img{
+	display:block
+	}
+
+
+
+/*------------ 12.9.2016 -----------------*/
+
+.odd_row .fleet-img-inner{
+	width:40%;
+	float:left;
+	background:#f2f2f2;
+	padding:5px;
+	
+	}
+.odd_row img, .even_row img {
+	width:100% !important;
+	display:block
+	}	
+.odd_row .fleet-content-inner{
+	width:55%;
+	float:right;
+	}
+
+.even_row .fleet-img-inner{
+	width:40%;
+	float:right;
+	background:#f2f2f2;
+	padding:5px
+	}
+.even_row .fleet-content-inner{
+	width:55%;
+	float:left;
+	}
+
+.inner_border{
+	 width:100%;
+	 height:1px;
+	 border-bottom:1px dashed #ddd;
+	 margin:40px 0
+	}
+
+#Fleet .inner_header{
+	text-decoration:underline;
+	padding-bottom:40px
+}
+
+
+/* --------------- Aloke 16.9.2016 ---------------- */
+
+/* ========================================================== 
+    ====================== banner carousel ====================
+   ==============================================================*/
+   
+.carousel-fade .carousel-inner { background: #000; }
+.carousel-fade .carousel-control { z-index: 2; }  
+.carousel-fade .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
+
+  .carousel-fade .next.left,
+  .carousel-fade .prev.right,
+  .carousel-fade .item.active { opacity: 1; }
+
+  .carousel-fade .active.left,
+  .carousel-fade .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    }
+
+
+/* Safari Fix */
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+
+/* Carousel Control custom */
+.carousel-control .control-icon {
+  font-size: 48px;
+  height: 30px;
+  margin-top: -15px;
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  }
+  .carousel-control .prev { margin-left:  -15px;  left: 50%; } /* Prev */
+  .carousel-control .next { margin-right: -15px; right: 50%; } /* Next */
+
+
+/* Removing BS background */
+.carousel .control-box { opacity: 0; }
+a.carousel-control.left  { left: 0; background: none; border: 0;}
+a.carousel-control.right { right: 0; background: none; border: 0;}
+
+
+/* Animation */
+.control-box, a.carousel-control, .carousel-indicators li {
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;   
+  /* hardware acceleration causes Bootstrap carousel controlbox margin error in webkit */
+  /* Assigning animation to indicator li will make slides flicker */
+  } 
+
+
+/* Hover animation */
+.carousel:hover .control-box { opacity: 1; }
+.carousel:hover a.carousel-control.left { left: 15px; }
+.carousel:hover a.carousel-control.right { right: 15px; }  
+
+
+/* Carouse Indicator */
+.carousel-indicators li.active,
+.carousel-indicators li { border: 0; }
+
+.carousel-indicators li {
+  background: #666;
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  }
+
+.carousel-indicators li.active {
+  background: #fff;
+  margin: 0 3px;
+}
+/* CSS Document */
+
+
+
+
+/* ---------------------- Respnosive css ------------------------- */
+
+
+@media (max-width:767px) {
+.container {
+	width: 85%
+}
+}
+
+@media (max-width:768px) {
+.container {
+	width: 85%;
+}
+.logo a{
+	width: 20%;
+}
+.menu{
+	display: none;
+}
+.responsiveMenu{
+	display: block;
+}
+.fixedChat{
+	display: block;
+}
+.chatLink{
+	display: none;
+}
+.fleet-container1 .fleet-img{
+	width: 100%;
+}
+.fleet-container1 .fleet-content{
+	width: 100%;	
+}
+.fleet-container2 .fleet-img{
+	width: 100%;
+}
+.fleet-container2 .fleet-img img{
+	width: 100%;
+}
+.fleet-container2 .fleet-content{
+	width: 100%;	
+}
+.fleet-container2 .fleet-content h4, p{
+	text-align: left !important;
+}
+#navbtns .previous{
+	right: -20px;
+	z-index: 1;
+}
+#navbtns .next{
+	left: -15px;
+	z-index: 1;
+}
+#car-book .full-form{
+	width: 100%;
+}
+.joinus-form{
+	width: 100%;
+}
+.joinus-left{
+	width: 50%;
+}
+.joinus-form textarea{
+	height: 70px;
+}
+.inputFields{
+	padding:10px;
+}
+.textSection {    
+    padding: 0 30px;
+    padding-top: 20%;
+}
+.textSection h2 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: right;
+    line-height: 30px;
+}
+.textSection p{
+	text-align: right !important;
+} 
+.footerPayment{
+	width: 80%;
+	float: right;
+	text-align: right;
+}
+.footerPayment h4{
+	text-align: right;
+}
+.topfooter{
+	padding: 40px 0;
+}
+.footerLogo{
+	padding-top: 15%;
+}
+.bottomfooter p{
+	text-align: center !important;
+}
+
+.adiSys ul li{
+	widith:100% !important;    
+    min-height: auto !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    text-align: left;
+    border: none !important;
+}
+
+.adiSys{
+
+	display: block;
+    background: #fff;
+    border: 1px solid gainsboro;
+    padding: 10px;
+    margin-bottom: 5px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+@media (min-width:991px) {
+.container {
+	width: 950px;	
+}
+
+
+			
+}
+
+
+@media (min-width:1200px) {
+.container {
+	width: 1180px;
+}
+}
+
+@media (min-width:1350px) {
+.container {
+	width: 1280px;
+}		
+}
+
+@media (min-width:1280px) {
+.container {
+	width: 1120px;
+	
+}
+
+		
+}	
+@media (min-width:1366px) {
+.container {
+	width: 1120px;
+	
+}
+ 
+
+}
+
+@media (max-width:1365px) {
+
+}
+
+
+@media (max-width:1280px) {
+		.menu ul{
+	padding: 30px 0;
+}
+.menu ul li a{
+	padding: 10px;
+}
+
+	
+}
+
+@media (max-width:1200px){
+ 		 
+}
+
+@media (max-width:1095px){
+
+}
+
+	
+@media (max-width:1061px) {
+	
+
+}
+@media (max-width:991px) {
+														 													  
+}
+	
+@media (max-width:880px){
+
+
+}
+@media (max-width:815px){
+
+.menu ul li a{
+	font-size: 14px;
+}
+			
+}
+
+
+@media (max-width:767px) {
+																										
+}
+@media (max-width:730px){
+
+}
+
+
+@media (max-width:650px) {
+
+}
+
+@media (max-width:625px) {
+}
+@media (max-width:585px) {
+	
+							
+}
+@media (max-width:549px){
+	
+}
+@media (max-width:480px) {
+									
+}
+@media (max-width:423px){
+
+}
+	
+@media (max-width:390px) {
+
+
+}
+@media (max-width:365px){
+
+}
+
+@media (max-width:345px){
+
+}
+@media (max-width:330px){
+
+}
+
+
+
+

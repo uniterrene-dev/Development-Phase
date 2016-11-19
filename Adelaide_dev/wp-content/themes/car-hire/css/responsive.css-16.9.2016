@@ -1,0 +1,245 @@
+/* CSS Document */
+
+
+@media (max-width:767px) {
+.container {
+	width: 85%
+}
+}
+
+@media (max-width:768px) {
+.container {
+	width: 85%;
+}
+.logo a{
+	width: 20%;
+}
+.menu{
+	display: none;
+}
+.responsiveMenu{
+	display: block;
+}
+.fixedChat{
+	display: block;
+}
+.chatLink{
+	display: none;
+}
+.fleet-container1 .fleet-img{
+	width: 100%;
+}
+.fleet-container1 .fleet-content{
+	width: 100%;	
+}
+.fleet-container2 .fleet-img{
+	width: 100%;
+}
+.fleet-container2 .fleet-img img{
+	width: 100%;
+}
+.fleet-container2 .fleet-content{
+	width: 100%;	
+}
+.fleet-container2 .fleet-content h4, p{
+	text-align: left !important;
+}
+#navbtns .previous{
+	right: -20px;
+	z-index: 1;
+}
+#navbtns .next{
+	left: -15px;
+	z-index: 1;
+}
+#car-book .full-form{
+	width: 100%;
+}
+.joinus-form{
+	width: 100%;
+}
+.joinus-left{
+	width: 50%;
+}
+.joinus-form textarea{
+	height: 70px;
+}
+.inputFields{
+	padding:10px;
+}
+.textSection {    
+    padding: 0 30px;
+    padding-top: 20%;
+}
+.textSection h2 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: right;
+    line-height: 30px;
+}
+.textSection p{
+	text-align: right !important;
+} 
+.footerPayment{
+	width: 80%;
+	float: right;
+	text-align: right;
+}
+.footerPayment h4{
+	text-align: right;
+}
+.topfooter{
+	padding: 40px 0;
+}
+.footerLogo{
+	padding-top: 15%;
+}
+.bottomfooter p{
+	text-align: center !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+@media (min-width:991px) {
+.container {
+	width: 950px;	
+}
+
+
+			
+}
+
+
+@media (min-width:1200px) {
+.container {
+	width: 1180px;
+}
+}
+
+@media (min-width:1350px) {
+.container {
+	width: 1280px;
+}		
+}
+
+@media (min-width:1280px) {
+.container {
+	width: 1120px;
+	
+}
+
+		
+}	
+@media (min-width:1366px) {
+.container {
+	width: 1120px;
+	
+}
+ 
+
+}
+
+@media (max-width:1365px) {
+
+}
+
+
+@media (max-width:1280px) {
+		.menu ul{
+	padding: 30px 0;
+}
+.menu ul li a{
+	padding: 10px;
+}
+
+	
+}
+
+@media (max-width:1200px){
+ 		 
+}
+
+@media (max-width:1095px){
+
+}
+
+	
+@media (max-width:1061px) {
+	
+
+}
+@media (max-width:991px) {
+														 													  
+}
+	
+@media (max-width:880px){
+
+
+}
+@media (max-width:815px){
+
+.menu ul li a{
+	font-size: 14px;
+}
+			
+}
+
+
+@media (max-width:767px) {
+																										
+}
+@media (max-width:730px){
+
+}
+
+
+@media (max-width:650px) {
+
+}
+
+@media (max-width:625px) {
+}
+@media (max-width:585px) {
+	
+							
+}
+@media (max-width:549px){
+	
+}
+@media (max-width:480px) {
+									
+}
+@media (max-width:423px){
+
+}
+	
+@media (max-width:390px) {
+
+
+}
+@media (max-width:365px){
+
+}
+
+@media (max-width:345px){
+
+}
+@media (max-width:330px){
+
+}
+
+
+
+

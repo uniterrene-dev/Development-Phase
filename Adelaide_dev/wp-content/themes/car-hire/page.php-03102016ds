@@ -1,0 +1,195 @@
+<?php get_header(); ?>
+
+	<main role="main">
+		<!-- section -->
+		<section>
+
+			<h1><?php the_title(); ?></h1>
+
+		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+            
+            <?php if($_REQUEST["pageid"]!='')
+            
+            {
+            
+            
+    
+            
+                $mypost = get_post($_REQUEST["pageid"]);
+
+
+
+                $name = get_post_meta($_REQUEST["pageid"], "booking_address_book_person_name", true); 
+
+
+                $email = get_post_meta($_REQUEST["pageid"], "booking_address_email", true); 
+
+                $phone = get_post_meta($_REQUEST["pageid"], "booking_address_phone_no", true); 
+
+                $dropoff_address = get_post_meta($_REQUEST["pageid"], "customer_name_drop_address", true); 
+
+
+                $pickup_address =  get_post_meta($_REQUEST["pageid"], "customer_name_pick_upup_address", true); 
+               
+                $time =  get_post_meta($_REQUEST["pageid"], "customer_name_time", true); 
+    
+
+            ?>
+            
+           <div style="width:70%; margin:0 auto;">
+            
+            <h3>Your Invoice is following</h3>
+               
+               <table style="width:100%; border: 1px solid #2a2a2a;">
+  <tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Firstname</td>
+    <td style="border:1px solid gainsboro; padding:15px"><?php echo $name;?></td>
+
+    
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px ;font-weight:bold;">Email</td>
+    <td style="border:1px solid gainsboro; padding:15px"><?php echo $email;?></td>
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Phone no</td>
+    <td style="border:1px solid gainsboro; padding:15px"><?php echo $phone;?></td>
+
+  </tr>  
+                   
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Pickup Address</td>
+    <td style="border:1px solid gainsboro; padding:15px"><?php echo $pickup_address;?></td>
+
+  </tr> 
+
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Dropoff Address</td>
+    <td style="border:1px solid gainsboro; padding:15px"><?php echo $dropoff_address;?></td>
+
+  </tr> 
+
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Booking Time</td>
+    <td style="border:1px solid gainsboro; padding:15px"><?php echo $time;?></td>
+
+  </tr> 
+  
+    <tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Distance</td>
+    <td style="border:1px solid gainsboro; padding:15px">3 km</td>
+
+  </tr> 
+                   
+    <tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Price</td>
+    <td style="border:1px solid gainsboro; padding:15px">$20</td>
+
+  </tr> 
+ 
+</table>
+               
+               
+            </div>
+            
+            
+            <?php
+    
+    $msg =' 
+            
+            
+            <div style="width:70%; margin:0 auto;">
+            
+            <h3>Your Invoice is following</h3>
+               
+               <table style="width:100%; border: 1px solid #2a2a2a;">
+  <tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Firstname</td>
+    <td style="border:1px solid gainsboro; padding:15px">"'.$name.'"</td>
+
+    
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px ;font-weight:bold;">Email</td>
+    <td style="border:1px solid gainsboro; padding:15px">"'.$email.'"</td>
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Phone no</td>
+    <td style="border:1px solid gainsboro; padding:15px">"'.$phone.'"</td>
+
+  </tr>  
+                   
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Pickup Address</td>
+    <td style="border:1px solid gainsboro; padding:15px">" '.$pickup_address.'"</td>
+
+  </tr> 
+
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Dropoff Address</td>
+    <td style="border:1px solid gainsboro; padding:15px">" '.$dropoff_address.'"</td>
+
+  </tr> 
+
+<tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Booking Time</td>
+    <td style="border:1px solid gainsboro; padding:15px">" '.$time.'"</td>
+
+  </tr> 
+  
+    <tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Distance</td>
+    <td style="border:1px solid gainsboro; padding:15px">3 km</td>
+
+  </tr> 
+                   
+    <tr>
+    <td style="border:1px solid gainsboro; padding:15px; font-weight:bold;">Price</td>
+    <td style="border:1px solid gainsboro; padding:15px">$20</td>
+
+  </tr> 
+ 
+</table>
+               
+               
+            </div>
+            
+            
+            ';$headers[] = "Content-type: text/html" ;
+    
+    wp_mail( "shourya@uniterrene.com", "Invoice", $msg, $headers  );
+
+
+}?>
+
+			<!-- article -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+				<?php the_content(); ?>
+
+				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+
+				<br class="clear">
+
+				<?php edit_post_link(); ?>
+
+			</article>
+			<!-- /article -->
+
+		<?php endwhile; ?>
+
+		<?php else: ?>
+
+			<!-- article -->
+			<article>
+
+				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+
+			</article>
+			<!-- /article -->
+
+		<?php endif; ?>
+
+		</section>
+		<!-- /section -->
+	</main>
+
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

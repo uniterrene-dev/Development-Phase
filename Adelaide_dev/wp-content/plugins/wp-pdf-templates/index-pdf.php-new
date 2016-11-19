@@ -1,0 +1,111 @@
+<?php
+/**
+ * Filename: index-pdf.php
+ * Project: WordPress PDF Templates
+ * Copyright: (c) 2014-2016 Antti Kuosmanen
+ * License: GPLv3
+ *
+ * Copy this file to your theme directory to start customising the PDF template.
+*/
+?><!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SEATON TYRES</title>
+<link rel="stylesheet" href="<?php echo plugin_dir_url( __FILE__ );?>css/custom.css">
+<link rel="stylesheet" href="<?php echo plugin_dir_url( __FILE__ );?>css/table_style.css">
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="container">
+    <div class="heading_left">
+      <h1>SEATON TYRES</h1>
+      <h2>640 PORT ROAD</h2>
+      <h2>BEVERELEY SA 5009</h2>
+      <h3>PH : 08 83453672</h3>
+      <h3>Email : ash@seatontyre.com.au</h3>
+      <span>A.B.N. 43570846 401</span> </div>
+    <div class="heading_right">
+      <table style="width:100%">
+        <tr>
+          <th>Invoice#:</th>
+          <td>00006940</td>
+        </tr>
+        <tr>
+          <th>Date:</th>
+          <td>24/12/2015</td>
+        </tr>
+        <tr>
+          <th>Page:</th>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>Ref:</th>
+          <td>TAXI-1551MV</td>
+        </tr>
+        <tr>
+          <th>Terms:</th>
+          <td>Net 30th after EOM</td>
+        </tr>
+      </table>
+    </div>
+    <div class="sale clearfix">
+      <div class="cash_sale">
+        <h3>CASH SALE</h3>
+      </div>
+      <div class="delivery">
+        <h3>Delivery Address:</h3>
+        <h3>CASH SALE</h3>
+      </div>
+    </div>
+    <div class="total_detail">
+      <table class="rwd-table">
+        <tr>
+          <th>Quantity</th>
+          <th>Item Code</th>
+          <th>Description</th>
+          <th>Unit Price (inc-GST)</th>
+          <th>Total (inc-GST)</th>
+        </tr>
+        <tr>
+          <td data-th="Quantity">1</td>
+          <td data-th="Item Code">ROT</td>
+          <td data-th="Description">ROTAION & BALANCE</td>
+          <td data-th="Unit Price (inc-GST)">$25.00</td>
+          <td data-th="Total (inc-GST)">$25.00</td>
+        </tr>
+      </table>
+    </div>
+    <div class="payment">
+      <table style="width:100%; border: 1px solid #000;">
+        <tr>
+          <td rowspan="2" style="border-bottom: 1px solid #fff;">To pay via MasterCard or VISA.<br/>
+            Call 08 83453672</td>
+          <td>subtotal</td>
+          <td>$25.00</td>
+        </tr>
+        <tr>
+          <td>GST</td>
+          <td>$2.27</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="border-bottom: 1px solid #fff;">by INTERNET: BSB 065112 ACC  10215522 </td>
+          <td>Total(inc-GST)</td>
+          <td>$25.00</td>
+        </tr>
+        <tr>
+          <td>Paid to Date</td>
+          <td>$25.00</td>
+        </tr>
+        <tr>
+          <td>OPENING HOURS: MON-FRI 8:00-5:00 SAT 8:00-2:00 </td>
+          <td>Balance Due:</td>
+          <td>$0.00</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/*===============================================================
+common portion start
+=================================================================
+*/
+* {
+	box-sizing: border-box;
+	outline: none !important;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Times New Roman", Times, serif;
+}
+body, html {
+	font-size: 16px;
+}
+div, table, tr, th, td, th, video, audio, h1, h2, h3, h4, h5, h6, aside, canvas, section, header, footer, nav, span, p, small, big, a, b, strong, img, hr, pre, button, input, textarea, optgroup, ul, li, ol, select, option, blockquote, nav {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	list-style-type: none;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	font-size: 0;
+}
+.clear {
+	clear: both
+}
+.container {
+	margin: 0 auto;
+	padding: 0 0px;
+}
+.row {
+	width: 100%;
+	margin: 10px auto
+}
+img {
+	max-width: 100%;
+}
+h1, h2, h3 {
+	font-weight: normal;
+	word-spacing: 10px
+}
+h4, h5, h6 {
+}
+h1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-weight: normal
+}
+h2 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	text-align: center;
+	line-height: 54px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #252525;
+}
+h3 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: normal;
+}
+h4 {
+	font-size: 23px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: normal;
+}
+/*===============================================================
+common portion end
+=================================================================
+*/
+.wrapper {
+	width: 100%;
+	height: auto;
+	padding: 30px 0;
+}
+.heading_left {
+	width: 30%;
+	float: left;
+	height: auto;
+}
+.heading_left h1 {
+	text-align: left;
+	font-weight: bold;
+}
+.heading_left h2 {
+	text-align: left;
+	line-height: 30px;
+}
+.heading_left h3 {
+	text-align: left;
+	line-height: 24px;
+}
+.heading_left span {
+	text-align: left;
+	font-size: 15px;
+}
+.heading_right {
+	width: 32%;
+	float: right;
+}
+.heading_right table td {
+	padding: 5px 10px;
+}
+.heading_right th {
+	text-align: left;
+	padding-left: 10px;
+}
+.sale {
+	width: 100%;
+	height: auto;
+	padding: 30px 0 0;
+	clear: both;
+}
+.cash_sale {
+	border: 1px solid #000;
+	width: 55%;
+	height: 100px;
+	float: left;
+	display: table;
+}
+.cash_sale h3 {
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.delivery {
+	border: 1px solid #000;
+	width: 36%;
+	height: auto;
+	float: right;
+	padding: 0px 0px 20px 23px;
+}
+.delivery h3 {
+	text-align: left;
+}
+.total_detail {
+	width: 100%;
+	height: auto;
+	padding: 15px 0 0;
+	clear: both;
+}
+.payment {
+	width: 100%;
+	height: auto;
+	padding: 15px 0;
+}
+.payment td{
+	padding: 5px 10px;
+}
+.heading_right th, .heading_right td{
+	border:none;
+}
