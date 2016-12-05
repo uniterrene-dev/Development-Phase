@@ -1,0 +1,166 @@
+.clearout {
+	height: 20px;
+	clear: both;
+}
+#flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
+	display: none;
+}
+.nbs-flexisel-container2 {
+	position: relative;
+	/*max-width:89%;*/
+	max-width: 100%;
+	/*margin-top:50px;*/
+	margin-left: auto;
+	margin-right: auto;/*overflow:hidden*/
+}
+.nbs-flexisel-ul2 {
+	position: relative;
+	width: 9999px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	text-align: center;
+}
+.nbs-flexisel-ul2 .image_wrap {
+	width: 80%;
+	/* border:1px solid #777;*/
+	min-height: 85px !important;
+}
+.nbs-flexisel-inner2 {
+	overflow: hidden;
+	float: left;
+	width: 100%;/*margin-left:15px*/
+   /* background:#fcfcfc;
+    background: #fcfcfc -moz-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* FF3.6+ 
+    background: #fcfcfc -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#eee)); 
+    background: #fcfcfc -webkit-linear-gradient(top, #fcfcfc 0%, #eee 100%); 
+    background: #fcfcfc -o-linear-gradient(top, #fcfcfc 0%, #eee 100%); 
+    background: #fcfcfc -ms-linear-gradient(top, #fcfcfc 0%, #eee 100%); 
+    background: #fcfcfc linear-gradient(top, #fcfcfc 0%, #eee 100%); 
+    border:1px solid #ccc;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px; */
+	/*padding-left:34px;*/
+}
+.nbs-flexisel-item2 {
+	float: left;
+	margin: 0px 2px;
+	padding: 0px;
+	cursor: pointer;
+	position: relative;
+	line-height: 0px;
+}
+.nbs-flexisel-item2 img {
+	max-width: 40%;
+	cursor: pointer;
+	position: relative;
+	/*margin-top: 10px;*/
+	margin-bottom: 10px;
+	/* max-width:120px;*/
+	overflow: hidden;
+	transition: all .8s ease;
+	-moz-transition: all .8s ease;
+	-webkit-transition: all .8s ease;
+	-o-transition: all .8s ease;
+	-ms-transition: all .8s ease;
+	transform:scale(1,1);
+	filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+	
+}
+.nbs-flexisel-item2:hover img{
+	filter: none;
+  -webkit-filter: grayscale(0);
+	}
+
+.nbs-flexisel-item2 .img_box {
+	padding: 0 5px;
+	max-height: 300px;
+	position: relative;
+	overflow:hidden 
+}
+.nbs-flexisel-item2 .img_box .img_overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0,0,0,0);
+	transition: all .8s ease;
+	-moz-transition: all .8s ease;
+	-webkit-transition: all .8s ease;
+	-o-transition: all .8s ease;
+	-ms-transition: all .8s ease;
+	transform:scale(0,0);
+	left:0px;
+	top:0;
+	z-index:1000
+}
+.nbs-flexisel-item2 .img_box:hover .img_overlay {
+	background: rgba(0,0,0,.8);
+	transform:scale(1,1)
+	}
+.nbs-flexisel-item2 .img_box:hover .img_overlay h4{
+	font-size:26px;
+	color:#fff;
+	text-align:center;
+	margin-top:70px;
+	font-weight:bold
+	}	
+.nbs-flexisel-item2 .img_box:hover .img_overlay h6{
+	font-size:18px;
+	color:#f4ae19;
+	text-align:center;
+	margin-top:10px
+	}
+.nbs-flexisel-item2 .img_box:hover .img_overlay .link{
+	width:100px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	display:block;
+	border-radius:4px;
+	border:1px solid #f4ae19;
+	transition: all .8s ease;
+	-moz-transition: all .8s ease;
+	-webkit-transition: all .8s ease;
+	-o-transition: all .8s ease;
+	-ms-transition: all .8s ease;
+	background:rgba(244, 174, 25, 0);
+	margin:15px auto 0 auto;
+	font-size:14px;
+	text-align:center;
+	color:#fff
+	}
+.nbs-flexisel-item2 .img_box:hover .img_overlay .link:hover{
+	background:rgba(244, 174, 25, 1)
+	}
+		
+.nbs-flexisel-item2 .img_box:hover img{
+	transform:scale(1.2,1.2) rotate(5deg);
+	}	
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left2, .nbs-flexisel-nav-right2 {
+	width: 27px;
+	height: 40px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 100;/* opacity: 0.5;*/
+}
+.nbs-flexisel-nav-left2 {
+	left: -0.6%;
+	top: 62px !important;
+	background: url(../images/left_normal.png) no-repeat;
+}
+.nbs-flexisel-nav-right2 {
+	right: -1.5%;
+	top: 62px !important;
+	background: url(../images/right_normal.png) no-repeat;
+}
+.nbs-flexisel-nav-right2:hover {
+	background: url(../images/right_hover.png) no-repeat;
+}
+.nbs-flexisel-nav-left2:hover {
+	background: url(../images/left_hover.png) no-repeat;
+}
