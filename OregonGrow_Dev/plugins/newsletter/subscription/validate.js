@@ -5,7 +5,7 @@ function newsletter_check_field(field, message) {
         return false;
     }
         
-    if (field.required !== undefined && field.value == "") {
+    if (field.required !== undefined && field.required !== false && field.value == "") {
         alert(message);
         return false;
     }

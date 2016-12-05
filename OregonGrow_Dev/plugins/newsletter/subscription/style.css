@@ -9,14 +9,14 @@
 /* Generic field wrapper */
 .tnp-subscription div.tnp-field {
     margin-bottom: 10px;
-    border: 0!important;
-    padding: 0!important;
+    border: 0;
+    padding: 0;
 }
 
 .tnp-subscription label {
     display: block;
     color: inherit;
-    font-size: 14px!important;
+    font-size: 14px;
     font-weight: 700;
     line-height: normal;
     padding: 5px;
@@ -25,15 +25,15 @@
 
 .tnp-subscription input[type=text], .tnp-subscription input[type=email], .tnp-subscription input[type=submit], .tnp-subscription select {
     width: 100%;
-    padding: 10px!important;
+    padding: 10px;
     display: block;
-    border: 1px!important;
+    border: 1px;
     border-color: #ddd;
-    background-color: #f4f4f4!important;
+    background-color: #f4f4f4;
     color: #444;
     font-size: 14px;
-    margin: 0!important;
-    line-height: normal!important;
+    margin: 0;
+    line-height: normal;
 }
 
 .tnp-subscription input[type=checkbox], .tnp-widget input[type=radio] {
@@ -43,12 +43,12 @@
 
 /* Antireset - http://www.satollo.net/css-and-select-space-between-the-options-and-the-arrow */
 .tnp-subscription select option {
-    margin-right: 10px!important;
+    margin-right: 10px;
 }
 
 .tnp-subscription input.tnp-submit {
-    background-color: #444!important;
-    color: #fff!important;
+    background-color: #444;
+    color: #fff;
     width: auto;
 }
 
@@ -67,26 +67,26 @@
 
 .tnp-profile .tnp-field {
     margin-bottom: 10px;
-    border: 0!important;
-    padding: 0!important;
+    border: 0;
+    padding: 0;
 }
 
 .tnp-profile label {
     display: block;
     color: #333;
-    font-size: 14px!important;
+    font-size: 14px;
 }
 
 .tnp-profile input[type=text], .tnp-profile input[type=email], .tnp-profile input[type=submit], .tnp-profile select {
-    width: 100%!important;
-    padding: 10px!important;
+    width: 100%;
+    padding: 10px;
     display: block;
-    border: 1px!important;
+    border: 1px;
     border-color: #ddd;
-    background-color: #f4f4f4!important;
+    background-color: #f4f4f4;
     color: #444;
     font-size: 14px;
-    margin: 0!important;
+    margin: 0;
     line-height: normal;
 }
 
@@ -101,12 +101,12 @@
 
 /* Antireset - http://www.satollo.net/css-and-select-space-between-the-options-and-the-arrow */
 .tnp-profile select option {
-    margin-right: 10px!important;
+    margin-right: 10px;
 }
 
 .tnp-profile input[type=submit] {
-    background-color: #444!important;
-    color: #fff!important;
+    background-color: #444;
+    color: #fff;
 }
 
 
@@ -118,23 +118,23 @@
 
 .tnp-widget .tnp-field {
     margin-bottom: 10px;
-    border: 0!important;
-    padding: 0!important;
+    border: 0;
+    padding: 0;
 }
 
 .tnp-widget label {
     display: block;
     color: inherit;
-    font-size: 14px!important;
+    font-size: 14px;
 }
 
 .tnp-widget input[type=text], .tnp-widget input[type=email], .tnp-widget input[type=submit], .tnp-widget select {
-    width: 100%!important;
-    padding: 10px!important;
+    width: 100%;
+    padding: 10px;
     display: block;
-    border: 1px solid #ddd !important;
-    border-color: #ddd!important;
-    background-color: #f4f4f4!important;
+    border: 1px solid #ddd ;
+    border-color: #ddd;
+    background-color: #f4f4f4;
     color: #444;
     font-size: 14px;
     line-height: normal;
@@ -147,16 +147,16 @@
 
 /* Antireset - http://www.satollo.net/css-and-select-space-between-the-options-and-the-arrow */
 .tnp-widget select option {
-    margin-right: 10px!important;
+    margin-right: 10px;
 }
 
 .tnp-widget input.tnp-submit {
-    background-color: #444!important;
-    color: #fff!important;
+    background-color: #444;
+    color: #fff;
 }
 
 .tnp-field input[type="submit"] {
-    position: inherit!important;
+    position: inherit;
 }
 
 .tnp-field label {
@@ -170,35 +170,35 @@
 }
 
 .tnp-widget-minimal form {
-    margin: 0!important;
-    padding: 0!important;
-    border: 0!important;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .tnp-widget-minimal input.tnp-email {
-    width: 70%!important;
-    box-sizing: border-box!important;
-    padding: 10px!important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
     display: inline-block;
-    border: 1px!important;
+    border: 1px;
     border-color: #ddd;
-    background-color: #f4f4f4!important;
+    background-color: #f4f4f4;
     color: #444;
     font-size: 14px;
 }
 
 .tnp-widget-minimal input.tnp-submit {
-    width: 30%!important;
-    box-sizing: border-box!important;
-    padding: 10px!important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
     display: inline-block;
-    border: 1px!important;
+    border: 1px;
     border-color: #ddd;
-    background-color: #444!important;
-    color: #fff!important;
+    background-color: #444;
+    color: #fff;
     font-size: 14px;
     line-height: normal;
-    border-radius: 0px!important;
+    border-radius: 0px;
 }
 
 
@@ -207,33 +207,33 @@
 }
 
 .tnp-subscription-minimal form {
-    margin: 0!important;
-    padding: 0!important;
-    border: 0!important;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .tnp-subscription-minimal input.tnp-email {
-    width: 70%!important;
+    width: 70%;
     max-width: 300px;
-    box-sizing: border-box!important;
-    padding: 10px!important;
+    box-sizing: border-box;
+    padding: 10px;
     display: inline-block;
-    border: 1px!important;
+    border: 1px;
     border-color: #ddd;
-    background-color: #f4f4f4!important;
+    background-color: #f4f4f4;
     color: #444;
     font-size: 14px;
 }
 
 .tnp-subscription-minimal input.tnp-submit {
-    width: 29%!important;
-    box-sizing: border-box!important;
-    padding: 10px!important;
+    width: 29%;
+    box-sizing: border-box;
+    padding: 10px;
     display: inline-block;
-    border: 1px!important;
+    border: 1px;
     border-color: #ddd;
-    background-color: #444!important;
-    color: #fff!important;
+    background-color: #444;
+    color: #fff;
     font-size: 14px;
 }
 
