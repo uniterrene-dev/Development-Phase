@@ -16,6 +16,7 @@ function sb_procard_enqueue_script() {
 	//js
 	wp_enqueue_script( 'index', get_template_directory_uri().'/js/index.js', array('jquery'), true );
 	wp_enqueue_script( 'custom', get_template_directory_uri().'/js/custom.js', array('jquery'), true );
+	wp_enqueue_script( 'procard-js', get_template_directory_uri().'/js/procard.js', array('jquery'), true );
 	//wp_enqueue_script( 'fancybox-js', get_template_directory_uri().'/js/jquery.fancybox.js', array('jquery'), true );	
 	wp_enqueue_script( 'flexisel', get_template_directory_uri().'/js/jquery.flexisel.js', array('jquery'), true );
 	wp_enqueue_script( 'flexslider', get_template_directory_uri().'/js/jquery.flexslider.js', array('jquery'), true );	
