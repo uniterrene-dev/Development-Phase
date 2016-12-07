@@ -309,6 +309,47 @@
 	}
 	add_action( 'init', 'sb_vrsp_audit_assurance_posttype' );
 
+	//VRSP custom post type for Taxation
+	function sb_vrsp_taxation_posttype() {
+		register_post_type( 'taxation_posts',
+		// CPT Options
+			array(
+				'labels' => array(
+					'name' => __( 'Taxation' ),
+					'singular_name' => __( 'Taxation' )
+				),
+
+				'public' => true,
+				'has_archive' => true,
+				'menu_icon' => 'dashicons-list-view',
+				'rewrite' => array('slug' => 'taxation_posts'),
+				'supports' => array( 'title', 'editor', 'thumbnail', ),
+			)
+		);
+	}
+	add_action( 'init', 'sb_vrsp_taxation_posttype' );
+
+	//VRSP custom post type for Business Advisory
+	function sb_vrsp_business_advisory_posttype() {
+		register_post_type( 'business_posts',
+		// CPT Options
+			array(
+				'labels' => array(
+					'name' => __( 'Business Advisory' ),
+					'singular_name' => __( 'Business Advisory' )
+				),
+
+				'public' => true,
+				'has_archive' => true,
+				'menu_icon' => 'dashicons-list-view',
+				'rewrite' => array('slug' => 'business_posts'),
+				'supports' => array( 'title', 'editor', 'thumbnail', ),
+			)
+		);
+	}
+	add_action( 'init', 'sb_vrsp_business_advisory_posttype' );
+
+
 	//VRSP custom post type for useful links
 	function sb_vrsp_useful_links_posttype() {
 		register_post_type( 'useful_link',

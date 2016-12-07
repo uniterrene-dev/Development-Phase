@@ -265,6 +265,20 @@
             ),
 
             array(
+                'id'       => 'tax_calender',
+                'type'     => 'text',
+                'description'   => __('Keep PDF downloadable link here', 'redux-framework-demo'),
+                'title'    => __( 'Tax calender downloadable link: ', 'redux-framework-demo' ),
+            ),
+
+            array(
+                'id'       => 'easy_filing',
+                'type'     => 'text',
+                'description'   => __('Keep PDF downloadable link here', 'redux-framework-demo'),
+                'title'    => __( 'Easy filing downloadable link: ', 'redux-framework-demo' ),
+            ),
+
+            array(
                 'id'       => 'facebook',
                 'type'     => 'text',
                 'title'    => __( 'Facebook link: ', 'redux-framework-demo' ),

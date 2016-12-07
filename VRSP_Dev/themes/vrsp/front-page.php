@@ -35,11 +35,11 @@ global $vrsp_options;
                     _e( 'Sorry, no image found' ); 
                 } 
             ?>
-          <div class="carousel-caption">
-            <h1 data-animation="animated zoomInUp"> <?php echo banner_content_and_button_link_get_meta( 'banner_content_and_button_link_first_content_line' ); ?> </h1>
-            <h3 data-animation="animated zoomInUp"> <?php echo banner_content_and_button_link_get_meta( 'banner_content_and_button_link_second_content_line' ); ?> </h3>
+          <div class="carousel-caption" data-animation="animated zoomInUp">
+            <h1> <?php echo banner_content_and_button_link_get_meta( 'banner_content_and_button_link_first_content_line' ); ?> </h1>
+            <h3> <?php echo banner_content_and_button_link_get_meta( 'banner_content_and_button_link_second_content_line' ); ?> </h3>
             <?php if(!empty(banner_content_and_button_link_get_meta( 'banner_content_and_button_link_download_profile_pdf_link' ))) { ?>
-            <a class="btn btn-primary btn-lg" data-animation="animated zoomInUp" href="<?php echo banner_content_and_button_link_get_meta( 'banner_content_and_button_link_download_profile_pdf_link' ); ?>">Download Profile</a>
+            <a class="btn btn-primary btn-lg" href="<?php echo banner_content_and_button_link_get_meta( 'banner_content_and_button_link_download_profile_pdf_link' ); ?>">Download Profile</a>
             <?php } ?>
           </div>
         </div>
@@ -137,7 +137,7 @@ global $vrsp_options;
                   <?php } ?>
               </div>
               <div class="services-div-text">
-                <h3> <?php echo $audit_page[0]->post_title; ?> </h3>
+                <h2> <?php echo $audit_page[0]->post_title; ?> </h2>
                 <p><?php echo $audit_page[0]->post_content; ?></p>
                 
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?><?php echo $audit_page[0]->post_name; ?>" class="button-div"> Read More </a> 
@@ -145,27 +145,66 @@ global $vrsp_options;
             </div>
             <?php } ?>
           </div>
+
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <?php
+              $tax_args=array(
+                'name' => 'taxation',
+                'post_type' => 'page',
+                'post_status' => 'publish',
+                'numberposts' => 1,
+              );
 
+              $tax_page = get_posts($tax_args);
+
+              //print_r($tax_page);
+
+              if( $tax_page ) {   
+            ?>
             <div class="services-div">
-              <div class="services-div-img"> <img src="<?php echo get_bloginfo('template_url') ?>/images/services-img-2.jpg" class="img-responsive"/> </div>
+              <div class="services-div-img">
+                <?php if(has_post_thumbnail()){ ?>
+                  <img src="<?php echo get_the_post_thumbnail_url($tax_page[0]->ID, 'full'); ?>" class="img-responsive" /> 
+                <?php } ?>
+              </div>
               <div class="services-div-text">
-                <h3> Taxation </h3>
-                <p> Consultancy on TDS & processing TDS refunds Preparation, Review and Filing of Income Tax... </p>
-                <a href="#" class="button-div"> Read More </a> </div>
+                <h2> <?php echo $tax_page[0]->post_title; ?> </h2>
+                <p><?php echo $tax_page[0]->post_content; ?></p>
+                
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?><?php echo $tax_page[0]->post_name; ?>" class="button-div"> Read More </a> 
             </div>
-
+            <?php } ?>
           </div>
+          </div>
+
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <?php
+              $business_args=array(
+                'name' => 'business-advisory',
+                'post_type' => 'page',
+                'post_status' => 'publish',
+                'numberposts' => 1,
+              );
 
+              $business_page = get_posts($business_args);
+
+              //print_r($tax_page);
+
+              if( $business_page ) {   
+            ?>
             <div class="services-div">
-              <div class="services-div-img"> <img src="<?php echo get_bloginfo('template_url') ?>/images/services-img-3.jpg" class="img-responsive"/> </div>
+              <div class="services-div-img">
+                <?php if(has_post_thumbnail()){ ?>
+                  <img src="<?php echo get_the_post_thumbnail_url($business_page[0]->ID, 'full'); ?>" class="img-responsive" /> 
+                <?php } ?>
+              </div>
               <div class="services-div-text">
-                <h3> Business Advisory </h3>
-                <p> Company Incorporation & Management Restructuring, Merger... </p>
-                <a href="#" class="button-div"> Read More </a> </div>
+                <h2> <?php echo $business_page[0]->post_title; ?> </h2>
+                <p><?php echo $business_page[0]->post_content; ?></p>
+                
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?><?php echo $business_page[0]->post_name; ?>" class="button-div"> Read More </a> 
             </div>
-
+            <?php } ?>
           </div>
         </div>
       </div>
@@ -213,26 +252,39 @@ global $vrsp_options;
   <section id="portfolio" class="portfolio-div">
     <div class="container">
       <div class="row">
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-          <div class="tex-calender">
-            <div class="heading-text heading-texts">
-              <h3><img src="<?php echo get_bloginfo('template_url') ?>/images/calendar-icon.png" /> <span> Tax </span> Calendar </h3>
+
+        <div class="recent_update col-lg-5 col-md-5 col-sm-5 col-xs-12">
+          <div class="heading-text heading-texts">
+            <h3> <span> Recent </span> Updates </h3>
+          </div>
+          <div class="recent-update-box">
+            <?php 
+              $recent_query = new WP_Query( 'page_id=143' );
+              while ($recent_query -> have_posts()) : $recent_query -> the_post();
+            ?>
+            <div class="recent-update-img"> 
+              <?php
+                if ( has_post_thumbnail() ) {
+              ?>
+              <img src="<?php echo the_post_thumbnail_url(); ?>" class="img-responsive" />
+              <?php
+                  }
+                else { 
+                _e( 'Sorry, no image found' ); 
+                }
+              ?>
             </div>
-            <div class="tex-calender-box">
-              <ul>
-                <li>
-                  <h4><span><img src="<?php echo get_bloginfo('template_url') ?>/images/calendar-icon-small.png" /></span> June 26, 2016 </h4>
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eveniet, nemo dicta. Ullam nam.It has survived not only five centuries, but also the leap into </p>
-                </li>
-                <li>
-                  <h4><span><img src="<?php echo get_bloginfo('template_url') ?>/images/calendar-icon-small.png" /></span> June 26, 2016 </h4>
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eveniet, nemo dicta. Ullam nam.It has survived not only five centuries, but also the leap into </p>
-                </li>
-              </ul>
-              <button class="button-div"> View All </button>
+            <div class="recent-update-text">
+              <p><?php the_content(); ?></p>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>recent-updates" class="button-div"> Read More </a> 
             </div>
+            <?php
+              endwhile;
+              wp_reset_postdata();
+            ?>
           </div>
         </div>
+
         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
           <div class="tex-calender">
             <div class="heading-text heading-texts">
@@ -275,37 +327,29 @@ global $vrsp_options;
   <section id="blog" class="blog-div">
     <div class="container">
       <div class="row">
-        <div class="recent_update col-lg-5 col-md-5 col-sm-5 col-xs-12">
-          <div class="heading-text heading-texts">
-            <h3> <span> Recent </span> Updates </h3>
-          </div>
-          <div class="recent-update-box">
-            <?php 
-              $recent_query = new WP_Query( 'page_id=143' );
-              while ($recent_query -> have_posts()) : $recent_query -> the_post();
-            ?>
-            <div class="recent-update-img"> 
-              <?php
-                if ( has_post_thumbnail() ) {
-              ?>
-              <img src="<?php echo the_post_thumbnail_url(); ?>" class="img-responsive" />
-              <?php
-                  }
-                else { 
-                _e( 'Sorry, no image found' ); 
-                }
-              ?>
+        
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+          <div class="tex-calender">
+            <div class="heading-text heading-texts">
+              <h3><img src="<?php echo get_bloginfo('template_url') ?>/images/calendar-icon.png" /> <span> Tax </span> Calendar </h3>
             </div>
-            <div class="recent-update-text">
-              <p><?php the_content(); ?></p>
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>recent-updates" class="button-div"> Read More </a> 
+            <div class="tex-calender-box">    
+              <?php if( !empty( $vrsp_options['tax_calender'] ) ){ ?>        
+              <div class="view_button"> <a href="<?php echo $vrsp_options['tax_calender']; ?>" class="button-div"> Download Tax Calender</a> </div>
+              <?php } ?>
             </div>
-            <?php
-              endwhile;
-              wp_reset_postdata();
-            ?>
+            <p>&nbsp;</p>
+            <div class="heading-text heading-texts">
+              <h3><img src="<?php echo get_bloginfo('template_url') ?>/images/easy-filing.png" /> <span> Easy </span> Filing </h3>
+            </div>
+            <div class="tex-calender-box"> 
+              <?php if( !empty( $vrsp_options['easy_filing'] ) ){ ?>               
+              <div class="view_button"> <a href="<?php echo $vrsp_options['easy_filing']; ?>" class="button-div"> Download Easy Filing</a> </div>
+              <?php } ?>
+            </div>
           </div>
         </div>
+
         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
           <div class="heading-text heading-texts">
             <h3> <span> Useful </span> Links </h3>
@@ -314,7 +358,7 @@ global $vrsp_options;
             <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
               
               <?php 
-                $args = array( 'post_type' => 'useful_link', 'posts_per_page' => 4, 'order' => 'ASC', 'orderby' => 'date', );
+                $args = array( 'post_type' => 'useful_link', 'posts_per_page' => 2, 'order' => 'ASC', 'orderby' => 'date', );
                 $usefuls = wp_get_recent_posts( $args, ARRAY_A );
 
                 //print_r($usefuls);

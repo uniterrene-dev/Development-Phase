@@ -25,6 +25,9 @@
         <?php if(!empty($vrsp_options['instagram'])){ ?>
         <li> <a href="<?php echo $vrsp_options['instagram'] ?>" class="ins" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i> </a></li>
         <?php } ?>
+        <?php if(!empty($vrsp_options['twitter'])){ ?>
+        <li> <a href="<?php echo $vrsp_options['twitter'] ?>" class="ins" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+        <?php } ?>
         <?php if(!empty($vrsp_options['linkedin'])){ ?>
         <li> <a href="<?php echo $vrsp_options['linkedin']; ?>" class="link" target="_blank"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
         <?php } ?>
@@ -54,6 +57,9 @@
                     <?php } ?>
                     <?php if(!empty($vrsp_options['instagram'])){ ?>
                     <li> <a href="<?php echo $vrsp_options['instagram']; ?>" class="ins" target="_blank"> <i class="fa fa-instagram" aria-hidden="true" target="_blank"></i> </a></li>
+                    <?php } ?>
+                    <?php if(!empty($vrsp_options['twitter'])){ ?>
+                    <li> <a href="<?php echo $vrsp_options['twitter'] ?>" class="ins" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
                     <?php } ?>
                     <?php if(!empty($vrsp_options['linkedin'])){ ?>
                     <li> <a href="<?php echo $vrsp_options['linkedin']; ?>" class="link" target="_blank"> <i class="fa fa-linkedin" aria-hidden="true" target="_blank"></i> </a></li>

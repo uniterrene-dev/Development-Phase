@@ -62,6 +62,7 @@ get_header(); ?>
         <?php endwhile; wp_reset_query(); ?>
         
         <div class="employee_wrapper">
+          <div class="heading-text heading-texts"><h3><img src="<?php echo get_bloginfo('template_url') ?>/images/employee-icon.png"> <span>Our </span>Employees</h3></div>
           <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
             <?php the_content(); ?>
           <?php endwhile; endif; ?>

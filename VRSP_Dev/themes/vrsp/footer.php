@@ -23,6 +23,9 @@ global $vrsp_options;
               <?php if(!empty($vrsp_options['facebook'])){ ?>
 		        <li> <a href="<?php echo $vrsp_options['facebook']; ?>" class="fb" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i> </a></li>
 		        <?php } ?>
+            <?php if(!empty($vrsp_options['instagram'])){ ?>
+        <li> <a href="<?php echo $vrsp_options['instagram'] ?>" class="ins" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i> </a></li>
+        <?php } ?>
 		        <?php if(!empty($vrsp_options['twitter'])){ ?>
 		        <li> <a href="<?php echo $vrsp_options['twitter'] ?>" class="ins" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
 		        <?php } ?>

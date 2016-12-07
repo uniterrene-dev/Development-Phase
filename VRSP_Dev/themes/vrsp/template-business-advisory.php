@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: Audit & Assurance Template
+* Template Name: Business Advisory Template
 */
 
 get_header(); ?>
@@ -41,7 +41,7 @@ get_header(); ?>
 
         <div class="audit_assurance col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <?php 
-              $args = array( 'post_type' => 'audit_n_assurance', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'date', );
+              $args = array( 'post_type' => 'business_posts', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'date', );
               $audit = new WP_Query( $args ); 
 
               while ($audit -> have_posts()) : $audit -> the_post();

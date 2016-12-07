@@ -130,6 +130,23 @@ a img.aligncenter {
 }
 
 /*--font awesome lists--*/
-.navigation .navbar .navbar-nav > li.current_page_item a {
+/*.navigation .navbar .navbar-nav > li.current_page_item a {
     border-bottom: 4px #65ac4c solid;
+}*/
+
+/*--kelma-delete later--*/
+.service_box {
+    margin: 20px 10px 0;
+    width: 30%;
+    float: left;
+    text-align: left;
 }
+.service_box .pic {
+    margin: 0 0 20px 0;
+}
+.service_box .content {
+    float: left;
+    margin-left: 0 !important;
+    width: 100%;
+}
+/*--kelma--*/
