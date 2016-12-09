@@ -26,6 +26,82 @@ get_header();
 </section>
 <!-- introduction -->
 
+<!--models-->
+<section id="models">
+  <div class="container">
+    <div class="row">
+      <h3 class="sec_head">MODELS</h3>
+    </div>
+    <div class="row">
+      <?php //echo do_shortcode('[recent_products per_page="3" columns="3"]'); ?>
+      <?php
+                    $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'orderby' =>'date','order' => 'ASC' );
+                    $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+      <div class="product_box"> <a id="id-<?php the_id(); ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+        <div class="product-wrapper">
+          <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="65px" height="115px" />'; ?>
+        </div>
+        <h4>
+          <?php the_title(); ?>
+        </h4>
+        </a>
+        <div class="cart_wrapper clearfix">
+          <div class="f_left rate"> <span class="price"><?php echo $product->get_price_html(); ?></span></div>
+          <div class="f_right cart">
+            <?php //woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>?add-to-cart=<?php the_id(); ?>"><i class="fa fa-shopping-cart"></i></a> </div>
+        </div>
+      </div>
+      <?php 
+          endwhile; 
+          wp_reset_query(); 
+      ?>
+    </div>
+  </div>
+</section>
+<!-- Models -->
+
+<section id="product_highlight">
+  <div class="container">
+    <div class="row">
+      <h3 class="sec_head">PRODUCTS HIGHLIGHTS</h3>
+    </div>
+    <div class="row">
+      <ul>
+        <?php 
+                        $pro_high_args = array( 'post_type' => 'product_highlight', 'posts_per_page' => -1, 'order' => 'DESC', 'orderby' => 'date', );
+
+                        $pro_high_query = new WP_Query( $pro_high_args ); 
+
+                        while ($pro_high_query -> have_posts()) : $pro_high_query -> the_post();
+                    ?>
+        <li>
+          <div class="icon_box">
+            <?php
+                                if ( has_post_thumbnail() ) { 
+                                    the_post_thumbnail( 'full' );
+                                }/*
+                                else { 
+                                    _e( 'Sorry, no image found' ); 
+                                }*/
+                            ?>
+          </div>
+          <h4>
+            <?php the_title(); ?>
+          </h4>
+          <?php the_content(); ?>
+        </li>
+        <?php 
+                        endwhile; 
+                        wp_reset_query();
+                    ?>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- Product Highlight -->
+
 <section id="tech_details">
   <div class="container">
     <h3 class="sec_head"> TECHNICAL DETAILS </h3>
@@ -193,55 +269,17 @@ get_header();
             </div>
           </div>
           <?php
-                                endwhile;
-                                wp_reset_postdata();
-                            ?>
+              endwhile;
+              wp_reset_postdata();
+          ?>
         </div>
       </div>
     </div>
-    <a class="button clearfix" href="#models">See Models <img class="alignnone size-full wp-image-16" src="http://onlinedevserver.biz/dev/oregon-grow/wp-content/uploads/2016/11/down_arrow_circle.png" alt="down_arrow_circle" height="40" width="40"></a> </div>
+     <!-- <a class="button clearfix" href="#models">See Models <img class="alignnone size-full wp-image-16" src="<?php echo bloginfo('template_directory'); ?>/images/down_arrow_circle.png" alt="down_arrow_circle" height="40" width="40"></a> --> </div>
 </section>
 <!-- Technical Details -->
 
-<section id="product_highlight">
-  <div class="container">
-    <div class="row">
-      <h3 class="sec_head">PRODUCTS HIGHLIGHTS</h3>
-    </div>
-    <div class="row">
-      <ul>
-        <?php 
-                        $pro_high_args = array( 'post_type' => 'product_highlight', 'posts_per_page' => -1, 'order' => 'DESC', 'orderby' => 'date', );
 
-                        $pro_high_query = new WP_Query( $pro_high_args ); 
-
-                        while ($pro_high_query -> have_posts()) : $pro_high_query -> the_post();
-                    ?>
-        <li>
-          <div class="icon_box">
-            <?php
-                                if ( has_post_thumbnail() ) { 
-                                    the_post_thumbnail( 'full' );
-                                }
-                                else { 
-                                    _e( 'Sorry, no image found' ); 
-                                }
-                            ?>
-          </div>
-          <h4>
-            <?php the_title(); ?>
-          </h4>
-          <?php the_content(); ?>
-        </li>
-        <?php 
-                        endwhile; 
-                        wp_reset_query();
-                    ?>
-      </ul>
-    </div>
-  </div>
-</section>
-<!-- Product Highlight -->
 
 <section id="technical_highlight">
   <div class="container">
@@ -262,10 +300,10 @@ get_header();
             <?php
                                 if ( has_post_thumbnail() ) { 
                                     the_post_thumbnail( 'full' );
-                                }
+                                }/*
                                 else { 
                                     _e( 'Sorry, no image found' ); 
-                                }
+                                }*/
                             ?>
           </div>
           <h4>
@@ -283,94 +321,11 @@ get_header();
 </section>
 <!-- Technical Highlight -->
 
-<section id="models">
-  <div class="container">
-    <div class="row">
-      <h3 class="sec_head">MODELS</h3>
-    </div>
-    <div class="row">
-      <?php //echo do_shortcode('[recent_products per_page="3" columns="3"]'); ?>
-      <?php
-                    $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'orderby' =>'date','order' => 'ASC' );
-                    $loop = new WP_Query( $args );
-                    while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
-      <div class="product_box"> <a id="id-<?php the_id(); ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-        <div class="product-wrapper">
-          <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="65px" height="115px" />'; ?>
-        </div>
-        <h4>
-          <?php the_title(); ?>
-        </h4>
-        </a>
-        <div class="cart_wrapper clearfix">
-          <div class="f_left rate"> <span class="price"><?php echo $product->get_price_html(); ?></span>
-            <?php 
-                                        $star_rating = $product->get_average_rating(); 
-                                        $pro_review = $product->get_review_count(); 
-                                    ?>
-            <p>
-              <?php 
-                                        if($star_rating == 5){
-                                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
-                                        }
-                                        elseif ($star_rating == 4) {
-                                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
-                                        }
-                                        elseif ($star_rating == 3) {
-                                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
-                                        }
-                                        elseif ($star_rating == 2) {
-                                            echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
-                                        }
-                                        elseif ($star_rating == 1) {
-                                            echo '<i class="fa fa-star" aria-hidden="true"></i>';
-                                        }
-                                        else {
-                                            
-                                        }
-                                   ?>
-              <em>
-              <?php 
-                                        if($pro_review == 5){
-                                            echo '5 Review(s)';
-                                        }
-                                        elseif ($pro_review == 4) {
-                                            echo '4 Review(s)';
-                                        }
-                                        elseif ($pro_review == 3) {
-                                            echo '3 Review(s)';
-                                        }
-                                        elseif ($pro_review == 2) {
-                                            echo '2 Review(s)';
-                                        }
-                                        elseif ($pro_review == 1) {
-                                            echo '1 Review(s)';
-                                        }
-                                        else {
-                                            echo 'No Review(s)';
-                                        }
-                                   ?>
-              </em></p>
-          </div>
-          <div class="f_right cart">
-            <?php //woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>?add-to-cart=<?php the_id(); ?>"><i class="fa fa-shopping-cart"></i></a> </div>
-        </div>
-      </div>
-      <?php 
-                    endwhile; 
-                    wp_reset_query(); 
-                ?>
-    </div>
-  </div>
-</section>
-<!-- Models -->
-
 <section id="subscription">
   <div class="container">
     <h4>SUBSCRIBE FOR NEWS, TIPS AND PROMOTIONS</h4>
     <div class="form_area">
-      <form action="#" method="post" class="clearfix">
+      <!-- <form action="#" method="post" class="clearfix">
         <label>
           <input type="email" name="mail" placeholder="Email">
         </label>
@@ -378,9 +333,12 @@ get_header();
           <input type="text" name="zip" placeholder="Zip">
         </label>
         <div class="clear"></div>
-        <!-- <img src="images/captcha.png" alt="#"/> -->
+         <img src="images/captcha.png" alt="#"/> 
         <button type="SUBSCRIBE">SUBSCRIBE</button>
-      </form>
+      </form> -->
+
+      <?php echo do_shortcode('[contact-form-7 id="126" title="Oregon Subscription Form"]'); ?>
+      
     </div>
   </div>
 </section>
@@ -416,5 +374,40 @@ get_header();
   </div>
 </section>
 <!-- FAQs -->
+
+<section id="models_repeat">
+  <div class="container">
+    <div class="row">
+      <h3 class="sec_head">MODELS</h3>
+    </div>
+    <div class="row">
+      <?php //echo do_shortcode('[recent_products per_page="3" columns="3"]'); ?>
+      <?php
+                    $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'orderby' =>'date','order' => 'ASC' );
+                    $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+      <div class="product_box"> <a id="id-<?php the_id(); ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+        <div class="product-wrapper">
+          <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="65px" height="115px" />'; ?>
+        </div>
+        <h4>
+          <?php the_title(); ?>
+        </h4>
+        </a>
+        <div class="cart_wrapper clearfix">
+          <div class="f_left rate"> <span class="price"><?php echo $product->get_price_html(); ?></span></div>
+          <div class="f_right cart">
+            <?php //woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>?add-to-cart=<?php the_id(); ?>"><i class="fa fa-shopping-cart"></i></a> </div>
+        </div>
+      </div>
+      <?php 
+                    endwhile; 
+                    wp_reset_query(); 
+                ?>
+    </div>
+  </div>
+</section>
+<!-- Models -->
 
 <?php get_footer(); ?>

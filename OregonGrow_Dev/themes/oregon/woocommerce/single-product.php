@@ -22,6 +22,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
+	<div class="banner-zoom" id="ex3">
+		<div class="container1">
+		<?php 
+			$banner_image = get_field('product_banner');
+			if( !empty($banner_image) ){ ?>
+				<img src="<?php echo $banner_image['url']; ?>" />
+				
+		<?php } ?>
+		<div class="zoomed"><!-- <img src="<?php echo bloginfo('template_directory'); ?>/images/magnify.png"> -->
+			 <a href="#" class="plus"><i class="fa fa-plus"></i></a>
+		</div>
+		</div>
+	</div>
+
+	<!-- <style type="text/css">
+		.banner-zoom img {
+		background: #FFF url(<?php echo $banner_image['url']; ?>);
+		background-size: cover;
+		}
+	</style>  -->
+
 	<section id="introduction">
         <div class="container clearfix">
 
