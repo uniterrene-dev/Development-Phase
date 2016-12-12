@@ -149,6 +149,12 @@
 .industrial_content h3 {
 	padding: 0px 0 10px !important;
 }
+.service_box {
+   
+    width: 30.5%;
+   
+    min-height: 454px;
+}
 }
  @media (max-width:1095px) {
 #header-part .header-top .header-top-left a {
@@ -489,6 +495,9 @@
 }
 #team .content {
 	width: 72% !important;
+}
+.service_box {
+	width: 30.5%;
 }
 }
  @media (max-width:880px) {
@@ -987,6 +996,9 @@
 .team-content {
 	padding-top: 20px;
 }
+.service_box {
+	width: 46.5%;
+}
 }
  @media (max-width:650px) {
 #header-part .header-top .header-top-left .phone-number {
@@ -1094,17 +1106,6 @@
 #team .pic {
 	margin-right: 0 !important
 }
-.service_box .pic {
-	width: 50% !important;
-	float: none !important;
-	margin: 0 auto;
-}
-.service_box .content {
-	float: none;
-	width: 50%;
-	margin: 0 auto;
-	margin-top: 30px !important;
-}
 .responsive_heading h3 {
 	text-align: center;
 }
@@ -1147,6 +1148,9 @@
 }
 .indistry_inner {
 	padding: 10px 0 20px 0 !important;
+}
+.service_box {
+	width: 45.5%;
 }
 }
  @media (max-width:585px) {
@@ -1481,6 +1485,10 @@ ul.list_arrow1 li {
 #searchform #s {
 	width: 100%;
 	margin-bottom: 15px;
+}
+.service_box {
+	width: 95%;
+	min-height:inherit;
 }
 }
  @media (max-width:423px) {
