@@ -23,7 +23,7 @@
 			wp_dequeue_script( 'wc-single-product' );
 		}		
 	}
-	add_action('wp_enqueue_scripts', 'sb_oregon_woo_dequeue_scripts');
+	//add_action('wp_enqueue_scripts', 'sb_oregon_woo_dequeue_scripts');
 
 	//Oregon thumbnail support in Oregon theme
 	add_theme_support( 'post-thumbnails' );
@@ -318,7 +318,7 @@
 	}
 
 	//gallery tab
-	add_filter( 'woocommerce_product_tabs', 'woo_gallery_product_tab' );
+	//add_filter( 'woocommerce_product_tabs', 'woo_gallery_product_tab' );
 	function woo_gallery_product_tab( $gallery_tab ) {		
 		// gallery tab	
 		$gal_var1 = get_field('gallery_tab_title');	
@@ -405,7 +405,7 @@
 	    return $tabs;
 	}
 
-	add_shortcode('sb_custom_product_gallery', 'sb_woo_product_gallery');
+	//add_shortcode('sb_custom_product_gallery', 'sb_woo_product_gallery');
 	function sb_woo_product_gallery($atts, $content){
 	    ob_start();
 	    //$path = WooCommerce::plugin_path();
@@ -418,5 +418,5 @@
 
 	//remove action
 	//remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
-	remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
+	//remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
 	//add_action('woocommerce_before_single_product', 'woocommerce_show_product_images', 20);

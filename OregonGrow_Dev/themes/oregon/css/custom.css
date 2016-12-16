@@ -1016,6 +1016,7 @@ a img.alignnone {
 	font-size: 15px;
 	font-weight: bold;
 	padding: 20px 20px;
+	margin: 20px 0 !important;
 }
 #content .woocommerce-breadcrumb a {
 	font-size: 13px;
@@ -1212,12 +1213,11 @@ span.wpcf7-not-valid-tip {
 .post-type-archive-product ul.products li {
 	box-shadow: 1px 1px 2px rgba(0,0,0,.4);
 	vertical-align: top;
-	
 	border-radius: 10px;
 	text-align: center;/*min-height: 462px;*/
 }
-.post-type-archive-product li.type-product img{
-	padding:20px;
+.post-type-archive-product li.type-product img {
+	padding: 20px;
 }
 .post-type-archive-product .products .star-rating {
 	margin: 0 auto !important;
@@ -1249,9 +1249,9 @@ span.wpcf7-not-valid-tip {
 .single-product .images {
 	border: 1px solid gainsboro;
 }
-.single-product div.images div.thumbnails {
+/*.single-product div.images div.thumbnails {
 	border-top: 1px solid gainsboro;
-}
+}*/
 .single-product .entry-summary p, #tab-description p {
 	color: #646464;
 	font-size: 15px !important;
@@ -1862,4 +1862,34 @@ header#inner_header .social_area a.back_btn:hover {
 }
 .post-type-archive-product a.woocommerce-LoopProduct-link h3 {
 	border-bottom: 1px solid #D8D5D5;
+}
+.product_title_blk h5 {
+	font-family: 'HelveticaNeueLTStd-Lt' !important;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 2rem;
+	color: #272727;
+}
+.bx-wrapper .bx-viewport {
+	height: auto !important;
+}
+.thumbnails a.zoom {
+	width: 6% !important;
+	display: inline-block;
+	vertical-align: top;
+	float: none !important;
+	border: 1px solid gainsboro;
+	padding: 10px;
+	margin: 0 7px 15px !important;
+}
+a.woocommerce-main-image img {
+	border-bottom: 1px solid gainsboro;
+}
+.woocommerce div.product .woocommerce-tabs .panel h5 {
+	font-weight: normal;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+	font-size: 1.375rem !important;
+	color: #202020;
+	text-transform: uppercase;
+	padding-left: 15px;
 }

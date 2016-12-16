@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
 	//$('.button.product_type_simple.add_to_cart_button.ajax_add_to_cart').text('cart');
 
 	//product gallery slide divs
-	$("#tab-gallerys .thumbnails").addClass("bxslider");
+	$(".thumbnails").addClass("bxslider");
 
 	//product gallery slide options
 	/*$('.bxslider').bxSlider({
@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
 				minSlides: 1,
 				maxSlides: 1,
 				moveSlides: 1,
-				slideWidth: 205,
+				slideWidth: 180,
 				slideMargin: 2,
 				infiniteLoop: false,
 				hideControlOnEnd: true,
@@ -51,10 +51,10 @@ jQuery(document).ready(function($){
 			};
 
 			var settings2 = {
-				minSlides: 4,
-				maxSlides: 4,
+				minSlides: 3,
+				maxSlides: 3,
 				moveSlides: 1,
-				slideWidth: 205,
+				slideWidth: 220,
 				slideMargin: 2,
 				infiniteLoop: false,
 				hideControlOnEnd: true,
@@ -110,7 +110,7 @@ jQuery(document).ready(function($){
 
 
 		//tab click smooth effect
-		$('.wc-tabs li a').on('click', function(e){
+		/*$('.wc-tabs li a').on('click', function(e){
 	  	  	//alert('sfds');
 	        e.preventDefault();
 	        var divAtr = $(this).attr('href');
@@ -120,10 +120,10 @@ jQuery(document).ready(function($){
 	        $('html,body').animate({
 	           scrollTop:secOffsetExact
 	        },2000); 
-	  	});
+	  	});*/
 
 		//on scroll stick section
-		$(window).scroll(function(){
+		/*$(window).scroll(function(){
 		  var sticky = $('.tabbar');
 		  scroll = $(window).scrollTop();
 
@@ -135,7 +135,7 @@ jQuery(document).ready(function($){
 			}else {
 		  		sticky.removeClass('fix-div'); 
 		  	}
-		});
+		});*/
 
 	 $('.tabbar .res_menu a').on('click', function(e){
 	 	e.preventDefault();
@@ -150,5 +150,16 @@ jQuery(document).ready(function($){
 	 $('.tabs-subrata li a').on('click', function(){
        $('.tabbar .tabs-subrata').removeClass('hide_show');
 	 });	
+
+	 //onclick change main image
+	$('.woocommerce-main-image').removeAttr('href');
+	$('.thumbnails .zoom').click(function(e){
+      	e.preventDefault();
+     
+      	var photo_fullsize =  $(this).find('img').attr('src').replace('-180x180','');
+
+		$('.woocommerce-main-image img').attr('src', photo_fullsize);
+		$('.woocommerce-main-image img').attr('srcset', '');		
+    });
 
 });
