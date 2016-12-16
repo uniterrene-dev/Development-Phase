@@ -49,13 +49,13 @@ global $procard_options;
 
 			<div class="container">
 
-				<div class=" slices2 ">
+				<!-- <div class=" slices2 ">
 
 					<h5>Need Help?</h5>
 
 					<?php wp_nav_menu( array( 'container' => 'ul', 'menu_class' => 'forLeft', 'menu_id' => '', 'theme_location' => 'help-menu' )); ?>			
 
-				</div>
+				</div> -->
 
 				<div class="slices bottomFooNav">
 
@@ -69,7 +69,7 @@ global $procard_options;
 
 				<div class="slices contact">
 
-					<h5>ORDERING & SHIPPING</h5>
+					<h5>IMPORTANT LINKS</h5>
 
 					<?php wp_nav_menu( array( 'container' => 'ul', 'menu_class' => 'forLeft', 'menu_id' => '', 'theme_location' => 'footer-menu' )); ?>
 

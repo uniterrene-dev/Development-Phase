@@ -131,13 +131,13 @@ input[type="submit"]:hover {
  color:#f3f3f3;
 }
 ::-ms-placeholder {
- color:#f3f3f3
+ color:#f3f3f3;
 }
 ::-webkit-placeholder {
- color:#f3f3f3
+ color:#f3f3f3;
 }
 ::-0-placeholder {
- color:#f3f3f3
+ color:#f3f3f3;
 }
 ::selection {
 	background: #f8db3a;
@@ -804,7 +804,7 @@ booster
 	text-transform: uppercase;
 	font-family: ptarmc;
 	word-spacing: normal;
-	line-height: 50px;
+	padding-top: 7px;
 }
 .newsletter ul > li:first-child {
 	width: 30%;
@@ -2463,4 +2463,67 @@ p.data_found {
 	float: none !important;
 	display: inline-block;
 	padding: 0 !important;
+}
+/*13_12_2016 Esha*/
+.mc4wp-form-fields input[type="email"] {
+	background: #063b59;
+	border-radius: 5px;
+	width: 83%;
+	color: #fff;
+	height: 48px;
+	text-indent: 15px;
+}
+.mc4wp-form-fields input[type="submit"] {
+	width: auto !important;
+	line-height: 0px !important;
+	padding: 0 20px;
+	height: 47px;
+	border-radius: 5px;
+}
+.mc4wp-form-fields input[type="submit"]:hover {
+	color: #028cd5;
+	border: 1px solid #028cd5;
+}
+.mc4wp-form-fields p {
+	margin: 0;
+}
+.page-id-223 .form-row .button {
+	background: #028cd5;
+	border: 1px solid #028cd5;
+	float: right;
+	padding: 4px 15px;
+	margin-top: 20px;
+	color: #028cd5;
+	transform: skew(-15deg);
+	-webkit-transform: skew(-15deg);
+	color: #fff !important;
+	box-shadow: 3px -4px 0 #000;
+	font-size: 17px;
+	width: auto;
+}
+.page-id-223 .form-row .button:hover {
+	background: #028cd5 !important;
+	color: #fff !important;
+	box-shadow: none;
+}
+.page-id-231 .main-content-part, .page-id-223 .main-content-part, .page-id-228 .main-content-part {
+	padding-top: 0px;
+}
+.page-id-228 .inner-div {
+	padding-bottom: 50px;
+}
+.form_content_left {
+	width: 49%;
+	float: left;
+	margin: 5px;
+}
+.form_content_full {
+	width: 99%;
+	margin: 5px;
+	clear: both;
+	height: auto;
+	padding-top: 5px;
+}
+.page-id-228 .wpcf7-form p {
+	margin: 0 5px;
 }
