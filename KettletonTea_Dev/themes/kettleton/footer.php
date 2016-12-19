@@ -11,7 +11,7 @@ global $kettleton_options;
 		      <p><span>Subscribe</span> Get updates about new dishes and upcoming events</p>
 		    </div>
 		    <div class="rightSection">
-		      <form action="">
+		      <!-- <form action="">
 		        <ul>
 		          <li>
 		            <input type="email" placeholder="Your Email Address">
@@ -20,10 +20,46 @@ global $kettleton_options;
 		            <button class="btn btn_submit" type="submit">SUBSCRIBE</button>
 		          </li>
 		        </ul>
-		      </form>
+		      </form> -->
+		      <?php echo do_shortcode('[mc4wp_form id="163"]'); ?>
 		    </div>
   		</div>
 	</section>
+
+	<?php
+		if( is_front_page() ){
+	?>
+	<!--testimonial rotater-->
+	<section class="testimonial">
+		<div class="container clearfix">
+			<div class="testimonial-container">
+				<ul class="test" id="testi">
+					<?php
+		                $tests = array(
+		                  'post_type' => 'client_testimonials',
+		                  'posts_per_page' => -1,
+		                  'orderby' =>'date',
+		                  'order' => 'DESC' );
+		                $recent_tests = new WP_Query( $tests );
+		                while ( $recent_tests->have_posts() ) : $recent_tests->the_post();
+		            ?>
+					<li>
+						<div class="main-test">
+							<h4><?php the_title(); ?></h4>
+							<?php the_content(); ?>
+							<div class="feed_btn"><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us">Your Feedback</a></div>
+						</div>					
+					</li>
+					<?php endwhile; ?>
+	        		<?php wp_reset_query(); ?>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!--testimonial rotator-->
+	<?php
+		}//only visibe on home page
+	?>
 
 	<!--footer-->
 	<footer>
@@ -48,7 +84,7 @@ global $kettleton_options;
           				</div>
 
 				        <!--col 2-->
-				        <div class="footerCols col2">
+				        <!-- <div class="footerCols col2">
 				           	<div class="colHead">
 				              	<h4>recent posts</h4>
 				            </div>
@@ -57,7 +93,7 @@ global $kettleton_options;
 									<?php dynamic_sidebar( 'recent-posts-sidebar' ); ?>
 								<?php } ?>
 				            </div>
-				        </div>
+				        </div> -->
           
           				<!--col 3-->          
           				<div class="footerCols col3">

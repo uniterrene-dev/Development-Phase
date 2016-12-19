@@ -143,3 +143,86 @@ Text Domain: kettleton
     top: -0.5em;
     z-index: 999;
 }
+
+.rightSection input[type="submit"] {
+    background: #393939;
+	color: #fff;
+	border: 2px solid #393939;
+	padding: 11px 20px;
+	color: #fff;
+	font-size: 12px;
+	box-shadow: none !important;
+	line-height: 1px !important;
+}
+.rightSection input[type="submit"]:hover {
+    background: #393939;
+}
+.mc4wp-alert p,
+.mc4wp-success p {
+	color: #fff;
+    font-size: 14px;
+}
+/*--testimonial scrollers--*/
+.testimonial {
+	margin: 0;
+	padding: 30px 0;
+}
+ul.test {
+	list-style: none;
+}
+ul.test li {
+	list-style: none;
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+.feed_btn a {
+	text-align: right;
+	float: right;
+	width: auto;
+	padding: 5px 10px;
+	border: 2px solid #b3b835;
+	color: #b3b835;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.post-type-archive-product .feed_btn a.woocommerce-LoopProduct-link{
+	border:none;
+}
+.testimonial-container {
+	width: 70%;
+	margin: 0 auto;
+}
+.main-test {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/*--media query--*/
+@media(max-width: 768px){
+	.testimonial-container {
+		width: 100%;
+	}
+	.main-test {
+		width: 80%;
+	}
+}
+@media(max-width: 480px){
+	.testimonial-container {
+		width: 100%;
+	}
+	.main-test {
+		width: 80%;
+	}
+}
+@media(max-width: 375px){
+	.main-test {
+		width: 80%;
+	}
+}
+@media(max-width: 360px){
+	.main-test {
+		width: 75%;
+	}
+}
