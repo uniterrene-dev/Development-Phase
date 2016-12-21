@@ -88,69 +88,6 @@ global $kettleton_options;
 </section>
 <!-- end specility of out tea--> 
 
-<!-- 
-<section class="blank_section">
-  <div class="blank_sec_content">
-    <div class="container">
-      <div class="content"> 
-      
-        <div class="rows row1 clearfix">
-          <div class="proImg">
-            <div class="overlay">
-              <div class="proOverContent">
-                <h4><span>HERBAL</span> TEA</h4>
-                <button class="btn  btn_read_more">SHOP NOW</button>
-              </div>
-            </div>
-            <img src="<?php echo bloginfo('template_directory'); ?>/images/abs_sec1_prod1.jpg" alt=""> </div>
-       
-          <div class="proDes">
-            <h3>Xin Yang Mao Jian
-              indian Tea</h3>
-            <p>Searching for a good present? Visit our Tea store! Here you will find lots of tea gifts you can choose...</p>
-            <a href="javascript:void(0)">READ MORE</a> </div>
-        </div>
-       
-        <div class="rows row2 clearfix">
-          <div class="proImg">
-            <div class="overlay">
-              <div class="proOverContent">
-                <h4><span>GREEN</span> TEA</h4>
-                <button class="btn  btn_read_more">SHOP NOW</button>
-              </div>
-            </div>
-            <img src="<?php echo bloginfo('template_directory'); ?>/images/abs_sec2_prod2.jpg" alt=""> </div>
-          
-          <div class="proDes">
-            <h3>Make a pause and
-              have a cup...</h3>
-            <p>We have a wide range of fresh teas and the products to serve them! Our gourmet tea assortments will suit...</p>
-            <a href="javascript:void(0)">READ MORE</a> </div>
-        </div>
-
-        <div class="rows row3 clearfix">
-          <div class="proImg">
-            <div class="overlay">
-              <div class="proOverContent">
-                <h4><span>BLACK</span> TEA</h4>
-                <button class="btn  btn_read_more">SHOP NOW</button>
-              </div>
-            </div>
-            <img src="<?php echo bloginfo('template_directory'); ?>/images/abs_sec3_prod3.jpg" alt=""> </div>
-       
-          <div class="proDes">
-            <h3>Would you like a
-              cup of Black tea?...</h3>
-            <p>We have a wide range of fresh teas and the products to serve them! Our gourmet tea assortments will suit...</p>
-            <a href="javascript:void(0)">READ MORE</a> </div>
-        </div>
-      
-      </div>
-    </div>
-  </div>
-</section>
- -->
-
  <!--recent added products-->
 <section class="recentProducts">
   <div class="container">
@@ -218,57 +155,5 @@ global $kettleton_options;
     </div>
   </div>
 </section>
-
-<!--
-<section class="bestTeas">
-  <div class="teasR">
-    <div class="container">
-      <div class="teasContent">
-        <h2>our best teas</h2>
-        <div class="teasSlider clearfix">
-          <ul id="flexiselDemo4">
-            <li>
-              <div class="products">
-                <div class="priductImg"> 
-                  
-                  <span class="tooltiptext">Our Special Green Tea</span> <img src="<?php echo bloginfo('template_directory'); ?>/images/teas_3.png" /> </div>
-              </div>
-            </li>
-            <li>
-              <div class="products">
-                <div class="priductImg"> 
-                 
-                  <span class="tooltiptext">Our Special Green Tea</span> <img src="<?php echo bloginfo('template_directory'); ?>/images/teas_3.png" /> </div>
-              </div>
-            </li>
-            <li>
-              <div class="products">
-                <div class="priductImg"> 
-                 
-                  <span class="tooltiptext">Our Special Green Tea</span> <img src="<?php echo bloginfo('template_directory'); ?>/images/teas_3.png" /> </div>
-              </div>
-            </li>
-            <li>
-              <div class="products">
-                <div class="priductImg"> 
-                  
-                  <span class="tooltiptext">Our Special Green Tea</span> <img src="<?php echo bloginfo('template_directory'); ?>/images/teas_3.png" /> </div>
-              </div>
-            </li>
-            <li>
-              <div class="products">
-                <div class="priductImg"> 
-                   
-                  <span class="tooltiptext">Our Special Green Tea</span> <img src="<?php echo bloginfo('template_directory'); ?>/images/teas_3.png" /> </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <button class="btn view_all">VIEW ALL</button>
-      </div>
-    </div>
-  </div>
-</section> 
--->
 
 <?php get_footer(); ?>

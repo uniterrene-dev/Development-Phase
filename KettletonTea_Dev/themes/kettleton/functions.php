@@ -81,6 +81,24 @@
 	}
 	add_action('after_setup_theme', 'sb_kettleton_redux_framework');
 
+	//Kettleton custom post type for testimonial
+	function sb_kettleton_testimonial_posttype() {
+		register_post_type( 'client_testimonials',
+			// CPT Options
+			array(
+				'labels' => array(
+					'name' => __( 'Testimonials' ),
+					'singular_name' => __( 'Testimonial' )
+					),
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'client_testimonials'),
+				'supports' => array( 'title', 'editor', ),
+				)
+			);
+	}
+	add_action( 'init', 'sb_kettleton_testimonial_posttype' );
+
 	//Kettleton customized exceprt word limit
 	//use excerpt(25) or the_excerpt()
 	function excerpt($limit) {

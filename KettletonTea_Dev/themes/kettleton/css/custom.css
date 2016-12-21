@@ -976,7 +976,8 @@ section img {
 .topfooter {
 	position: relative;
 	width: 100%;
-	padding: 13%;
+	/*padding: 13%;*/
+	padding: 11.6%;
 	background: url(../images/foo_bg.jpg) no-repeat;
 	background-size: cover;
 }
@@ -1032,8 +1033,11 @@ section img {
 	text-transform: none;
 	line-height: 18px;
 }
-.footerContent .footerCols.col1 {
+/*.footerContent .footerCols.col1 {
 	width: 40%;
+}*/
+.footerContent .footerCols.col1 {
+	width: 70%;
 }
 .footerContent .footerCols.col3 {
 	width: 27%;
@@ -1848,13 +1852,21 @@ a.yith-wcqv-button {
 	margin: 0 0.1% 1.992em !important;
 }
 .woocommerce ul.products li.product .onsale {
-	margin: 0.1em 1em 0 0 !important;
+	margin: 0.1em 1em 0 0;
+}
+.post-type-archive-product .priductImg {
+	position: relative;
 }
 .post-type-archive-product .priductImg .productHover {
-	width: auto !important;
-	height: 73% !important;
-	padding-left: 0% !important;
-	right: 12px !important;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 999;
+	background: rgba(166,160,0, .7);
 }
 .post-type-archive-product .productHover ul li a.button {
 	padding: 0 !important;
@@ -2131,6 +2143,9 @@ button.single_add_to_cart_button {
 	width: auto;
 	padding: 0px 15px !important;
 }
+.post-type-archive-product .products span.onsale {
+    margin: 0.1em 0em 0 0 !important;
+}
 .woocommerce-breadcrumb a {
 	text-transform: uppercase;
 }
@@ -2162,14 +2177,18 @@ ul.menu li.current_page_item a {
 	float: none !important;
 	vertical-align: top;
 }
-.woocommerce-order-received h2{
+.woocommerce-order-received h2 {
 	font-size: 38px;
 }
-.woocommerce-order-received .order_details tfoot th{
+.woocommerce-order-received .order_details tfoot th {
 	border-right: 1px solid #DADADA;
 }
-.woocommerce-order-received .order_details .product-name a, .woocommerce-order-received .order_details .product-total span{
-color: #6a6a6a !important;
-font-weight: bold;
+.woocommerce-order-received .order_details .product-name a, .woocommerce-order-received .order_details .product-total span {
+	color: #6a6a6a !important;
+	font-weight: bold;
 }
-
+.main-test h4 {
+	font-family: Ubuntu-R;
+	text-transform: uppercase;
+	font-size: 25px;
+}

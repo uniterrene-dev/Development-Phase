@@ -40,6 +40,24 @@ jQuery(document).ready(function($){
 
 	});
 
+    $("#testi").flexisel({
+
+        visibleItems: 1,
+
+        itemsToScroll: 1,
+
+        autoPlay: {
+
+            enable: true,
+
+            interval: 5500,
+
+            pauseOnHover: true
+
+        }
+
+    });
+
 
 
     $('.responsiveMenu a').bind('click',function () {
@@ -97,5 +115,11 @@ jQuery(document).ready(function($){
         $( ".owl-controls" ).hide();
        }
     });
+
+    //removing unwanted links
+    $('.post-type-archive-product section.newsletter').unwrap();
+    $('.post-type-archive-product .fooCon p').unwrap();
+    $('.post-type-archive-product .colHead').unwrap();
+    $( ".post-type-archive-product li.footerNav ul li a.woocommerce-LoopProduct-link" ).remove();
 
 });

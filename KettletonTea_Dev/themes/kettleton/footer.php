@@ -11,16 +11,6 @@ global $kettleton_options;
 		      <p><span>Subscribe</span> Get updates about new dishes and upcoming events</p>
 		    </div>
 		    <div class="rightSection">
-		      <!-- <form action="">
-		        <ul>
-		          <li>
-		            <input type="email" placeholder="Your Email Address">
-		          </li>
-		          <li>
-		            <button class="btn btn_submit" type="submit">SUBSCRIBE</button>
-		          </li>
-		        </ul>
-		      </form> -->
 		      <?php echo do_shortcode('[mc4wp_form id="163"]'); ?>
 		    </div>
   		</div>
@@ -79,7 +69,7 @@ global $kettleton_options;
 				            </div>
 				            <div class="fooCon">
 				              <p><?php echo $page_data->post_excerpt; ?></p>
-				              <p><a href="<?php echo get_page_link($page_id); ?>">READ MORE</a></p>
+				              <div class="read"><a href="<?php echo get_page_link($page_id); ?>">READ MORE</a></div>
 				            </div>
           				</div>
 
