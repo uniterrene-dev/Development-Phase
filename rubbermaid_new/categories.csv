@@ -1,0 +1,104 @@
+id,name,parentid
+3,Agriculture,2
+4,Cleaning,2
+5,Food Service,2
+6,Material Handling,2
+7,Safety,2
+8,Waste,2
+9,Big Wheel & Tractor Carts,3
+10,Stock Tanks,3
+11,"Brooms, Brushes & Dusters",4
+12,Brooms,11
+13,Handles,11
+14,Brushes,11
+15,Dust Pans,11
+16,Dusters,11
+17,Caddies,4
+18,Microfiber Cloths,4
+24,Floor & Carpet Care,4
+25,Carpet Bonnets,24
+26,Sweepers,24
+27,Vacuum  Accessories,24
+28,Vacuums,24
+29,Laundry Products,4
+30,Hamper & Laundry Bags,29
+31,Mops & Equipment,4
+32,Buckets & Wringers,31
+33,Finish Mops & Applicators,31
+34,Floor Dusters & Accessories,31
+35,Mop Handles,31
+36,Mop Heads,31
+37,Mops,31
+38,Odor Control,4
+39,Personal Hygiene Products,4
+40,Feminine Care Dispenser Liners,39
+41,Feminine Care Dispensers & Receptacles,39
+42,Restroom Cleaners & Accessories,4
+43,Storage Containers,4
+44,Beverages & Beverage Dispensers,5
+45,Beverage Dispensers,44
+46,Breakroom Supplies,5
+47,Condiment Organizers,46
+48,Decanters & Pitchers,46
+49,High Chairs,5
+50,Ingredient Bins,5
+51,Kitchen Supplies,5
+52,Cold & Hot Food Pans,51
+53,Cooking & Serving Utensils,51
+54,Food Storage Containers & Lids,51
+55,Ice Containers,51
+56,Measuring Cups ,51
+57,Racks & Carts,51
+58,Scoops,51
+59,Towels & Wipes,51
+60,Pizza Supplies,51
+61,Warewashing,51
+62,Bus & Utility Boxes & Covers,61
+63,"Dish, Flatware, Glass Racks & Dollies",61
+64,Audio-Visual Carts,6
+65,Cart Accessories,6
+66,Cube Trucks,6
+67,Housekeeping Carts,6
+68,Janitor Carts,6
+69,Platform Trucks,6
+70,Service Carts ,6
+71,Tilt Trucks,6
+72,Tractor & Big Wheel Carts,6
+73,TradeMaster Carts,6
+74,Triple Trolley Carts,6
+75,Utility Carts,6
+76,Baby Changing Stations,7
+77,Matting,7
+78,Indoor 39,77
+79,Safety Signs,7
+80,Pads,79
+81,Dollies,8
+82,Indoor Waste Receptacles,8
+83,Brute Containers,82
+84,Confidential Document Containers,82
+85,Medical Waste ,82
+86,Metal Receptacles,82
+87,Slim Jim Containers,82
+88,Step-on Containers,82
+89,Waste Receptacles,82
+90,Wastebaskets,82
+91,Labels,8
+92,Outdoor Waste Receptacles,8
+93,Brute Containers,92
+94,Landmark,92
+95,Livestock Tanks,92
+96,Metal Receptacles,92
+97,Plaza Containers,92
+98,Ranger Containers,92
+99,Waste Receptacles,92
+100,Recycling Containers,8
+101,Rigid Liners,8
+102,Smoking Receptacles,8
+103,Trash Bags,8
+104,Can Liners,103
+105,Waste Receptacle Accessories,8
+106,Waste Receptacles Lids,8
+107,"Microfiber Mops, Pads & Handles",31
+108,Accessories,4
+111,Pizza Supplies,5
+113,Storage Sheds,4
