@@ -1,4 +1,10 @@
 <?php
+/*
+ * Author name: Shourya Chowdhury
+ *
+ * Description: Import All The Categroies From The Old Site To The New Site
+ */
+
 $mageFilename = 'app/Mage.php';
 require_once $mageFilename;
 Mage::setIsDeveloperMode(true);
@@ -8,7 +14,7 @@ Mage::app('admin');
 Mage::register('isSecureArea', 1);
 //$parentId = '2';
 $j=1;
-$fp = fopen("categories.csv", 'r'); 
+$fp = fopen("categories.csv", 'r'); //Csv File Which Consists All The Categroies of the old site
 
 while(($website=fgetcsv($fp))) 
 	{
@@ -20,7 +26,7 @@ while(($website=fgetcsv($fp)))
 		}
 	$id=$website[0];
 	$name=$website[1];
-	$parentid=$website[2];
+	$parentname=$website[2];
 	
 	try
 	{
@@ -31,8 +37,22 @@ while(($website=fgetcsv($fp)))
 	$category->setIsActive(1);
 	$category->setDisplayMode('PRODUCTS');
 	$category->setIsAnchor(1); //for active anchor
+	//$category->setStoreId(Mage::app()->getStore()->getId());
+	//$parentCategory = Mage::getModel('catalog/category')->load($parentid);
+	
+	$Category = Mage::getResourceModel('catalog/category_collection')
+    ->addFieldToFilter('name', $parentname)
+    ->getFirstItem();
+    
+   
+	
+	$categoryId = $Category->getId();
+	
 	$category->setStoreId(Mage::app()->getStore()->getId());
-	$parentCategory = Mage::getModel('catalog/category')->load($parentid);
+	$parentCategory = Mage::getModel('catalog/category')->load($categoryId);
+	
+	//die;
+	
 	$category->setPath($parentCategory->getPath());
 	 $category->save();
 	} 
