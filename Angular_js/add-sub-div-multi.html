@@ -1,0 +1,96 @@
+<!-- -
+
+/* Author Name: Shourya Chowdhury
+   Company: Uniterrene Websoft Pvt Ltd
+   Description: Adding, sub, multi,divi in angular js
+
+*/
+
+
+ -->
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="AddNumbersApp">
+
+<div>
+<h1>Adding Two Numbers in angular</h1>
+    <div ng-controller="AddNumbersController">
+        <input ng-model="a" ng-keyup="AddNumbers()">
+        <input ng-model="b" ng-keyup="AddNumbers()">
+        <h1>{{ sum }}</h1>
+    </div>
+</div>
+
+
+<div>
+<h1>Sub Two Numbers in angular</h1>
+    <div ng-controller="SubNumbersController">
+        <input ng-model="a1" ng-keyup="SubNumbers()">
+        <input ng-model="b1" ng-keyup="SubNumbers()">
+        <h1>{{ sum1 }}</h1>
+    </div>
+</div>
+
+
+<div>
+<h1>Multiplication Two Numbers in angular</h1>
+    <div ng-controller="MultiNumbersController">
+        <input ng-model="a2" ng-keyup="MultiNumbers()">
+        <input ng-model="b2" ng-keyup="MultiNumbers()">
+        <h1>{{ sum2 }}</h1>
+    </div>
+</div>
+
+<div>
+<h1>Division Two Numbers in angular</h1>
+    <div ng-controller="DivNumbersController">
+        <input ng-model="a3" ng-keyup="DivNumbers()">
+        <input ng-model="b3" ng-keyup="DivNumbers()">
+        <h1>{{ sum3 }}</h1>
+    </div>
+</div>
+
+
+<script>
+var app = angular.module('AddNumbersApp', []);
+   app.controller('AddNumbersController', function($scope) {
+        $scope.AddNumbers = function() {
+            var a = Number($scope.a || 0);
+            var b = Number($scope.b || 0);
+            $scope.sum = a+b;
+        }
+});
+
+
+    app.controller('SubNumbersController', function($scope) {
+        $scope.SubNumbers = function() {
+            var a1 = Number($scope.a1 || 0);
+            var b1 = Number($scope.b1 || 0);
+            $scope.sum1 = a1-b1;
+        }
+});
+
+ app.controller('MultiNumbersController', function($scope) {
+        $scope.MultiNumbers = function() {
+            var a2 = Number($scope.a2 || 0);
+            var b2 = Number($scope.b2 || 0);
+            $scope.sum2 = a2*b2;
+        }
+});
+
+
+ app.controller('DivNumbersController', function($scope) {
+        $scope.DivNumbers = function() {
+            var a3 = Number($scope.a3 || 0);
+            var b3 = Number($scope.b3 || 0);
+            $scope.sum3 = a3/b3;
+        }
+});
+
+</script>
+
+
+
+</body>
+</html>
