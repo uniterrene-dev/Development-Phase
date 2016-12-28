@@ -1,0 +1,49 @@
+<!-- -
+
+/* Author Name: Shourya Chowdhury
+   Company: Uniterrene Websoft Pvt Ltd
+   Description: Counter With Start and Stop Button
+
+*/
+
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="CounterApp">
+
+<div>
+   <div ng-controller="CounterController">
+   {{counter}}
+   <button ng-click="stopCounter()">Stop</button>
+   <button ng-click="startCounter()">Start</button>
+   </div>
+</div>
+
+<script>
+var app = angular.module('CounterApp', []);
+    
+	app.controller('CounterController', function($scope, $timeout) {
+        var timer;
+        $scope.counter = 0;
+        $scope.stopCounter = function() {
+            $timeout.cancel(timer);
+            timer = null;
+        };
+        $scope.startCounter = function() {
+            if (timer === null) {
+                updateCounter();
+            }
+        };
+        var updateCounter = function() {
+            $scope.counter++;
+            timer = $timeout(updateCounter, 1000);
+        };
+        updateCounter();
+    });
+</script>
+
+</body>
+</html>
