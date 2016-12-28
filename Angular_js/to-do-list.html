@@ -1,0 +1,40 @@
+<!-- -
+
+/* Author Name: Shourya Chowdhury
+   Company: Uniterrene Websoft Pvt Ltd
+   Description: Simple To do list
+
+*/
+
+
+ -->
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="ToDoApp">
+
+<div ng-controller="todoController">
+    <form ng-submit="add()">
+    <input ng-model="title"><button>Add</button>
+    </form>
+    <ul>
+        <li ng-repeat="t in tasks track by $index">{{ t }} <button ng-click="delete()">x</button></li>
+    </ul>
+</div>
+
+</body>
+
+<script>
+var app = angular.module('ToDoApp', []);
+app.controller('todoController', function($scope) {
+        $scope.tasks = [];
+        $scope.add = function() {
+            $scope.tasks.push($scope.title);
+        }
+        $scope.delete = function() {
+            $scope.tasks.splice(this.$index, 1);
+        }
+    })
+
+</script>
+</html>
