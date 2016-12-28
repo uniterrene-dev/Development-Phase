@@ -1,0 +1,53 @@
+<!-- -
+
+/* Author Name: Shourya Chowdhury
+   Company: Uniterrene Websoft Pvt Ltd
+   Description: Simple Calculator
+
+*/
+
+
+ -->
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="CalculatorApp">
+
+<div ng-controller="CalculatorController">
+  <p><input type="number" ng-model="a"></p>
+  <p><input type="number" ng-model="b"></p>
+  <p><select ng-model="operator">
+        <option>+</option>
+        <option>*</option>
+        <option>-</option>
+        <option>/</option>
+     </select></p>
+  <p>{{ result() }}</p>
+ </div>
+
+
+<script>
+
+var app = angular.module('CalculatorApp', []);
+
+app.controller('CalculatorController', function($scope) {
+        $scope.result = function() {
+            if ($scope.operator == '+') {
+                return $scope.a + $scope.b;
+            }
+            if ($scope.operator == '-') {
+                return $scope.a - $scope.b;
+            }
+            if ($scope.operator == '*') {
+                return $scope.a * $scope.b;
+            }
+            if ($scope.operator == '/') {
+                return $scope.a / $scope.b;
+            }
+        };
+    });
+
+</script>
+
+</body>
+</html>
