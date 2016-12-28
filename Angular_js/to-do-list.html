@@ -3,6 +3,7 @@
 /* Author Name: Shourya Chowdhury
    Company: Uniterrene Websoft Pvt Ltd
    Description: Simple To do list
+   version:1.0.1
 
 */
 
@@ -10,15 +11,32 @@
  -->
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+li
+{
+display:inline-block;
+vertical-align:top;
+width:200px;
+}
+</style>
+
+</head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <body ng-app="ToDoApp">
 
 <div ng-controller="todoController">
     <form ng-submit="add()">
-    <input ng-model="title"><button>Add</button>
+    Enter Your Name Here
+    <input ng-model="name">
+    Enter Your Task Name Here 
+   <input ng-model="taskname">
+
+<button>Add</button>
     </form>
     <ul>
-        <li ng-repeat="t in tasks track by $index">{{ t }} <button ng-click="delete()">x</button></li>
+        <li ng-repeat="t in tasks track by $index">{{ t }} </li>
+        <li ng-repeat="t2 in tasks2 track by $index">{{ t2 }} <button ng-click="delete()">x</button></li>
     </ul>
 </div>
 
@@ -28,11 +46,24 @@
 var app = angular.module('ToDoApp', []);
 app.controller('todoController', function($scope) {
         $scope.tasks = [];
+        $scope.tasks2 = [];
         $scope.add = function() {
-            $scope.tasks.push($scope.title);
+            var a = $scope.name;
+            var b = $scope.taskname;
+            $scope.fullName = $scope.name;
+            $scope.lastname = $scope.taskname;
+
+
+            $scope.tasks.push($scope.fullName);
+		$scope.tasks2.push($scope.taskname);
+            
+	    $scope.name="";	
+            $scope.taskname=""; 
+            //$scope.tasks.push($scope.taskname);
         }
         $scope.delete = function() {
             $scope.tasks.splice(this.$index, 1);
+            $scope.tasks2.splice(this.$index, 1);
         }
     })
 
