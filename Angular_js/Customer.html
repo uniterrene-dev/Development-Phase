@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<div id="CustScreen" ng-controller="CustomerController">
+Customer Name:- <input type="text" ng-model="CustomerName">
+Customer Code:- <input type="text" ng-model="CustomerCode">
+<div id="divCustomerName">{{CustomerName}}</div>
+<div id="divCustomerCode">{{CustomerCode}}</div><br/>
+
+
+
+
+</div>
+
+
+
+
+</body>
+<script>
+
+function Customer($scope)
+{
+	$scope.CustomerName="Shourya";
+	$scope.CustomerCode="1001";
+	
+}
+var myApp = angular.module("myApp",[]);
+myApp.controller('CustomerController',Customer);
+</script>
+
+</html>
