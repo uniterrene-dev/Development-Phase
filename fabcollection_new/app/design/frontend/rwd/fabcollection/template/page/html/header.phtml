@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabcollection | Home</title>
+<link href="<?php echo $this->getSkinUrl(); ?>css/custom.css" rel="stylesheet" type="text/css">
+<link href="<?php echo $this->getSkinUrl(); ?>css/responsive.css" rel="stylesheet" type="text/css">
+<link href="<?php echo $this->getSkinUrl(); ?>css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!--MENU-->
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/menu_style.css" />
+<!--HOT & HAPPENING SLIDER-->
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/owl.carousel.min.css" />
+</head>
+
+<body>
+<div id="search">
+  <button type="button" class="close">×</button>
+  <form>
+    <input type="search" value="" placeholder="type keyword(s) here" />
+  </form>
+</div>
+<header id="nav-header">
+  <section id="top-header">
+    <div class="container">
+      <div class="top-header-left top-header-left-mobile">
+        <ul>
+          <li><a href="#"><span><i class="fa fa-truck" aria-hidden="true"></i></span>FREE SHIPPING & RETURNS</a></li>
+        </ul>
+      </div>
+      <div class="logo-header-right logo-header-right-mobile">
+        <form method="get" id="searchform">
+          <fieldset class="search">
+            <!--<input type="text" class="box" placeholder="Search" />--> 
+            <span>Search</span> <a href="#search" class="btn" title="Submit Search"><i class="fa fa-search" aria-hidden="true"></i></a>
+          </fieldset>
+        </form>
+      </div>
+      
+      <div class="top-header-right">
+        <ul>
+          <li><a href="#">LOG IN </a></li>
+          <li><a href="#">GET 15% OFF</a></li>
+          <li><a href="#"><span>SHOPPING BAG<i class="fa fa-shopping-bag" aria-hidden="true"></i></span></a></li>
+        </ul>
+      </div>
+      
+      <div class="top-header-right top-header-right-mobile">
+        <ul>
+          <li><a href="#">LOG IN </a></li>
+          <li><a href="#"><span><i class="fa fa-truck" aria-hidden="true"></i></span></a></li>
+          <li><a href="#"><span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span></a></li>
+        </ul>
+      </div>
+      
+      <div class="mobile-menu-icon"> 
+         <a id="openPageslide" href="#pageslide">
+          <span class="menubar"></span>
+          <span class="menubar"></span>
+          <span class="menubar"></span>
+         </a>
+        </div>
+        
+    </div>
+  </section>
+  <div class="steky-div">
+    <section id="logo-header">
+      <div class="container clearfix">
+        <div class="logo-header-left logo-header-left-mobile clearfix">
+			<?php echo $this->getChildHtml('store_language') ?>
+<!--
+          <ul>
+            <li><a href="#"><img src="<?php echo $this->getSkinUrl('images/logoheader_icon.png')?>"></a>| </li>
+              
+            <li><a href="#">English</a> | </li>
+            <li><a href="#">CAD</a></li>
+          </ul>
+-->
+        </div>
+        
+        <div class="logo-header-middle"> <a href="#"><img src="<?php echo $this->getSkinUrl('images/logo.png')?>" alt="Logo" title="Fabcollection"/></a> </div>
+        <div class="logo-header-right logo-header-right-desktop">
+          <form method="get" id="searchform">
+            <fieldset class="search">
+              <!--<input type="text" class="box" placeholder="Search" />--> 
+              <span>Search</span> <a href="#search" class="btn" title="Submit Search"><i class="fa fa-search" aria-hidden="true"></i></a>
+            </fieldset>
+          </form>
+        </div>
+        <div class="logo-header-left logo-header-left-desktop clearfix">
+<!--
+          <ul>
+            <li><a href="#"><img src="<?php echo $this->getSkinUrl('images/logoheader_icon.png')?>"></a>| </li>
+            <li><a href="#">English</a> | </li>
+            <li><a href="#">CAD</a></li>
+          </ul>
+-->
+        </div>
+      </div>
+    </section>
+    <div class="main">
+      <nav id="cbp-hrmenu">
+        <div id="pageslide" class="cbp-hrmenu navBox">
+          <button class="menu-close" type="button">×</button>
+          <?php echo $this->getChildHtml('topMenu') ?>
+
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<?php
+$routeName = Mage::app()->getRequest()->getRouteName(); 
+$identifier = Mage::getSingleton('cms/page')->getIdentifier();
+?>
+<?php if($routeName == 'cms' && $identifier == 'home') { ?>
+<!--
+<section id="banner" class="slider-container clearfix">
+  <div class="slider" id="slider">
+   <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider1')->toHtml() ?>
+    
+     <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider2')->toHtml() ?>
+     <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider3')->toHtml() ?>
+      
+  </div>
+</section>
+-->
+<section id="banner" class="slider-container clearfix">
+  <div class="slider" id="slider">
+	  <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider1')->toHtml() ?>
+	  <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider2')->toHtml() ?>
+<!--
+    <div class="slide"> <img src="images/banner1.png" alt=""> <span class="caption">
+      <h1>BEAD WORKS </h1>
+      <h4>THESE BEST SELLERS ARE BACK IN NEW COLORS !</h4>
+      <a href="#" class="banner-button">SHOP NOW <i class="fa fa-caret-right" aria-hidden="true"></i> </a></span></div>
+    <div class="slide"> <img src="images/banner1.png" alt=""> <span class="caption">
+      <h1>BEAD WORKS </h1>
+      <h4>THESE BEST SELLERS ARE BACK IN NEW COLORS !</h4>
+      <a href="#" class="banner-button">SHOP NOW <i class="fa fa-caret-right" aria-hidden="true"></i> </a></span></div>
+    <div class="slide"> <img src="images/banner1.png" alt=""> <span class="caption">
+      <h1>BEAD WORKS </h1>
+      <h4>THESE BEST SELLERS ARE BACK IN NEW COLORS !</h4>
+      <a href="#" class="banner-button">SHOP NOW <i class="fa fa-caret-right" aria-hidden="true"></i> </a></span></div>
+  </div>
+-->
+</section>
+<?php } ?>
