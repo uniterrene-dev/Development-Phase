@@ -59,8 +59,8 @@
 		<div class="slItems">
 			<div class="slItem" style="background-image: url('<?php echo esc_url( get_template_directory_uri() )?>/images/slider-1.jpg');">
 				<div class="slText">
-					Slide 1
-                    
+					
+                    <div class="banner_caption"><a href="#">Meet Our Ladies</a></div>
 				</div>
 			</div>
             <div class="slItem">
@@ -70,17 +70,17 @@
                   Your browser does not support the video tag.
                 </video>
 				<div class="slText">
-					Slide 2 
+					<div class="banner_caption"><a href="#">Meet Our Ladies</a></div>
 				</div>
 			</div>
 			<div class="slItem" style="background-image: url('<?php echo esc_url( get_template_directory_uri() )?>/images/slider-2.jpg');">
 				<div class="slText">
-					Slide 3
+					<div class="banner_caption"><a href="#">Meet Our Ladies</a></div>
 				</div>
 			</div>
             <div class="slItem" style="background-image: url('<?php echo esc_url( get_template_directory_uri() )?>/images/slider-3.jpg');">
 				<div class="slText">
-					Slide 4
+					<div class="banner_caption"><a href="#">Meet Our Ladies</a></div>
 				</div>
 			</div>
 		</div>
