@@ -65,8 +65,8 @@
 			</div>
             <div class="slItem">
                 <video width="100%" height="100%" controls autoplay>
-                  <source src="video/movie.mp4" type="video/mp4">
-                  <source src="video/movie.ogg" type="video/ogg">
+                  <source src="<?php echo esc_url( get_template_directory_uri() )?>/video/movie.mp4" type="video/mp4">
+                  <source src="<?php echo esc_url( get_template_directory_uri() )?>/video/movie.ogg" type="video/ogg">
                   Your browser does not support the video tag.
                 </video>
 				<div class="slText">
