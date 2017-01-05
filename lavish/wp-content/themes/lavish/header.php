@@ -29,18 +29,18 @@
 </head>
 
 <body>
+<header>
 <div class="top-nav">
     <div class="wrapper">
-        <div class="top-right-nav">
+        <div class="top-nav">
             <ul>
-                <li><a href="#">MEMBERS LOGIN</a></li>
-                <li><a href="#">MAGAZINE</a></li>
-                <li><a href="#" id="show-city-list">CITIES</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">DEUTSCH</a></li>
+                <li><a href="#">MEMBERS LOUNGE</a></li>
+                <li><a href="#">RATES</a></li>
+                <li><a href="#" id="show-city-list">EXOTIC FANTASIES</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">FAQ</a></li>
             </ul>
         </div>
-        <div class="clear"></div>
     </div>
 </div>
 <!--<div class="city-menu">
@@ -128,8 +128,9 @@
     </div>
 </div>-->
 <div class="second-nav">
-    <div class="wrapper">
-        <a href="#"><img class="logo" src="<?php echo esc_url( get_template_directory_uri() )?>/images/header-logo.png" alt="logo" title="logo image"></a>
+    <div class="container clearfix">
+       <div class="header-logo"> <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/header-logo.png" alt="logo" title="logo image"></a>
+       </div>
         <div class="main-nav">
             <ul>
                 <li><a href="#" id="show-lady_menu">ESCORT LADIES</a></li>
@@ -139,7 +140,6 @@
                 <li><a href="#">JOBS</a></li>
             </ul>
         </div>
-        <div id="mobile_nav"></div>
     </div>
 </div>
 <!--<div class="lady_menu">
@@ -176,6 +176,7 @@
         <div class="close-lady_menu"><a href="javascript:;" id="close-lady_menu">Close list</a></div>
     </div>
 </div>-->
+</header>
 <div class="index-slide">
     <ul class="target-slider">
             <li>
