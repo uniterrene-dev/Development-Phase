@@ -265,6 +265,25 @@ nav {
 }
 .top-menu ul li{
 	display:inline-block;
+	padding: 2px 7px;
+}
+.top-menu ul li span i{
+    font-size: 12px;
+    vertical-align: middle;
+	color:#af1958;
+}
+.top-menu ul li a {
+    color: #fff;
+    font-family: "Tw Cen MT";
+    font-size: 12px;
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	-ms-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;
+}
+.top-menu ul li a:hover{
+	color: #af1958;
 }
 .top-menu ul li a{
 	color:#fff;
@@ -272,9 +291,8 @@ nav {
 	font-family: "Tw Cen MT";
 }
 .logo {
-    width: 200px;
+    width: 180px;
 	float:left;
-	padding:7px 0;
 }
 .menu {
     float: right;
