@@ -270,8 +270,11 @@ common portion end
 	float:left;
 	width:160px;
 }
-.main-nav{
-	float:right;
+.main-nav {
+    float: right;
+    padding-top: 10px;
+    text-align: right;
+    width: 75%;
 }
 .main-nav ul li{
 	display:inline-block;
@@ -286,4 +289,13 @@ common portion end
 }
 .main-nav ul li a:hover{
 	background:#ad1457;
+}
+banner{
+	position:relative;
+}
+header{
+	position:absolute;
+	width:100%;
+	z-index:99;
+	background:rgba(0,0,0, 0.2);
 }
