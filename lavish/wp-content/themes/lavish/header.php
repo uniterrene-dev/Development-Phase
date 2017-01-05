@@ -88,7 +88,7 @@
                 </a>
                     </li>
         </ul>
-        <div class="wrap-center-slide">
+        <div class="slide-content">
           <div class="big-button-slide">
             <a href="#">Meet Our Ladies</a>
           </div>
