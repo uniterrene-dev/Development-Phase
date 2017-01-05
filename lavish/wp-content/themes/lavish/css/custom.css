@@ -21,6 +21,7 @@ common portion start
 }
 body {
 	margin: 0;
+	background-color: #f7f0ec;
 	padding: 0 !important;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -254,68 +255,35 @@ a.btn_without_bor {
 common portion end
 =================================================================
 */
-banner {
-    position: relative;
+.top-nav{
+	text-align: right;
 }
-nav {
-    position: absolute;
-    width: 100%;
-    z-index: 99;
-}
-.navigation{
-	background:rgba(0,0,0, 0.3);
-}
-.top-menu{
-	text-align:right;
-}
-.top-menu ul li{
-	display:inline-block;
-	padding:0px 7px;
-}
-.top-menu ul li:last-child{
-	padding-right:0px;
-}
-.top-menu ul li span i{
-    font-size: 12px;
-    vertical-align: middle;
-	color:#af1958;
-}
-.top-menu ul li a {
-    color: #fff;
-    font-family: "Tw Cen MT";
-    font-size: 12px;
-}
-.top-menu ul li a:hover{
-	color: #af1958;
-}
-.top-menu ul li a {
-    color: #fff;
-    font-family: "Tw Cen MT";
-    font-size: 12px;
-    line-height: 15px;
-}
-.logo {
-    width:165px;
-	float:left;
-}
-.menu {
-    float: right;
-    padding-top: 15px;
-    text-align: right;
-    width: 75%;
-}
-.menu ul li{
+.top-nav ul li{
 	display:inline-block;
 }
-.menu ul li a {
-    color: #fff;
-    font-family: "Tw Cen MT";
-    font-size: 19px;
-    font-weight: 300;
-    line-height: 26px;
-    padding: 6px 20px;
-}
-.menu ul li a:hover{
-	background:#af1958;
+.top-nav ul li a{
+	font-size:12px;
 	color:#fff;
+	font-family: 'Tw Cen MT';
+}
+.header-logo{
+	float:left;
+	width:160px;
+}
+.main-nav{
+	float:right;
+}
+.main-nav ul li{
+	display:inline-block;
+	line-height:40px;
+}
+.main-nav ul li a{
+	color:#fff;
+	font-family: 'Tw Cen MT';
+	font-size:19px;
+	padding:7px 15px;
+	
+}
+.main-nav ul li a:hover{
+	background:#ad1457;
 }
