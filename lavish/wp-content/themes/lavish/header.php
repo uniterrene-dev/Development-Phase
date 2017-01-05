@@ -31,7 +31,7 @@
       <div class="container clearfix">
         <div class="top-menu">
           <ul>
-            <li><a href="#"> MEMBERS LOUNGE </a></li>
+            <li><span> <i class="fa fa-unlock-alt" aria-hidden="true"></i> </span><a href="#"> MEMBERS LOUNGE </a></li>
             <li><a href="#"> RATES </a></li>
             <li><a href="#"> EXOTIC FANTASIES </a></li>
             <li><a href="#"> NEWS </a></li>
