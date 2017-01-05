@@ -70,7 +70,7 @@
             </li>
             <li>
                
-				<video width="100%" height="100%" controls autoplay>
+				<video width="100%" height="auto" controls autoplay>
 					<source src="<?php echo esc_url( get_template_directory_uri() )?>/video/movie.mp4" type="video/mp4">
 						<source src="<?php echo esc_url( get_template_directory_uri() )?>/video/movie.ogg" type="video/ogg">
                   
@@ -83,14 +83,14 @@
                 </a>
             </li>
             <li>
-                <a href="#s">
+                <a href="#">
                     <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/slider-3.jpg" alt="slider14" title="banner slider">
                 </a>
                     </li>
         </ul>
         <div class="wrap-center-slide">
           <div class="big-button-slide">
-            <a href="#">Meet Our Escort Ladies</a>
+            <a href="#">Meet Our Ladies</a>
           </div>
         </div>
 </div>
