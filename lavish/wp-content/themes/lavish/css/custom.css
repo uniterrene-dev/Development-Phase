@@ -121,6 +121,11 @@ a {
 	text-decoration: none;
 	outline: none;
 	-webkit-font-smoothing: antialiased;
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	-ms-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;
 }
 a:hover {
 	text-decoration: none !important;
@@ -265,7 +270,10 @@ nav {
 }
 .top-menu ul li{
 	display:inline-block;
-	padding: 2px 7px;
+	padding:0px 7px;
+}
+.top-menu ul li:last-child{
+	padding-right:0px;
 }
 .top-menu ul li span i{
     font-size: 12px;
@@ -276,28 +284,25 @@ nav {
     color: #fff;
     font-family: "Tw Cen MT";
     font-size: 12px;
-	transition:all 0.4s ease-in-out 0s;
-	-webkit-transition:all 0.4s ease-in-out 0s;
-	-moz-transition:all 0.4s ease-in-out 0s;
-	-ms-transition:all 0.4s ease-in-out 0s;
-	-o-transition:all 0.4s ease-in-out 0s;
 }
 .top-menu ul li a:hover{
 	color: #af1958;
 }
-.top-menu ul li a{
-	color:#fff;
-	font-size:12px;
-	font-family: "Tw Cen MT";
+.top-menu ul li a {
+    color: #fff;
+    font-family: "Tw Cen MT";
+    font-size: 12px;
+    line-height: 15px;
 }
 .logo {
-    width: 180px;
+    width:165px;
 	float:left;
 }
 .menu {
     float: right;
+    padding-top: 15px;
+    text-align: right;
     width: 75%;
-	text-align:right;
 }
 .menu ul li{
 	display:inline-block;
@@ -305,7 +310,12 @@ nav {
 .menu ul li a {
     color: #fff;
     font-family: "Tw Cen MT";
-    font-size: 21px;
+    font-size: 19px;
     font-weight: 300;
-    padding: 10px 20px;
+    line-height: 26px;
+    padding: 6px 20px;
+}
+.menu ul li a:hover{
+	background:#af1958;
+	color:#fff;
 }
