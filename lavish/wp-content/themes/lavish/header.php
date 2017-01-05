@@ -33,12 +33,29 @@
 <div class="top-nav">
     <div class="container">
         <div class="top-nav">
+			
+		
+			
             <ul>
                 <li><span> <i class="fa fa-unlock-alt" aria-hidden="true"></i> </span><a href="#">MEMBERS LOUNGE</a></li>
+<!--
                 <li><a href="#">RATES</a></li>
                 <li><a href="#" id="show-city-list">EXOTIC FANTASIES</a></li>
                 <li><a href="#">NEWS</a></li>
                 <li><a href="#">FAQ</a></li>
+-->
+<?php if ( has_nav_menu( 'top' ) ) : ?>
+
+<?php wp_nav_menu( array(
+		'theme_location' => 'top',
+		'menu_id'        => '',
+'menu' => 'top', 'container' => '', 'container_class' => '', 'container_id' => '', 'menu_class' => '', 'menu_id' => '',
+    'echo' => true, 'fallback_cb' => 'wp_page_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'items_wrap' => '<li>%3$s</li>', 'item_spacing' => 'preserve',
+    'depth' => 0, 'walker' => ''
+	) ); ?>
+        
+
+<?php endif; ?>	
             </ul>
         </div>
     </div>
@@ -51,10 +68,24 @@
         <div class="main-nav">
             <ul>
                 <li><a href="#" id="show-lady_menu">ESCORT LADIES</a></li>
+<!--
                 <li><a href="#">RATES & BOOKING</a></li>
                 <li><a href="#">NEWS</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">JOBS</a></li>
+-->
+<?php if ( has_nav_menu( 'top' ) ) : ?>
+
+<?php wp_nav_menu( array(
+		'theme_location' => 'top-big',
+		'menu_id'        => '',
+'menu' => 'top', 'container' => '', 'container_class' => '', 'container_id' => '', 'menu_class' => '', 'menu_id' => '',
+    'echo' => true, 'fallback_cb' => 'wp_page_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'items_wrap' => '<li>%3$s</li>', 'item_spacing' => 'preserve',
+    'depth' => 0, 'walker' => ''
+	) ); ?>
+        
+
+<?php endif; ?>	
             </ul>
         </div>
     </div>
