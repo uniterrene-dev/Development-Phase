@@ -2,19 +2,28 @@
 /**
  * Template Name: Home Page
  */
-get_header();
+get_header('custom');
 ?>
 
-<div class="content1">
-    <div class="wrap-center">
-            <div class="box1">
-                            <h1>High-class escort service - Elite escort agency</h1>
-            <p>Since its founding in 2000, our elite escort agency sets new standards across Europe in relation to&nbsp;<a title="VIP escort service" href="#">VIP escort service</a> for the classy gentleman.</p>        </div>
-            <div class="box2">
-                            <h2>Always up-to-date: News about our exclusive escorts </h2>        
-            <p>In order to find out what is going on in the sensual world of our top escort models check out our <a title="Latest news" href="#">latest news</a>. Updates, photos, information and much more.</p>        </div>
-        </div>
-</div>
+<section id="about-box" class="about-div">
+ <div class="container clearfix">
+  <div class="home-about-box">
+   <div class="home-about-col-1">
+     <h3>  High-class escort service - </br>Elite escort agency </h3>
+     <p>Since its founding in 2000, our elite escort agency sets new standards across Europe in relation to <a title="VIP escort service" href="#">VIP escort service</a>for the classy gentleman.</p>
+   </div>
+   <div class="home-about-col-2">
+     <h3>  High-class escort service -</br> Elite escort agency </h3>
+     <p>Since its founding in 2000, our elite escort agency sets new standards across Europe in relation to <a title="VIP escort service" href="#">VIP escort service</a>for the classy gentleman.</p>
+   </div>
+   <div class="home-about-col-3">
+     <h3>  High-class escort service -</br> Elite escort agency </h3>
+     <p>Since its founding in 2000, our elite escort agency sets new standards across Europe in relation to <a title="VIP escort service" href="#">VIP escort service</a>for the classy gentleman.</p>
+   </div>
+ </div>
+</section>
+
+
 <div class="city-section">
     <div class="wrap-center">
         <h2>Our High Class Escort Service is<br> available in the following cities</h2>
