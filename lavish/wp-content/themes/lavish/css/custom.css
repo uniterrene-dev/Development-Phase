@@ -302,10 +302,35 @@ common portion end
 }
 banner{
 	position:relative;
+	border-bottom:3px #ad1457 solid;
 }
 header{
 	position:absolute;
 	width:100%;
 	z-index:99;
 	background:rgba(0,0,0, 0.2);
+}
+.big-button-slide {
+    background-color: #ad1457;
+    border: 1px solid #ad1457;
+    border-radius: 7px;
+    color: white;
+    display: inline-block;
+}
+.big-button-slide > a {
+    color: #fff;
+    display: block;
+    font-family: "Tw Cen MT";
+    font-size: 18px;
+    padding: 7px 14px;
+    text-transform: uppercase;
+}
+.slide-content {
+    bottom: 14%;
+    color: #fff;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 9999;
 }
