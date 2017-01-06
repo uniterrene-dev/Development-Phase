@@ -40,7 +40,7 @@ get_header();
     </div>
     <div class="home-model-box-right">
       <div class="home-model-box-img">
-       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-2.jpg" /></a>
+       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-2.jpg" / alt=""></a>
       </div>
       <div class="home-model-box-content">
       <h3> <a href="#">Angelina</a> </h3>
@@ -72,7 +72,7 @@ get_header();
     </li>
     <li>
      <div class="model-view-img">
-      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-2.jpg" /></a>
+      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-2.jpg" / alt=""></a>
      </div>
      <div class="model-view-content">
       <h3> <a href="#">Marie</a> </h3>
@@ -84,7 +84,7 @@ get_header();
     </li>
     <li>
      <div class="model-view-img">
-      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-3.jpg" /></a>
+      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-3.jpg" / alt=""></a>
      </div>
      <div class="model-view-content">
       <h3> <a href="#">Jade</a> </h3>
@@ -99,7 +99,7 @@ get_header();
  </div>
 </section>
 
-<div id="city-section" class="city-section-div">
+<section id="city-section" class="city-section-div">
     <div class="container">
        <div class="city-details clearfix">
          <div class="city-details-left">
@@ -154,40 +154,66 @@ foreach($categories as $category) {
          <a class="city-more-btn" id="show-city-list" href="javascript:;">View All Lavish Mate Cities</a>
         </div> 
     </div>
-</div>
+</section> <!----- city name section -->
 
-<div class="content-last">
-    <div class="wrap-center mag">
-        <h4>Our Magazine with interesting facts</h4>
-                <div class="blog-box">
-            <div class="blog-thumb">
-                <a href="#">
-                    <img width="1000" height="703" src="http://www.targetescorts.com/magazine/wp-content/uploads/chamonix-escort-service.jpg" class="attachment-medium size-medium wp-post-image" alt="Erotic winter vacation in Chamonix with VIP escort service" srcset="http://www.targetescorts.com/magazine/wp-content/uploads/chamonix-escort-service.jpg 1000w, http://www.targetescorts.com/magazine/wp-content/uploads/chamonix-escort-service-768x540.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />                </a>
-            </div>
-            <h3>Sensual winter magic with VIP escort service Chamonix</h3>
-            <p>Powerful. This is probably the first word that comes to your mind when you admire the highest mountain of the Alps together with your charming escort in...</p>
-            <p><a class="red" href="#" target="_blank">Read More</a></p>
-        </div>
-                <div class="blog-box">
-            <div class="blog-thumb">
-                <a href="#" target="_blank">
-                    <img width="1000" height="600" src="http://www.targetescorts.com/magazine/wp-content/uploads/vierschanzentournee-escort-service.jpg" class="attachment-medium size-medium wp-post-image" alt="Elite escort agency &amp; the Four-Hills-Tournament" srcset="http://www.targetescorts.com/magazine/wp-content/uploads/vierschanzentournee-escort-service.jpg 1000w, http://www.targetescorts.com/magazine/wp-content/uploads/vierschanzentournee-escort-service-768x461.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />                </a>
-            </div>
-            <h3>The Four-Hills-Tournament & our VIP escort agency</h3>
-            <p>A perfect combination for gentlemen who appreciate both the ski jumping as well as the company of gorgeous and stylish escort ladies. Our high-class escort...</p>
-            <p><a class="red" href="#" target="_blank">Read More</a></p>
-        </div>
-                <div class="blog-box">
-            <div class="blog-thumb">
-                <a href="#" target="_blank">
-                    <img width="587" height="311" src="http://www.targetescorts.com/magazine/wp-content/uploads/xmas-service-2016.jpg" class="attachment-medium size-medium wp-post-image" alt="Target Escorts wishes you a festive season!" />                </a>
-            </div>
-            <h3>Merry Christmas & Happy New Year!</h3>
-            <p>The Target Escorts team and all our lovely escort ladies wish you a (sensual) Christmas time! We hope you enjoy the good food, the time with friends and family,...</p>
-            <p><a class="red" href="#" target="_blank">Read More</a></p>
-        </div>
-            </div>
-</div>
+<section id="exclusive-models" class="exclusive-models-div">
+  <div class="container">
+    <div class="exclusive-models-box">
+       <a href="#"> View All Exclusive Models </a>
+    </div>
+  </div>
+</section> <!----- Exclusive Models -->
+
+<section id="latest-news-section" class="latest-news-div">
+ <div class="container">
+  <div class="latest-news-header">
+    <div class="latest-news-heading"> <h3><span class="latest-head"> Latest News </span></h3> </div>
+    <div class="latest-news-sub-heading"><p> Exclusive news about new Lavish Mate models, 
+nightlife, VIP entertainment & lifestyle....</p> </div>
+  </div>
+  <div class="latest-news-box clearfix">
+   <div class="latest-news-col-1 latest-news">
+     <div class="latest-news-img">
+       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/news-1.png" / alt=""></a>
+     </div>
+     <div class="latest-news-content">
+       <h2><a href="#"> Why Do Couples Book Escorts? </a></h2>
+       <h4> November 17,2016 </h4>
+       <p> Are you thinking of booking time with an escort? it natural for a couple to want to explore new things especially when it comes to their sex lives....</p>
+       <div class="read-btn">
+        <a href="#"> Read article <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+       </div>
+     </div>
+   </div>
+   <div class="latest-news-col-2 latest-news">
+     <div class="latest-news-img">
+       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/news-2.png" / alt=""></a>
+     </div>
+     <div class="latest-news-content">
+       <h2> <a href="#">Why Do Couples Book Escorts? </a></h2>
+       <h4> November 17,2016 </h4>
+       <p> Are you thinking of booking time with an escort? it natural for a couple to want to explore new things especially when it comes to their sex lives....</p>
+       <div class="read-btn">
+        <a href="#"> Read article <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+       </div>
+     </div>
+   </div>
+   <div class="latest-news-col-3 latest-news">
+     <div class="latest-news-img">
+       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/news-3.png" / alt=""></a>
+     </div>
+     <div class="latest-news-content">
+       <h2> <a href="#">Why Do Couples Book Escorts? </a></h2>
+       <h4> November 17,2016 </h4>
+       <p> Are you thinking of booking time with an escort? it natural for a couple to want to explore new things especially when it comes to their sex lives....</p>
+       <div class="read-btn">
+        <a href="#"> Read article <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+       </div>
+     </div>
+   </div>
+  </div>
+ </div>
+</section> <!----- Latest News -->
 
 
 <?php get_footer();?>
