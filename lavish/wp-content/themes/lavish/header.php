@@ -38,12 +38,7 @@
 			
             <ul>
                 <li><span> <i class="fa fa-unlock-alt" aria-hidden="true"></i> </span><a href="#">MEMBERS LOUNGE</a></li>
-<!--
-                <li><a href="#">RATES</a></li>
-                <li><a href="#" id="show-city-list">EXOTIC FANTASIES</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">FAQ</a></li>
--->
+
 <?php if ( has_nav_menu( 'top' ) ) : ?>
 
 <?php wp_nav_menu( array(
@@ -68,12 +63,7 @@
         <div class="main-nav">
             <ul>
                 <li><a href="#" id="show-lady_menu">ESCORT LADIES</a></li>
-<!--
-                <li><a href="#">RATES & BOOKING</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">JOBS</a></li>
--->
+
 <?php if ( has_nav_menu( 'top' ) ) : ?>
 
 <?php wp_nav_menu( array(
@@ -92,37 +82,79 @@
 </div>
 
 </header>
+
+<!---Slider Section --->
+
 <div class="index-slide">
-    <ul class="target-slider">
-            <li>
-              <a href="#">
-                    <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/slider-1.jpg" alt="slider1" title="banner slider">
-                </a>
-            </li>
-            <li>
-               
-				<video width="100%" height="650px" controls  playsinline="" autoplay loop>
-					<source src="<?php echo esc_url( get_template_directory_uri() )?>/video/movie.mp4" type="video/mp4">
-						<source src="<?php echo esc_url( get_template_directory_uri() )?>/video/movie.ogg" type="video/ogg">
-                  
-                </video>
-               
-            </li>
-            <li>
-                <a href="#">
-                    <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/slider-2.jpg" alt="slider3" title="banner slider">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/slider-3.jpg" alt="slider14" title="banner slider">
-                </a>
-                    </li>
-        </ul>
+    <ul class="target-slider"><!--ul start-->
+<?php
+$args = array(
+	'numberposts' => 10,
+	'offset' => 0,
+	'category' => 0,
+	'orderby' => 'rand',
+	'order' => 'ASC',
+	'include' => '',
+	'exclude' => '',
+	'meta_key' => '',
+	'meta_value' =>'',
+	'post_type' => 'homepage_banner_post',
+	'post_status' => 'draft, publish, future, pending, private',
+	'suppress_filters' => true
+);
+
+$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+$j=1;
+$input = array();
+foreach($recent_posts as $recent_posts)
+{ 
+	 //echo $recent_posts['ID'];
+	 $area_code="";
+	 
+	  $link_or_embed = get_post_meta($recent_posts['ID'], "video_link_link_or_embeb", true); 
+	  
+	  if($link_or_embed=="Link" || $link_or_embed=="Embed")
+	  {
+		  
+			
+		  
+		 $area_code .='<li>';
+		 $area_code .=' <video width="100%" height="650px" controls  playsinline="" autoplay loop><source src="';
+		 $area_code .=esc_url( get_template_directory_uri() ).'/video/movie.mp4"';
+		 $area_code .='type="video/mp4"></li>';
+	  }
+	  else
+	  {
+		  
+			if (has_post_thumbnail($recent_posts['ID'] ) ): 
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
+			
+			$area_code .= '<li><img src="';
+			$area_code .=  $image[0].'"';
+			$area_code .=' alt="slider1" title="banner slider">';
+			$area_code .='</li>';
+			
+			
+			endif;
+		  
+		  
+		  
+	  
+	  
+	  }
+	  echo $area_code;
+	  
+	 }	?>
+	 </ul><!--End ul-->
+        
         <div class="slide-content">
           <div class="big-button-slide">
             <a href="#">Meet Our Ladies</a>
           </div>
         </div>
-</div>
+</div><!--End Div-->
+
+
+
+
 
