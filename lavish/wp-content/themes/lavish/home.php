@@ -21,8 +21,39 @@ get_header('custom');
      <p>Since its founding in 2000, our elite escort agency sets new standards across Europe in relation to <a title="VIP escort service" href="#">VIP escort service</a>for the classy gentleman.</p>
    </div>
  </div>
+  <div class="about-box-divider"></div>
 </section>
-
+<section id="home-model" class="home-model-div">
+ <div class="container">
+   <div class="home-model-box clearfix">
+    <div class="home-model-box-left">
+      <div class="home-model-box-img">
+       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-1.jpg" /></a>
+      </div>
+      <div class="home-model-box-content">
+      <h3> <a href="#">Yvonno</a> </h3>
+      <h4> Sexy Blonde </h4>
+      <div class="home-model-box-details">
+        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+      </div> 
+    </div>
+    </div>
+    <div class="home-model-box-right">
+      <div class="home-model-box-img">
+       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-2.jpg" /></a>
+      </div>
+      <div class="home-model-box-content">
+      <h3> <a href="#">Angelina</a> </h3>
+      <h4> Cute Blonde </h4>
+      <div class="home-model-box-details">
+        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+      </div> 
+    </div>
+    </div>
+    
+   </div>
+ </div>
+</section>
 
 <div class="city-section">
     <div class="wrap-center">
