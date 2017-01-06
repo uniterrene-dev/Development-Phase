@@ -21,21 +21,41 @@
      <div class="footer-left-col-1 footer-col">
       <h5> Get to Know Us </h5>
       <ul>
+<!--
        <li><a href="#">Our Models</a></li>
        <li><a href="#">About LavishMate</a></li>
        <li><a href="#">Our Service</a></li>
        <li><a href="#">Subscribe News Letter </a></li>
+-->
+<?php if ( has_nav_menu( 'get-know' ) ) : ?>
+
+<?php wp_nav_menu( array(
+		'theme_location' => 'get-know',
+		'menu_id'        => '',
+'menu' => 'top', 'container' => '', 'container_class' => '', 'container_id' => '', 'menu_class' => '', 'menu_id' => '',
+    'echo' => true, 'fallback_cb' => 'wp_page_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'items_wrap' => '<li>%3$s</li>', 'item_spacing' => 'preserve',
+    'depth' => 0, 'walker' => ''
+	) ); ?>
+        
+
+<?php endif; ?>	
       </ul>
      </div>
      <div class="footer-left-col-2 footer-col">
       <h5> Content </h5>
       <ul>
-       <li><a href="#">Mate of The Month</a></li>
-       <li><a href="#">Mate of The Year</a></li>
-       <li><a href="#">Gift Ideas</a></li>
-       <li><a href="#">Events</a></li>
-       <li><a href="#">News</a></li>
-       <li><a href="#">Link to Us</a></li>
+       <?php if ( has_nav_menu( 'content' ) ) : ?>
+
+<?php wp_nav_menu( array(
+		'theme_location' => 'content',
+		'menu_id'        => '',
+'menu' => 'top', 'container' => '', 'container_class' => '', 'container_id' => '', 'menu_class' => '', 'menu_id' => '',
+    'echo' => true, 'fallback_cb' => 'wp_page_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'items_wrap' => '<li>%3$s</li>', 'item_spacing' => 'preserve',
+    'depth' => 0, 'walker' => ''
+	) ); ?>
+        
+
+<?php endif; ?>
       </ul>
      </div>
     </div>
@@ -48,23 +68,35 @@
      <div class="footer-left-col-1 footer-col">
       <h5> Future Lavish Mate </h5>
       <ul>
-       <li><a href="#">My Calendar</a></li>
-       <li><a href="#">Casting</a></li>
-       <li><a href="#">About Us</a></li>
-       <li><a href="#">The Perfect Lady</a></li>
-       <li><a href="#">Future Model FAQ</a></li>
+       <?php if ( has_nav_menu( 'future' ) ) : ?>
+
+<?php wp_nav_menu( array(
+		'theme_location' => 'future',
+		'menu_id'        => '',
+'menu' => 'top', 'container' => '', 'container_class' => '', 'container_id' => '', 'menu_class' => '', 'menu_id' => '',
+    'echo' => true, 'fallback_cb' => 'wp_page_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'items_wrap' => '<li>%3$s</li>', 'item_spacing' => 'preserve',
+    'depth' => 0, 'walker' => ''
+	) ); ?>
+        
+
+<?php endif; ?>
       </ul>
      </div>
      <div class="footer-left-col-2 footer-col">
       <h5> Let Us Help You </h5>
       <ul>
-       <li><a href="#">Members lounge</a></li>
-       <li><a href="#">Rates</a></li>
-       <li><a href="#">Booking</a></li>
-       <li><a href="#">Gentleman FAQ</a></li>
-       <li><a href="#">Our Cities</a></li>
-       <li><a href="#">10 Steps to Conquer</a></li>
-       <li><a href="#">White Us a Feedback</a></li>
+       <?php if ( has_nav_menu( 'help' ) ) : ?>
+
+<?php wp_nav_menu( array(
+		'theme_location' => 'help',
+		'menu_id'        => '',
+'menu' => 'top', 'container' => '', 'container_class' => '', 'container_id' => '', 'menu_class' => '', 'menu_id' => '',
+    'echo' => true, 'fallback_cb' => 'wp_page_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'items_wrap' => '<li>%3$s</li>', 'item_spacing' => 'preserve',
+    'depth' => 0, 'walker' => ''
+	) ); ?>
+        
+
+<?php endif; ?>
       </ul>
      </div>
     </div>
