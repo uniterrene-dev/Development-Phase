@@ -129,9 +129,9 @@ foreach($recent_posts as $recent_posts)
 			if (has_post_thumbnail($recent_posts['ID'] ) ): 
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
 			
-			$area_code .= '<li><img src="';
+			$area_code .= '<li><a href="#"><img src="';
 			$area_code .=  $image[0].'"';
-			$area_code .=' alt="slider1" title="banner slider">';
+			$area_code .=' alt="slider1" title="banner slider"></a>';
 			$area_code .='</li>';
 			
 			
