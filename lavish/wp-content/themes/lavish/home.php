@@ -2,23 +2,23 @@
 /**
  * Template Name: Home Page
  */
-get_header('custom');
+get_header();
 ?>
 
 <section id="about-box" class="about-div">
  <div class="container clearfix">
   <div class="home-about-box">
    <div class="home-about-col-1">
-     <h3>  High-class escort service - </br>Elite escort agency </h3>
-     <p>Since its founding in 2000, our elite escort agency sets new standards across Europe in relation to <a title="VIP escort service" href="#">VIP escort service</a>for the classy gentleman.</p>
+     <h3>  <?php echo get_option('webq_es_srv');?> </h3>
+     <p><?php echo get_option('webq_es_srv_des');?></p>
    </div>
    <div class="home-about-col-2">
-     <h3>  High-class escort service -</br> Elite escort agency </h3>
-     <p>Since its founding in 2000, our elite escort agency sets new standards across Europe in relation to <a title="VIP escort service" href="#">VIP escort service</a>for the classy gentleman.</p>
+     <h3>  <?php echo get_option('webq_es_srv2');?> </h3>
+     <p><?php echo get_option('webq_es_srv_des2');?></p>
    </div>
    <div class="home-about-col-3">
-     <h3>  High-class escort service -</br> Elite escort agency </h3>
-     <p>Since its founding in 2000, our elite escort agency sets new standards across Europe in relation to <a title="VIP escort service" href="#">VIP escort service</a>for the classy gentleman.</p>
+     <h3>  <?php echo get_option('webq_es_srv3');?> </h3>
+     <p><?php echo get_option('webq_es_srv_des3');?></p>
    </div>
  </div>
   <div class="about-box-divider"></div>
@@ -103,22 +103,26 @@ get_header('custom');
     <div class="container">
        <div class="city-details clearfix">
          <div class="city-details-left">
-           <h3> Our Discreet Concierge Service is available to your preferred cities </h3>
-           <p> Lavish Mate®  discretion  service is exclusively designed to meet the needs of premium gentlemen.
-Lavish Mate® ladies enjoy the company of discerning gentlemen and enjoy both enlightened 
-conversation as well as sensuous evenings. 
-The difficulty will be choosing which one to meet first! </p>
+           <h3> <?php echo get_option('webq_dis_srv');?> </h3>
+           <p> <?php echo get_option('webq_dis_srv_des');?> </p>
          </div>
          <div class="city-details-right">
-           <h3> Our Discreet Concierge Service is available to your preferred cities </h3>
-           <p> Lavish Mate®  discretion  service is exclusively designed to meet the needs of premium gentlemen.
-Lavish Mate® ladies enjoy the company of discerning gentlemen and enjoy both enlightened 
-conversation as well as sensuous evenings. 
-The difficulty will be choosing which one to meet first! </p>
+           <h3> <?php echo get_option('webq_dis_srv2');?> </h3>
+           <p> <?php echo get_option('webq_dis_srv_des2');?> </p>
          </div>
        </div> 
         <div class="city-buttons">
                        <ul> 
+						 
+<?php 
+						   $args = array('child_of' => '4');
+$categories = get_categories( $args );
+foreach($categories as $category) { 
+   // print_r($category);
+    
+    echo ' <li><a href="' . get_category_link( $category->term_id ) . '">'. $category->name.'</a></li>';
+} ?>
+<!--
                         <li><a href="#">BOCA RATON</a></li>
                         <li><a href="#">MIAMI</a></li>
                         <li><a href="#">PALM BEACH</a></li>
@@ -142,6 +146,8 @@ The difficulty will be choosing which one to meet first! </p>
                         <li><a href="#">BREGENZ</a></li>
                         <li><a href="#">BASEL</a></li>
                         <li><a href="#">BARCELONA</a></li>
+-->
+
                        </ul> 
                     </div>
         <div class="city-more-btn-div">            
