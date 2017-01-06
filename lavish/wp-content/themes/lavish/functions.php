@@ -82,6 +82,10 @@ function twentyseventeen_setup() {
 	register_nav_menus( array(
 		'top'    => __( 'Top Menu', 'twentyseventeen' ),
 		'top-big'    => __( 'Second Menu', 'twentyseventeen' ),
+		'get-know'    => __( 'Get Know Us', 'twentyseventeen' ),
+		'content'    => __( 'Content', 'twentyseventeen' ),
+		'help'    => __( 'Let Us Help You', 'twentyseventeen' ),
+		'future'    => __( 'Future Lavish Mate', 'twentyseventeen' ),
 		'social' => __( 'Social Links Menu', 'twentyseventeen' ),
 	) );
 
