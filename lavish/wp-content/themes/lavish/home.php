@@ -109,29 +109,44 @@ Lavish Mate® ladies enjoy the company of discerning gentlemen and enjoy both en
 conversation as well as sensuous evenings. 
 The difficulty will be choosing which one to meet first! </p>
          </div>
+         <div class="city-details-right">
+           <h3> Our Discreet Concierge Service is available to your preferred cities </h3>
+           <p> Lavish Mate®  discretion  service is exclusively designed to meet the needs of premium gentlemen.
+Lavish Mate® ladies enjoy the company of discerning gentlemen and enjoy both enlightened 
+conversation as well as sensuous evenings. 
+The difficulty will be choosing which one to meet first! </p>
+         </div>
        </div> 
         <div class="city-buttons">
-                        <a href="#">Berlin</a>
-                        <a href="#">Cologne</a>
-                        <a href="#">Dubai</a>
-                        <a href="#">Dusseldorf</a>
-                        <a href="#">Frankfurt</a>
-                        <a href="#">Geneva</a>
-                        <a href="#">Hamburg</a>
-                        <a href="#">London</a>
-                        <a href="#">Marbella</a>
-                        <a href="#">Milan</a>
-                        <a href="#">Monaco</a>
-                        <a href="#">Munich</a>
-                        <a href="#">Paris</a>
-                        <a href="#">Rome</a>
-                        <a href="#">Saint Tropez</a>
-                        <a href="#">Salzburg</a>
-                        <a href="#">Stuttgart</a>
-                        <a href="#">Vienna</a>
-                        <a href="#">Zurich</a>
+                       <ul> 
+                        <li><a href="#">BOCA RATON</a></li>
+                        <li><a href="#">MIAMI</a></li>
+                        <li><a href="#">PALM BEACH</a></li>
+                        <li><a href="#">BROWARD</a></li>
+                        <li><a href="#">MANHATTAN </a></li>
+                        <li><a href="#">LOS ANGELES</a></li>
+                        <li><a href="#">CHICAGO</a></li>
+                        <li><a href="#">SAN DIEGO</a></li>
+                        <li><a href="#">MONTRÉAL</a></li>
+                        <li><a href="#">DUBAI</a></li>
+                        <li><a href="#">LONDON</a></li>
+                        <li><a href="#">VANCOUVER</a></li>
+                        <li><a href="#">PARIS</a></li>
+                        <li><a href="#">ROME</a></li>
+                        <li><a href="#">MONACO</a></li>
+                        <li><a href="#">BERLIN</a></li>
+                        <li><a href="#">SYDNEY</a></li>
+                        <li><a href="#">DUSSELDORF</a></li>
+                        <li><a href="#">COLOGNE</a></li>
+                        <li><a href="#">FRANKFURT</a></li>
+                        <li><a href="#">BREGENZ</a></li>
+                        <li><a href="#">BASEL</a></li>
+                        <li><a href="#">BARCELONA</a></li>
+                       </ul> 
                     </div>
-        <a class="red" id="show-city-list" href="javascript:;">View all cities</a>
+        <div class="city-more-btn-div">            
+         <a class="city-more-btn" id="show-city-list" href="javascript:;">View All Lavish Mate Cities</a>
+        </div> 
     </div>
 </div>
 
