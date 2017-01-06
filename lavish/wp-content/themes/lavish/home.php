@@ -122,31 +122,7 @@ foreach($categories as $category) {
     
     echo ' <li><a href="' . get_category_link( $category->term_id ) . '">'. $category->name.'</a></li>';
 } ?>
-<!--
-                        <li><a href="#">BOCA RATON</a></li>
-                        <li><a href="#">MIAMI</a></li>
-                        <li><a href="#">PALM BEACH</a></li>
-                        <li><a href="#">BROWARD</a></li>
-                        <li><a href="#">MANHATTAN </a></li>
-                        <li><a href="#">LOS ANGELES</a></li>
-                        <li><a href="#">CHICAGO</a></li>
-                        <li><a href="#">SAN DIEGO</a></li>
-                        <li><a href="#">MONTRÉAL</a></li>
-                        <li><a href="#">DUBAI</a></li>
-                        <li><a href="#">LONDON</a></li>
-                        <li><a href="#">VANCOUVER</a></li>
-                        <li><a href="#">PARIS</a></li>
-                        <li><a href="#">ROME</a></li>
-                        <li><a href="#">MONACO</a></li>
-                        <li><a href="#">BERLIN</a></li>
-                        <li><a href="#">SYDNEY</a></li>
-                        <li><a href="#">DUSSELDORF</a></li>
-                        <li><a href="#">COLOGNE</a></li>
-                        <li><a href="#">FRANKFURT</a></li>
-                        <li><a href="#">BREGENZ</a></li>
-                        <li><a href="#">BASEL</a></li>
-                        <li><a href="#">BARCELONA</a></li>
--->
+
 
                        </ul> 
                     </div>
@@ -159,7 +135,10 @@ foreach($categories as $category) {
 <section id="exclusive-models" class="exclusive-models-div">
   <div class="container">
     <div class="exclusive-models-box">
+<!--
        <a href="#"> View All Exclusive Models </a>
+-->
+<?php echo get_option('webq_ex_models');?>
     </div>
   </div>
 </section> <!----- Exclusive Models -->
@@ -167,50 +146,55 @@ foreach($categories as $category) {
 <section id="latest-news-section" class="latest-news-div">
  <div class="container">
   <div class="latest-news-header">
-    <div class="latest-news-heading"> <h3><span class="latest-head"> Latest News </span></h3> </div>
-    <div class="latest-news-sub-heading"><p> Exclusive news about new Lavish Mate models, 
-nightlife, VIP entertainment & lifestyle....</p> </div>
+    <div class="latest-news-heading"> <h3><span class="latest-head"><?php echo get_option('webq_lat_news');?></span></h3> </div>
+    <div class="latest-news-sub-heading"><p> <?php echo get_option('webq_lat_news_sub_heading');?></p> </div>
   </div>
   <div class="latest-news-box clearfix">
-   <div class="latest-news-col-1 latest-news">
+<?php
+$args = array(
+	'numberposts' => 3,
+	'offset' => 0,
+	'category' => 28,
+	'orderby' => 'rand',
+	'order' => 'ASC',
+	'include' => '',
+	'exclude' => '',
+	'meta_key' => '',
+	'meta_value' =>'',
+	'post_type' => 'post',
+	'post_status' => 'draft, publish, future, pending, private',
+	'suppress_filters' => true
+);
+
+$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+$j=1;
+foreach($recent_posts as $recent_posts)
+{ 
+	//print_r($recent_posts);
+
+$class_name = "latest-news-col-".$j;	
+$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
+$post_content = $recent_posts['post_content'];
+$post_title = $recent_posts['post_title'];
+$guid = $recent_posts['guid'];
+?>
+
+ 
+   <div class="<?php echo $class_name;?> latest-news">
      <div class="latest-news-img">
-       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/news-1.png" / alt=""></a>
+       <a href="#"><img src="<?php echo $image[0];?>" / alt=""></a>
      </div>
      <div class="latest-news-content">
-       <h2><a href="#"> Why Do Couples Book Escorts? </a></h2>
-       <h4> November 17,2016 </h4>
-       <p> Are you thinking of booking time with an escort? it natural for a couple to want to explore new things especially when it comes to their sex lives....</p>
+       <h2><a href="<?php echo $guid;?>"> <?php echo $post_title; ?> </a></h2>
+       <h4> <?php echo get_the_time('F j, Y', $recent_posts['ID']);?> </h4>
+       <p> <?php echo $post_content; ?></p>
        <div class="read-btn">
-        <a href="#"> Read article <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+        <a href="<?php echo $guid;?>"> Read article <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
        </div>
      </div>
    </div>
-   <div class="latest-news-col-2 latest-news">
-     <div class="latest-news-img">
-       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/news-2.png" / alt=""></a>
-     </div>
-     <div class="latest-news-content">
-       <h2> <a href="#">Why Do Couples Book Escorts? </a></h2>
-       <h4> November 17,2016 </h4>
-       <p> Are you thinking of booking time with an escort? it natural for a couple to want to explore new things especially when it comes to their sex lives....</p>
-       <div class="read-btn">
-        <a href="#"> Read article <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
-       </div>
-     </div>
-   </div>
-   <div class="latest-news-col-3 latest-news">
-     <div class="latest-news-img">
-       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/news-3.png" / alt=""></a>
-     </div>
-     <div class="latest-news-content">
-       <h2> <a href="#">Why Do Couples Book Escorts? </a></h2>
-       <h4> November 17,2016 </h4>
-       <p> Are you thinking of booking time with an escort? it natural for a couple to want to explore new things especially when it comes to their sex lives....</p>
-       <div class="read-btn">
-        <a href="#"> Read article <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
-       </div>
-     </div>
-   </div>
+   <?php $j++; } ?>	 
+
   </div>
  </div>
 </section> <!----- Latest News -->
