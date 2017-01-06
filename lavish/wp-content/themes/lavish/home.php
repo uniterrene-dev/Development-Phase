@@ -54,11 +54,62 @@ get_header('custom');
    </div>
  </div>
 </section>
+<section id="model-view" class="model-view-div">
+ <div class="container">
+  <div class="model-view-box">
+   <ul>
+    <li>
+     <div class="model-view-img">
+      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-1.jpg" /></a>
+     </div>
+     <div class="model-view-content">
+      <h3> <a href="#">Kristina</a> </h3>
+      <h4> Sweet & Sexy </h4>
+      <div class="home-model-box-details">
+        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="model-view-img">
+      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-2.jpg" /></a>
+     </div>
+     <div class="model-view-content">
+      <h3> <a href="#">Marie</a> </h3>
+      <h4> Smart and Sexy model </h4>
+      <div class="home-model-box-details">
+        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="model-view-img">
+      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-3.jpg" /></a>
+     </div>
+     <div class="model-view-content">
+      <h3> <a href="#">Jade</a> </h3>
+      <h4> Busty & Classy </h4>
+      <div class="home-model-box-details">
+        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+      </div>
+     </div>
+    </li>
+   </ul>
+  </div>
+ </div>
+</section>
 
-<div class="city-section">
-    <div class="wrap-center">
-        <h2>Our High Class Escort Service is<br> available in the following cities</h2>
-        <p>Target Escorts<sup>&reg;</sup> is an exclusive escort agency that guarantees discretion and reliability.<br> Target Escorts<sup>&reg;</sup> stands for the highest level of service, fun and privacy.<br> Here, gentlemen may expect a premium VIP escort service.</p>
+<div id="city-section" class="city-section-div">
+    <div class="container">
+       <div class="city-details clearfix">
+         <div class="city-details-left">
+           <h3> Our Discreet Concierge Service is available to your preferred cities </h3>
+           <p> Lavish Mate®  discretion  service is exclusively designed to meet the needs of premium gentlemen.
+Lavish Mate® ladies enjoy the company of discerning gentlemen and enjoy both enlightened 
+conversation as well as sensuous evenings. 
+The difficulty will be choosing which one to meet first! </p>
+         </div>
+       </div> 
         <div class="city-buttons">
                         <a href="#">Berlin</a>
                         <a href="#">Cologne</a>
