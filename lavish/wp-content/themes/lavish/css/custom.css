@@ -21,7 +21,7 @@ common portion start
 }
 body {
 	margin: 0;
-	background-color: #f7f0ec;
+	background-color: #f3e6e0;
 	padding: 0 !important;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -63,7 +63,7 @@ img {
 	max-width: 100%;
 }
 h1, h2, h4, h5, h6 {
-	font-family: 'HelveticaNeueLTStd-Bd';
+	font-family: 'Tw Cen MT';
 	-webkit-font-smoothing: antialiased;
 }
 h1 {
@@ -83,15 +83,17 @@ h2 {
 	margin-top: 0px !important;
 }
 h3 {
-	font-size: 1.25rem;
+	font-size: 1.875rem;
 	font-family: 'Tw Cen MT';
 	line-height: 40px;
 	font-weight: normal;
 	margin-bottom: 0px !important;
 	margin-top: 0px !important;
+	-webkit-font-smoothing: antialiased !important;
 }
 h4 {
-	font-size: 1.438rem;
+	font-size: 1.25rem;
+	font-family: 'Tw Cen MT';
 	line-height: 30px;
 	font-weight: normal;
 	margin-bottom: 0px !important;
@@ -340,6 +342,7 @@ header{
     vertical-align: middle;
     padding-top: 60px;
     padding-bottom: 10px;
+	position:relative;
 }
 .about-div .home-about-col-1{
 	width:33%;
@@ -358,7 +361,6 @@ header{
 }
 .about-div h3 {
     color: #796e6a;
-    font-size: 28px;
     line-height: 36px;
 }
 .about-div p{
@@ -367,5 +369,55 @@ header{
 	font-size:16px;
 }
 .about-div a{
+	color:#ad1457;
+}
+.about-box-divider {
+    background: #a9a9a9 none repeat scroll 0 0;
+    height: 1px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 54%;
+    width: 70%;
+}
+.home-model-box {
+    padding: 10px 72px;
+}
+.home-model-box-left {
+    background: #fff;
+    float: left;
+	width:48.5%;
+}
+.home-model-box-right{
+	background: #fff;
+    float: right;
+	width:48.5%;
+}
+.home-model-box-content{
+	padding:15px 25px;
+}
+.home-model-box-content h3 a{
+	color:#3c3224;
+}
+.home-model-box-content h3 a:hover{
+	color:#ad1457;
+}
+.home-model-div{
+	padding: 40px 0;
+}
+.home-model-box-content h4{
+	line-height:25px;
+}
+.home-model-box-details{
+	text-align:right;
+	padding-top:10px;
+}
+.home-model-box-details a{
+	color:#8b8898;
+	font-size:20px;
+	font-family: 'Tw Cen MT';
+}
+.home-model-box-details a:hover{
 	color:#ad1457;
 }
