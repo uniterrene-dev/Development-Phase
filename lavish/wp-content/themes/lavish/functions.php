@@ -549,3 +549,124 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+
+/*Added New Codes For The Banner Section Of The Home Page*/
+// Register Custom Post Type
+function homepage_banner_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Home Page Banners', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Home Page Banner', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Home Page Banners', 'text_domain' ),
+		'name_admin_bar'        => __( 'Home Page Banner', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
+		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+		'all_items'             => __( 'All Items', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Item', 'text_domain' ),
+		'edit_item'             => __( 'Edit Item', 'text_domain' ),
+		'update_item'           => __( 'Update Item', 'text_domain' ),
+		'view_item'             => __( 'View Item', 'text_domain' ),
+		'view_items'            => __( 'View Items', 'text_domain' ),
+		'search_items'          => __( 'Search Item', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+		'items_list'            => __( 'Items list', 'text_domain' ),
+		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Home Page Banner', 'text_domain' ),
+		'description'           => __( 'Home Page Banner Description', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'homepage_banner_post', $args );
+
+}
+add_action( 'init', 'homepage_banner_post_type', 0 );
+
+
+function video_link_get_meta( $value ) {
+	global $post;
+
+	$field = get_post_meta( $post->ID, $value, true );
+	if ( ! empty( $field ) ) {
+		return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+	} else {
+		return false;
+	}
+}
+
+function video_link_add_meta_box() {
+	add_meta_box(
+		'video_link-video-link',
+		__( 'Video Link', 'video_link' ),
+		'video_link_html',
+		'homepage_banner_post',
+		'normal',
+		'default'
+	);
+}
+add_action( 'add_meta_boxes', 'video_link_add_meta_box' );
+
+function video_link_html( $post) {
+	wp_nonce_field( '_video_link_nonce', 'video_link_nonce' ); ?>
+
+	<p>You Can Add The Video Link.
+For the video link section the links can be youtube or any other embed link or the normal links or any external links.</p>
+
+	<p>
+
+		<input type="radio" name="video_link_link_or_embeb" id="video_link_link_or_embeb_0" value="Link" <?php echo ( video_link_get_meta( 'video_link_link_or_embeb' ) === 'Link' ) ? 'checked' : ''; ?>>
+<label for="video_link_link_or_embeb_0">Link</label><br>
+
+		<input type="radio" name="video_link_link_or_embeb" id="video_link_link_or_embeb_1" value="Embed" <?php echo ( video_link_get_meta( 'video_link_link_or_embeb' ) === 'Embed' ) ? 'checked' : ''; ?>>
+<label for="video_link_link_or_embeb_1">Embed</label><br>
+	</p>	<p>
+		<label for="video_link_video_link_url"><?php _e( 'Video Link Url', 'video_link' ); ?></label><br>
+		<textarea name="video_link_video_link_url" id="video_link_video_link_url" ><?php echo video_link_get_meta( 'video_link_video_link_url' ); ?></textarea>
+	
+	</p><?php
+}
+
+function video_link_save( $post_id ) {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+	if ( ! isset( $_POST['video_link_nonce'] ) || ! wp_verify_nonce( $_POST['video_link_nonce'], '_video_link_nonce' ) ) return;
+	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+	if ( isset( $_POST['video_link_link_or_embeb'] ) )
+		update_post_meta( $post_id, 'video_link_link_or_embeb', esc_attr( $_POST['video_link_link_or_embeb'] ) );
+	if ( isset( $_POST['video_link_video_link_url'] ) )
+		update_post_meta( $post_id, 'video_link_video_link_url', esc_attr( $_POST['video_link_video_link_url'] ) );
+}
+add_action( 'save_post', 'video_link_save' );
+
+/*
+	Usage: video_link_get_meta( 'video_link_link_or_embeb' )
+	Usage: video_link_get_meta( 'video_link_video_link_url' )
+*/
+
