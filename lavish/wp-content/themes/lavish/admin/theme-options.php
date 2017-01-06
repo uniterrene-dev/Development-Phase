@@ -136,9 +136,32 @@ $options[] = array( "name" => "Our Discreet Concierge Service2 Description",
 					"id" => "webq_dis_srv_des2",
 					"std" => "",
 					"type" => "webq_editor");	
+					
+$options[] = array( "name" => " View All Exclusive Models",
+                    "type" => "heading");	
+                    
+$options[] = array( "name" => "View All Exclusive Models",
+					"desc" => "Here you can enter any heading you want and also give the link of the section",
+					"id" => "webq_ex_models",
+					"std" => "",
+					"type" => "webq_editor");	                    				
 	
-										
-														
+$options[] = array( "name" => "Latest News",
+                    "type" => "heading");										
+
+
+$options[] = array( "name" => "Latest News",
+					"desc" => "Here you can enter any heading you want",
+					"id" => "webq_lat_news",
+					"std" => "",
+					"type" => "webq_editor");	
+					
+
+$options[] = array( "name" => "Latest News Subheading",
+					"desc" => "Here you can enter any heading you want",
+					"id" => "webq_lat_news_sub_heading",
+					"std" => "",
+					"type" => "webq_editor");																			
 	
 update_option('of_template',$options); 					  
 update_option('of_themename',$themename);   
