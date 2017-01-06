@@ -70,15 +70,14 @@ h1 {
 	font-size: 1.875rem;
 	font-family: 'Tw Cen MT';
 	font-weight: normal;
-	font-weight: normal;
 	margin-bottom: 0px !important;
 	margin-top: 0px !important;
 }
 h2 {
-	font-size: 2rem;
+	font-size: 2.25rem;
 	font-family: 'Tw Cen MT';
 	line-height: 54px;
-	font-weight: bold;
+	font-weight: normal;
 	margin-bottom: 0px !important;
 	margin-top: 0px !important;
 }
@@ -120,25 +119,15 @@ p {
 ul {
 	margin-bottom: 0px !important;
 }
-ul li {
-	text-decoration: none;
-	outline: none;
-	-webkit-font-smoothing: antialiased;
-	transition:all 0.4s ease-in-out 0s;
-	-webkit-transition:all 0.4s ease-in-out 0s;
-	-moz-transition:all 0.4s ease-in-out 0s;
-	-ms-transition:all 0.4s ease-in-out 0s;
-	-o-transition:all 0.4s ease-in-out 0s;
-}
 a {
 	text-decoration: none;
 	outline: none;
 	-webkit-font-smoothing: antialiased;
-	transition:all 0.4s ease-in-out 0s;
+	/*transition:all 0.4s ease-in-out 0s;
 	-webkit-transition:all 0.4s ease-in-out 0s;
 	-moz-transition:all 0.4s ease-in-out 0s;
 	-ms-transition:all 0.4s ease-in-out 0s;
-	-o-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;*/
 }
 a:hover {
 	text-decoration: none !important;
@@ -392,6 +381,9 @@ header{
     top: 54%;
     width: 70%;
 }
+/* ****************************************************************************************
+**************************** model section 
+************************************************************************************** */
 .home-model-box {
     padding: 10px 72px;
 }
@@ -474,6 +466,9 @@ header{
 	background:#dddcda;
 	padding:60px 0 25px 0
 }
+/* *********************************************************************************
+*************************** city section 
+*********************************************************************************** */
 .city-details {
     padding: 0 8%;
     text-align: center;
@@ -558,4 +553,79 @@ header{
 .city-more-btn-div a:hover{
 	background:#ad1457;
 	color:#fff;
+}
+
+/* *****************************************************************************************
+****************************** exclusive models 
+****************************************************************************************** */
+
+.exclusive-models-div{
+	margin:120px 0;
+	background:#eae5e0;
+	text-align:center;
+	position:relative;
+}
+.exclusive-models-div::after {
+    background-image: url("../images/decoration.png");
+    background-repeat: repeat-x;
+    bottom: -15px;
+    content: "";
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+.exclusive-models-div::before {
+    background-image: url("../images/decoration-1.png");
+    background-repeat: repeat-x;
+    content: "";
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    width: 100%;
+}
+.exclusive-models-box{
+	padding:45px 0;
+}
+.exclusive-models-box a{
+	background:#ad1457;
+	color:#fff;
+	padding:10px 12px;
+	font-family: "Tw Cen MT";
+	font-size:20px;
+	text-transform:uppercase;
+	border-radius: 5px;
+}
+.exclusive-models-box a:hover{
+	background:#6d6361;
+}
+
+/* ********************************************************************************
+********************** Latest news 
+********************************************************************************** */
+
+.latest-news{
+	background:#fff;
+}
+.latest-news-col-1{
+	width:31.5%;
+	float:left;
+}
+.latest-news-col-2{
+	width:31.5%;
+	float:left;
+	margin:0 35px;
+}
+.latest-news-col-3{
+	width:31.5%;
+	float:right;
+}
+.latest-news-content{
+	padding:15px 30px;
+}
+.latest-news-content h2{
+	line-height:36px;
 }
