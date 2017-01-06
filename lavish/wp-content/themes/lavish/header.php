@@ -101,7 +101,7 @@
             </li>
             <li>
                
-				<video width="100%" height="650px" controls autoplay>
+				<video width="100%" height="650px" controls  playsinline="" autoplay loop>
 					<source src="<?php echo esc_url( get_template_directory_uri() )?>/video/movie.mp4" type="video/mp4">
 						<source src="<?php echo esc_url( get_template_directory_uri() )?>/video/movie.ogg" type="video/ogg">
                   
