@@ -68,7 +68,8 @@ $options = array();
 $options[] = array( "name" => "General Settings For Home Page Different Options",
                     "type" => "heading");
 
-					
+	$options[] = array( "name" => "High Class",
+                    "type" => "heading");				
 	
 					
 $options[] = array( "name" => "High Class Escort Service",
@@ -108,10 +109,33 @@ $options[] = array( "name" => "High Class Escort Service3",
 					"type" => "webq_editor");						
 																							
 														
-					
+$options[] = array( "name" => "Our Discreet Concierge Service",
+                    "type" => "heading");					
 					
 
-
+$options[] = array( "name" => "Our Discreet Concierge Service",
+					"desc" => "Here you can enter any heading you want",
+					"id" => "webq_dis_srv",
+					"std" => "",
+					"type" => "webq_editor");	
+					
+$options[] = array( "name" => "Our Discreet Concierge Service Description",
+					"desc" => "Here you can enter any description you want",
+					"id" => "webq_dis_srv_des",
+					"std" => "",
+					"type" => "webq_editor");	
+					
+$options[] = array( "name" => "Our Discreet Concierge Service2",
+					"desc" => "Here you can enter any heading you want",
+					"id" => "webq_dis_srv2",
+					"std" => "",
+					"type" => "webq_editor");	
+					
+$options[] = array( "name" => "Our Discreet Concierge Service2 Description",
+					"desc" => "Here you can enter any description you want",
+					"id" => "webq_dis_srv_des2",
+					"std" => "",
+					"type" => "webq_editor");	
 	
 										
 														
