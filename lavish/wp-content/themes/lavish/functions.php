@@ -12,6 +12,29 @@
 /**
  * Twenty Seventeen only works in WordPress 4.7 or later.
  */
+ 
+ ###########################################################
+#################### Theme Option #########################
+###########################################################
+if ( STYLESHEETPATH == TEMPLATEPATH ) {
+	define('OF_FILEPATH', TEMPLATEPATH);
+	define('OF_DIRECTORY', get_template_directory_uri());
+
+} else {
+
+	define('OF_FILEPATH', STYLESHEETPATH);
+	define('OF_DIRECTORY', get_template_directory_uri());
+}
+
+require_once (OF_FILEPATH . '/admin/admin-interface.php');
+require_once (OF_FILEPATH . '/admin/theme-options.php');
+
+
+if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
+	require get_template_directory() . '/inc/back-compat.php';
+	return;
+}
+ 
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
