@@ -113,7 +113,8 @@ p {
 	color: #575555;
 	margin: 0 auto !important;
 	color: #676767;
-	font-size: 17px;
+	font-size: 14px;
+	font-style:italic;
 	-webkit-font-smoothing: antialiased;
 }
 ul {
@@ -1021,8 +1022,35 @@ header{
     display: inline-block;
 	font-size:14px;
 	font-family: "Tw Cen MT";
-   /* line-height: 35px;*/
+   /*line-height: 35px;*/
 }
+
 .casting-tab-details{
 	display:none;
+}
+.casting-tab-details:nth-child(1){
+	display:block;
+}
+.casting-from-box input[type="submit"] {
+    background: #9c0b46 !important;
+    float: right;
+    height: 40px;
+    line-height: 20px;
+    width: 200px;
+	border:none !important;
+	font-size:22px !important;
+	font-family: "Tw Cen MT";
+}
+.casting-from-box input[type="submit"]:hover {
+    background: #696868 !important;
+}
+.free-gide-div{
+	text-align:center;
+	padding:90px 0 70px 0;
+}
+.free-gide-box{
+	padding:20px 100px;
+}
+.free-gide-box p{
+	padding-top:20px;
 }
