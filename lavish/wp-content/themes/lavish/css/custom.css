@@ -975,6 +975,54 @@ header{
 	font-size:15px;
 }
 .casting-tab ul li a:hover {
-    background: #696868;
-   
+    background: #696868; 
+}
+.casting-form-heading{
+	padding:40px 0;
+	text-align:center;
+}
+.contact-info-box .contact-info-box-left{
+	float:left;
+	width:48%;
+}
+.contact-info-box .contact-info-box-right{
+	float:right;
+	width:46%;
+}
+
+.personal-info-box .personal-info-left{
+	float:left;
+	width:48%;
+}
+.personal-info-box .personal-info-right{
+	float:right;
+	width:46%;
+}
+
+.casting-from-box input {
+    border: 1px solid #c3c3c3 !important;
+	background:#eae5e0 !important;
+}
+.casting-from-box textarea {
+    border: 1px solid #c3c3c3 !important;
+	background:#eae5e0 !important;
+	min-height:220px;
+	padding-top:10px;
+	width:100% !important;
+}
+.casting-from-box select{
+    border: 1px solid #c3c3c3 !important;
+	background:#eae5e0 !important;
+	height: 39px !important;
+	border-radius:0px !important;
+}
+.casting-from-box label {
+    vertical-align: middle;
+    display: inline-block;
+	font-size:14px;
+	font-family: "Tw Cen MT";
+   /* line-height: 35px;*/
+}
+.casting-tab-details{
+	display:none;
 }
