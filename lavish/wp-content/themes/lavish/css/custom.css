@@ -307,6 +307,7 @@ common portion end
 	font-family: 'Tw Cen MT';
 	font-size:19px;
 	padding:7px 15px;
+	text-transform:uppercase;
 	
 }
 .main-nav ul li a:hover{
@@ -726,8 +727,18 @@ header{
 	padding-top:20px;
 }
 .latest-news-div{
-	padding-bottom:80px;
+	padding-bottom:65px;
 }
+.copyscape-btn{
+	text-align:center;
+	padding-top:65px;
+}
+.copyscape-btn a:hover{
+	opacity:0.7;
+}
+/* **********************************************************************************
+****************** footer 
+*********************************************************************************** */
 .footer-div{
 	background:url("../images/footer-bg.jpg") no-repeat center center;
 	background-size:cover;
