@@ -105,19 +105,19 @@
      <p> Payment options </p>
      <p>We accept the following credit cards: </p>
      <div class="payment-div"> 
-       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/credit_grey.png" / alt=""></a>
+       <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/credit_grey.png" / alt="">
      </div>
    </div>
    <div class="copy-right-div clearfix">
     <div class="copy-right-left">
-      <p> © 2016 Lavish Mate®  Entertainment- All rights reserved  <span>Privacy Policy, Terms of Use, Copy Right Policy </span> </p>
+      <p> <?php echo get_option('webq_copy');?> </p>
     </div>
     <div class="copy-right-right">
      <ul>
-      <li> <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a> </li>
-      <li> <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i> </a> </li>
-      <li> <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i> </a> </li>
-      <li> <a href="#"> <i class="fa fa-youtube" aria-hidden="true"></i> </a> </li>
+      <li> <a href="<?php echo get_option('webq_fb');?>"> <i class="fa fa-facebook" aria-hidden="true"></i> </a> </li>
+      <li> <a href="<?php echo get_option('webq_twt');?>"> <i class="fa fa-twitter" aria-hidden="true"></i> </a> </li>
+      <li> <a href="<?php echo get_option('webq_ins');?>"> <i class="fa fa-instagram" aria-hidden="true"></i> </a> </li>
+      <li> <a href="<?php echo get_option('webq_youtube');?>"> <i class="fa fa-youtube" aria-hidden="true"></i> </a> </li>
      </ul>
     </div>
    </div>
