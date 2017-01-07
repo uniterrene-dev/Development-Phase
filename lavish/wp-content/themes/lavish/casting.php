@@ -71,9 +71,9 @@ of service and welcoming you to Lavish Mate®. </p>
  <div class="container">
   <div class="casting-tab">
    <ul>
-    <li><a href="#">Contact Info</a></li>
-    <li><a href="#">Personal info</a></li>
-    <li><a href="#">four photos</a></li>
+    <li><a href="#" id="contact-info">Contact Info</a></li>
+    <li><a href="#" id="personal-info">Personal info</a></li>
+    <li><a href="#" id="four-photos">four photos</a></li>
    </ul>
   </div>
   <?php echo do_shortcode('[wpuf_form id="164"]');?>
