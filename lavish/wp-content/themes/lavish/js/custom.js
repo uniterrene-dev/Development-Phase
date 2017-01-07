@@ -1,4 +1,4 @@
-// from js 
+//casting from js 
 
   wpuf_conditional_items = [];
   wpuf_conditional_items.push();
@@ -587,4 +587,4 @@
                 jQuery()
             }
        
-           
+//casting from js end //
