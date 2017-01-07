@@ -190,7 +190,59 @@ $options[] = array( "name" => "Youtube Link",
 					"desc" => "Here you can enter any youtube link",
 					"id" => "webq_youtube",
 					"std" => "",
-					"type" => "webq_editor");                    																						
+					"type" => "webq_editor");                    
+/*Casting Area*/
+$options[] = array( "name" => "General Settings For Cast Your Lavish Mate",
+                    "type" => "heading");
+                    
+$options[] = array( "name" => "Cast Your Lavish Mate Header",
+					"desc" => "Here you can enter any header",
+					"id" => "webq_cast_header",
+					"std" => "",
+					"type" => "webq_editor");
+					                    																							$options[] = array( "name" => "Casting Contest One",
+					"desc" => "Here you can enter any header",
+					"id" => "webq_cast_one",
+					"std" => "",
+					"type" => "webq_editor");	
+					
+$options[] = array( "name" => "Casting Contest Two",
+					"desc" => "Here you can enter any header",
+					"id" => "webq_cast_two",
+					"std" => "",
+					"type" => "webq_editor");	
+					
+
+					
+$options[] = array( "name" => "Amezing Header Tab One Heading",
+					"desc" => "Here you can enter any header",
+					"id" => "webq_amz_one_head",
+					"std" => "",
+					"type" => "webq_editor");	
+					
+$options[] = array( "name" => "Amezing Header Tab One Description",
+					"desc" => "Here you can enter any header",
+					"id" => "webq_amz_one_des",
+					"std" => "",
+					"type" => "webq_editor");
+					
+$options[] = array( "name" => "Amezing Header Tab Two Heading",
+					"desc" => "Here you can enter any header",
+					"id" => "webq_amz_two_head",
+					"std" => "",
+					"type" => "webq_editor");	
+					
+$options[] = array( "name" => "Amezing Header Tab Two Description",
+					"desc" => "Here you can enter any header",
+					"id" => "webq_amz_two_des",
+					"std" => "",
+					"type" => "webq_editor");
+		
+$options[] = array( "name" => "Amezing Area Bottom Content",
+					"desc" => "Here you can enter any content",
+					"id" => "webq_amz_btm_content",
+					"std" => "",
+					"type" => "webq_editor");																																		
 	
 update_option('of_template',$options); 					  
 update_option('of_themename',$themename);   
