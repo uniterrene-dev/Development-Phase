@@ -1004,13 +1004,21 @@ header{
     border: 1px solid #c3c3c3 !important;
 	background:#eae5e0 !important;
 }
-.casting-from-box textarea {
+.casting-from-box .textareafield{
     border: 1px solid #c3c3c3 !important;
 	background:#eae5e0 !important;
 	min-height:220px;
 	padding-top:10px;
 	width:100% !important;
 }
+.casting-from-box textarea{
+	background:#eae5e0 !important;
+	border:none !important;
+	box-shadow:none !important;
+	font-family: "Tw Cen MT";
+	width:100% !important;
+}
+
 .casting-from-box select{
     border: 1px solid #c3c3c3 !important;
 	background:#eae5e0 !important;
@@ -1024,7 +1032,6 @@ header{
 	font-family: "Tw Cen MT";
    /*line-height: 35px;*/
 }
-
 .casting-tab-details{
 	display:none;
 }
@@ -1040,6 +1047,16 @@ header{
 	border:none !important;
 	font-size:22px !important;
 	font-family: "Tw Cen MT";
+}
+.casting-from-box .button{
+	background: #9c0b46 !important;
+	border:1px #9c0b46 solid !important;
+	box-shadow:none !important;
+	font-family: "Tw Cen MT";
+}
+.casting-from-box .button:hover{
+	background: #696868 !important;
+	border:1px #696868 solid !important;
 }
 .casting-from-box input[type="submit"]:hover {
     background: #696868 !important;
