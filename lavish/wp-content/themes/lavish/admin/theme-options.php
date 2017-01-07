@@ -161,7 +161,36 @@ $options[] = array( "name" => "Latest News Subheading",
 					"desc" => "Here you can enter any heading you want",
 					"id" => "webq_lat_news_sub_heading",
 					"std" => "",
-					"type" => "webq_editor");																			
+					"type" => "webq_editor");	
+					
+$options[] = array( "name" => "General Settings For Footer Area",
+                    "type" => "heading");	
+                    
+$options[] = array( "name" => "Copy Right Text",
+					"desc" => "Here you can enter any copy right text you want",
+					"id" => "webq_copy",
+					"std" => "",
+					"type" => "webq_editor");                    																						
+$options[] = array( "name" => "Facebook Link",
+					"desc" => "Here you can enter any fb link",
+					"id" => "webq_fb",
+					"std" => "",
+					"type" => "webq_editor");                    																						
+$options[] = array( "name" => "Twitter Link",
+					"desc" => "Here you can enter any twitter link",
+					"id" => "webq_twt",
+					"std" => "",
+					"type" => "webq_editor");                    																						
+$options[] = array( "name" => "Instragram Link",
+					"desc" => "Here you can enter any twitter link",
+					"id" => "webq_ins",
+					"std" => "",
+					"type" => "webq_editor");                    																						
+$options[] = array( "name" => "Youtube Link",
+					"desc" => "Here you can enter any youtube link",
+					"id" => "webq_youtube",
+					"std" => "",
+					"type" => "webq_editor");                    																						
 	
 update_option('of_template',$options); 					  
 update_option('of_themename',$themename);   
