@@ -87,6 +87,7 @@ function twentyseventeen_setup() {
 		'help'    => __( 'Let Us Help You', 'twentyseventeen' ),
 		'future'    => __( 'Future Lavish Mate', 'twentyseventeen' ),
 		'social' => __( 'Social Links Menu', 'twentyseventeen' ),
+		'casting' => __( 'Casting Page Menu', 'twentyseventeen' ),
 	) );
 
 	/*
