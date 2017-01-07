@@ -1,4 +1,9 @@
 //casting from js 
+jQuery('.casting-tab-name').click(function(e) {	
+	jQuery('.casting-tab-details').hide();
+    var ids = jQuery(this).attr('href');
+	jQuery(ids).show();
+});
 
   wpuf_conditional_items = [];
   wpuf_conditional_items.push();
@@ -588,3 +593,4 @@
             }
        
 //casting from js end //
+
