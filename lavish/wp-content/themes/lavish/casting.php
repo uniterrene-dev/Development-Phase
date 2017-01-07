@@ -66,10 +66,19 @@ of service and welcoming you to Lavish Mate®. </p>
   </div>
  </div>
 </section>
-<section>
-	
-	<?php echo do_shortcode('[wpuf_form id="164"]');?>
-	</section>
+
+<section id="casting-from" class="casting-from-div">
+ <div class="container">
+  <div class="casting-tab">
+   <ul>
+    <li><a href="#">Contact Info</a></li>
+    <li><a href="#">Personal info</a></li>
+    <li><a href="#">four photos</a></li>
+   </ul>
+  </div>
+  <?php echo do_shortcode('[wpuf_form id="164"]');?>
+ </div> 
+</section>
 <?php
 get_footer();
 ?>
