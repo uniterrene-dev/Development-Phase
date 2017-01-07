@@ -18,6 +18,7 @@
 <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
 <title>Lavish</title>
+
  <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() )?>/css/custom.css">
  <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() )?>/css/responsive.css">
  <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() )?>/css/font-awesome.min.css">
@@ -26,6 +27,7 @@
  <link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/jquery.bxslider.css" >
  <link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/jquery_dropdown.css">
 
+<?php wp_head(); ?>
 </head>
 
 <body>
@@ -58,7 +60,7 @@
 
 <div class="second-nav">
     <div class="container clearfix">
-       <div class="header-logo"> <a href="javascript:void(0)"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/header-logo.png" alt="logo" title="logo image"></a>
+       <div class="header-logo"> <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/header-logo.png" alt="logo" title="logo image"></a>
        </div>
         <div class="main-nav">
             <ul>
@@ -128,7 +130,7 @@ foreach($recent_posts as $recent_posts)
 		  
 			if (has_post_thumbnail($recent_posts['ID'] ) ): 
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
-			
+			//print_r($image[0]);
 			$area_code .= '<li><a href="#"><img src="';
 			$area_code .=  $image[0].'"';
 			$area_code .=' alt="slider1" title="banner slider"></a>';
@@ -149,7 +151,7 @@ foreach($recent_posts as $recent_posts)
         
         <div class="slide-content">
           <div class="big-button-slide">
-            <a href="#">JOIN OUR portfolio</a>
+            <a href="#">Meet Our Ladies</a>
           </div>
         </div>
 </div><!--End Div-->
