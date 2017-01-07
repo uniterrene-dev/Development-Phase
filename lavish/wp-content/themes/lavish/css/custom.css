@@ -958,3 +958,23 @@ header{
 	padding:80px 0;
 	background:#eae5e0;
 }
+.casting-tab {
+    text-align: center;
+}
+.casting-tab ul li {
+    display: inline-block;
+    margin: 0 50px;
+}
+.casting-tab ul li a {
+    background: #9c0b46;
+    color: #fff;
+    display: block;
+    padding: 12px 25px;
+	text-transform:uppercase;
+	font-family: "Tw Cen MT";
+	font-size:15px;
+}
+.casting-tab ul li a:hover {
+    background: #696868;
+   
+}
