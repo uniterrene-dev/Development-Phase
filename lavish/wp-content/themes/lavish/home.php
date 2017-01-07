@@ -21,7 +21,7 @@ get_header();
      <p><?php echo get_option('webq_es_srv_des3');?></p>
    </div>
  </div>
-  <div class="about-box-divider"></div>
+  <div class="about-box-divider"><span> </span></div>
 </section>
 <section id="home-model" class="home-model-div">
  <div class="container">
