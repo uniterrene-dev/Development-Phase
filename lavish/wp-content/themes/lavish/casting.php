@@ -2,8 +2,9 @@
 /**
  * Template Name: Casting Page
  */
-get_header('custing');
+get_header('casting');
 ?>
+
 <?php
 get_footer();
 ?>
