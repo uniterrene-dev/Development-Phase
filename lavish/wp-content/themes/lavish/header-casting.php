@@ -58,7 +58,7 @@
 
 <div class="second-nav">
     <div class="container clearfix">
-       <div class="header-logo"> <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/header-logo.png" alt="logo" title="logo image"></a>
+       <div class="header-logo"> <a href="javascript:void(0)"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/header-logo.png" alt="logo" title="logo image"></a>
        </div>
         <div class="main-nav">
             <ul>
@@ -149,7 +149,7 @@ foreach($recent_posts as $recent_posts)
         
         <div class="slide-content">
           <div class="big-button-slide">
-            <a href="#">Meet Our Ladies</a>
+            <a href="#">JOIN OUR portfolio</a>
           </div>
         </div>
 </div><!--End Div-->
