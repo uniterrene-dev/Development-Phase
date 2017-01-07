@@ -196,6 +196,9 @@ $guid = $recent_posts['guid'];
    <?php $j++; } ?>	 
 
   </div>
+  <div class="copyscape-btn">
+    <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/copyscape-banner-gray.png" / alt=""></a>
+  </div>
  </div>
 </section> <!----- Latest News -->
 
