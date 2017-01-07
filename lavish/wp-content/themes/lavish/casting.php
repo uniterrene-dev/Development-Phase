@@ -70,9 +70,9 @@ get_header('casting');
   <div class="container">
     <div class="casting-tab">
       <ul>
-        <li><a href="#contact-info" class="casting-tab-name">Contact Info</a></li>
-        <li><a href="#personal-info" class="casting-tab-name">Personal info</a></li>
-        <li><a href="#four-photos" class="casting-tab-name">four photos</a></li>
+        <li><a data-href="#contact-info" href="javaScript:void(0);" class="casting-tab-name">Contact Info</a></li>
+        <li><a data-href="#personal-info" href="javaScript:void(0);" class="casting-tab-name">Personal info</a></li>
+        <li><a data-href="#four-photos" href="javaScript:void(0);" class="casting-tab-name">four photos</a></li>
       </ul>
     </div>
     <?php //echo do_shortcode('[wpuf_form id="164"]');?>
