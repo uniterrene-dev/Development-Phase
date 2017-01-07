@@ -860,3 +860,97 @@ header{
 .footer-logo{
 	padding-top:10px;
 }
+
+/* ***************************************************************************************
+************************ casting page 
+************************************************************************************** */
+
+.casting-about-div{
+	background:#eaeaea;
+	background-image: url("../images/decoration.png");
+    background-repeat: repeat-x;
+    padding: 60px 0;
+    position: relative;
+    vertical-align: middle;
+}
+.casting-about-top {
+    line-height: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.casting-about-top ul li {
+    display: inline-block;
+    line-height: 16px;
+	margin:0 10px;
+}
+.casting-about-top ul li a{
+	background: #fff;
+	padding: 5px 12px;
+	font-size:14px;
+	 border-radius: 7px;
+	color: #898787;
+	font-family: "Tw Cen MT";
+}
+.casting-about-top ul li a:hover{
+	background:#ad1457;
+	color:#fff;
+}
+.casting-about-bottom {
+    margin-top: 40px;
+    text-align: center;
+}
+.casting-about-top .about-box-divider {
+    top: 25%;
+}
+.casting-about-bottom-content {
+    padding: 20px 90px;
+}
+.casting-about-bottom .casting-about-bottom-content p{
+	font-size:14px;
+	font-style:italic;
+	padding-top:20px;
+}
+.casting-amazing-div{
+	padding:80px 0;
+	background-image: url("../images/decoration.png");
+    background-repeat: repeat-x;
+    position: relative;
+    vertical-align: middle;
+	text-align:center;
+}
+.casting-amazing-top-heading{
+	background:#afacac;
+	padding:7px 0;
+}
+.casting-amazing-top-heading h3 {
+    color: #fff;
+	font-size:26px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.casting-amazing-top-left {
+    float: left;
+    width: 40%;
+}
+.casting-amazing-top-right {
+    float: right;
+    width: 40%;
+}
+.casting-amazing-top p{
+	font-size:14px;
+	font-style:italic;
+	padding:40px;
+}
+.casting-amazing-top p strong{
+	color:#ad1457;
+}
+.casting-amazing-top .about-box-divider {
+    top: 35%;
+}
+.casting-amazing-bottom{
+	padding-top:55px;
+}
+.casting-amazing-bottom p{
+	font-size:14px;
+	font-style:italic;
+}
