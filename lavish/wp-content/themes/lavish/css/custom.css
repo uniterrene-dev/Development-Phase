@@ -1155,3 +1155,6 @@ ul.wpuf-form li:nth-child(2n) {
 .casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-prev-btn:hover{
 	background:#696868 !important;
 }
+.casting-from-box {
+    padding: 0 45px;
+}
