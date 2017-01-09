@@ -1102,12 +1102,20 @@ header{
 .casting-from-box .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li:hover{
 	background:#696868 !important;
 }
-.casting-from-box fieldset.wpuf-multistep-fieldset {
+/*.casting-from-box fieldset.wpuf-multistep-fieldset {
     border: medium none;
     margin: 0 auto;
     padding-bottom: 50px;
     position: relative;
     width: 65%;
+}*/
+ul.wpuf-form li {
+    display: inline-block;
+    width: 48%;
+}
+ul.wpuf-form li:nth-child(2n) {
+    width: 45%;
+	float:right;
 }
 .casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-next-btn {
     background: #9c0b46;
@@ -1122,5 +1130,20 @@ header{
 	-o-transition:all 0.4s ease-in-out 0s;
 }
 .casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-next-btn:hover{
+	background:#696868 !important;
+}
+.casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-prev-btn {
+    background: #9c0b46;
+    right: 10px;
+	padding:10px 20px;
+	color:#fff;
+	font-family: "Tw Cen MT";
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	-ms-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;
+}
+.casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-prev-btn:hover{
 	background:#696868 !important;
 }
