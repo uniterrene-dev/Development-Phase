@@ -16,6 +16,14 @@ common portion start
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Vivaldi';
+	src: url('../fonts/Vivaldi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Vivaldi.woff') format('woff'),
+		url('../fonts/Vivaldi.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 * {
 	box-sizing: border-box
 }
@@ -1200,4 +1208,150 @@ ul.wpuf-form li:nth-child(2n) {
     position: relative;
     top: -49px;
     left: -14px;
+}
+.header-casting-message-box{
+	background: url(../images/casting-message-header.jpg) no-repeat center center;
+	background-size:cover;
+	padding:20px 0;
+}
+.header-casting-message-box .casting-message-text{
+	float:left;
+	width:85%;
+}
+.header-casting-message-box .casting-message-logo {
+    float: right;
+    padding-top: 30px;
+    width: 15%;
+}
+.header-casting-message-box .casting-message-text h1{
+	font-size:72px;
+	color:#f5ece6;
+	font-family: 'Vivaldi';
+	line-height:70px;
+	
+}
+.header-casting-message-box .casting-message-text h2{
+	font-size:40px;
+	color:#f5ece6;
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	padding-left: 14%;
+}
+.hello-dear-div{
+	padding:50px 0;
+	text-align:center;
+	background:#fff;
+	
+}
+.hello-dear-box {
+    padding: 0 12%;
+}
+.hello-dear-div h3{
+	font-family:"Times New Roman", Times, serif;
+	font-size:36px;
+	font-style:italic;
+}
+.hello-dear-div p{
+	font-size:18px;
+	padding-top:20px;
+}
+.hello-dear-div p strong{
+	font-size:40px;
+	font-weight:normal;
+}
+.application-details-div{
+	background:#fff;
+}
+.application-details-box{
+	background:#eff0f1;
+	padding:0 30px;
+}
+.application-details{
+	background: rgba(240, 241, 242, 1) url("../images/casting-message-bg.jpg") no-repeat scroll right center;
+}
+.application-details-heading {
+    border: 15px solid #fff;
+    /*margin: 0 30px;*/
+	position:relative;
+}
+.application-details-heading::after {
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 13px solid #eff0f1;
+    content: "";
+    height: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 0;
+}
+.application-details-heading h1{
+	font-size:70px;
+	font-family: 'Vivaldi';
+	text-align:center;
+	color:#c7c4c2;
+}
+.application-detail-top p{
+	font-size:18px;
+	padding-top:20px;
+}
+.application-detail-top {
+    width: 70%;
+}
+.application-detail-top .application-details-heading{
+	margin:20px 0;
+	background:#eff0f1;
+}
+.application-detail-bottom{
+	text-align:center;
+	padding:0 30px;
+}
+.application-detail-bottom p{
+	font-size:18px;
+	padding-top:20px;
+}
+.application-detail-bottom-bottom p{
+	font-size:18px;
+	padding-top:20px;
+	color:#452f01;
+}
+.application-detail-bottom-bottom{
+	padding:0 40px;
+}
+.application-detail-bottom-footer p{
+	padding:3% 20%;
+}
+.application-detail-bottom-footer-bottom p{
+	padding:0 20px;
+	font-size:12px;
+	line-height:22px;
+}
+.application-detail-bottom-footer-bottom {
+    background: #eff0f1 none repeat scroll 0 0;
+    border: 15px solid #fff;
+    padding: 15px 0;
+    position: relative;
+}
+.application-detail-bottom-footer-bottom::before {
+    border-bottom: 13px solid #eff0f1;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: -13px;
+    width: 0;
+}
+.application-detail-footer{
+	text-align:left;
+	line-height:24px;
+	padding:15px 0;
+}
+.application-detail-footer p{
+	padding-top: 0px;
+	font-size:12px;
 }
