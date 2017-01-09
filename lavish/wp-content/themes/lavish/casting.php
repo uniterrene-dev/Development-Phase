@@ -9,10 +9,18 @@ get_header('casting');
   <div class="container">
     <div class="casting-about-top">
       <ul>
-        <li><a href="javascript:void(0)">ABOUT US</a></li>
-        <li><a href="javascript:void(0)">THE PERFECT LADY</a></li>
-        <li><a href="javascript:void(0)">FUTURE MODEL FAQ</a></li>
-        <li><a href="javascript:void(0)">CONTACT US</a></li>
+        <?php if ( has_nav_menu( 'casting' ) ) : ?>
+
+<?php wp_nav_menu( array(
+		'theme_location' => 'casting',
+		'menu_id'        => '',
+'menu' => 'top', 'container' => '', 'container_class' => '', 'container_id' => '', 'menu_class' => '', 'menu_id' => '',
+    'echo' => true, 'fallback_cb' => 'wp_page_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'items_wrap' => '<li>%3$s</li>', 'item_spacing' => 'preserve',
+    'depth' => 0, 'walker' => ''
+	) ); ?>
+        
+
+<?php endif; ?>	
       </ul>
       <div class="about-box-divider"> <span> </span> </div>
     </div>
