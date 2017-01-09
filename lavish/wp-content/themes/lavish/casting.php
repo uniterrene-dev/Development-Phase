@@ -78,15 +78,9 @@ get_header('casting');
 <section id="free-gide" class="free-gide-div">
  <div class="container">
   <div class="free-gide-box">
-   <h3> Lavish Mate fees guide </h3>
-   <p> Lavish Mate® luxury escort agency accepts cash or credit card to settle your account for your time with your elite date. For travel companion appointments, pre-payment is required 
-(minimum 2-5 days before flights). You can view all the actual fee schedules above. </p>
-   <p> Our elegant companions are available to travel worldwide. Whether throughout United State, or to Europe, Middle East or Oceania (Asia/ Australia/ New Zealand), we will have an 
-extraordinary, upscale woman who can make your time unforgettable. Our model escort companions are frequently called to international locations please see our Gentleman FAQ 
-for more details on booking a beautiful experience with one of our gorgeous angels. </p>
-  <p> Have we aroused your interest? We are very selective in casting our optimum girls that provide honesty, loyalty and have charming personalities. Then we are happy to receive your application!
-We are looking forward to meeting you! </p>
-
+   <h3> <?php echo get_option('webq_lavish_header');?></h3>
+   
+<?php echo get_option('webq_lavish_des');?>
     <div class="copyscape-btn">
       <a href="#">
         <img src="http://localhost/public_html/newwp/lavish/wp-content/themes/lavish/images/copyscape-banner-gray.png" alt="">
@@ -95,7 +89,6 @@ We are looking forward to meeting you! </p>
   </div>
  </div>
 </section>
-
 <?php
 get_footer();
 ?>
