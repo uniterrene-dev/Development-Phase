@@ -125,21 +125,23 @@
  </div>
 </footer>
 
-
-<!--
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery-1.11.0.js"></script> 
--->
-
-<?php wp_footer(); ?>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/custom.js"></script> 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery_dropdown.js"></script>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/javascripts.js"></script>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery.easing.js" ></script>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery.bxslider.min.js" ></script>
 
+
+<?php wp_footer(); ?>
+
+
+
+
 <script>
 	$( document ).ready(function() {
-    console.log( "ready!" );
+		//alert();
+    $( ".full_name" ).before( "<div class='contact-info-box-left'>" );
 });
 	
 	</script>
