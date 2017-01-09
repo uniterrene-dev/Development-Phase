@@ -1102,6 +1102,14 @@ header{
 .casting-from-box .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li:hover{
 	background:#696868 !important;
 }
+.casting-from-box .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li:nth-child(2n) {
+	float:none;
+}
+.wpuf-el.how_many_dates_you_used_handle_per_day_.handel_dates {
+    display: inline-block;
+    float: left;
+    width: 48%;
+}
 /*.casting-from-box fieldset.wpuf-multistep-fieldset {
     border: medium none;
     margin: 0 auto;
