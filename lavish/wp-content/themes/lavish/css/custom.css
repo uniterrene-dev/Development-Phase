@@ -1071,3 +1071,56 @@ header{
 .free-gide-box p{
 	padding-top:20px;
 }
+.casting-from-box .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li::before, .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li::after {
+    border-image: none;
+    border-radius: none !important;
+    border-style: none !important;
+}
+.casting-from-box .wpuf-form .wpuf-multistep-progressbar{
+	text-align:center;
+}
+.casting-from-box .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li {
+    border-radius: 0;
+    font-family: "Tw Cen MT";
+    font-size: 15px;
+    margin: 0 45px;
+    text-transform: uppercase;
+    width: 160px !important;
+    padding: 12px 25px;
+	cursor:pointer;
+	margin-bottom:60px;
+}
+.casting-from-box .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li{
+	background:#9c0b46 !important;
+	color:#fff;
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	-ms-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;
+}
+.casting-from-box .wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li:hover{
+	background:#696868 !important;
+}
+.casting-from-box fieldset.wpuf-multistep-fieldset {
+    border: medium none;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    position: relative;
+    width: 65%;
+}
+.casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-next-btn {
+    background: #9c0b46;
+    right: 10px;
+	padding:10px 20px;
+	color:#fff;
+	font-family: "Tw Cen MT";
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	-ms-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;
+}
+.casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-next-btn:hover{
+	background:#696868 !important;
+}
