@@ -1119,10 +1119,10 @@ header{
 }*/
 ul.wpuf-form li {
     display: inline-block;
-    width: 48%;
+    width: 42%;
 }
 ul.wpuf-form li:nth-child(2n) {
-    width: 45%;
+    width: 40%;
 	float:right;
 }
 .casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-next-btn {
