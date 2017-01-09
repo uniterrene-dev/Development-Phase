@@ -242,7 +242,18 @@ $options[] = array( "name" => "Amezing Area Bottom Content",
 					"desc" => "Here you can enter any content",
 					"id" => "webq_amz_btm_content",
 					"std" => "",
-					"type" => "webq_editor");																																		
+					"type" => "webq_editor");
+					
+$options[] = array( "name" => "Lavish Mate fees guide Header",
+					"desc" => "Here you can enter any content",
+					"id" => "webq_lavish_header",
+					"std" => "",
+					"type" => "webq_editor");																												
+$options[] = array( "name" => "Lavish Mate fees guide Description",
+					"desc" => "Here you can enter any content",
+					"id" => "webq_lavish_des",
+					"std" => "",
+					"type" => "webq_editor");															
 	
 update_option('of_template',$options); 					  
 update_option('of_themename',$themename);   
