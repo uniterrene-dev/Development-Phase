@@ -674,6 +674,125 @@ add_action( 'save_post', 'video_link_save' );
 	Usage: video_link_get_meta( 'video_link_link_or_embeb' )
 	Usage: video_link_get_meta( 'video_link_video_link_url' )
 */
+
+
+
+function select_page_get_meta( $value ) {
+	global $post;
+
+	$field = get_post_meta( $post->ID, $value, true );
+	if ( ! empty( $field ) ) {
+		return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+	} else {
+		return false;
+	}
+}
+
+function select_page_add_meta_box() {
+	add_meta_box(
+		'select_page-select-page',
+		__( 'Select Page Where You Want To Add The Banner', 'select_page' ),
+		'select_page_html',
+		'homepage_banner_post',
+		'normal',
+		'default'
+	);
+}
+add_action( 'add_meta_boxes', 'select_page_add_meta_box' );
+
+function select_page_html( $post) {
+	wp_nonce_field( '_select_page_nonce', 'select_page_nonce' ); ?>
+
+	<p>From this radio buttons you have to select the page. In that page this slider will be shown.</p>
+
+	<p>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_0" value="Home" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Home' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_0">Home</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_1" value="Escort ladies" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Escort ladies' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_1">Escort ladies</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_2" value="Booking" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Booking' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_2">Booking</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_3" value="Vip" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Vip' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_3">Vip</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_4" value="Casting" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Casting' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_4">Casting</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_5" value="Cities" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Cities' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_5">Cities</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_6" value="Contact" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Contact' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_6">Contact</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_7" value="Rates" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Rates' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_7">Rates</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_8" value="Exotic Fantasises" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Exotic Fantasises' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_8">Exotic Fantasises</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_9" value="News" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'News' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_9">News</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_10" value="Faq" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Faq' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_10">Faq</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_11" value="The prefred lady" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'The prefred lady' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_11">The prefred lady</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_12" value="Mate of the year" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Mate of the year' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_12">Mate of the year</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_13" value="Mate of the month" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Mate of the month' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_13">Mate of the month</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_14" value="Link to us" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Link to us' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_14">Link to us</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_15" value="Events" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Events' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_15">Events</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_16" value="Our services" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Our services' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_16">Our services</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_17" value="About" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'About' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_17">About</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_18" value="My Calendar" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'My Calendar' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_18">My Calendar</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_19" value="Feedback" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Feedback' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_19">Feedback</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_20" value="Members" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === 'Members' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_20">Members</label><br>
+
+		<input type="radio" name="select_page_page_names" id="select_page_page_names_21" value="10 steps to conquer" <?php echo ( select_page_get_meta( 'select_page_page_names' ) === '10 steps to conquer' ) ? 'checked' : ''; ?>>
+<label for="select_page_page_names_21">10 steps to conquer</label><br>
+
+	</p><?php
+}
+
+function select_page_save( $post_id ) {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+	if ( ! isset( $_POST['select_page_nonce'] ) || ! wp_verify_nonce( $_POST['select_page_nonce'], '_select_page_nonce' ) ) return;
+	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+	if ( isset( $_POST['select_page_page_names'] ) )
+		update_post_meta( $post_id, 'select_page_page_names', esc_attr( $_POST['select_page_page_names'] ) );
+}
+add_action( 'save_post', 'select_page_save' );
+
+/*
+	Usage: select_page_get_meta( 'select_page_page_names' )
+*/
+
+
+
+
 // Register Custom Post Type
 function Casting_Members() {
 
