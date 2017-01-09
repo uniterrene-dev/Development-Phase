@@ -8,20 +8,21 @@ jQuery('.casting-tab-name').click(function(e) {
  
 //casting from js end //
 
-var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector("#");
+//var vid = document.getElementById("bgvid");
 
-function vidFade() {
-  vid.classList.add("stopfade");
-}
+//fullscrreen video//
 
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed 
-vid.pause();
-// to capture IE10
-vidFade();
-}); 
+//function vidFade() {
+//  vid.classList.add("stopfade");
+//}
+//
+//vid.addEventListener('ended', function()
+//{
+//
+//vid.pause();
+//
+//vidFade();
+//}); 
 
 
 //pauseButton.addEventListener("click", function() {
