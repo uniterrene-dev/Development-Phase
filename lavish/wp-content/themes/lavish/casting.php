@@ -61,13 +61,13 @@ get_header('casting');
 </section>
 <section id="casting-from" class="casting-from-div">
   <div class="container">
-    <div class="casting-tab">
+    <!--<div class="casting-tab">
       <ul>
         <li><a data-href="#contact-info" href="javaScript:void(0);" class="casting-tab-name">Contact Info</a></li>
         <li><a data-href="#personal-info" href="javaScript:void(0);" class="casting-tab-name">Personal info</a></li>
         <li><a data-href="#four-photos" href="javaScript:void(0);" class="casting-tab-name">four photos</a></li>
       </ul>
-    </div>
+    </div>-->
     <?php //echo do_shortcode('[wpuf_form id="164"]');?>
     <div class="casting-from-box">
       <?php echo do_shortcode('[wpuf_form id="164"]');?>
@@ -83,7 +83,7 @@ get_header('casting');
 <?php echo get_option('webq_lavish_des');?>
     <div class="copyscape-btn">
       <a href="#">
-        <img src="http://localhost/public_html/newwp/lavish/wp-content/themes/lavish/images/copyscape-banner-gray.png" alt="">
+        <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/copyscape-banner-gray.png" alt="">
       </a>
     </div>
   </div>
