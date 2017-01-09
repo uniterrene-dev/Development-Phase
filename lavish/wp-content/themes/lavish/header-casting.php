@@ -110,6 +110,10 @@ $j=1;
 $input = array();
 foreach($recent_posts as $recent_posts)
 { 
+	$page_name = get_post_meta($recent_posts['ID'], "select_page_page_names", true); 
+	
+	if($page_name == "Casting")
+	{
 	 //echo $recent_posts['ID'];
 	 $area_code="";
 	 
@@ -146,6 +150,8 @@ foreach($recent_posts as $recent_posts)
 	  }
 	  echo $area_code;
 	  
+	 }
+	 
 	 }	?>
 	 </ul><!--End ul-->
         
