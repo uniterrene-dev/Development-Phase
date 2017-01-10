@@ -115,7 +115,7 @@ get_header();
                        <ul> 
 						 
 <?php 
-						   $args = array('child_of' => '4');
+						   $args = array('child_of' => '4', 'orderby' => 'ID','order' => 'ASC',);
 $categories = get_categories( $args );
 foreach($categories as $category) { 
    // print_r($category);
