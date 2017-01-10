@@ -969,10 +969,13 @@ header{
     float: right;
     width: 40%;
 }
+.casting-amazing-top {
+    padding: 0 5%;
+}
 .casting-amazing-top p{
 	font-size:14px;
 	font-style:italic;
-	padding:40px;
+	padding:30px 12px;
 }
 .casting-amazing-top p strong{
 	color:#ad1457;
