@@ -1011,8 +1011,15 @@ header{
 	font-family: "Tw Cen MT";
 	font-size:15px;
 }
+.casting-tab ul li a.active{
+	background: #696868; 
+}
 .casting-tab ul li a:hover {
     background: #696868; 
+}
+.wpuf-form .wpuf-multistep-progressbar ul.wpuf-step-wizard li.active-step {
+    background: #696868 !important;
+    color: #ffffff !important;
 }
 .casting-form-heading{
 	padding:40px 0;
@@ -1057,9 +1064,13 @@ header{
 
 .casting-from-box select{
     border: 1px solid #5d5d5e !important;
-	background:#eae5e0 !important;
+	background:#eae5e0 url(../images/select-dowan-arows.png) no-repeat center right; !important;
 	height: 39px !important;
 	border-radius:0px !important;
+	appearance: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	/*background: url(../images/select-dowan-arows.png) center right;*/
 }
 .casting-from-box label {
     display: inline-block;
@@ -1154,24 +1165,51 @@ header{
     position: relative;
     width: 65%;
 }*/
-/*ul.wpuf-form li {
+/*ul.wpuf-form div fieldset{
+ -webkit-column-count: 2 !important;
+    -moz-column-count: 2 !important;
+         column-count: 2 !important;
+		 -ms-column-count: 2 !important;
+		 -o-column-count: 2 !important;
+}
+ul.wpuf-form li:nth-of-type(4){
+	margin-bottom:100px;
+}
+ul.wpuf-form div fieldset > button{
+	column-count: none !important;
+}*/
+
+
+/*ul.wpuf-form li{
+	width:100% !important
+}*/
+/*.wpuf-multistep-next-btn.btn.btn-primary {
+    bottom: -63px;
+    right: 0 !important;
+}*/
+/*.casting-common fieldset.wpuf-multistep-fieldset > button {
+    bottom: -59px;
+    position: relative;
+    right: 0 !important;
+}*/
+ul.wpuf-form li {
     display: inline-block;
     width: 42%;
 }
 ul.wpuf-form li:nth-child(2n) {
     width: 40%;
 	float:right;
-}*/
-.casting-Contact .wpuf-multistep-fieldset li{
-	width: 42%;
-	column-count: 2;
-	/*display:inline-block;*/
 }
-/*.casting-Contact .wpuf-multistep-fieldset li:nth-child(5n){
-	 width: 42%;
-	 float:right;
+.casting-from-box input[type="radio"] {
+    width: 15px ;
+    height: 15px;
+}
+/*.casting-Contact .wpuf-multistep-fieldset > li:nth-child(-n+7) {
+    width: 42%;
 }*/
-
+/*.casting-Contact .wpuf-multistep-fieldset > li:nth-child(-n+11) {
+    width: 42%;
+}*/
 .casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-next-btn {
     background: #9c0b46;
     right: 10px;
