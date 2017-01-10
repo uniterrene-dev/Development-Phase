@@ -59,9 +59,9 @@ get_header('casting');
     </div>
     <div class="casting-tab">
       <ul>
-        <li><a data-href="#contact-info" href="javaScript:void(0);" class="casting-tab-name">Contact Info</a></li>
-        <li><a data-href="#personal-info" href="javaScript:void(0);" class="casting-tab-name">Personal info</a></li>
-        <li><a data-href="#four-photos" href="javaScript:void(0);" class="casting-tab-name">four photos</a></li>
+        <li><a href="#casting-Contact" class="casting-tab-name active">Contact Info</a></li>
+        <li><a href="#casting-Personal" class="casting-tab-name">Personal info</a></li>
+        <li><a href="#casting-Four" class="casting-tab-name">four photos</a></li>
       </ul>
     </div>
   </div>
