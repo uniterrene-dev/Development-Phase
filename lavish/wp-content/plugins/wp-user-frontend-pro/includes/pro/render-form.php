@@ -626,14 +626,19 @@ class WPUF_render_form_element extends WPUF_Render_Form {
         if ( $obj->multiform_start == 1 && !empty( $obj->multiform_start ) ) {
             ?>
 
-            </fieldset>
+            </fieldset></div>
         <?php
         } else{
             $obj->multiform_start = 1;
         }
 
         if ( !empty( $enable_multistep ) ) {
+			
+			$label =  $attr['label'];
+			$label_class = explode(" ",$label)
+			
             ?>
+            <div class="casting-common casting-<?php echo $label_class[0];?>">
             <fieldset class="wpuf-multistep-fieldset">
                 <legend>
                     <?php echo $attr['label'];?>
