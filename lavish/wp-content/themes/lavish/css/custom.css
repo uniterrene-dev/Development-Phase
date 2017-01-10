@@ -1154,14 +1154,24 @@ header{
     position: relative;
     width: 65%;
 }*/
-ul.wpuf-form li {
+/*ul.wpuf-form li {
     display: inline-block;
     width: 42%;
 }
 ul.wpuf-form li:nth-child(2n) {
     width: 40%;
 	float:right;
+}*/
+.casting-Contact .wpuf-multistep-fieldset li{
+	width: 42%;
+	column-count: 2;
+	/*display:inline-block;*/
 }
+/*.casting-Contact .wpuf-multistep-fieldset li:nth-child(5n){
+	 width: 42%;
+	 float:right;
+}*/
+
 .casting-from-box fieldset.wpuf-multistep-fieldset .wpuf-multistep-next-btn {
     background: #9c0b46;
     right: 10px;
