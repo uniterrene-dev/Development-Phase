@@ -413,7 +413,7 @@ header{
     margin: 0 auto;
     position: absolute;
     right: 0;
-    top: 54%;
+    top: 45%;
     width: 70%;
 	text-align: center;
 }
@@ -907,13 +907,14 @@ header{
     line-height: 16px;
 	margin:0 10px;
 }
-.casting-about-top ul li a{
-	background: #fff;
-	padding: 5px 12px;
-	font-size:14px;
-	 border-radius: 7px;
-	color: #898787;
-	font-family: "Tw Cen MT";
+.casting-about-top ul li a {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 7px;
+    color: #898787;
+    font-family: "Tw Cen MT";
+    font-size: 16px;
+    padding: 7px 14px;
+    text-transform: uppercase;
 }
 .casting-about-top ul li a:hover{
 	background:#ad1457;
@@ -1024,11 +1025,11 @@ header{
 }
 
 .casting-from-box input {
-    border: 1px solid #999 !important;
+    border: 1px solid #5d5d5e !important;
 	background:#eae5e0 !important;
 }
 .casting-from-box .textareafield{
-    border: 1px solid #999 !important;
+    border: 1px solid #5d5d5e !important;
 	background:#eae5e0 !important;
 	min-height:100px;
 	padding-top:10px;
@@ -1043,17 +1044,18 @@ header{
 }
 
 .casting-from-box select{
-    border: 1px solid #999 !important;
+    border: 1px solid #5d5d5e !important;
 	background:#eae5e0 !important;
 	height: 39px !important;
 	border-radius:0px !important;
 }
 .casting-from-box label {
-    vertical-align: middle;
     display: inline-block;
-	font-size:14px;
-	font-family: "Tw Cen MT";
-   /*line-height: 35px;*/
+    font-family: "Times New Roman",Times,serif;
+    font-size: 12pt;
+    vertical-align: middle;
+    font-style: italic;
+	/*line-height: 32px;*/
 }
 .casting-tab-details{
 	display:none;
@@ -1186,28 +1188,34 @@ ul.wpuf-form li:nth-child(2n) {
     margin-top: 30px;
     width: 100%;
 }
-.casting-from-box .wpuf-submit {
+/*.casting-from-box .wpuf-submit {
     display: block !important;
     float: right !important;
     position: absolute;
     right: 11px;
     top: 56%;
     width: 100% !important;
-}
-.casting-from-box .wpuf-el.tram-conditon-fild {
+}*/
+/*.casting-from-box .wpuf-el.tram-conditon-fild {
     display: block;
     float: right;
     margin-top: 100px;
     width: 85%;
-}
+}*/
 /*.casting-from-box .wpuf-fields .wpuf-el.tram-conditon-fild label{
 	float:left;
 	display:block;
 }*/
-.casting-from-box .wpuf-fields.wpuf__164 > label {
+.casting-from-box .tram-conditon-fild{
+	width:100%;
+}
+.casting-from-box .tram-conditon-fild .wpuf-fields > label {
     position: relative;
-    top: -49px;
+    top: -51px;
     left: -14px;
+    display: inherit;
+    width: 16px;
+    height: 16px;
 }
 .header-casting-message-box{
 	background: url(../images/casting-message-header.jpg) no-repeat center center;
@@ -1354,4 +1362,12 @@ ul.wpuf-form li:nth-child(2n) {
 .application-detail-footer p{
 	padding-top: 0px;
 	font-size:12px;
+}
+.casting-from-box ul.wpuf-form li .wpuf-label {
+    float: left;
+    width: 30%;
+}
+.casting-from-box ul.wpuf-form li .wpuf-fields {
+    float: left;
+    width: 70%;
 }
