@@ -90,7 +90,7 @@ h2 {
 	margin-top: 0px !important;
 }
 h3 {
-	font-size: 1.875rem;
+	font-size: 1.75rem;
 	font-family: 'Tw Cen MT';
 	line-height: 40px;
 	font-weight: normal;
@@ -297,9 +297,14 @@ common portion end
 .top-nav ul li span i{
 	font-size:12px;
 }
-.header-logo{
-	float:left;
-	width:160px;
+.header-logo {
+    float: left;
+    position: absolute;
+    top: -8px;
+    width: 160px;
+}
+.second-nav {
+    position: relative;
 }
 .main-nav {
     float: right;
@@ -413,7 +418,7 @@ header{
     margin: 0 auto;
     position: absolute;
     right: 0;
-    top: 45%;
+    top: 41%;
     width: 70%;
 	text-align: center;
 }
@@ -430,7 +435,7 @@ header{
 **************************** model section 
 ************************************************************************************** */
 .home-model-box {
-    padding: 10px 72px;
+    padding: 10px 0;
 }
 .home-model-box-left {
     background: #fff;
@@ -481,7 +486,7 @@ header{
 }
 .model-view-box ul li{
 	display:inline-block;
-	width:31.5%;
+	width:31.4%;
 	background:#fff;
 	margin:0 15px;
 }
@@ -511,7 +516,7 @@ header{
 	padding-bottom:95px;
 }
 .city-section-div{
-	background:#dddcda;
+	background:#eae5e1;
 	padding:60px 0 25px 0
 }
 /* *********************************************************************************
@@ -674,7 +679,7 @@ header{
 	background:#fff;
 }
 .latest-news-col-1{
-	width:31.5%;
+	width:31%;
 	float:left;
 }
 .latest-news-col-2{
