@@ -943,7 +943,7 @@ header{
 	padding-top:20px;
 }
 .casting-amazing-div{
-	padding:80px 0;
+	padding:80px 0 40px 0;
 	background-image: url("../images/decoration.png");
     background-repeat: repeat-x;
     position: relative;
@@ -996,6 +996,7 @@ header{
 }
 .casting-tab {
     text-align: center;
+	padding-top:40px;
 }
 .casting-tab ul li {
     display: inline-block;
@@ -1381,4 +1382,12 @@ ul.wpuf-form li:nth-child(2n) {
 .casting-from-box ul.wpuf-form li .wpuf-fields {
     float: left;
     width: 70%;
+}
+.wpuf-step-wizard{
+	 display:none;
+}
+.casting-from-heading{
+	text-align:center;
+	text-transform:uppercase;
+	padding-bottom:30px;
 }
