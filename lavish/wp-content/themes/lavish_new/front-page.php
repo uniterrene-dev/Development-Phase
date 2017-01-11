@@ -22,6 +22,7 @@ get_header();
    </div>
  </div>
   <div class="about-box-divider"><span> </span></div>
+ </div> 
 </section>
 <!--Mate of the year and mate of the month section-->
 <section id="home-model" class="home-model-div">
