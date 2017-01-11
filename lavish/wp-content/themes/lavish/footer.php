@@ -134,17 +134,5 @@
 
 
 <?php wp_footer(); ?>
-
-
-
-
-<script>
-	$( document ).ready(function() {
-		//alert();
-    $( ".full_name" ).before( "<div class='contact-info-box-left'>" );
-});
-	
-	</script>
-
 </body>
 </html>
