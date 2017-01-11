@@ -5,7 +5,13 @@ jQuery('.casting-tab-name').click(function(e) {
 	jQuery(ids).show();
 });
 
- 
+jQuery('.casting-tab').click(function(e) {	
+	jQuery('.active').hide();
+    var ids = jQuery(this).attr('href');
+	$(".art-hmenu .active").removeClass("active"); 
+    $(this).addClass("active"); 
+});
+
 //casting from js end //
 
 //var vid = document.getElementById("bgvid");
