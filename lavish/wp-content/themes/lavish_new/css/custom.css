@@ -1116,6 +1116,7 @@ header{
 .casting-from-box input {
     border: 1px solid #5d5d5e !important;
 	background:#eae5e0 !important;
+	border-radius: 2px;
 }
 .casting-from-box .textareafield{
     border: 1px solid #5d5d5e !important;
@@ -1123,6 +1124,7 @@ header{
 	min-height:100px;
 	padding-top:10px;
 	width:100% !important;
+	border-radius: 2px;
 }
 .casting-from-box textarea{
 	background:#eae5e0 !important;
@@ -1130,17 +1132,34 @@ header{
 	box-shadow:none !important;
 	font-family: "Tw Cen MT";
 	width:100% !important;
+	border-radius: 2px;
 }
 
 .casting-from-box select{
     border: 1px solid #5d5d5e !important;
-	background:#eae5e0 url(../images/select-dowan-arows.png) no-repeat center right; !important;
+	background:#eae5e0 url(../images/select-dowan-arows.png) no-repeat center right; 
 	height: 39px !important;
 	border-radius:0px !important;
 	appearance: none;
 	-webkit-appearance: none;
     -moz-appearance: none;
+	border-radius: 2px;
 	/*background: url(../images/select-dowan-arows.png) center right;*/
+}
+.casting-from-box input:focus{
+	border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
+}
+.casting-from-box select:focus{
+	border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
+}
+.casting-from-box textarea:focus{
+	border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
 }
 .casting-from-box label {
     display: inline-block;
@@ -1264,11 +1283,11 @@ ul.wpuf-form div fieldset > button{
 }*/
 ul.wpuf-form li {
     display: inline-block;
-    width: 42%;
+    width: 50%;
 }
 ul.wpuf-form li:nth-child(2n) {
-    width: 40%;
-	float:right;
+    /*width: 40%;
+	float:right;*/
 }
 .casting-from-box input[type="radio"] {
     width: 15px ;
@@ -1311,7 +1330,7 @@ ul.wpuf-form li:nth-child(2n) {
 	background:#696868 !important;
 }
 .casting-from-box {
-    padding: 0 45px;
+    padding: 0 45px 0 85px;
 }
 .wpuf-el.your_message_.your-massage-box {
     float: left;
@@ -1336,6 +1355,38 @@ ul.wpuf-form li:nth-child(2n) {
 	float:left;
 	display:block;
 }*/
+.casting-from-box ul.wpuf-form li .wpuf-label {
+    float: left;
+    width: 35%;
+    margin-right:18px;
+    text-align:right;
+    line-height:18px;
+}
+.casting-from-box ul.wpuf-form li .wpuf-fields {
+    float: left;
+    width: 40%;
+}
+.wpuf-step-wizard{
+	 display:none;
+}
+.casting-from-heading{
+	text-align:center;
+	text-transform:uppercase;
+	padding-bottom:30px;
+}
+.your-massage-box .wpuf-label{
+	 width: 17% !important;
+}
+.your-massage-box .wpuf-fields{
+	 width: 70% !important;
+}
+.tram-conditon-fild .wpuf-label{
+	 width: 18% !important;
+}
+.tram-conditon-fild .wpuf-fields{
+	 width: 71% !important;
+}
+
 .casting-from-box .tram-conditon-fild{
 	width:100%;
 }
@@ -1493,22 +1544,6 @@ ul.wpuf-form li:nth-child(2n) {
 	padding-top: 0px;
 	font-size:12px;
 }
-.casting-from-box ul.wpuf-form li .wpuf-label {
-    float: left;
-    width: 32%;
-    margin-right:18px;
-    text-align:right;
-    line-height:18px;
-}
-.casting-from-box ul.wpuf-form li .wpuf-fields {
-    float: left;
-    width: 62%;
-}
-.wpuf-step-wizard{
-	 display:none;
-}
-.casting-from-heading{
-	text-align:center;
-	text-transform:uppercase;
-	padding-bottom:30px;
+.wpuf-submit{
+	width:89% !important;
 }
