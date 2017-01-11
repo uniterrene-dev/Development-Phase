@@ -782,7 +782,7 @@ header{
 .latest-news-content h4{
 	color:#6d6361;
 	line-height:36px;
-	padding-bottom:40px;
+	padding-bottom:25px;
 }
 .latest-news-content p{
 	color: #6d6361;
@@ -1284,6 +1284,7 @@ ul.wpuf-form div fieldset > button{
 ul.wpuf-form li {
     display: inline-block;
     width: 50%;
+	vertical-align:top;
 }
 ul.wpuf-form li:nth-child(2n) {
     /*width: 40%;
@@ -1292,6 +1293,12 @@ ul.wpuf-form li:nth-child(2n) {
 .casting-from-box input[type="radio"] {
     width: 15px ;
     height: 15px;
+}
+.casting-from-box input[type="radio"]:focus{
+	box-shadow:none !important;
+}
+.tram-conditon-fild input:focus{
+	box-shadow:none !important;
 }
 /*.casting-Contact .wpuf-multistep-fieldset > li:nth-child(-n+7) {
     width: 42%;
@@ -1546,4 +1553,82 @@ ul.wpuf-form li:nth-child(2n) {
 }
 .wpuf-submit{
 	width:89% !important;
+}
+
+/* ************************************************************************************
+************************ vip form
+************************************************************************************* */
+
+.vip-form-div{
+	padding:70px 0;
+}
+.vip-form-box .vip-form-box-field .vip-label {
+    float: left;
+    padding-right: 22px;
+    text-align: right;
+    width: 50%;
+	font-family: "Times New Roman",Times,serif;
+    font-size: 12pt;
+    font-style: italic;
+    vertical-align: middle;
+}
+.vip-form-box .vip-form-box-field .vip-label span{
+	color:red;
+}
+.vip-form-box .vip-form-box-field .vip-fields{
+	width:50%;
+	float:right;
+}
+.vip-form-box .vip-form-box-field .vip-fields input{
+	border: 1px solid #5d5d5e !important;
+    border-radius: 2px;
+}
+.vip-form-box .vip-form-box-left{
+	float:left;
+	width:42%;
+}
+.vip-form-box .vip-form-box-right{
+	float:right;
+	width:42%;
+}
+.vip-form-box-field {
+    display: table;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.vip-form-box{
+	padding:0 6%;
+}
+.vip-form-box .vip-form-box-field .vip-fields label{
+	display:inline-block;
+	font-family: "Times New Roman",Times,serif;
+    font-size: 12pt;
+    font-style: italic;
+}
+.vip-form-box .vip-form-box-field .vip-fields label input {
+    float: left;
+    height: 20px;
+    width: 16px;
+}
+.vip-form-text-textarea{
+	clear:both;
+}
+.vip-form-text-textarea .vip-form-box-field-textarea .vip-label{
+	width:21%;
+	float:left;
+	font-family: "Times New Roman",Times,serif;
+    font-size: 12pt;
+    font-style: italic;
+    text-align: right;
+	padding-right: 22px;
+}
+.vip-form-text-textarea .vip-form-box-field-textarea .vip-fields {
+    float: right;
+    width: 79%;
+}
+.vip-form-text-textarea .vip-form-box-field-textarea .vip-fields textarea{
+	min-height: 100px;
+	padding-top:8px;
+	border: 1px solid #5d5d5e !important;
+    border-radius: 2px;
 }
