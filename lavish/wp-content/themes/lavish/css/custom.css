@@ -404,7 +404,7 @@ header{
     line-height: 36px;
 }
 .about-div p{
-	padding:30px 40px;
+	padding:30px 52px;
 	font-style:italic;
 	font-size:16px;
 }
@@ -418,7 +418,7 @@ header{
     margin: 0 auto;
     position: absolute;
     right: 0;
-    top: 41%;
+    top: 48%;
     width: 70%;
 	text-align: center;
 }
@@ -441,14 +441,35 @@ header{
     background: #fff;
     float: left;
 	width:48.5%;
+	overflow:hidden;
+	position:relative;
 }
 .home-model-box-right{
 	background: #fff;
     float: right;
 	width:48.5%;
+	overflow:hidden;
+	position:relative;
 }
-.home-model-box-content{
+/*.home-model-box-content{
 	padding:15px 25px;
+}*/
+.home-model-box-content-top{
+	background:#fff;
+	padding:15px 25px;
+	height: 214px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	-ms-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;
+}
+.home-model-box .model-box:hover .home-model-box-content-top{
+	top: -70px;
 }
 .home-model-box-content h3 a{
 	color:#6d6361;
@@ -463,9 +484,36 @@ header{
 	line-height:25px;
 	color:#6d6361;
 }
-.home-model-box-details{
-	text-align:right;
-	padding-top:10px;
+.home-model-box-details {
+    background: #fff none repeat scroll 0 0;
+    bottom: -100px;
+    font-size: 15px;
+    height: 40px;
+    left: 0;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+/*.model-view-box ul li .model-view-content .home-model-box-details {
+    bottom: 67px;
+}*/
+.home-model-box-details a{
+	padding: 10px 20px;
+	line-height: 40px;
+}
+.home-model-box-img{
+	overflow:hidden;
+}
+.model-description{
+	font-family:"Times New Roman", Times, serif;
+	padding-top: 15px;
+}
+/*.home-model-box-img img {
+    display: block;
+}*/
+.home-model-box-content{
+	position:relative;
+    height:140px;
 }
 .home-model-box-details span i{
 	font-size:17px;
@@ -489,6 +537,8 @@ header{
 	width:31.4%;
 	background:#fff;
 	margin:0 15px;
+	overflow:hidden;
+	position:relative;
 }
 .model-view-box ul li:nth-child(1){
 	margin-left:0;
@@ -497,8 +547,28 @@ header{
 	margin-right:0;
 }
 .model-view-content {
-    padding: 15px 25px;
+    /*padding: 15px 25px;*/
 	text-align:left;
+	height: 140px;
+    position: relative;
+}
+.model-view-content-top{
+	padding: 15px 25px;
+	background: #fff none repeat scroll 0 0;
+    height: 214px;
+    left: 0;
+    padding: 15px 25px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	-ms-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;
+}
+.model-view-box ul li:hover .model-view-content-top{
+	top: -80px;
 }
 .model-view-content h3 a{
 	 color:#6d6361;
@@ -567,16 +637,16 @@ header{
 	padding-top:20px;
 }
 .city-buttons{
-	padding:5% 6% 0 6%;
+	padding:5% 15% 0 15%;
 	text-align:center;
 }
 .city-buttons ul li {
     background: #fff none repeat scroll 0 0;
-    border-radius: 12px;
+    border-radius: 7px;
     display: inline-block;
     font-family: "Tw Cen MT";
-    font-size: 26px;
-    margin: 7px 18px;
+    font-size: 22px;
+    margin: 7px 11px;
     text-transform: uppercase;
 	transition:all 0.4s ease-in-out 0s;
 	-webkit-transition:all 0.4s ease-in-out 0s;
@@ -589,7 +659,7 @@ header{
 }
 .city-buttons ul li a{
 	color:#a0a0a0;
-	padding: 8px 20px;
+	padding: 9px 15px;
 	display:block;
 }
 .city-buttons ul li, .city-buttons ul li a:hover{
@@ -701,7 +771,7 @@ header{
 .latest-news-content h2 {
     font-weight: 300;
     line-height: 36px;
-    font-size: 32px;
+    font-size: 28px;
 }
 .latest-news-content h2 a{
 	color:#6d6361;
@@ -1425,11 +1495,14 @@ ul.wpuf-form li:nth-child(2n) {
 }
 .casting-from-box ul.wpuf-form li .wpuf-label {
     float: left;
-    width: 30%;
+    width: 32%;
+    margin-right:18px;
+    text-align:right;
+    line-height:18px;
 }
 .casting-from-box ul.wpuf-form li .wpuf-fields {
     float: left;
-    width: 70%;
+    width: 62%;
 }
 .wpuf-step-wizard{
 	 display:none;
