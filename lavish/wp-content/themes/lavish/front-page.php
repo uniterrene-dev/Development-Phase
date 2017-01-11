@@ -23,77 +23,176 @@ get_header();
  </div>
   <div class="about-box-divider"><span> </span></div>
 </section>
+<!--Mate of the year and mate of the month section-->
 <section id="home-model" class="home-model-div">
  <div class="container">
-   <div class="home-model-box clearfix">
-    <div class="home-model-box-left">
+	 <div class="home-model-box clearfix">
+	 <?php
+	 $brand_name = "mate-of-the-month";
+	 $original_query = $wp_query;
+$wp_query = null;
+$args=array('posts_per_page'=>1,'post_type' => 'casting_members', 'tag' => $brand_name);
+$wp_query = new WP_Query( $args );
+if ( have_posts() ) :
+
+    while (have_posts()) : the_post();
+    
+    $id = get_the_ID();
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' ); 
+    
+     ?>
+        
+    <div class="home-model-box-left model-box">
       <div class="home-model-box-img">
-       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-1.jpg" /></a>
+       <a href="#"><img src="<?php echo $image[0];?>" /></a>
       </div>
       <div class="home-model-box-content">
-      <h3> <a href="#">Yvonno</a> </h3>
-      <h4> Sexy Blonde </h4>
-      <div class="home-model-box-details">
+       <div class="home-model-box-content-top">
+        <h3> <a href="#"><?php the_title();?></a> </h3>
+           <h4> <?php
+          
+          $tags = wp_get_post_tags($id, array(
+           'exclude' => 63
+        )
+    );
+         //print_r($tags);
+          foreach($tags as $tgs){
+              echo $tgs->name;
+          }
+          
+          ?> </h4>
+        <div class="model-description">
+          <p>A pleasure-seeking Penthouse model with a sexy smile… Nicky is a pleasure to be around model with a sexy smile… Nicky is a pleasure to be around</p>
+        </div>
+       </div>
+       <div class="home-model-box-details">
         <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
-      </div> 
+       </div> 
+      </div>
     </div>
-    </div>
-    <div class="home-model-box-right">
+    <?php endwhile;
+endif;
+$wp_query = null;
+$wp_query = $original_query;
+wp_reset_postdata();
+	 
+	 ?>
+	 
+	<?php $brand_name_year = "mate-of-the-year";
+	 $original_query = $wp_query;
+$wp_query = null;
+$args=array('posts_per_page'=>1,'post_type' => 'casting_members', 'tag' => $brand_name_year);
+$wp_query = new WP_Query( $args );
+if ( have_posts() ) :
+
+    while (have_posts()) : the_post();
+    
+    $id = get_the_ID();
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' ); 
+    
+     ?>
+   
+    <div class="home-model-box-right model-box">
       <div class="home-model-box-img">
        <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-2.jpg" / alt=""></a>
       </div>
       <div class="home-model-box-content">
-      <h3> <a href="#">Angelina</a> </h3>
-      <h4> Cute Blonde </h4>
-      <div class="home-model-box-details">
+       <div class="home-model-box-content-top">
+        <h3> <a href="#"><?php the_title();?></a> </h3>
+           <h4> <?php
+          
+          $tags = wp_get_post_tags($id, array(
+           'exclude' => 63
+        )
+    );
+         //print_r($tags);
+          foreach($tags as $tgs){
+              echo $tgs->name;
+          }
+          
+          ?> </h4>
+        <div class="model-description">
+          <p>A pleasure-seeking Penthouse model with a sexy smile… Nicky is a pleasure to be around model with a sexy smile… Nicky is a pleasure to be around</p>
+        </div>
+       </div>
+       <div class="home-model-box-details">
         <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
-      </div> 
+       </div> 
+      </div>
     </div>
-    </div>
-    
+    <?php endwhile;
+endif;
+$wp_query = null;
+$wp_query = $original_query;
+wp_reset_postdata();
+	 
+	 ?>
    </div>
  </div>
-</section>
+</section><!--End Section-->
+<!---Others model section--->
 <section id="model-view" class="model-view-div">
  <div class="container">
   <div class="model-view-box">
    <ul>
+	   <?php
+$args = array(
+	'numberposts' => 3,
+	'offset' => 0,
+	'category' => 0,
+	'orderby' => 'rand',
+	'order' => 'ASC',
+	'tag__not_in' => array( 62,63 ),
+	'include' => '',
+	'exclude' => '',
+	'meta_key' => '',
+	'meta_value' =>'',
+	'post_type' => 'casting_members',
+	'post_status' => 'publish',
+	'suppress_filters' => true
+);
+
+$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+$j=1;
+$input = array();
+foreach($recent_posts as $recent_posts)
+{ 
+	
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
+	?>
+	
+
     <li>
      <div class="model-view-img">
-      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-1.jpg" /></a>
+      <a href="#"><img src="<?php echo $image[0];?>" /></a>
      </div>
      <div class="model-view-content">
-      <h3> <a href="#">Kristina</a> </h3>
-      <h4> Sweet & Sexy </h4>
+      <div class="model-view-content-top">
+       <h3> <a href="#"><?php print_r($recent_posts['post_title'] );?></a> </h3>
+       <h4> <?php
+      
+      $tags = wp_get_post_tags($recent_posts['ID'], array(
+       'exclude' => 69,68
+    )
+);
+     //print_r($tags);
+      foreach($tags as $tgs){
+		  echo $tgs->name;
+	  }
+      
+      ?> </h4>
+        <div class="model-description">
+         <p>A pleasure-seeking Penthouse model with a sexy smile… Nicky is a pleasure to be around  </p>
+        </div>
+       </div>
       <div class="home-model-box-details">
         <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
       </div>
      </div>
     </li>
-    <li>
-     <div class="model-view-img">
-      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-2.jpg" / alt=""></a>
-     </div>
-     <div class="model-view-content">
-      <h3> <a href="#">Marie</a> </h3>
-      <h4> Smart and Sexy model </h4>
-      <div class="home-model-box-details">
-        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
-      </div>
-     </div>
-    </li>
-    <li>
-     <div class="model-view-img">
-      <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-view-3.jpg" / alt=""></a>
-     </div>
-     <div class="model-view-content">
-      <h3> <a href="#">Jade</a> </h3>
-      <h4> Busty & Classy </h4>
-      <div class="home-model-box-details">
-        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
-      </div>
-     </div>
-    </li>
+    
+		<?php } ?>
+     
    </ul>
   </div>
  </div>
