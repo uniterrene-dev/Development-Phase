@@ -115,12 +115,13 @@ get_header();
        <li class="vip-form-box-field">
         <div class="vip-label"> <label>How often do you plan on booking your companion?  <span class="required">*</span></label> </div>
         <div class="vip-fields"> 
-           <select>
-             <option value="Daily">Daily</option>
+           <select id="select-fild" class="select-fild-box">
+             <option value="Daily" selected="selected">Daily</option>
              <option value="weekly">weekly</option>
              <option value="monthly">monthly</option>
              <option value="other">other</option>
-           </select> 
+           </select>
+            
         </div>
        </li>
        <li class="vip-form-box-field">
@@ -160,12 +161,32 @@ get_header();
            </select> 
         </div>
        </li>
+       
+       <li>
+       <select class="element-select" id="select_name" name="select_name"> 
+
+        <option value="" selected="selected">Please Select</option>           
+        <option value="paypal" >Paypal</option>
+        <option value="webmoney" >Webmoney</option>
+
+       </select>
+
+		 <script type="text/javascript">
+                $(document).ready(function(){ 
+                                $('#select_name').change(function(){
+                                alert($(this).val());                                                          
+        
+                 });  
+				});
+         </script>
+       </li>  
+       
       </div> 
       <div class="vip-form-text-textarea clearfix">
         <li class="vip-form-box-field-textarea">
         <div class="vip-label"> <label> Why become a member? </label> </div>
         <div class="vip-fields">
-         <textarea placeholder="" rows="3" cols="20"></textarea>
+         <textarea placeholder="" rows="3" cols="20" required></textarea>
         </div>
        </li>
       </div>
@@ -177,5 +198,13 @@ get_header();
    </div>
  </div>
 </section>
+
+ <script>
+	//function displayVals() {
+	 // var multipleValues = $( "#select-fild" ).val() || [];
+	//} 
+	//$( "select" ).change( displayVals );
+	//displayVals();
+ </script>
 
 <?php get_footer();?>
