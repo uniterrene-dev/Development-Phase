@@ -772,7 +772,7 @@ header{
 .latest-news-content h2 {
     font-weight: 300;
     line-height: 36px;
-    font-size: 28px;
+    font-size: 24px;
 }
 .latest-news-content h2 a{
 	color:#6d6361;
@@ -881,11 +881,12 @@ header{
 .footer-col h5{
 	padding-bottom:20px;
 }
-.footer-col ul li a{
-	color:#bab1a4;
-	font-size:12px;
-	font-family:"Times New Roman", Times, serif;
-	font-style:italic;
+.footer-col ul li a {
+    color: #bab1a4;
+    font-family: "Times New Roman",Times,serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 24px;
 }
 .footer-col ul li a:hover{
 	color:#a58967;
@@ -902,10 +903,10 @@ header{
 }
 .footer-left-col-2{
 	float:right;
-	width:22%;
+	width:30%;
 }
 .footer-right .footer-left-col-2{
-	width:30%;
+	width:33%;
 }
 .footer-middle {
     float: left;
@@ -933,7 +934,7 @@ header{
 }
 .copy-right-div .copy-right-left p span{
 	color:#a58967;
-	padding-left:10px;
+	padding-left:7px;
 }
 .copy-right-left{
 	float:left;
@@ -1170,6 +1171,7 @@ header{
     font-size: 12pt;
     vertical-align: middle;
     font-style: italic;
+	color: #6d6361;
 	/*line-height: 32px;*/
 }
 .casting-tab-details{
@@ -1340,7 +1342,7 @@ ul.wpuf-form li:nth-child(2n) {
 	background:#696868 !important;
 }
 .casting-from-box {
-    padding: 0 45px 0 85px;
+    padding: 0 45px 0 15px;
 }
 .wpuf-el.your_message_.your-massage-box {
     float: right;
@@ -1367,13 +1369,13 @@ ul.wpuf-form li:nth-child(2n) {
 }*/
 .casting-from-box ul.wpuf-form li .wpuf-label {
     float: left;
-    width: 35%;
+    width: 56%;
     margin-right:18px;
     text-align:right;
     line-height:18px;
 }
 .casting-from-box ul.wpuf-form li .wpuf-fields {
-    float: left;
+    float: right;
     width: 40%;
 }
 .wpuf-step-wizard{
@@ -1404,6 +1406,9 @@ ul.wpuf-form li:nth-child(2n) {
 }
 .tram-conditon-fild .wpuf-fields textarea{
 	min-height: 60px;
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	color:#6d6361 !important;
 }
 .casting-from-box .tram-conditon-fild{
 	width:100%;
@@ -1563,7 +1568,7 @@ ul.wpuf-form li:nth-child(2n) {
 	font-size:12px;
 }
 .wpuf-submit{
-	width:40% !important;
+	width:100% !important;
 }
 
 /* ************************************************************************************
@@ -1670,4 +1675,136 @@ ul.wpuf-form .rear_view{
 .vip-form-submit-btn input:hover{
 	background: #696868 !important;
 	color:#fff;
+}
+.vip-member-section-div{
+	background: url("../images/vip-top-bg.jpg") no-repeat center center;
+	background-size:cover;
+	padding:40px 0;
+	text-align:center;
+	position:relative;
+}
+.vip-member-section-div:after{
+	background: rgba(0, 0, 0, 0) url("../images/vip-borderline.png") repeat center center;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 100%;
+}
+.vip-member-section-div:before{
+	background: rgba(0, 0, 0, 0) url("../images/vip-borderline-1.png") repeat center center;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+}
+.vip-member-box-top {
+    padding-bottom: 35px;
+    position: relative;
+}
+.vip-member-box-top h3{
+	color:#898787;
+}
+.vip-member-box-top .about-box-divider {
+    bottom: 0;
+    top: 85%;
+    width: 90%;
+}
+.vip-member-box-content {
+    padding: 0 10%;
+}
+.vip-member-box-content p{
+	padding-top:5px;
+	color:#898787;
+}
+
+/* ---------------------------------------------------------------------------------------
+------------------------------------ vip page 
+----------------------------------------------------------------------------------------- */
+
+.vip-member-acrodian-div{
+	background: url("../images/vip-accordion-bg.jpg") no-repeat center center;
+	background-size:cover;
+	padding:40px 0;
+	text-align:center;
+	position:relative;
+}
+.accordion {
+  width: 100%;
+  margin: 0 auto 100px;
+  /*border-top: 1px solid #d9e5e8;*/
+}
+.accordion li {
+  /*border-bottom: 1px solid #d9e5e8;*/
+  position: relative;
+}
+.accordion li p {
+  display: none;
+  padding:4px 0 0 0;
+  color: #8a8787;
+  font-size: 16px;
+  line-height: 26px;
+}
+.accordion li p strong{
+	font-size:20px;
+}
+.accordion a {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 3;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-indent: 15px;
+  user-select: none;
+  text-align:center;
+  color:#b2afaf;
+  font-family: "Tw Cen MT";
+  font-size: 24px;
+  line-height: 38px;
+}
+.accordion a:after {
+  width: 8px;
+  height: 8px;
+  font-size: 17px;
+  font-weight: 300;
+  top:3px;
+  position: absolute;
+  content: "\f067";
+  font-family: FontAwesome;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.accordion p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 2;
+  padding: 10px;
+}
+
+a.active:after {
+  top: 3px;
+  content: '\f068';
+  font-family: FontAwesome;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.accordion li .accordion-panel a.active p{
+	display:block
+}
+/*.accordion-panel.accordian-active {
+    border-bottom: 1px solid #4e4e4e;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}*/
+.vip-member-acrodian-box {
+    padding: 25px 0;
 }
