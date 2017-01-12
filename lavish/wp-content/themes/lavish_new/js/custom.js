@@ -5,39 +5,31 @@ jQuery('.casting-tab-name').click(function(e) {
 	jQuery(ids).show();
 });
 
-jQuery('.casting-tab').click(function(e) {	
-	jQuery('.active').hide();
-    var ids = jQuery(this).attr('href');
-	$(".art-hmenu .active").removeClass("active"); 
-    $(this).addClass("active"); 
-});
 
-//casting from js end //
+// ***** vip accordion ***** // 
+(function($) {
+    $('.accordion > li:eq(0) a').addClass('active');
+	
+	if ( $( '.accordion > li:eq(0) a' ).hasClass( "active" ) ) {
+	$('.accordian-active p').show();
+	}
+	$('.accordian-active h6').show();
+    $('.accordion a').click(function(j) {
+		//alert();
+        var dropDown = $(this).closest('li').find('p');
 
-//var vid = document.getElementById("bgvid");
+        $(this).closest('.accordion').find('accordion-panel').not(dropDown).slideUp();
 
-//fullscrreen video//
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).closest('.accordion').find('accordion-panel.active').removeClass('active');
+            $(this).addClass('active');
+        }
 
-//function vidFade() {
-//  vid.classList.add("stopfade");
-//}
-//
-//vid.addEventListener('ended', function()
-//{
-//
-//vid.pause();
-//
-//vidFade();
-//}); 
+        dropDown.stop(false, true).slideToggle();
 
-
-//pauseButton.addEventListener("click", function() {
-  //vid.classList.toggle("stopfade");
-  //if (vid.paused) {
-    //vid.play();
-    //pauseButton.innerHTML = "Pause";
-  //} else {
-    //vid.pause();
-    //pauseButton.innerHTML = "Paused";
-  //}
-//})
+        j.preventDefault();
+    });
+})(jQuery);
+// ***** vip accordion end***** // 
