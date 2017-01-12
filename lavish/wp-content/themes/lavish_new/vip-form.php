@@ -161,7 +161,7 @@ get_header();
         </div>
        </li>
       </div> 
-      <div class="vip-form-text-textarea">
+      <div class="vip-form-text-textarea clearfix">
         <li class="vip-form-box-field-textarea">
         <div class="vip-label"> <label> Why become a member? </label> </div>
         <div class="vip-fields">
@@ -170,7 +170,7 @@ get_header();
        </li>
       </div>
       
-      <div class="vip-form-submit-btn">
+      <div class="vip-form-submit-btn clearfix">
        <input name="submit" value="Submit" type="submit">
       </div> 
     </form>
