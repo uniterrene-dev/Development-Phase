@@ -322,6 +322,7 @@ common portion end
 	font-size:19px;
 	padding:7px 15px;
 	text-transform:uppercase;
+	border-radius:5px;
 	
 }
 .main-nav ul li a:hover{
@@ -1002,7 +1003,7 @@ header{
     text-align: center;
 }
 .casting-about-top .about-box-divider {
-    top: 25%;
+    top: 28%;
 }
 .casting-about-bottom-content {
     padding: 20px 90px;
@@ -1021,7 +1022,7 @@ header{
 	text-align:center;
 }
 .casting-amazing-top-heading {
-    background: #afacac none repeat scroll 0 0;
+    background: #d5cfc8;
     border-radius: 15px;
     padding: 7px 0;
 }
@@ -1029,7 +1030,7 @@ header{
     color: #fff;
 	font-size:26px;
     line-height: 40px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 .casting-amazing-top-left {
     float: left;
@@ -1051,7 +1052,7 @@ header{
 	color:#ad1457;
 }
 .casting-amazing-top .about-box-divider {
-    top: 35%;
+    top: 33%;
 }
 .casting-amazing-bottom{
 	padding-top:55px;
@@ -1080,6 +1081,7 @@ header{
 	text-transform:uppercase;
 	font-family: "Tw Cen MT";
 	font-size:15px;
+	border-radius: 7px;
 }
 .casting-tab ul li a.active{
 	background: #696868; 
@@ -1121,7 +1123,8 @@ header{
 .casting-from-box .textareafield{
     border: 1px solid #5d5d5e !important;
 	background:#eae5e0 !important;
-	min-height:100px;
+	/*min-height:100px;*/
+	min-height:40px;
 	padding-top:10px;
 	width:100% !important;
 	border-radius: 2px;
@@ -1340,9 +1343,9 @@ ul.wpuf-form li:nth-child(2n) {
     padding: 0 45px 0 85px;
 }
 .wpuf-el.your_message_.your-massage-box {
-    float: left;
-    margin-top: 30px;
-    width: 100%;
+    float: right;
+    margin-top: -251px;
+    width: 50%;
 }
 /*.casting-from-box .wpuf-submit {
     display: block !important;
@@ -1381,25 +1384,33 @@ ul.wpuf-form li:nth-child(2n) {
 	text-transform:uppercase;
 	padding-bottom:30px;
 }
+.casting-from-heading h3{
+	color:#222;
+}
 .your-massage-box .wpuf-label{
-	 width: 17% !important;
+	 width: 35%;
 }
 .your-massage-box .wpuf-fields{
-	 width: 70% !important;
+	 width: 40%;
+}
+.your-massage-box .wpuf-fields textarea{
+	min-height:300px;
 }
 .tram-conditon-fild .wpuf-label{
 	 width: 18% !important;
 }
-.tram-conditon-fild .wpuf-fields{
-	 width: 71% !important;
+.tram-conditon-fild .wpuf-fields {
+    width: 30% !important;
 }
-
+.tram-conditon-fild .wpuf-fields textarea{
+	min-height: 60px;
+}
 .casting-from-box .tram-conditon-fild{
 	width:100%;
 }
 .casting-from-box .tram-conditon-fild .wpuf-fields > label {
     position: relative;
-    top: -51px;
+    top: -71px;
     left: -14px;
     display: inherit;
     width: 16px;
@@ -1552,7 +1563,7 @@ ul.wpuf-form li:nth-child(2n) {
 	font-size:12px;
 }
 .wpuf-submit{
-	width:89% !important;
+	width:40% !important;
 }
 
 /* ************************************************************************************
@@ -1631,4 +1642,32 @@ ul.wpuf-form li:nth-child(2n) {
 	padding-top:8px;
 	border: 1px solid #5d5d5e !important;
     border-radius: 2px;
+}
+.footer-top {
+    padding: 0 5%;
+}
+ul.wpuf-form .full_body{
+	display:block !important;
+}
+ul.wpuf-form .rear_view{
+	display:block !important;
+}
+.vip-form-submit-btn{
+	width:100%;
+	padding-top:40px;
+}
+.vip-form-submit-btn input{
+	background: #9c0b46 none repeat scroll 0 0 !important;
+    border: medium none !important;
+    float: right;
+    font-family: "Tw Cen MT";
+    font-size: 22px !important;
+    /*height: 40px;*/
+    line-height: 20px;
+    width: 200px;
+	border-radius:7px;
+}
+.vip-form-submit-btn input:hover{
+	background: #696868 !important;
+	color:#fff;
 }
