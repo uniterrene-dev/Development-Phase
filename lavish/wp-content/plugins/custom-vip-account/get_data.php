@@ -415,11 +415,9 @@ foreach ( $application_new as $application_new ) {
       </head>
       <body>
       <p><h2>Step One: Collect non-sensitive payment information.<br /></h2></p>
-
-      <h3> Customer Information</h3>
+		<h3> Customer Information</h3>
       <h4> Billing Details</h4>
-
-        <form action="" method="post">
+		<form action="" method="post">
           <table>
           <tr><td>Customer Vault Id  </td><td><input type="text" name="customer-vault-id" value="'.$customer_vid.'"></td></tr>
           <tr><td>Company</td><td><input type="text" name="billing-address-company" value="Acme, Inc."></td></tr>
@@ -434,8 +432,7 @@ foreach ( $application_new as $application_new ) {
           <tr><td>Phone Number </td><td><input type="text" name="billing-address-phone" value="'.$phone.'"></td></tr>
           <tr><td>Mobile Number </td><td><input type="text" name="billing-address-fax" value="'.$mobile_number.'"></td></tr>
           <tr><td>Email Address </td><td><input type="text" name="billing-address-email" value="'.$email.'"></td></tr>
-
-          <tr><td><h4><br /> Shipping Details</h4>
+			<tr><td><h4><br /> Shipping Details</h4>
           <tr><td>Company</td><td><input type="text" name="shipping-address-company" value="Acme, Inc."></td></tr>
           <tr><td>First Name </td><td><input type="text" name="shipping-address-first-name" value="'.$first_name.'"></td></tr>
           <tr><td>Last Name </td><td><input type="text" name="shipping-address-last-name" value="'.$last_name.'"></td></tr>
@@ -450,8 +447,7 @@ foreach ( $application_new as $application_new ) {
           <tr><td colspan="2" align=center>Total Amount $'.$price_org.' </td></tr>
           <tr><td colspan="2" align=center><input type="submit" value="Submit Step One"><input type="hidden" name ="DO_STEP_1" value="true"></td></tr>
           </table>
-
-        </form>
+		</form>
       </body>
     </html>
 
