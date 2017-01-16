@@ -2,6 +2,7 @@
 
 function registration_form() 
 {
+	$pac_name = $_REQUEST['pac'];
 
     echo '
     <style>
@@ -112,7 +113,7 @@ function registration_form()
        <li class="vip-form-box-field">
         <div class="vip-label"> <label> Membership <span class="required">*</span></label> </div>
         <div class="vip-fields"> 
-           <select>
+           <select name="total_plans" id="total_plans">
              <option name="lavishpln" value="">Lavish $150</option>
              <option name="sliverpln" value="">Silver $100k</option>
              <option name="goldpln" value="">Gold $250k</option>
@@ -232,10 +233,10 @@ if ( is_wp_error( $reg_errors ) ) {
 }
 }
 function complete_registration($username,$first_name,$last_name,$age,$nationality,$nationality,$city,$zipcode,$username,$password,
-$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln) {
+$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln,$total_plans) {
 	global $wpdb;
     global $reg_errors, $username,$first_name,$last_name,$age,$nationality,$nationality,$city,$zipcode,$username,$password,
-$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln;
+$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln,$total_plans;
     if ( 1 > count( $reg_errors->get_error_messages() ) ) {
         $userdata = array(
         'user_login'    =>   $username,
@@ -248,7 +249,7 @@ $conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toy
          require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
          
          
-      echo "member pln is ". $mem_pln;
+     
          $user = wp_insert_user( $userdata );
         
          $appTable = $wpdb->prefix . "users";
@@ -264,24 +265,17 @@ $conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toy
 		$uid =  $application->ID;
 		}
         
-       $sql = "INSERT INTO `lav`.`wp_vip_accounts` (`vip_account_id`, `vip_account_name`, `vip_account_package_name`, `vip_account_post_limit`, `vip_account_access`, `vip_user_id`,`is_payment`) VALUES ('', '$username', '$mem_pln', '10', 'all', '$uid','0');";
+       $sql = "INSERT INTO `lav`.`wp_vip_accounts` (`vip_account_id`, `vip_account_name`, `vip_account_package_name`, `vip_account_post_limit`, `vip_account_access`, `vip_user_id`, `is_payment`, `vip_first_name`, `vip_last_name`, `vip_nationality`, `vip_address`, `vip_city`, `vip_zipcode`, `vip_email`, `vip_phone`, `vip_mob_num`, `vip_time_call`, `vip_explain`, `vip_hot_spot`, `vip_toys`, `vip_gateway`, `vip_monthy_package`, `vip_total_package`) VALUES 
+       ('', '$username', 'Sliver', '130', 'all', '$uid', '0', '$first_name', '$last_name', '$nationality', '$address', '$city', '$zipcode', '$email', '$phone', '$mob_num', '$time_call', '$explain', '$hot_spot', '$toys', '$gateway', '$mem_pln', '$total_plans');";
         
         
        
         
         //$user = wp_insert_user( $userdata );
         dbDelta( $sql );
-        //~ echo 'Registration complete. Goto <a href="' . get_site_url() . '/wp-login.php">login page</a>.';   
-         //~ echo '
-    //~ <style>
-    //~ .container
-    //~ {
-      //~ display:none;
-	//~ }
-    //~ </style>
-    //~ ';
+        
     
-    header('Location: http://localhost/public_html/newwp/lavish/test2/');    
+    header('Location: http://localhost/public_html/newwp/lavish/payment-vip?uid='.$uid);    
     //echo do_shortcode( '[cr_custom_payment]' );
     }
 }
@@ -302,7 +296,7 @@ function custom_registration_function() {
          
         // sanitize user form input
         global $username,$first_name,$last_name,$age,$nationality,$address,$city,$zipcode,$username,$password,
-$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln;
+$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln,$total_plans;
         
         $username   =   sanitize_user( $_POST['username'] );
         $password   =   esc_attr( $_POST['password'] );
@@ -322,6 +316,7 @@ $conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toy
         $toys  =   sanitize_text_field( $_POST['toys'] );
         $gateway  =   sanitize_text_field( $_POST['gateway'] );
         $mem_pln  =   $_POST['member_plans'];
+		$total_plans  =   $_POST['total_plans'];
         
      
       // die;
@@ -331,13 +326,13 @@ $conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toy
         // only when no WP_error is found
         complete_registration(
         $username,$first_name,$last_name,$age,$nationality,$address,$city,$zipcode,$username,$password,
-$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln
+$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln,$total_plans
         );
     }
  
     registration_form(
-        $username,$first_name,$last_name,$age,$nationality,$nationality,$city,$zipcode,$username,$password,
-$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln
+        $username,$first_name,$last_name,$age,$nationality,$address,$city,$zipcode,$username,$password,
+$conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toys,$gateway,$mem_pln,$total_plans
         );
         
 }
@@ -373,6 +368,43 @@ $APIKey = '2F822Rw39fx762MaV7Yy86jXGTC7sCDy';
 // If there is no POST data or a token-id, print the initial shopping cart form to get ready for Step One.
 if (empty($_POST['DO_STEP_1']) && empty($_GET['token-id'])) 
 {
+	
+	 $uid = $_REQUEST['uid'];
+
+global $wpdb;
+
+$sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
+
+ $applications = $wpdb->get_results($sql);
+
+    foreach ( $applications as $application ) {
+    $customer_vid = $application->vip_account_id;
+       $first_name =   $application->vip_first_name;
+       $last_name =    $application->vip_last_name;
+       $address =      $application->vip_address;
+       $city =         $application->vip_city;
+       $zipcode =      $application->vip_zipcode;
+       $email =        $application->vip_email;
+       $phone =        $application->vip_phone;
+       $mobile_number =$application->vip_mob_num;
+       $email = $application->vip_email;
+      $package_name = $application->vip_total_package;
+ }
+       $package_name = $application->vip_total_package;
+$query = "SELECT * 
+FROM  `wp_package_price` 
+WHERE  `package_name` =  '$package_name'";
+
+$application_new = $wpdb->get_results($query);
+
+foreach ( $application_new as $application_new ) {
+	$price = $application_new->package_price;
+	$price_org = (int)str_replace(' ', '', $price);
+	
+	
+	
+}
+
 
     print '  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
     print '
@@ -389,33 +421,33 @@ if (empty($_POST['DO_STEP_1']) && empty($_GET['token-id']))
 
         <form action="" method="post">
           <table>
-          <tr><td>Customer Vault Id  </td><td><input type="text" name="customer-vault-id" value=""></td></tr>
+          <tr><td>Customer Vault Id  </td><td><input type="text" name="customer-vault-id" value="'.$customer_vid.'"></td></tr>
           <tr><td>Company</td><td><input type="text" name="billing-address-company" value="Acme, Inc."></td></tr>
-          <tr><td>First Name </td><td><input type="text" name="billing-address-first-name" value="John"></td></tr>
-          <tr><td>Last Name </td><td><input type="text" name="billing-address-last-name" value="Smith"></td></tr>
-          <tr><td>Address </td><td><input type="text" name="billing-address-address1" value="1234 Main St."></td></tr>
+          <tr><td>First Name </td><td><input type="text" name="billing-address-first-name" value="'.$first_name.'"></td></tr>
+          <tr><td>Last Name </td><td><input type="text" name="billing-address-last-name" value="'.$last_name.'"></td></tr>
+          <tr><td>Address </td><td><input type="text" name="billing-address-address1" value="'.$address.'"></td></tr>
           <tr><td>Address 2 </td><td><input type="text" name="billing-address-address2" value="Suite 205"></td></tr>
-          <tr><td>City </td><td><input type="text" name="billing-address-city" value="Beverly Hills"></td></tr>
-          <tr><td>State/Province </td><td><input type="text" name="billing-address-state" value="CA"></td></tr>
-          <tr><td>Zip/Postal </td><td><input type="text" name="billing-address-zip" value="90210"></td></tr>
+          <tr><td>City </td><td><input type="text" name="billing-address-city" value="'.$city.'"></td></tr>
+          <tr><td>State/Province </td><td><input type="text" name="billing-address-state" value="'.$city.'"></td></tr>
+          <tr><td>Zip/Postal </td><td><input type="text" name="billing-address-zip" value="'.$zipcode.'"></td></tr>
           <tr><td>Country </td><td><input type="text" name="billing-address-country" value="US"></td></tr>
-          <tr><td>Phone Number </td><td><input type="text" name="billing-address-phone" value="555-555-5555"></td></tr>
-          <tr><td>Fax Number </td><td><input type="text" name="billing-address-fax" value="555-555-5555"></td></tr>
-          <tr><td>Email Address </td><td><input type="text" name="billing-address-email" value="test@example.com"></td></tr>
+          <tr><td>Phone Number </td><td><input type="text" name="billing-address-phone" value="'.$phone.'"></td></tr>
+          <tr><td>Mobile Number </td><td><input type="text" name="billing-address-fax" value="'.$mobile_number.'"></td></tr>
+          <tr><td>Email Address </td><td><input type="text" name="billing-address-email" value="'.$email.'"></td></tr>
 
           <tr><td><h4><br /> Shipping Details</h4>
           <tr><td>Company</td><td><input type="text" name="shipping-address-company" value="Acme, Inc."></td></tr>
-          <tr><td>First Name </td><td><input type="text" name="shipping-address-first-name" value="Mary"></td></tr>
-          <tr><td>Last Name </td><td><input type="text" name="shipping-address-last-name" value="Smith"></td></tr>
-          <tr><td>Address </td><td><input type="text" name="shipping-address-address1" value="1234 Main St."></td></tr>
-          <tr><td>Address 2</td><td><input type="text" name="shipping-address-address2" value="Suite 205"></td></tr>
-          <tr><td>City </td><td><input type="text" name="shipping-address-city" value="Beverly Hills"></td></tr>
-          <tr><td>State/Province </td><td><input type="text" name="shipping-address-state" value="CA"></td></tr>
-          <tr><td>Zip/Postal </td><td><input type="text" name="shipping-address-zip" value="90210"></td></tr>
+          <tr><td>First Name </td><td><input type="text" name="shipping-address-first-name" value="'.$first_name.'"></td></tr>
+          <tr><td>Last Name </td><td><input type="text" name="shipping-address-last-name" value="'.$last_name.'"></td></tr>
+          <tr><td>Address </td><td><input type="text" name="shipping-address-address1" value="'.$address.'"></td></tr>
+          <tr><td>Address 2</td><td><input type="text" name="shipping-address-address2" value=""></td></tr>
+          <tr><td>City </td><td><input type="text" name="shipping-address-city" value="'.$city.'"></td></tr>
+          <tr><td>State/Province </td><td><input type="text" name="shipping-address-state" value=""></td></tr>
+          <tr><td>Zip/Postal </td><td><input type="text" name="shipping-address-zip" value="'.$zipcode.'"></td></tr>
           <tr><td>Country</td><td><input type="text" name="shipping-address-country" value="US"></td></tr>
-          <tr><td>Phone Number </td><td><input type="text" name="shipping-address-phone" value="555-555-5555"></td></tr>
+          <tr><td>Phone Number </td><td><input type="text" name="shipping-address-phone" value="'.$phone.'"></td></tr>
           <tr><td colspan="2"> </td>
-          <tr><td colspan="2" align=center>Total Amount $12.00 </td></tr>
+          <tr><td colspan="2" align=center>Total Amount $'.$price_org.' </td></tr>
           <tr><td colspan="2" align=center><input type="submit" value="Submit Step One"><input type="hidden" name ="DO_STEP_1" value="true"></td></tr>
           </table>
 
@@ -427,8 +459,40 @@ if (empty($_POST['DO_STEP_1']) && empty($_GET['token-id']))
 }
 else if (!empty($_POST['DO_STEP_1']))
  {
-	
+		 $uid = $_REQUEST['uid'];
+global $wpdb;
 
+$sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
+
+ $applications = $wpdb->get_results($sql);
+
+    foreach ( $applications as $application ) {
+    $customer_vid = $application->vip_account_id;
+       $first_name =   $application->vip_first_name;
+       $last_name =    $application->vip_last_name;
+       $address =      $application->vip_address;
+       $city =         $application->vip_city;
+       $zipcode =      $application->vip_zipcode;
+       $email =        $application->vip_email;
+       $phone =        $application->vip_phone;
+       $mobile_number =$application->vip_mob_num;
+       $email = $application->vip_email;
+      $package_name = $application->vip_total_package;
+ }
+       $package_name = $application->vip_total_package;
+$query = "SELECT * 
+FROM  `wp_package_price` 
+WHERE  `package_name` =  '$package_name'";
+
+$application_new = $wpdb->get_results($query);
+
+foreach ( $application_new as $application_new ) {
+	$price = $application_new->package_price;
+	$price_org = (int)str_replace(' ', '', $price);
+	
+	
+	
+}
     // Initiate Step One: Now that we've collected the non-sensitive payment information, we can combine other order information and build the XML format.
     $xmlRequest = new DOMDocument('1.0','UTF-8');
 
@@ -438,7 +502,7 @@ else if (!empty($_POST['DO_STEP_1']))
     // Amount, authentication, and Redirect-URL are typically the bare minimum.
     appendXmlNode($xmlRequest, $xmlSale,'api-key','2F822Rw39fx762MaV7Yy86jXGTC7sCDy');
     appendXmlNode($xmlRequest, $xmlSale,'redirect-url',$_SERVER['HTTP_REFERER']);
-    appendXmlNode($xmlRequest, $xmlSale, 'amount', '12.00');
+    appendXmlNode($xmlRequest, $xmlSale, 'amount', '10000');
     appendXmlNode($xmlRequest, $xmlSale, 'ip-address', $_SERVER["REMOTE_ADDR"]);
     //appendXmlNode($xmlRequest, $xmlSale, 'processor-id' , 'processor-a');
     appendXmlNode($xmlRequest, $xmlSale, 'currency', 'USD');
@@ -579,7 +643,7 @@ else if (!empty($_POST['DO_STEP_1']))
 
 elseif (!empty($_GET['token-id'])) 
 {
-
+ $uid = $_REQUEST['uid'];
     // Step Three: Once the browser has been redirected, we can obtain the token-id and complete
     // the transaction through another XML HTTPS POST including the token-id which abstracts the
     // sensitive payment information that was previously collected by the Payment Gateway.
@@ -612,6 +676,10 @@ elseif (!empty($_GET['token-id']))
     if ((string)$gwResponse->result == 1 ) {
         print " <p><h3> Transaction was Approved, XML response was:</h3></p>\n";
         print '<pre>' . (htmlentities($data)) . '</pre>';
+        global $wpdb;
+require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+$wpdb->query($wpdb->prepare("UPDATE  `lav`.`wp_vip_accounts` SET  `is_payment` =  '1' WHERE  `wp_vip_accounts`.`vip_user_id` =$uid;"));
+         header('Location: http://localhost/public_html/newwp/lavish/vip-messages?uid='.$uid);  
 
     } elseif((string)$gwResponse->result == 2)  {
         print " <p><h3> Transaction was Declined.</h3>\n";
