@@ -754,6 +754,14 @@ header{
 	width:31%;
 	float:left;
 }
+.latest-news-img img {
+    display: block;
+    width: 100%;
+}
+.model-view-img img {
+    display: block;
+    width: 100%;
+}
 .latest-news-col-2{
 	width:31.5%;
 	float:left;
@@ -952,13 +960,13 @@ header{
     width: 35px;
 	text-align:center;
 	border-radius:50%;
-	padding: 5px 0;
+	padding: 8px 0;
 }
 .copy-right-right ul li a{
 	color:#fff;
 }
 .copy-right-right ul li a i{
-	font-size:22px;
+	font-size:20px;
 }
 .footer-logo{
 	padding-top:10px;
@@ -1743,9 +1751,13 @@ ul.wpuf-form .rear_view{
   /*border-bottom: 1px solid #d9e5e8;*/
   position: relative;
 }
+.accordion-panel {
+    display: none;
+    padding: 25px 0;
+}
 .accordion li p {
-  display: none;
-  padding:4px 0 0 0;
+  /*display: none;*/
+  padding:10px 0 0 0;
   color: #8a8787;
   font-size: 16px;
   line-height: 26px;
@@ -1769,7 +1781,33 @@ ul.wpuf-form .rear_view{
   font-size: 24px;
   line-height: 38px;
 }
+.accordion .accordion-tab {
+    color: #b2afaf;
+    cursor: pointer;
+    display: block;
+    font-family: "Tw Cen MT";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 38px;
+    margin: 0 auto;
+    text-align: center;
+    text-indent: 15px;
+    width: 75%;
+}
 .accordion a:after {
+  width: 8px;
+  height: 8px;
+  font-size: 17px;
+  font-weight: 300;
+  top:3px;
+  position: absolute;
+  content: "\f067";
+  font-family: FontAwesome;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.accordion .accordion-tab:after {
   width: 8px;
   height: 8px;
   font-size: 17px;
@@ -1789,13 +1827,24 @@ ul.wpuf-form .rear_view{
   padding: 10px;
 }
 
-a.active:after {
+.accordion-tab.active:after {
   top: 3px;
   content: '\f068';
   font-family: FontAwesome;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+.accordion-tab a.active:after {
+  top: 3px;
+  content: '\f068';
+  font-family: FontAwesome;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.accordion li .accordion-panel .accordion-tab.active p{
+	display:block
 }
 .accordion li .accordion-panel a.active p{
 	display:block
@@ -1807,4 +1856,201 @@ a.active:after {
 }*/
 .vip-member-acrodian-box {
     padding: 25px 0;
+}
+.accordion-panel h4 {
+    color: #8a8787;
+    font-size: 22px;
+    padding-top: 17px;
+}
+.accordion-details ul{
+	padding-top:15px;
+}
+.accordion-details ul li {
+    color: #8a8787;
+    font-family: "Times New Roman",Times,serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 28px;
+    list-style-type: disc;
+}
+.vip-packeges-div{
+	background: url("../images/vip-packeg-bg.jpg") no-repeat center center;
+	background-size:cover;
+	padding:40px 0 65px 0;
+	text-align:center;
+	position:relative;
+	border-top: 3px solid #ad1457;
+	border-bottom: 3px solid #ad1457;
+}
+.vip-packeges-div:after{
+	background: rgba(0, 0, 0, 0) url("../images/vip-borderline.png") repeat center center;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 100%;
+}
+.vip-packeges-div:before{
+	background: rgba(0, 0, 0, 0) url("../images/vip-borderline-1.png") repeat center center;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+}
+.vip-packeges-box h3{
+	font-size:24px;
+	color:#e4d8c1;
+}
+.vip-packeges-box p {
+    color: #b2afaf;
+    line-height: 20px;
+    padding-top: 25px;
+}
+.vip-packeges-details{
+	padding-top:25px;
+}
+.vip-packeges-details h3{
+	color:#b2afaf;
+	font-size:28px;
+}
+.vip-packeges-details-box{
+	padding-top:30px;
+}
+.vip-packeges-details-top ul li{
+	color: #8a8787;
+    font-family: "Times New Roman",Times,serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 28px;
+    list-style-type: disc;
+	width:100%;
+	margin:0;
+}
+.vip-packeges-details-box li {
+    display: inline-block;
+    margin: 0 35px;
+    vertical-align: top;
+    width: 27%;
+}
+.vip-packeges-details-top h4 {
+    color: #8a8787;
+}
+.packeg-apply-btn-div{
+	padding-top:30px;
+}
+.packeg-apply-btn-div .packeg-apply-btn {
+    /*background: #ffa800;*/
+    color: #fff;
+    margin: 0 auto;
+}
+.packeg-apply-btn-div .packeg-apply-btn a{
+	font-family: "Tw Cen MT";
+	color:#fff;
+	padding: 10px 20px;
+    display: inline;
+	background:#840529;
+	border-radius:5px;
+}
+.packeg-apply-btn-div .packeg-apply-btn a:hover{
+	background:#6d6361;
+}
+.vip-luxury-acrodian-div{
+	background: url("../images/vip-luxury-bg.jpg") no-repeat center center;
+	background-size:cover;
+	padding:40px 0;
+	text-align:center;
+	position:relative;
+}
+.vip-luxury-acrodian-div h3{
+	color:#b2afaf;
+}
+.vip-luxury-acrodian-div p{
+	color:#b2afaf;
+}
+.vip-copyright-div{
+	background: url("../images/vip-copy-right-bg.jpg") no-repeat center center;
+	background-size:cover;
+	padding:60px 0;
+	text-align:center;
+	position:relative;
+}
+.vip-copyright-div:after{
+	background: rgba(0, 0, 0, 0) url("../images/vip-borderline.png") repeat center center;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 100%;
+}
+.vip-copyright-div:before{
+	background: rgba(0, 0, 0, 0) url("../images/vip-borderline-1.png") repeat center center;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+}
+.vip-teax-chear-img{
+	padding:50px 0;
+}
+.vip-copyright-div h3{
+	color: #b2afaf;
+}
+.vip-copyright-div p{
+	color: #b2afaf;
+	padding-top:10px;
+	width:60%;
+	margin:0 auto;
+}
+.vip-copy-right-text{
+	padding:50px 0;
+	position:relative;
+}
+.vip-copy-right-text h2{
+	color:#b2afaf;
+}
+.vip-copy-right-text .vip-bottom-divider-top{
+	top: 10%;
+}
+.vip-copy-right-text .vip-bottom-divider-bottom{
+	bottom: 10%;
+}
+.vip-copyright-text {
+    padding-bottom: 85px;
+    position: relative;
+}
+.vip-copyright-text .vip-bottom-divider-top{
+	top: 99%;
+	width:90%;
+}
+.vip-copy-right-text .about-box-divider{
+	top: 100%;
+	width:90%;
+}
+.back-to-ladies-btn{
+	padding:100px 0 60px 0;
+}
+.back-to-ladies-btn a{
+	background:#840529;
+	padding:17px 25px;
+	color:#fff;
+	font-family: "Tw Cen MT";
+	text-transform:uppercase;
+	font-size:20px;
+	border-radius:7px;
+}
+.back-to-ladies-btn a:hover {
+    background:#6d6361;
+}
+.vip-footer .footer-div:after{
+	background:none
 }
