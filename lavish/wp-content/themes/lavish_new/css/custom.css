@@ -1788,13 +1788,24 @@ ul.wpuf-form .rear_view{
     font-family: "Tw Cen MT";
     font-size: 24px;
     font-weight: 300;
-    line-height: 38px;
+    line-height: 50px;
     margin: 0 auto;
     text-align: center;
     text-indent: 15px;
-    width: 75%;
+    width: 100%;
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	-ms-transition:all 0.4s ease-in-out 0s;
+	-o-transition:all 0.4s ease-in-out 0s;
 }
-.accordion a:after {
+.accordion .accordion-tab:hover{
+	background:#840529;
+}
+.accordion-tab.active {
+    background: #840529;
+}
+/*.accordion a:after {
   width: 8px;
   height: 8px;
   font-size: 17px;
@@ -1806,7 +1817,7 @@ ul.wpuf-form .rear_view{
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
+}*/
 .accordion .accordion-tab:after {
   width: 8px;
   height: 8px;
@@ -1826,7 +1837,9 @@ ul.wpuf-form .rear_view{
   line-height: 2;
   padding: 10px;
 }
-
+.accordion-pane-box {
+    padding: 0 7%;
+}
 .accordion-tab.active:after {
   top: 3px;
   content: '\f068';
@@ -1856,6 +1869,12 @@ ul.wpuf-form .rear_view{
 }*/
 .vip-member-acrodian-box {
     padding: 25px 0;
+}
+.vip-packeges-box p{
+	padding:0 10%;
+}
+.vip-luxury-acrodian-heading {
+    padding:0 9%;
 }
 .accordion-panel h4 {
     color: #8a8787;
@@ -2017,6 +2036,7 @@ ul.wpuf-form .rear_view{
 }
 .vip-copy-right-text h2{
 	color:#b2afaf;
+	font-size:28px;
 }
 .vip-copy-right-text .vip-bottom-divider-top{
 	top: 10%;
@@ -2052,5 +2072,11 @@ ul.wpuf-form .rear_view{
     background:#6d6361;
 }
 .vip-footer .footer-div:after{
-	background:none
+	background:none;
 }
+/*.accordion li .accordion-panel .vip-packeges-details-box ul li{
+	position: inherit;
+}
+.accordion li .accordion-tab:after{
+	display:none;
+}*/
