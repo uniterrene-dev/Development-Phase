@@ -339,7 +339,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="#"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -359,7 +359,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="#"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -381,7 +381,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="#"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -405,7 +405,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="#"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -429,7 +429,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="#"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
                     </div>
                   </div>
                 </li>
