@@ -8,22 +8,26 @@ jQuery('.casting-tab-name').click(function(e) {
 
 // ***** vip accordion ***** // 
 (function($) {
-    $('.accordion > li:eq(0) a').addClass('active');
+    $('.accordion > li:eq(0) .accordion-tab').addClass('active');
 	
-	if ( $( '.accordion > li:eq(0) a' ).hasClass( "active" ) ) {
-	$('.accordian-active p').show();
+	if ( $( '.accordion > li:eq(0) .accordion-tab' ).hasClass( "active" ) ) {
+	//$('.accordian-active p').show();
+	$('.accordian-active.accordion-panel').show();
 	}
-	$('.accordian-active h6').show();
-    $('.accordion a').click(function(j) {
+    $('.accordion .accordion-tab').click(function(j) {
 		//alert();
-        var dropDown = $(this).closest('li').find('p');
+		/*if ( $( '.accordion > li:eq(0) .accordion-tab' ).hasClass( "active" ) ) {
+		$('.accordion').find('.accordion-panel.active').removeClass('active');	
+		}*/
+		
+        var dropDown = $(this).closest('li').find('.accordion-panel');
 
-        $(this).closest('.accordion').find('accordion-panel').not(dropDown).slideUp();
+        $(this).closest('.accordion').find('.accordion-panel').not(dropDown).slideUp();
 
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         } else {
-            $(this).closest('.accordion').find('accordion-panel.active').removeClass('active');
+            $(this).closest('.accordion').find('.accordion-tab.active').removeClass('active');
             $(this).addClass('active');
         }
 
