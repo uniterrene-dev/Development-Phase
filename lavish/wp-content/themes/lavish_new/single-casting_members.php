@@ -237,66 +237,115 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
        
        <h3> About Me </h3>
        <div class="fact-table">
-        <div class="row">
-         <span class="fact-col">Conversation:</span>
-         <span class="fact-col">German, English, Russian</span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Cuisine::</span>
-         <span class="fact-col">Swiss, Asian</span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Drinks::</span>
-         <span class="fact-col">Champagne, Wine</span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Wardrobe:</span>
+        <ul>
+        <li>
+         <span class="fact-col">Ethnicity:</span>
+         <span class="fact-col">xxx</span>
+        </li>
+        <li>
+         <span class="fact-col">Conversasions:</span>
+         <span class="fact-col">fghj</span>
+        </li>
+        <li>
+         <span class="fact-col">Age:</span>
+         <span class="fact-col">27</span>
+        </li>
+        <li>
+         <span class="fact-col">Sexual Orientation:</span>
          <span class="fact-col">Sexy elegant and smart casual </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Lingerie:</span>
-         <span class="fact-col"> Lingerie: Playful with lace </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Perfumes:</span>
-         <span class="fact-col"> D&G, Armani </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Hobbies:</span>
-         <span class="fact-col"> Art, sports, painting </span>
-        </div>
-        <div class="row">
+        </li>
+        <li>
+         <span class="fact-col">Education:</span>
+         <span class="fact-col"> MMA </span>
+        </li>
+        <li>
          <span class="fact-col">Occupation:</span>
          <span class="fact-col"> Self employed </span>
-        </div>
-        <div class="row">
+        </li>
+        <li>
+         <span class="fact-col">Cuisine:</span>
+         <span class="fact-col"> fgfgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Drinks:</span>
+         <span class="fact-col"> Bear </span>
+        </li>
+        <li>
+         <span class="fact-col">Flowers:</span>
+         <span class="fact-col"> ghgh </span>
+        </li>
+        <li>
+         <span class="fact-col">Hobbies:</span>
+         <span class="fact-col"> Sex </span>
+        </li>
+        <li>
+         <span class="fact-col">Perfumes:</span>
+         <span class="fact-col"> dgdfg </span>
+        </li>
+        <li>
+         <span class="fact-col">Hand bags by:</span>
+         <span class="fact-col"> gfgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Loves shoes by:</span>
+         <span class="fact-col"> dfdgfg </span>
+        </li>
+        <li>
+         <span class="fact-col">Character traits:</span>
+         <span class="fact-col"> fbffg </span>
+        </li>
+        <li>
+         <span class="fact-col">Trips:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Duo Service:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
          <span class="fact-col">Clothing Size:</span>
-         <span class="fact-col"> US 2, UK 6, Italy 40 </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Jeans size:</span>
-         <span class="fact-col"> 26 </span>
-        </div>
-        <div class="row">
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
          <span class="fact-col">Bra size:</span>
          <span class="fact-col"> 33B </span>
-        </div>
-        <div class="row">
+        </li>
+        <li>
          <span class="fact-col">Shoe size:</span>
-         <span class="fact-col"> US 7, UK 4, EU 37  </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Loves shoes by:</span>
-         <span class="fact-col"> Jimmy Choo, Manolo Blahnik </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Trips:</span>
-         <span class="fact-col"> Worldwide </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">More:</span>
-         <span class="fact-col"> Non-smoker, Bisexual </span>
-        </div>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Jeans size:</span>
+         <span class="fact-col"> 26 </span>
+        </li>
+        <li>
+         <span class="fact-col">Wardrobe:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Lingerie:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Shave:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Piecing:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Tattoos:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Smoke:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
+        <li>
+         <span class="fact-col">Drug user:</span>
+         <span class="fact-col"> ffgf </span>
+        </li>
        </div>
     </div>
    </div>
