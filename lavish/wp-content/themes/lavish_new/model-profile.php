@@ -583,140 +583,337 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
 </section>
 
 <section id="model-listing" class="model-listing-div">
-  <div class="content1 lady-last">
-        
-            <div class="block_thumb_list">
-<div class="strip-full"><h3><span class="left-right slider-custom-left"><img src="Alina-Target%20Escorts_files/left-arrow.png" alt="left" border="0"></span> Alina <span class="left-right slider-custom-right"><img src="Alina-Target%20Escorts_files/right-arrow.png" alt="right" border="0"></span></h3></div>
-<div class="wrap-thumbs">
-    <div class="bx-wrapper" style="max-width: 1200px;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 449px;"><ul class="thumb_list" style="width: 1515%; position: relative; transition-timing-function: ease; transition-duration: 0s; transform: translate3d(-1800px, 0px, 0px);"><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-10--escort-girl-basel.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-10--escort-girl-basel.jpg" alt="Girlfriend experience with Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-11--escort-bern.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-11--escort-bern.jpg" alt="Dates for couples with escort Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-12--escort-lady-geneva.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-12--escort-lady-geneva.jpg" alt="Sensual beauty: escort Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-13-escort-lady-zurich.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-13-escort-lady-zurich.jpg" alt="Willing escort model">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                    <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-1--escort-zurich.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-1--escort-zurich.jpg" alt="Sexy escort Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-2--escort-lady-basel.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-2--escort-lady-basel.jpg" alt="Blond temptation: Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-3--escort-service-bern.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-3--escort-service-bern.jpg" alt="Escort model Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-4--escort-agency-geneva.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-4--escort-agency-geneva.jpg" alt="Curvy escort lady Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-5--escort-model-zurich.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-5--escort-model-zurich.jpg" alt="Sporty escort model Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-6--escort-basel.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-6--escort-basel.jpg" alt="Open-minded escort lady Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-7--escort-agency-bern.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-7--escort-agency-bern.jpg" alt="Sensual lover Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-8--escort-lady-geneva.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-8--escort-lady-geneva.jpg" alt="Open to erotic adventures: escort Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-9--escort-services-zurich.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-9--escort-services-zurich.jpg" alt="Ready for duo dates: Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-10--escort-girl-basel.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-10--escort-girl-basel.jpg" alt="Girlfriend experience with Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-11--escort-bern.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-11--escort-bern.jpg" alt="Dates for couples with escort Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-12--escort-lady-geneva.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-12--escort-lady-geneva.jpg" alt="Sensual beauty: escort Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-13-escort-lady-zurich.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-13-escort-lady-zurich.jpg" alt="Willing escort model">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li>
-                        <li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-1--escort-zurich.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-1--escort-zurich.jpg" alt="Sexy escort Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-2--escort-lady-basel.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-2--escort-lady-basel.jpg" alt="Blond temptation: Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-3--escort-service-bern.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-3--escort-service-bern.jpg" alt="Escort model Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
-                    <a href="http://www.targetescorts.com/ladyphotos/alina-4--escort-agency-geneva.jpg" rel="prettyPhoto[Alina]">
-                        <img src="Alina-Target%20Escorts_files/alina-4--escort-agency-geneva.jpg" alt="Curvy escort lady Alina">
-                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
-                    </a>
-                </li></ul></div><div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link active">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="" data-slide-index="4" class="bx-pager-link">5</a></div><div class="bx-pager-item"><a href="" data-slide-index="5" class="bx-pager-link">6</a></div><div class="bx-pager-item"><a href="" data-slide-index="6" class="bx-pager-link">7</a></div><div class="bx-pager-item"><a href="" data-slide-index="7" class="bx-pager-link">8</a></div><div class="bx-pager-item"><a href="" data-slide-index="8" class="bx-pager-link">9</a></div><div class="bx-pager-item"><a href="" data-slide-index="9" class="bx-pager-link">10</a></div><div class="bx-pager-item"><a href="" data-slide-index="10" class="bx-pager-link">11</a></div><div class="bx-pager-item"><a href="" data-slide-index="11" class="bx-pager-link">12</a></div><div class="bx-pager-item"><a href="" data-slide-index="12" class="bx-pager-link">13</a></div></div><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
-</div>
-</div>  
-
+  <div class="block-lady_list">
+    <div class="strip-full"><h3><span class="left-right slider-custom-left"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/left-arrow.png" alt="left" border="0"></span> Escort Ladies <span class="left-right slider-custom-right"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/right-arrow.png" alt="right" border="0"></span></h3></div>
+    <div class="wrap-thumbs">
+        <div class="bx-wrapper">
+          <div class="bx-viewport">
+             <ul class="lady_list">
+         
+                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-1.jpg" alt="">
+                        </a>
+                        <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Kiara                            </a>
+                            <div class="lady_age">Age: Mid 20´s </div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Dusseldorf, Cologne, Bonn</div>
+                        </div>
+                    </li>
+                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-2.jpg" alt="">
+                        </a>
+                          <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Mia                            </a>
+                            <div class="lady_age">Age: Mid 20s </div>
+                            <div class="trips">Europe</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Cannes, St. Tropez, Monaco, Geneva</div>
+                        </div>
+                    </li>
+                     <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-3.jpg" alt="">
+                        </a>
+                         <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Aaliyah                            </a>
+                            <div class="lady_age">Age: Mid 30s </div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Paris, Brussels, Geneva, London, Frankfurt</div>
+                        </div>
+                    </li>
+                                                                <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-4.jpg" alt="">
+                        </a>
+                          <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Victoria                            </a>
+                            <div class="lady_age">Age: Mid 20´s</div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Stuttgart, Munich, Frankfurt, Zurich</div>
+                        </div>
+                    </li>
+                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                           <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-5.jpg" alt="">
+                        </a>
+                          <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Stella                            </a>
+                            <div class="lady_age">Age: Late 20´s</div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Hanover, Berlin, Hamburg, Frankfurt</div>
+                        </div>
+                    </li>
+                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                           <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-6.jpg" alt="">
+                        </a>
+                          <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Claudia                            </a>
+                            <div class="lady_age">Age: Early 30s </div>
+                            <div class="trips">Europe</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Innsbruck, Salzburg, Vienna, Stuttgart</div>
+                        </div>
+                    </li>
+                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-7.jpg" alt="">
+                        </a>
+                          <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Anna                            </a>
+                            <div class="lady_age">Age: Mid 20s </div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Hanover, Hamburg, Berlin, Marbella</div>
+                        </div>
+                    </li>
+                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="http://www.targetescorts.com/evelyn-escort-service.htm">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-8.jpg" alt="">
+                        </a>
+                          <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Evelyn                            </a>
+                            <div class="lady_age">Age: Early 20</div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Berlin, Hamburg, Hanover, Leipzig</div>
+                        </div>
+                    </li>
+                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="http://www.targetescorts.com/julia-escort-service.htm">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-9.jpg" alt="">
+                        </a>
+                           <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Julia                            </a>
+                            <div class="lady_age">Age: Late 20´s </div>
+                            <div class="trips">Europe</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Munich, Nuremberg, Stuttgart, Salzburg</div>
+                        </div>
+                    </li>
+                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-10.jpg" alt="">
+                        </a>
+                            <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Amelie                            </a>
+                            <div class="lady_age">Age: Early 20s</div>
+                            <div class="trips">Europe</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Dusseldorf, Cologne, Bonn, Frankfurt</div>
+                        </div>
+                    </li>
+                        <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-11.jpg" alt="">
+                        </a>
+                           <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Carolina                            </a>
+                            <div class="lady_age">Age: Early 20</div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Vienna, Salzburg, Graz, Munich</div>
+                        </div>
+                    </li>
+                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-12.jpg" alt="">
+                        </a>
+                         <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Jasmin                            </a>
+                            <div class="lady_age">Age: Mid 20´s</div>
+                            <div class="trips">Europe</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Nuremberg, Munich, Mainz, Frankfurt</div>
+                        </div>
+                    </li>
+                        <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-13.jpg" alt="">
+                        </a>
+                           <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Emily                            </a>
+                            <div class="lady_age">Age: Mid 20´s </div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Mannheim, Frankfurt, Stuttgart</div>
+                        </div>
+                    </li>
+                         <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-14.jpg" alt="">
+                        </a>
+                           <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Sophie                            </a>
+                            <div class="lady_age">Age: Mid 20´s </div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Zurich, Basel, Bern, Geneva</div>
+                        </div>
+                    </li>
+                                                                <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-15.jpg" alt="">
+                        </a>
+                                                    <div class="new_lady"><img src="Escorts-ladis_files/heart-new.png" alt="New"></div>
+                                                <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Alice                            </a>
+                            <div class="lady_age">Age: Early 20s </div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Stuttgart, Karlsruhe, Frankfurt</div>
+                        </div>
+                    </li>
+                         <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-16.jpg" alt="">
+                        </a>
+                           <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Isabelle                            </a>
+                            <div class="lady_age">Age: 30</div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Cologne, Dusseldorf, Frankfurt</div>
+                        </div>
+                    </li>
+                                    <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-17.jpg" alt="">
+                        </a>
+                           <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Lina                            </a>
+                            <div class="lady_age">Age: Mid 20s </div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Mannheim, Karlsruhe, Frankfurt, Stuttgart</div>
+                        </div>
+                    </li><li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-18.jpg" alt="">
+                        </a>
+                                                <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Laura                            </a>
+                            <div class="lady_age">Age: Mid 20´s</div>
+                            <div class="trips">Europe</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Dresden, Leipzig, Berlin</div>
+                        </div>
+                    </li><li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-19.jpg" alt="">
+                        </a>
+                                                    <div class="new_lady"><img src="Escorts-ladis_files/heart-new.png" alt="New"></div>
+                                                <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Alina                            </a>
+                            <div class="lady_age">Age: Early 30´s </div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Zurich, Basel, Bern, Geneva</div>
+                        </div>
+                    </li>
+                     <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                        <a href="#">
+                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-20.jpg" alt="">
+                        </a>
+                           <div class="lady_overlay">
+                            <a class="overlay-name" href="#">
+                            Sasha                            </a>
+                            <div class="lady_age">Age: 20</div>
+                            <div class="trips">Worldwide</div>
+                            <a class="button" href="#">
+                                More
+                            </a>
+                            <div>Nuremberg, Frankfurt, Munich, Wiesbaden</div>
+                        </div>
+                       </li>
+                     </ul>
+                    </div>
+                      <!--<div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="" data-slide-index="4" class="bx-pager-link">5</a></div><div class="bx-pager-item"><a href="" data-slide-index="5" class="bx-pager-link">6</a></div><div class="bx-pager-item"><a href="" data-slide-index="6" class="bx-pager-link">7</a></div><div class="bx-pager-item"><a href="" data-slide-index="7" class="bx-pager-link active">8</a></div><div class="bx-pager-item"><a href="" data-slide-index="8" class="bx-pager-link">9</a></div><div class="bx-pager-item"><a href="" data-slide-index="9" class="bx-pager-link">10</a></div><div class="bx-pager-item"><a href="" data-slide-index="10" class="bx-pager-link">11</a></div><div class="bx-pager-item"><a href="" data-slide-index="11" class="bx-pager-link">12</a></div><div class="bx-pager-item"><a href="" data-slide-index="12" class="bx-pager-link">13</a></div><div class="bx-pager-item"><a href="" data-slide-index="13" class="bx-pager-link">14</a></div><div class="bx-pager-item"><a href="" data-slide-index="14" class="bx-pager-link">15</a></div><div class="bx-pager-item"><a href="" data-slide-index="15" class="bx-pager-link">16</a></div><div class="bx-pager-item"><a href="" data-slide-index="16" class="bx-pager-link">17</a></div><div class="bx-pager-item"><a href="" data-slide-index="17" class="bx-pager-link">18</a></div><div class="bx-pager-item"><a href="" data-slide-index="18" class="bx-pager-link">19</a></div><div class="bx-pager-item"><a href="" data-slide-index="19" class="bx-pager-link">20</a></div><div class="bx-pager-item"><a href="" data-slide-index="20" class="bx-pager-link">21</a></div><div class="bx-pager-item"><a href="" data-slide-index="21" class="bx-pager-link">22</a></div><div class="bx-pager-item"><a href="" data-slide-index="22" class="bx-pager-link">23</a></div><div class="bx-pager-item"><a href="" data-slide-index="23" class="bx-pager-link">24</a></div><div class="bx-pager-item"><a href="" data-slide-index="24" class="bx-pager-link">25</a></div><div class="bx-pager-item"><a href="" data-slide-index="25" class="bx-pager-link">26</a></div></div></div>-->
+                    </div>
     </div>
+</div>
+</section>
+
+<section id="model-copy-right" class="model-copy-right-div">
+  <div class="container">
+   <div class="model-copy-right-box">
+      <A href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/copyscape-banner-gray.png" alt=""></a>
+   </div>
+  </div>
 </section>
 
 
 
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
+<!--<script type="text/javascript" src="<?php //echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>-->
+<!--<script src="<?php //echo esc_url( get_template_directory_uri() )?>/js/jquery_004.js" type="text/javascript"></script>
+<script src="<?php //echo esc_url( get_template_directory_uri() )?>/js/jquery_dropdown.js" type="text/javascript"></script>
+<script src="<?php //echo esc_url( get_template_directory_uri() )?>/js/javascripts.js" type="text/javascript"></script>
+<script src="<?php //echo esc_url( get_template_directory_uri() )?>/js/jquery_003.js" type="text/javascript"></script>
+<script src="<?php //echo esc_url( get_template_directory_uri() )?>/js/jquery_002.js" type="text/javascript"></script>-->
 <?php
 get_footer();
 ?>
