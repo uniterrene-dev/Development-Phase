@@ -126,10 +126,10 @@ foreach($recent_posts as $recent_posts)
 		  
 			
 		  
-		 $area_code .='<li>';
-		 $area_code .=' <video width="100%" height="650px" controls  playsinline="" autoplay loop><source src="';
-		 $area_code .=esc_url( get_template_directory_uri() ).'/video/movie.mp4"';
-		 $area_code .='type="video/mp4"></li>';
+		 //$area_code .='<li>';
+		 //$area_code .=' <video width="100%" height="650px" controls  playsinline="" autoplay loop><source src="';
+		 //$area_code .=esc_url( get_template_directory_uri() ).'/video/movie.mp4"';
+		 //$area_code .='type="video/mp4"></li>';
 	  }
 	  else
 	  {
