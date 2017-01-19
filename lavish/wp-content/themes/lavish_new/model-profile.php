@@ -696,7 +696,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                         </div>
                     </li>
                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                        <a href="http://www.targetescorts.com/evelyn-escort-service.htm">
+                        <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-8.jpg" alt="">
                         </a>
                           <div class="lady_overlay">
@@ -711,7 +711,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                         </div>
                     </li>
                        <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
-                        <a href="http://www.targetescorts.com/julia-escort-service.htm">
+                        <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-9.jpg" alt="">
                         </a>
                            <div class="lady_overlay">
