@@ -2568,7 +2568,22 @@ ul.wpuf-form .rear_view{
 .vip-model-feedback h4{
 	color: #6d6361;
 }
-
+.model-listing-div .block-lady_list .strip-full h3{
+	color:#fff;
+	line-height: 75px;
+}
+.strip-full {
+    background-color: #ad1457 !important;
+    text-align: center;
+    width: 100%;
+}
+.model-listing-div{
+	padding-bottom:70px;
+}
+.model-copy-right-div{
+	text-align:center;
+	padding:10px 0 60px 0;
+}
 
 .dropdown dd,
 .dropdown dt {

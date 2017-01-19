@@ -44,7 +44,7 @@
 
 /* LOADER */
 
-.bx-wrapper .bx-loading {
+/*.bx-wrapper .bx-loading {
 	min-height: 50px;
 	background: url(../images/bx_loader.gif) center center no-repeat #f7f0ec;
 	height: 100%;
@@ -53,7 +53,7 @@
 	top: 0;
 	left: 0;
 	z-index: 2000;
-}
+}*/
 
 /* PAGER */
 
