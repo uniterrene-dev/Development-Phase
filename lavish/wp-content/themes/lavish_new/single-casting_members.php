@@ -244,11 +244,11 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
         </li>
         <li>
          <span class="fact-col">Conversasions:</span>
-         <span class="fact-col">fghj</span>
+         <span class="fact-col">German, English</span>
         </li>
         <li>
          <span class="fact-col">Age:</span>
-         <span class="fact-col">27</span>
+         <span class="fact-col">24</span>
         </li>
         <li>
          <span class="fact-col">Sexual Orientation:</span>
@@ -260,59 +260,59 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
         </li>
         <li>
          <span class="fact-col">Occupation:</span>
-         <span class="fact-col"> Self employed </span>
+         <span class="fact-col"> Real estate agent </span>
         </li>
         <li>
          <span class="fact-col">Cuisine:</span>
-         <span class="fact-col"> fgfgf </span>
+         <span class="fact-col"> Italian, French, Japanese </span>
         </li>
         <li>
          <span class="fact-col">Drinks:</span>
-         <span class="fact-col"> Bear </span>
+         <span class="fact-col"> Champagne </span>
         </li>
         <li>
          <span class="fact-col">Flowers:</span>
-         <span class="fact-col"> ghgh </span>
+         <span class="fact-col"> Roses </span>
         </li>
         <li>
          <span class="fact-col">Hobbies:</span>
-         <span class="fact-col"> Sex </span>
+         <span class="fact-col"> Travelling, sports, Fashion </span>
         </li>
         <li>
          <span class="fact-col">Perfumes:</span>
-         <span class="fact-col"> dgdfg </span>
+         <span class="fact-col"> Bond No9, Gucci </span>
         </li>
         <li>
          <span class="fact-col">Hand bags by:</span>
-         <span class="fact-col"> gfgf </span>
+         <span class="fact-col"> LV, Gucci, Philipp Plein </span>
         </li>
         <li>
          <span class="fact-col">Loves shoes by:</span>
-         <span class="fact-col"> dfdgfg </span>
+         <span class="fact-col"> Gucci, Christian Louboutin, Philipp Plein </span>
         </li>
         <li>
          <span class="fact-col">Character traits:</span>
-         <span class="fact-col"> fbffg </span>
+         <span class="fact-col"> Sexy self-confident, open minded, humorous </span>
         </li>
         <li>
          <span class="fact-col">Trips:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> Europe </span>
         </li>
         <li>
          <span class="fact-col">Duo Service:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> Jasmin Stella Anna Cheryl </span>
         </li>
         <li>
          <span class="fact-col">Clothing Size:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> US 2, UK 6, Italy 40 </span>
         </li>
         <li>
          <span class="fact-col">Bra size:</span>
-         <span class="fact-col"> 33B </span>
+         <span class="fact-col"> 34D </span>
         </li>
         <li>
          <span class="fact-col">Shoe size:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> US 9, UK 7, EU 39 </span>
         </li>
         <li>
          <span class="fact-col">Jeans size:</span>
@@ -320,11 +320,11 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
         </li>
         <li>
          <span class="fact-col">Wardrobe:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> Louis Vuitton, Gucci, Philipp Plein </span>
         </li>
         <li>
          <span class="fact-col">Lingerie:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> La Perla, Agent Provocateur </span>
         </li>
         <li>
          <span class="fact-col">Shave:</span>
@@ -332,15 +332,15 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
         </li>
         <li>
          <span class="fact-col">Piecing:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> Body Button </span>
         </li>
         <li>
          <span class="fact-col">Tattoos:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> No Tattoo,  </span>
         </li>
         <li>
          <span class="fact-col">Smoke:</span>
-         <span class="fact-col"> ffgf </span>
+         <span class="fact-col"> Non smoker,  </span>
         </li>
         <li>
          <span class="fact-col">Drug user:</span>
