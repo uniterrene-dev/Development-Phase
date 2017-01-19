@@ -514,71 +514,207 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
        
        <h3> About Me </h3>
        <div class="fact-table">
-        <div class="row">
-         <span class="fact-col">Conversation:</span>
-         <span class="fact-col">German, English, Russian</span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Cuisine::</span>
-         <span class="fact-col">Swiss, Asian</span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Drinks::</span>
-         <span class="fact-col">Champagne, Wine</span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Wardrobe:</span>
-         <span class="fact-col">Sexy elegant and smart casual </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Lingerie:</span>
-         <span class="fact-col"> Lingerie: Playful with lace </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Perfumes:</span>
-         <span class="fact-col"> D&G, Armani </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Hobbies:</span>
-         <span class="fact-col"> Art, sports, painting </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Occupation:</span>
-         <span class="fact-col"> Self employed </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Clothing Size:</span>
-         <span class="fact-col"> US 2, UK 6, Italy 40 </span>
-        </div>
-        <div class="row">
+        <ul>
+         <li>
+          <span class="fact-col">Conversation:</span>
+          <span class="fact-col">German, English, Russian</span>
+         </li>
+         <li>
+          <span class="fact-col">Cuisine::</span>
+          <span class="fact-col">Swiss, Asian</span>
+         </li>
+         <li>
+          <span class="fact-col">Drinks::</span>
+          <span class="fact-col">Champagne, Wine</span>
+         </li>
+         <li>
+          <span class="fact-col">Wardrobe:</span>
+          <span class="fact-col">Sexy elegant and smart casual </span>
+         </li>
+         <li>
+          <span class="fact-col">Lingerie:</span>
+          <span class="fact-col"> Lingerie: Playful with lace </span>
+         </li>
+         <li>
+          <span class="fact-col">Perfumes:</span>
+          <span class="fact-col"> D&G, Armani </span>
+         </li>
+         <li>
+          <span class="fact-col">Hobbies:</span>
+          <span class="fact-col"> Art, sports, painting </span>
+         </li>
+         <li>
+          <span class="fact-col">Occupation:</span>
+          <span class="fact-col"> Self employed </span>
+         </li>
+         <li>
+          <span class="fact-col">Clothing Size:</span>
+          <span class="fact-col"> US 2, UK 6, Italy 40 </span>
+         </li>
+         <li>
          <span class="fact-col">Jeans size:</span>
          <span class="fact-col"> 26 </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Bra size:</span>
-         <span class="fact-col"> 33B </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Shoe size:</span>
-         <span class="fact-col"> US 7, UK 4, EU 37  </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Loves shoes by:</span>
-         <span class="fact-col"> Jimmy Choo, Manolo Blahnik </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">Trips:</span>
-         <span class="fact-col"> Worldwide </span>
-        </div>
-        <div class="row">
-         <span class="fact-col">More:</span>
-         <span class="fact-col"> Non-smoker, Bisexual </span>
-        </div>
+         </li>
+         <li>
+          <span class="fact-col">Bra size:</span>
+          <span class="fact-col"> 33B </span>
+         </li>
+         <li>
+          <span class="fact-col">Shoe size:</span>
+          <span class="fact-col"> US 7, UK 4, EU 37  </span>
+         </li>
+         <li>
+          <span class="fact-col">Loves shoes by:</span>
+          <span class="fact-col"> Jimmy Choo, Manolo Blahnik </span>
+         </li>
+         <li>
+          <span class="fact-col">Trips:</span>
+          <span class="fact-col"> Worldwide </span>
+         </li>
+         <li>
+          <span class="fact-col">More:</span>
+          <span class="fact-col"> Non-smoker, Bisexual </span>
+         </li>
+        </ul>
        </div>
     </div>
    </div>
   </div>
 </section>
+
+<section id="model-listing" class="model-listing-div">
+  <div class="content1 lady-last">
+        
+            <div class="block_thumb_list">
+<div class="strip-full"><h3><span class="left-right slider-custom-left"><img src="Alina-Target%20Escorts_files/left-arrow.png" alt="left" border="0"></span> Alina <span class="left-right slider-custom-right"><img src="Alina-Target%20Escorts_files/right-arrow.png" alt="right" border="0"></span></h3></div>
+<div class="wrap-thumbs">
+    <div class="bx-wrapper" style="max-width: 1200px;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 449px;"><ul class="thumb_list" style="width: 1515%; position: relative; transition-timing-function: ease; transition-duration: 0s; transform: translate3d(-1800px, 0px, 0px);"><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-10--escort-girl-basel.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-10--escort-girl-basel.jpg" alt="Girlfriend experience with Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-11--escort-bern.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-11--escort-bern.jpg" alt="Dates for couples with escort Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-12--escort-lady-geneva.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-12--escort-lady-geneva.jpg" alt="Sensual beauty: escort Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-13-escort-lady-zurich.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-13-escort-lady-zurich.jpg" alt="Willing escort model">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                    <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-1--escort-zurich.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-1--escort-zurich.jpg" alt="Sexy escort Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-2--escort-lady-basel.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-2--escort-lady-basel.jpg" alt="Blond temptation: Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-3--escort-service-bern.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-3--escort-service-bern.jpg" alt="Escort model Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-4--escort-agency-geneva.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-4--escort-agency-geneva.jpg" alt="Curvy escort lady Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-5--escort-model-zurich.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-5--escort-model-zurich.jpg" alt="Sporty escort model Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-6--escort-basel.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-6--escort-basel.jpg" alt="Open-minded escort lady Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-7--escort-agency-bern.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-7--escort-agency-bern.jpg" alt="Sensual lover Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-8--escort-lady-geneva.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-8--escort-lady-geneva.jpg" alt="Open to erotic adventures: escort Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-9--escort-services-zurich.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-9--escort-services-zurich.jpg" alt="Ready for duo dates: Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-10--escort-girl-basel.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-10--escort-girl-basel.jpg" alt="Girlfriend experience with Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-11--escort-bern.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-11--escort-bern.jpg" alt="Dates for couples with escort Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-12--escort-lady-geneva.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-12--escort-lady-geneva.jpg" alt="Sensual beauty: escort Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                                                <li style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-13-escort-lady-zurich.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-13-escort-lady-zurich.jpg" alt="Willing escort model">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li>
+                        <li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-1--escort-zurich.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-1--escort-zurich.jpg" alt="Sexy escort Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-2--escort-lady-basel.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-2--escort-lady-basel.jpg" alt="Blond temptation: Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-3--escort-service-bern.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-3--escort-service-bern.jpg" alt="Escort model Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li><li style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    <a href="http://www.targetescorts.com/ladyphotos/alina-4--escort-agency-geneva.jpg" rel="prettyPhoto[Alina]">
+                        <img src="Alina-Target%20Escorts_files/alina-4--escort-agency-geneva.jpg" alt="Curvy escort lady Alina">
+                        <div class="thumb-rollover"><img src="Alina-Target%20Escorts_files/circle-cross.png" alt="enlarge"></div>
+                    </a>
+                </li></ul></div><div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link active">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="" data-slide-index="4" class="bx-pager-link">5</a></div><div class="bx-pager-item"><a href="" data-slide-index="5" class="bx-pager-link">6</a></div><div class="bx-pager-item"><a href="" data-slide-index="6" class="bx-pager-link">7</a></div><div class="bx-pager-item"><a href="" data-slide-index="7" class="bx-pager-link">8</a></div><div class="bx-pager-item"><a href="" data-slide-index="8" class="bx-pager-link">9</a></div><div class="bx-pager-item"><a href="" data-slide-index="9" class="bx-pager-link">10</a></div><div class="bx-pager-item"><a href="" data-slide-index="10" class="bx-pager-link">11</a></div><div class="bx-pager-item"><a href="" data-slide-index="11" class="bx-pager-link">12</a></div><div class="bx-pager-item"><a href="" data-slide-index="12" class="bx-pager-link">13</a></div></div><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+</div>
+</div>  
+
+    </div>
+</section>
+
+
 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
 <?php
