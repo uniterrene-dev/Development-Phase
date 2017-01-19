@@ -737,10 +737,15 @@ class WPUF_render_form_element extends WPUF_Render_Form {
 
         <div data-required="yes" data-type="radio" class="wpuf-fields <?php echo ' wpuf_'.$attr['name'].'_'.$form_id; ?>">
 
+<!--
             <textarea rows="10" cols="40" disabled="disabled" name="toc"><?php echo $attr['description']; ?></textarea>
-            <label>
+-->
+          <label>
                 <input type="checkbox" name="wpuf_accept_toc" required="required" /> <?php echo $attr['label']; ?>
-            </label>
+           </label>
+           <p>Yes, I understand and agree to the LavishMate Terms of Service, including the User Agreement and <span><a href="#">Privacy Policy. *</a></span></p>
+
+            
         </div>
     <?php
     }
