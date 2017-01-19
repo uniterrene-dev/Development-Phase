@@ -30,7 +30,7 @@ get_header();
     <div class="vip-member-acrodian-box">
   
      <ul class="accordion">
-          <li>
+          <!--<li>
             <div class="accordion-tab">
              The Benefit of being a VIP Member is Endless 
             </div> 
@@ -44,6 +44,22 @@ get_header();
                  <p> You can send us your booking request via e-mail, chat and/or of course for telephone booking you can reach us 24/7; Text booking only for existing client.  We will do our best to make your last minute booking possible! </p>
                 </div> 
                </div> 
+            </div> 
+        </li>-->
+          <li>
+            <div class="accordion-tab">
+             The Benefit of being a VIP Member is Endless 
+            </div>
+            <div class="accordion-panel">
+             <div class="container">
+               <div class="accordion-pane-box">
+                 <p>Unlimited exotic models, Luxury Jets, Yachts, Helicopters, Private Island, Hotels, Luxury Vehicles, and more</p>
+                 <p> <strong>Become a VIP Member Today</strong> </p>
+                 <p> With our portfolio of exclusive companions and luxury hotels, private islands, helicopters, vehicles and yachts, the possibilities are endless. </p>
+                 <p> Access to these sophisticated service is strictly reserved for the interests of VIP members, the most prestigious of Lavish Mate® clientele. The specifics of each package will vary according to the vendor and location, so please enquire with us directly so we can tailor-make a package just for you. Remember: we here to make your vacation, date or romantic getaway a reality so please tell us exactly how we can help you</p>
+                 <p> You can send us your booking request via e-mail, chat and/or of course for telephone booking you can reach us 24/7; Text booking only for existing client.  We will do our best to make your last minute booking possible! </p>
+                </div>
+             </div> 
             </div> 
         </li>
           <li>
@@ -615,19 +631,33 @@ to make your charter flight experience the best it can be </p>
     <h3> Looking for Beautiful Companion Dates? </h3>
     <p> We are delighted to provide you with the most beautiful women, and the finest girlfriend experience, at our leading high class escort service. 
 Our elite companions will make your dinner date, social occasion or vacation an unforgettable memory. </p>
-    <div class="about-box-divider vip-bottom-divider-top"><span> </span></div>
    </div>
 
-   <div class="vip-copy-right-text">
-    <h2> Copyright + </h2>
-    <div class="about-box-divider"><span> </span></div>
+   
+  </div>
+   <div class="vip-copy-text-accordion">
+    <!--<div class="about-box-divider vip-bottom-divider-top"><span> </span></div>-->
+     <ul class="accordion">     
+         <li>
+            <div class="accordion-tab">
+             Copyright 
+            </div>
+            <div class="accordion-panel">
+             <div class="container">
+               <div class="accordion-pane-box">
+                 <p>All contents of our web sites (including but not limited to: Chihuahua head symbol, logo, texts, graphics, audio, video and layout) are exclusive copyright of Lavish Mate®. Our web pages or elements of our web pages are protected by copyright law and law of unfair competition and may not by copied, distributed or modified without our written consent. It is illegal and punishable by criminal law to copy, distribute or modify our copyrighted material without our prior consent. Lavish Mate® will pursue all legal remedies against infringements of our rights.
+Lavish Mate® is a registered trademark in the United States, Canada and numerous other countries. This is also proof of the recognized expertise of Lavish Mate® which has emerged as a modern and globally operating elite escort agency over the years. In case of violation of our registered trademark Lavish Mate® we will initiate civil litigation for damages and will seek criminal prosecution by local law enforcement authorities.</p>
+                </div>
+             </div> 
+            </div> 
+        </li>
+      </ul> 
+    <!--<div class="about-box-divider"><span> </span></div>-->
    </div>
    
    <div class="back-to-ladies-btn">
     <a href="#"> Back to The Ladies </a>
    </div>
-  
-  </div>
   
 </section>
 
