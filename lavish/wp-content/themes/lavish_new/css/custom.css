@@ -2526,14 +2526,15 @@ ul.wpuf-form .rear_view{
 	padding:15px 0;
 }
 .model-fact-div-service ul li {
+    border: 1px solid #6d6361;
     color: #6d6361;
     display: inline-block;
     font-family: "Tw Cen MT";
     font-size: 22px;
-    padding: 5px 10px;
-    border: 1px #6d6361 solid;
+    padding: 5px 10px !important;
+    background: none !important;
 }
-.model-fact-div .row {
+.model-fact-div ul li {
     padding: 8px 0;
     overflow: hidden;
     line-height: 26px;
@@ -2543,7 +2544,7 @@ ul.wpuf-form .rear_view{
     font-style: italic;
 	font-weight:500;
 }
-.model-fact-div .row:nth-child(2n+1) {
+.model-fact-div ul li:nth-child(2n+1) {
     background: #eae5e0 none repeat scroll 0 0;
 }
 .model-fact-div .fact-col:nth-of-type(2n+1) {
