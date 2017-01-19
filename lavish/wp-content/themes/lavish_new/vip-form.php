@@ -2,7 +2,7 @@
 /**
  * Template Name: vipform Page
  */
-get_header();
+//get_header();
 ?>
 
 <section id="vip-form" class="vip-form-div">
@@ -154,7 +154,7 @@ get_header();
        <li class="vip-form-box-field">
         <div class="vip-label"> <label> Who would your favorite mates be?  </label> </div>
         <div class="vip-fields"> 
-           <select>
+           <select name="models" multiple>
              <option value="Yvonno">Yvonno</option>
              <option value="Angelina">Angelina</option>
              <option value="Jade">Jade</option>
