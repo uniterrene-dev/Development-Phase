@@ -8,7 +8,7 @@ get_header('model');
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 				
-				echo get_the_ID();?>
+				//echo get_the_ID();?>
 				
 				<section id="modelprofile-about" class="modelprofile-about-div">
   <div class="container">
@@ -111,50 +111,28 @@ get_header('model');
     
 	<article class="gallery-container-div">
 							<div class="gallery-container">
-								<ul style="width:4050px;">
-															<li id="model-pic-0">
-															<a href="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-1.jpg" class="fancybox" rel="gallery">
-															<img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-1.jpg" alt="">
-															</a>							
-							                                </li>
-															<li id="model-pic-1">
-															<a href="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-2.jpg" class="fancybox" rel="gallery">
-															<img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-2.jpg" alt="">
-															</a>														
-				                                            </li>
-															<li id="model-pic-2">
-															<a href="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-3.jpg" class="fancybox" rel="gallery">
-															<img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-3.jpg" alt="">
-															</a>							
-							                                </li>
-															<li id="model-pic-3">
-															<a href="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-4.jpg" class="fancybox" rel="gallery">
-															<img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-4.jpg" alt="">
-															</a>
+								<ul id="gupi_ul" >
 									
-						                                    </li>
-															<li id="model-pic-4">
-															<a href="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-5.jpg" class="fancybox" rel="gallery">
-															<img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-5.jpg" alt="">
-															</a>								
-						                                    </li>
-															<li id="model-pic-5">
-															<a href="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-6.jpg" class="fancybox" rel="gallery">
-															<img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-6.jpg" alt="">
-														    </a>
-						                                    </li>
-															<li id="model-pic-6">
-															<a href="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-7.jpg" class="fancybox" rel="gallery">
-															<img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-7.jpg" alt="">
-															</a>
-						                                    </li>
-															<li id="model-pic-7">
-															<a href="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-8.jpg" class="fancybox" rel="gallery">
-															<img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-profile/model-profile-8.jpg" alt="">
-															</a>							
-						                                    </li>
-                                                           
-															</ul>
+									<?php
+$images = get_post_meta( $post->ID, 'all_images_slider_images' );
+
+if ( $images ) {
+	$j=0;
+    foreach ( $images as $attachment_id ) {
+      
+        $thumb = wp_get_attachment_image( $attachment_id, 'full' );
+        $full_size = wp_get_attachment_url( $attachment_id ); ?>
+
+			<li id="model-pic-<?php echo $j?>">
+				<a href="<?php echo $full_size?>" class="fancybox" rel="gallery">
+					<img src="<?php echo $full_size?>" alt="">
+				</a>							
+			</li>
+   <?php  $j++; }
+}
+
+?>
+</ul>
 			</div>
 		
 			
@@ -166,7 +144,7 @@ get_header('model');
    <div class="model-descrip-box clearfix">
      <div class="model-descrip-left">
        <h3> My Location </h3>
-       <p> In Dubai till the 27.03.2016 Hanover, Hamburg, Burlin, Dusseldorf </p>
+       <p>  <?php echo get_post_meta( $post->ID, 'address_', true ); ?> </p>
      </div>
      <div class="model-descrip-right">
        <h3> Travel Expenses </h3>
@@ -357,7 +335,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
 
 
 
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
+
 <?php
 get_footer();
 ?>
