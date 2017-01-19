@@ -51,4 +51,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 
+.slider_images_no
+{
 
+display:none !important;
+}
+#gupi_ul li a
+{
+ display:block;
+}
+.gallery-container ul li{
+float:inherit;
+display:inline-block;
+}
