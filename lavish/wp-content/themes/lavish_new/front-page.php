@@ -45,11 +45,11 @@ if ( have_posts() ) :
         
     <div class="home-model-box-left model-box">
       <div class="home-model-box-img">
-       <a href="#"><img src="<?php echo $image[0];?>" /></a>
+       <a href="<?php echo get_permalink();?>"><img src="<?php echo $image[0];?>" /></a>
       </div>
       <div class="home-model-box-content">
        <div class="home-model-box-content-top">
-        <h3> <a href="#"><?php the_title();?></a> </h3>
+        <h3> <a href="<?php echo get_permalink();?>"><?php the_title();?></a> </h3>
            <h4> <?php
           
           $tags = wp_get_post_tags($id, array(
@@ -67,7 +67,7 @@ if ( have_posts() ) :
         </div>
        </div>
        <div class="home-model-box-details">
-        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+        <a href="<?php echo get_permalink();?>"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
        </div> 
       </div>
     </div>
@@ -95,11 +95,11 @@ if ( have_posts() ) :
    
     <div class="home-model-box-right model-box">
       <div class="home-model-box-img">
-       <a href="#"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-2.jpg" / alt=""></a>
+       <a href="<?php echo get_permalink();?>"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-2.jpg" / alt=""></a>
       </div>
       <div class="home-model-box-content">
        <div class="home-model-box-content-top">
-        <h3> <a href="#"><?php the_title();?></a> </h3>
+        <h3> <a href="<?php echo get_permalink();?>"><?php the_title();?></a> </h3>
            <h4> <?php
           
           $tags = wp_get_post_tags($id, array(
@@ -117,7 +117,7 @@ if ( have_posts() ) :
         </div>
        </div>
        <div class="home-model-box-details">
-        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+        <a href="<?php echo get_permalink();?>"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
        </div> 
       </div>
     </div>
@@ -165,11 +165,11 @@ foreach($recent_posts as $recent_posts)
 
     <li>
      <div class="model-view-img">
-      <a href="#"><img src="<?php echo $image[0];?>" /></a>
+      <a href="<?php echo $recent_posts['guid']?>"><img src="<?php echo $image[0];?>" /></a>
      </div>
      <div class="model-view-content">
       <div class="model-view-content-top">
-       <h3> <a href="#"><?php print_r($recent_posts['post_title'] );?></a> </h3>
+       <h3> <a href="<?php echo $recent_posts['guid']?>"><?php print_r($recent_posts['post_title'] );?></a> </h3>
        <h4> <?php
       
       $tags = wp_get_post_tags($recent_posts['ID'], array(
@@ -187,7 +187,7 @@ foreach($recent_posts as $recent_posts)
         </div>
        </div>
       <div class="home-model-box-details">
-        <a href="#"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
+        <a href="<?php echo $recent_posts['guid']?>"> View this model <span> <i class="fa fa-angle-right" aria-hidden="true"></i> </span></a>
       </div>
      </div>
     </li>
