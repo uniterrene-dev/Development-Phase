@@ -590,7 +590,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
           <div class="bx-viewport">
              <ul class="lady_list">
          
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-1.jpg" alt="">
                         </a>
@@ -605,7 +605,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Dusseldorf, Cologne, Bonn</div>
                         </div>
                     </li>
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-2.jpg" alt="">
                         </a>
@@ -620,7 +620,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Cannes, St. Tropez, Monaco, Geneva</div>
                         </div>
                     </li>
-                     <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                     <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-3.jpg" alt="">
                         </a>
@@ -635,7 +635,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Paris, Brussels, Geneva, London, Frankfurt</div>
                         </div>
                     </li>
-                                                                <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-4.jpg" alt="">
                         </a>
@@ -650,7 +650,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Stuttgart, Munich, Frankfurt, Zurich</div>
                         </div>
                     </li>
-                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="#">
                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-5.jpg" alt="">
                         </a>
@@ -665,7 +665,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Hanover, Berlin, Hamburg, Frankfurt</div>
                         </div>
                     </li>
-                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="#">
                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-6.jpg" alt="">
                         </a>
@@ -680,7 +680,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Innsbruck, Salzburg, Vienna, Stuttgart</div>
                         </div>
                     </li>
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-7.jpg" alt="">
                         </a>
@@ -695,7 +695,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Hanover, Hamburg, Berlin, Marbella</div>
                         </div>
                     </li>
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-8.jpg" alt="">
                         </a>
@@ -710,7 +710,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Berlin, Hamburg, Hanover, Leipzig</div>
                         </div>
                     </li>
-                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-9.jpg" alt="">
                         </a>
@@ -725,7 +725,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Munich, Nuremberg, Stuttgart, Salzburg</div>
                         </div>
                     </li>
-                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-10.jpg" alt="">
                         </a>
@@ -740,7 +740,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Dusseldorf, Cologne, Bonn, Frankfurt</div>
                         </div>
                     </li>
-                        <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-11.jpg" alt="">
                         </a>
@@ -755,7 +755,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Vienna, Salzburg, Graz, Munich</div>
                         </div>
                     </li>
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-12.jpg" alt="">
                         </a>
@@ -770,7 +770,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Nuremberg, Munich, Mainz, Frankfurt</div>
                         </div>
                     </li>
-                        <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-13.jpg" alt="">
                         </a>
@@ -785,7 +785,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Mannheim, Frankfurt, Stuttgart</div>
                         </div>
                     </li>
-                         <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                         <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-14.jpg" alt="">
                         </a>
@@ -800,7 +800,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Zurich, Basel, Bern, Geneva</div>
                         </div>
                     </li>
-                                                                <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-15.jpg" alt="">
                         </a>
@@ -816,7 +816,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Stuttgart, Karlsruhe, Frankfurt</div>
                         </div>
                     </li>
-                         <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                         <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-16.jpg" alt="">
                         </a>
@@ -831,7 +831,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Cologne, Dusseldorf, Frankfurt</div>
                         </div>
                     </li>
-                                    <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                     <li id="got_overlay" class="bx-clone">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-17.jpg" alt="">
                         </a>
@@ -845,7 +845,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             </a>
                             <div>Mannheim, Karlsruhe, Frankfurt, Stuttgart</div>
                         </div>
-                    </li><li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    </li><li id="got_overlay" class="bx-clone">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-18.jpg" alt="">
                         </a>
@@ -859,7 +859,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             </a>
                             <div>Dresden, Leipzig, Berlin</div>
                         </div>
-                    </li><li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    </li><li id="got_overlay" class="bx-clone">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-19.jpg" alt="">
                         </a>
@@ -875,7 +875,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
                             <div>Zurich, Basel, Bern, Geneva</div>
                         </div>
                     </li>
-                     <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                     <li id="got_overlay" class="bx-clone">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-20.jpg" alt="">
                         </a>
