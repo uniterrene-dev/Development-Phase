@@ -848,3 +848,196 @@ function Casting_Members() {
 
 }
 add_action( 'init', 'Casting_Members', 0 );
+
+
+function extra_profile_fileds_get_meta( $value ) {
+	global $post;
+
+	$field = get_post_meta( $post->ID, $value, true );
+	if ( ! empty( $field ) ) {
+		return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+	} else {
+		return false;
+	}
+}
+
+function extra_profile_fileds_add_meta_box() {
+	add_meta_box(
+		'extra_profile_fileds-extra-profile-fileds',
+		__( 'Extra Profile Fileds', 'extra_profile_fileds' ),
+		'extra_profile_fileds_html',
+		'casting_members',
+		'normal',
+		'default'
+	);
+}
+add_action( 'add_meta_boxes', 'extra_profile_fileds_add_meta_box' );
+
+function extra_profile_fileds_html( $post) {
+	wp_nonce_field( '_extra_profile_fileds_nonce', 'extra_profile_fileds_nonce' ); ?>
+
+	<p>Those fields are not in the front end casting form.</p>
+
+	<p>
+		<label for="extra_profile_fileds_age"><?php _e( 'Age', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_age" id="extra_profile_fileds_age" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_age' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_bust"><?php _e( 'Bust', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_bust" id="extra_profile_fileds_bust" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_bust' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_waist"><?php _e( 'Waist', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_waist" id="extra_profile_fileds_waist" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_waist' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_hips"><?php _e( 'Hips', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_hips" id="extra_profile_fileds_hips" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_hips' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_hair"><?php _e( 'Hair', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_hair" id="extra_profile_fileds_hair" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_hair' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_eyes"><?php _e( 'Eyes', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_eyes" id="extra_profile_fileds_eyes" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_eyes' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_services"><?php _e( 'Services', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_services" id="extra_profile_fileds_services" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_services' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_ethnicity"><?php _e( 'Ethnicity', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_ethnicity" id="extra_profile_fileds_ethnicity" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_ethnicity' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_sexual_orientation"><?php _e( 'Sexual Orientation', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_sexual_orientation" id="extra_profile_fileds_sexual_orientation" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_sexual_orientation' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_cuisine"><?php _e( 'Cuisine', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_cuisine" id="extra_profile_fileds_cuisine" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_cuisine' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_drinks"><?php _e( 'Drinks', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_drinks" id="extra_profile_fileds_drinks" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_drinks' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_flowers"><?php _e( 'Flowers', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_flowers" id="extra_profile_fileds_flowers" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_flowers' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_hobbies"><?php _e( 'Hobbies', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_hobbies" id="extra_profile_fileds_hobbies" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_hobbies' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_perfumes"><?php _e( 'Perfumes', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_perfumes" id="extra_profile_fileds_perfumes" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_perfumes' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_hand_bags_by"><?php _e( 'Hand bags by', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_hand_bags_by" id="extra_profile_fileds_hand_bags_by" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_hand_bags_by' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_loves_shoes_by"><?php _e( 'Loves shoes by', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_loves_shoes_by" id="extra_profile_fileds_loves_shoes_by" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_loves_shoes_by' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_character_traits"><?php _e( 'Character traits', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_character_traits" id="extra_profile_fileds_character_traits" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_character_traits' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_trips"><?php _e( 'Trips', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_trips" id="extra_profile_fileds_trips" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_trips' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_duo_service"><?php _e( 'Duo Service', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_duo_service" id="extra_profile_fileds_duo_service" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_duo_service' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_clothing_size"><?php _e( 'Clothing Size', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_clothing_size" id="extra_profile_fileds_clothing_size" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_clothing_size' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_shoe_size"><?php _e( 'Shoe size', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_shoe_size" id="extra_profile_fileds_shoe_size" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_shoe_size' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_jeans_size"><?php _e( 'Jeans size', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_jeans_size" id="extra_profile_fileds_jeans_size" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_jeans_size' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_wardrobe"><?php _e( 'Wardrobe', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_wardrobe" id="extra_profile_fileds_wardrobe" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_wardrobe' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_lingerie"><?php _e( 'Lingerie', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_lingerie" id="extra_profile_fileds_lingerie" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_lingerie' ); ?>">
+	</p>	<p>
+		<label for="extra_profile_fileds_shave"><?php _e( 'Shave', 'extra_profile_fileds' ); ?></label><br>
+		<input type="text" name="extra_profile_fileds_shave" id="extra_profile_fileds_shave" value="<?php echo extra_profile_fileds_get_meta( 'extra_profile_fileds_shave' ); ?>">
+	</p><?php
+}
+
+function extra_profile_fileds_save( $post_id ) {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+	if ( ! isset( $_POST['extra_profile_fileds_nonce'] ) || ! wp_verify_nonce( $_POST['extra_profile_fileds_nonce'], '_extra_profile_fileds_nonce' ) ) return;
+	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+	if ( isset( $_POST['extra_profile_fileds_age'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_age', esc_attr( $_POST['extra_profile_fileds_age'] ) );
+	if ( isset( $_POST['extra_profile_fileds_bust'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_bust', esc_attr( $_POST['extra_profile_fileds_bust'] ) );
+	if ( isset( $_POST['extra_profile_fileds_waist'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_waist', esc_attr( $_POST['extra_profile_fileds_waist'] ) );
+	if ( isset( $_POST['extra_profile_fileds_hips'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_hips', esc_attr( $_POST['extra_profile_fileds_hips'] ) );
+	if ( isset( $_POST['extra_profile_fileds_hair'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_hair', esc_attr( $_POST['extra_profile_fileds_hair'] ) );
+	if ( isset( $_POST['extra_profile_fileds_eyes'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_eyes', esc_attr( $_POST['extra_profile_fileds_eyes'] ) );
+	if ( isset( $_POST['extra_profile_fileds_services'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_services', esc_attr( $_POST['extra_profile_fileds_services'] ) );
+	if ( isset( $_POST['extra_profile_fileds_ethnicity'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_ethnicity', esc_attr( $_POST['extra_profile_fileds_ethnicity'] ) );
+	if ( isset( $_POST['extra_profile_fileds_sexual_orientation'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_sexual_orientation', esc_attr( $_POST['extra_profile_fileds_sexual_orientation'] ) );
+	if ( isset( $_POST['extra_profile_fileds_cuisine'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_cuisine', esc_attr( $_POST['extra_profile_fileds_cuisine'] ) );
+	if ( isset( $_POST['extra_profile_fileds_drinks'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_drinks', esc_attr( $_POST['extra_profile_fileds_drinks'] ) );
+	if ( isset( $_POST['extra_profile_fileds_flowers'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_flowers', esc_attr( $_POST['extra_profile_fileds_flowers'] ) );
+	if ( isset( $_POST['extra_profile_fileds_hobbies'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_hobbies', esc_attr( $_POST['extra_profile_fileds_hobbies'] ) );
+	if ( isset( $_POST['extra_profile_fileds_perfumes'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_perfumes', esc_attr( $_POST['extra_profile_fileds_perfumes'] ) );
+	if ( isset( $_POST['extra_profile_fileds_hand_bags_by'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_hand_bags_by', esc_attr( $_POST['extra_profile_fileds_hand_bags_by'] ) );
+	if ( isset( $_POST['extra_profile_fileds_loves_shoes_by'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_loves_shoes_by', esc_attr( $_POST['extra_profile_fileds_loves_shoes_by'] ) );
+	if ( isset( $_POST['extra_profile_fileds_character_traits'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_character_traits', esc_attr( $_POST['extra_profile_fileds_character_traits'] ) );
+	if ( isset( $_POST['extra_profile_fileds_trips'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_trips', esc_attr( $_POST['extra_profile_fileds_trips'] ) );
+	if ( isset( $_POST['extra_profile_fileds_duo_service'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_duo_service', esc_attr( $_POST['extra_profile_fileds_duo_service'] ) );
+	if ( isset( $_POST['extra_profile_fileds_clothing_size'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_clothing_size', esc_attr( $_POST['extra_profile_fileds_clothing_size'] ) );
+	if ( isset( $_POST['extra_profile_fileds_shoe_size'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_shoe_size', esc_attr( $_POST['extra_profile_fileds_shoe_size'] ) );
+	if ( isset( $_POST['extra_profile_fileds_jeans_size'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_jeans_size', esc_attr( $_POST['extra_profile_fileds_jeans_size'] ) );
+	if ( isset( $_POST['extra_profile_fileds_wardrobe'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_wardrobe', esc_attr( $_POST['extra_profile_fileds_wardrobe'] ) );
+	if ( isset( $_POST['extra_profile_fileds_lingerie'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_lingerie', esc_attr( $_POST['extra_profile_fileds_lingerie'] ) );
+	if ( isset( $_POST['extra_profile_fileds_shave'] ) )
+		update_post_meta( $post_id, 'extra_profile_fileds_shave', esc_attr( $_POST['extra_profile_fileds_shave'] ) );
+}
+add_action( 'save_post', 'extra_profile_fileds_save' );
+
+/*
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_age' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_bust' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_waist' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_hips' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_hair' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_eyes' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_services' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_ethnicity' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_sexual_orientation' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_cuisine' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_drinks' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_flowers' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_hobbies' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_perfumes' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_hand_bags_by' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_loves_shoes_by' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_character_traits' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_trips' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_duo_service' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_clothing_size' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_shoe_size' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_jeans_size' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_wardrobe' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_lingerie' )
+	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_shave' )
+*/
