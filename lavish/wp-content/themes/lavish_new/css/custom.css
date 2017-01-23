@@ -2585,7 +2585,106 @@ ul.wpuf-form .rear_view{
 	padding:10px 0 60px 0;
 }
 
+.model-booking-box-btn .accordion .accordion-tab {
+    width: 25%;
+    background: #ad1457;
+    border-radius: 7px;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 0px ;
+    line-height: 50px;
+	color:#fff;
+}
+.model-booking-box-btn .accordion .accordion-tab:hover{
+	background: #696868;
+}
+.model-booking-box-btn .accordion .accordion-tab:after{
+	content:normal;
+}
+.booking-form-div .booking-box-left{
+	width:42%;
+	float:left;
+}
+.booking-form-div .booking-box-right{
+	width:42%;
+	float:right;
+}
+.booking-form-div .vip-fields {
+    float: right;
+    width: 50%;
+}
+.booking-form-div .vip-label {
+    display: inline-block;
+    float: left;
+    font-family: times new roman;
+    font-style: italic;
+    padding-right: 15px;
+    text-align: right;
+    vertical-align: top;
+    width: 48%;
+    line-height: 36px;
+}
+.booking-form-div .vip-fields > input {
+    border:1px solid #5d5d5e !important;
+    border-radius: 2px;
+}
+.model-booking-box-btn .accordion-pane-box {
+    padding: 0 2%;
+}
+.booking-box-field {
+    display: table;
+    margin-bottom: 0px;
+    width: 100%;
+}
+.booking-form-div .vip-label span {
+    color: red;
+}
 
+.booking-form-div .vip-fields > select {
+	appearance: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    background: #eae5e0 url("../images/select-dowan-arows.png") no-repeat scroll right center;
+    border: 1px solid #5d5d5e !important;
+    border-radius: 0 !important;
+    height: 39px !important;
+}
+.booking-form-div .vip-label > label {
+    color: #6d6361;
+}
+.booking-form-div{
+	padding-top:20px;
+}
+.booking-form-div textarea{
+    background: #eae5e0 none repeat scroll 0 0 !important;
+    border: 1px solid #5d5d5e !important;
+    border-radius: 2px;
+    min-height: 300px;
+    padding-top: 10px;
+}
+.booking-form-submit-btn {
+    padding-top: 30px;
+    clear: both;
+}
+.booking-form-submit-btn input{
+	background: #9c0b46 none repeat scroll 0 0 !important;
+    border: medium none !important;
+    float: right;
+    font-family: "Tw Cen MT";
+    font-size: 22px !important;
+    height: 40px;
+    line-height: 20px;
+    width: 200px;
+	border-radius:5px;
+}
+
+.booking-form-submit-btn input:hover {
+    background: #696868 none repeat scroll 0 0 !important;
+    color: #fff;
+}
+
+
+/*  mutliSelect */
 
 .mutliSelect-box .dropdown dd,
 .mutliSelect-box .dropdown dt {
@@ -2660,3 +2759,5 @@ ul.wpuf-form .rear_view{
 .mutliSelect-box .mutliSelect ul li{
 	color:#fff;
 }
+
+/*  mutliSelect End */
