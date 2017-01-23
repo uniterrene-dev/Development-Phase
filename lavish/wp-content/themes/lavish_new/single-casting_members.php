@@ -165,7 +165,223 @@ if ( $images ) {
       <div class="model-booking-box">
         <?php echo(the_content()); ?>
         <div class="model-booking-box-btn">
-         <a  href="#"> BOOK <?php the_title();?> </a>
+         
+          <ul class="accordion">
+            <li>
+            <div class="accordion-tab model-booking-box-tab">
+             BOOK <?php the_title();?>
+            </div>
+             <div class="accordion-panel">
+              <div class="accordion-pane-box">
+               <div class="booking-form-div">
+                <form>
+                  <div class="booking-box-left clearfix">
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Your Full name <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Age <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Nationally <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Your E-mail <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Conform E-mail </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="email" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Your phone number </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Mobile phone number <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Address <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> City </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Zip Code <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="password" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Hotel/room </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="password" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label"> <label> Desired Mate </label> </div>
+                    <div class="vip-fields"> 
+                       <select class="xxxxxxxxxxxxxx">
+                         <option value="Lavish">Yvonno</option>
+                         <option value="Silver">Angelina</option>
+                         <option value="Gold">Angelina</option>
+                         <option value="Platinum">Kristinak</option>
+                         <option value="Black">Jade</option>
+                       </select> 
+                    </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label"> <label> Alternative Mate </label> </div>
+                    <div class="vip-fields"> 
+                       <select>
+                         <option value="Yvonno">Yvonno</option>
+                         <option value="Angelina">Angelina</option>
+                         <option value="Marie">Marie</option>
+                         <option value="Kristinak">Kristinak</option>
+                         <option value="Jade">Jade</option>
+                       </select> 
+                    </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label"> <label> How many mates </label> </div>
+                    <div class="vip-fields"> 
+                       <select>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                         <option value="6">6</option>
+                         <option value="7">7</option>
+                         <option value="8">8</option>
+                         <option value="9">9</option>
+                         <option value="10">10</option>
+                       </select> 
+                    </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label"> <label> How many mates </label> </div>
+                    <div class="vip-fields"> 
+                       <select>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                         <option value="6">6</option>
+                         <option value="7">7</option>
+                         <option value="8">8</option>
+                         <option value="9">9</option>
+                         <option value="10">10</option>
+                       </select> 
+                    </div>
+                   </li>
+                  </div> 
+                  <div class="booking-box-right clearfix">
+                   
+                   
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Date of meeting </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Time of Meeting </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Best times to call </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label"> <label> Duration </label> </div>
+                    <div class="vip-fields"> 
+                       <select>
+                         <option value="1hr">1hr</option>
+                         <option value="2hrs">2hrs</option>
+                         <option value="3hrs">3hrs</option>
+                         <option value="3hrs">3hrs</option>
+                         <option value="3hrs">3hrs</option>
+                         <option value="6hrs">6hrs</option>
+                         <option value="8hrs">8hrs</option>
+                         <option value="12hrs">12hrs</option>
+                         <option value="1day">1 day</option>
+                         <option value="2days">2 days</option>
+                         <option value="other">other</option>
+                       </select> 
+                    </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> Any likes or Dislikes </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label"> <label> Dress Style </label> </div>
+                    <div class="vip-fields"> 
+                       <select>
+                         <option value="short">short dress</option>
+                         <option value="maxi">maxi dress</option>
+                         <option value="cocktail">cocktail dress, </option>
+                         <option value="skirt">skirt</option>
+                         <option value="sporty">sporty chic</option>
+                         <option value="business">business attire </option>
+                       </select> 
+                    </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label"> <label> Payment Method </label> </div>
+                    <div class="vip-fields"> 
+                       <select>
+                         <option value="Cash Payment">Cash Payment</option>
+                         <option value="Bank Card">Bank Card</option>
+                         <option value="Credit Card Payment">Credit Card Payment </option>
+                       </select> 
+                    </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> How did you find us? <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="booking-box-field">
+                    <div class="vip-label">
+                     <label> What is your desired message for your mate?  <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="vip-form-box-field-textarea">
+                    <div class="vip-label"> <label> (Any special requests you have of your girl example special wardrobe etc.)	 </label> </div>
+                    <div class="vip-fields">
+                     <textarea placeholder="" rows="3" cols="20" required></textarea>
+                    </div>
+                   </li>
+                  </div> 
+                  
+                  
+                  <div class="booking-form-submit-btn">
+                   <input name="submit" value="Submit" type="submit">
+                  </div> 
+                </form>
+               </div> 
+              </div>
+             </div> 
+            </li>
+          </ul>
         </div>
       </div>
       
@@ -690,8 +906,7 @@ if ( ! empty( $categories ) ) {
 
 
 
-
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
 <?php
 get_footer();
 ?>
-
