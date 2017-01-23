@@ -68,10 +68,7 @@
                 <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
                 <action method="addLinkRel"><rel>stylesheet</rel><href>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</href></action>
                 <action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
-                <!-- Add js for custom template -->
-                 <action method="addItem"><type>skin_js</type><name>js/custom-js/custom.js</name></action>
-                 <action method="addItem"><type>skin_js</type><name>js/custom-js/index.js</name></action>
-                 <action method="addItem"><type>skin_js</type><name>js/custom-js/sidenav.js</name></action>
+                
                  <!-- Add stylesheets for custom template -->
                  <action method="addItem"><type>skin_css</type><name>css/custom.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
                  <action method="addItem"><type>skin_css</type><name>css/common.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
@@ -168,6 +165,8 @@
             </block>
         </block>
 
+
+	
         <block type="core/profiler" output="toHtml" name="core_profiler"/>
     </default>
 
