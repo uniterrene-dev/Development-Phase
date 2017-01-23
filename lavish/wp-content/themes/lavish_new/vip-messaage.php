@@ -3,6 +3,29 @@
  * Template Name: vipmessage Page
  */
 get_header('vipmessage');
+
+ $uid = $_REQUEST['uid'];
+
+global $wpdb;
+
+$sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
+
+ $applications = $wpdb->get_results($sql);
+
+    foreach ( $applications as $application ) {
+    $customer_vid = $application->vip_account_id;
+       $first_name =   $application->vip_first_name;
+       $last_name =    $application->vip_last_name;
+       $address =      $application->vip_address;
+       $city =         $application->vip_city;
+       $zipcode =      $application->vip_zipcode;
+       $email =        $application->vip_email;
+       $phone =        $application->vip_phone;
+       $mobile_number =$application->vip_mob_num;
+       $email = $application->vip_email;
+      $package_name = $application->vip_total_package;
+ }
+
 ?>
 
 <section class="main-vip-message-bg">
@@ -10,7 +33,7 @@ get_header('vipmessage');
      <div class="luxury-vip-box">
       <div class="container">
         <div class="hello-dear-box">
-          <h3> Congratulations You Have Become: </h3>
+          <h3> Congratulations <?php echo $first_name;?> You Have Become: </h3>
           <h3> A LUXURY VIP Member <span> placed on 12/23/2016 </span> </h3>
           <div class="luxury-vip-top-text">
           <p> We wanted to let you know that we're working on your VIP Luxury Package arrangement right now. If you have questions 
