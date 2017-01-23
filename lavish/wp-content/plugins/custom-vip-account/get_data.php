@@ -18,15 +18,13 @@ function registration_form()
  
     echo '
     <div class="container">
-		<div class="vip-form-box">
-    
+		<div class="vip-form-box">  
     <form action="" method="post" name="vip-form" id="vip-form" class="form-vip">
     <section id="vip-form" class="vip-form-div">
-	
       <div class="vip-form-box-left clearfix">
        <li class="vip-form-box-field">
         <div class="vip-label">
-         <label> Full Name <span class="required">*</span> </label> </div>
+         <label> First Name <span class="required">*</span> </label> </div>
         <div class="vip-fields"> <input name="first_name" placeholder="" value="" type="text" required> </div>        
        </li>
        <li class="vip-form-box-field">
@@ -65,6 +63,16 @@ function registration_form()
          <label> Desired Username: <span class="required">*</span> </label> </div>
         <div class="vip-fields"> <input placeholder="" name="username" value="" type="text" required> </div>
        </li>
+	   <li class="vip-form-box-field">
+        <div class="vip-label">
+         <label> E-mail <span class="required">*</span> </label> </div>
+        <div class="vip-fields"> <input name="email" placeholder="" value="" type="email" required> </div>
+       </li>
+       <li class="vip-form-box-field">
+        <div class="vip-label">
+         <label> Confirm E-mail <span class="required">*</span> </label> </div>
+        <div class="vip-fields"> <input name="conemail" placeholder="" value="" type="email" required> </div>
+       </li>
        <li class="vip-form-box-field">
         <div class="vip-label">
          <label> Password <span class="required">*</span> </label> </div>
@@ -75,16 +83,7 @@ function registration_form()
          <label> Confirm Password <span class="required">*</span> </label> </div>
         <div class="vip-fields"> <input placeholder="" type="password" name="conpassword" value="" type="password" required> </div>
        </li>
-       <li class="vip-form-box-field">
-        <div class="vip-label">
-         <label> E-mail <span class="required">*</span> </label> </div>
-        <div class="vip-fields"> <input name="email" placeholder="" value="" type="email" required> </div>
-       </li>
-       <li class="vip-form-box-field">
-        <div class="vip-label">
-         <label> Confirm E-mail <span class="required">*</span> </label> </div>
-        <div class="vip-fields"> <input name="conemail" placeholder="" value="" type="email" required> </div>
-       </li>
+       
       </div> 
       <div class="vip-form-box-right clearfix">
        
@@ -113,7 +112,7 @@ function registration_form()
        <li class="vip-form-box-field">
         <div class="vip-label"> <label> Membership <span class="required">*</span></label> </div>
         <div class="vip-fields"> 
-           <select name="total_plan" id="total_plan1">
+           <select name="total_plan" id="total_plans">
              <option name="lavishpln" value="lavishpln">Lavish $150</option>
              <option name="sliverpln" value="sliverpln">Silver $100k</option>
              <option name="goldpln" value="goldpln">Gold $250k</option>
@@ -160,14 +159,40 @@ function registration_form()
          <label> <input value="No" type="radio">No</label>
         </div>
        </li>
-       <li class="vip-form-box-field">
+       <li class="vip-form-box-field mutliSelect-box">
         <div class="vip-label"> <label> Who would your favorite mates be?  </label> </div>
         <div class="vip-fields"> 
-           <select>
-             <option value="Yvonno">Yvonno</option>
-             <option value="Angelina">Angelina</option>
-             <option value="Jade">Jade</option>
-           </select> 
+		   
+		   <dl class="dropdown"> 
+  
+			<dt>
+			<a href="javascript:void(0)">
+			  <span class="hida">Select</span>    
+			  <p class="multiSel"></p>  
+			</a>
+			</dt>
+		  
+			<dd>
+				<div class="mutliSelect">
+					<ul>
+						<li>
+						   <label><input type="checkbox" value="Apple" />Yvonno </label>
+						<li>
+							<label><input type="checkbox" value="Blackberry" />Angelina</label>
+						<li>
+							<label><input type="checkbox" value="HTC" />Angelina</label>
+						<li>
+							<label><input type="checkbox" value="Sony Ericson" />Yvonno</label>
+						<li>
+							<label><input type="checkbox" value="Motorola" />Angelina</label>
+						<li>
+						   <label> <input type="checkbox" value="Nokia" />Angelina</label>
+					</ul>
+				</div>
+			</dd>
+		</dl>
+		   
+		   
         </div>
        </li>
       </div> 
@@ -258,17 +283,15 @@ $conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toy
         
          $applications = $wpdb->get_results($sql_user_id);
          
- //~ echo $mem_pln;
- //~ die;
+ 
 
 		foreach ( $applications as $application ) {
 
 		$uid =  $application->ID;
 		}
         
-       $sql = "INSERT INTO `wp_vip_accounts` (`vip_account_id`, `vip_account_name`, `vip_account_package_name`, `vip_account_post_limit`, `vip_account_access`, `vip_user_id`, `is_payment`, `vip_first_name`, `vip_last_name`, `vip_nationality`, `vip_address`, `vip_city`, `vip_zipcode`, `vip_email`, `vip_phone`, `vip_mob_num`, `vip_time_call`, `vip_explain`, `vip_hot_spot`, `vip_toys`, `vip_gateway`, `vip_monthy_package`, `vip_total_package`) VALUES 
-       ('', '$username', 'Sliver', '130', 'all', '$uid', '0', '$first_name', '$last_name', '$nationality', '$address', '$city', '$zipcode', '$email', '$phone', '$mob_num', '$time_call', '$explain', '$hot_spot', '$toys', '$gateway', '$mem_pln', 
-       '$total_plans');";
+       $sql = "INSERT INTO `lav`.`wp_vip_accounts` (`vip_account_id`, `vip_account_name`, `vip_account_package_name`, `vip_account_post_limit`, `vip_account_access`, `vip_user_id`, `is_payment`, `vip_first_name`, `vip_last_name`, `vip_nationality`, `vip_address`, `vip_city`, `vip_zipcode`, `vip_email`, `vip_phone`, `vip_mob_num`, `vip_time_call`, `vip_explain`, `vip_hot_spot`, `vip_toys`, `vip_gateway`, `vip_monthy_package`, `vip_total_package`) VALUES 
+       ('', '$username', 'Sliver', '130', 'all', '$uid', '0', '$first_name', '$last_name', '$nationality', '$address', '$city', '$zipcode', '$email', '$phone', '$mob_num', '$time_call', '$explain', '$hot_spot', '$toys', '$gateway', '$mem_pln', '$total_plans');";
         
         
        
@@ -375,7 +398,7 @@ if (empty($_POST['DO_STEP_1']) && empty($_GET['token-id']))
 
 global $wpdb;
 
-$sql = "Select * from `wp_vip_accounts` where `vip_user_id`=$uid;";
+$sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
 
  $applications = $wpdb->get_results($sql);
 
@@ -392,7 +415,7 @@ $sql = "Select * from `wp_vip_accounts` where `vip_user_id`=$uid;";
        $email = $application->vip_email;
       $package_name = $application->vip_total_package;
  }
-      $package_name = $application->vip_total_package;
+       $package_name = $application->vip_total_package;
 $query = "SELECT * 
 FROM  `wp_package_price` 
 WHERE  `package_name` =  '$package_name'";
@@ -400,9 +423,6 @@ WHERE  `package_name` =  '$package_name'";
 $application_new = $wpdb->get_results($query);
 
 foreach ( $application_new as $application_new ) {
-	
-	//print_r($application_new);
-	
 	$price = $application_new->package_price;
 	$price_org = (int)str_replace(' ', '', $price);
 	
@@ -413,48 +433,289 @@ foreach ( $application_new as $application_new ) {
 
     print '  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
     print '
-    <html>
-      <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Collect non-sensitive Customer Info </title>
-      </head>
-      <body>
-      <p><h2>Step One: Collect non-sensitive payment information.<br /></h2></p>
+    <div class="vip-payment-form">
+	 <div class="container">
+	  <div class="vip-payment-form-box clearfix">
+        <h2>Step One: Collect non-sensitive payment information.</h2>
 		<h3> Customer Information</h3>
-      <h4> Billing Details</h4>
 		<form action="" method="post">
-          <table>
-          <tr><td>Customer Vault Id  </td><td><input type="text" name="customer-vault-id" value="'.$customer_vid.'"></td></tr>
-          <tr><td>Company</td><td><input type="text" name="billing-address-company" value="Acme, Inc."></td></tr>
-          <tr><td>First Name </td><td><input type="text" name="billing-address-first-name" value="'.$first_name.'"></td></tr>
-          <tr><td>Last Name </td><td><input type="text" name="billing-address-last-name" value="'.$last_name.'"></td></tr>
-          <tr><td>Address </td><td><input type="text" name="billing-address-address1" value="'.$address.'"></td></tr>
-          <tr><td>Address 2 </td><td><input type="text" name="billing-address-address2" value="Suite 205"></td></tr>
-          <tr><td>City </td><td><input type="text" name="billing-address-city" value="'.$city.'"></td></tr>
-          <tr><td>State/Province </td><td><input type="text" name="billing-address-state" value="'.$city.'"></td></tr>
-          <tr><td>Zip/Postal </td><td><input type="text" name="billing-address-zip" value="'.$zipcode.'"></td></tr>
-          <tr><td>Country </td><td><input type="text" name="billing-address-country" value="US"></td></tr>
-          <tr><td>Phone Number </td><td><input type="text" name="billing-address-phone" value="'.$phone.'"></td></tr>
-          <tr><td>Mobile Number </td><td><input type="text" name="billing-address-fax" value="'.$mobile_number.'"></td></tr>
-          <tr><td>Email Address </td><td><input type="text" name="billing-address-email" value="'.$email.'"></td></tr>
-			<tr><td><h4><br /> Shipping Details</h4>
-          <tr><td>Company</td><td><input type="text" name="shipping-address-company" value="Acme, Inc."></td></tr>
-          <tr><td>First Name </td><td><input type="text" name="shipping-address-first-name" value="'.$first_name.'"></td></tr>
-          <tr><td>Last Name </td><td><input type="text" name="shipping-address-last-name" value="'.$last_name.'"></td></tr>
-          <tr><td>Address </td><td><input type="text" name="shipping-address-address1" value="'.$address.'"></td></tr>
-          <tr><td>Address 2</td><td><input type="text" name="shipping-address-address2" value=""></td></tr>
-          <tr><td>City </td><td><input type="text" name="shipping-address-city" value="'.$city.'"></td></tr>
-          <tr><td>State/Province </td><td><input type="text" name="shipping-address-state" value=""></td></tr>
-          <tr><td>Zip/Postal </td><td><input type="text" name="shipping-address-zip" value="'.$zipcode.'"></td></tr>
-          <tr><td>Country</td><td><input type="text" name="shipping-address-country" value="US"></td></tr>
-          <tr><td>Phone Number </td><td><input type="text" name="shipping-address-phone" value="'.$phone.'"></td></tr>
-          <tr><td colspan="2"> </td>
-          <tr><td colspan="2" align=center>Total Amount $'.$price_org.' </td></tr>
-          <tr><td colspan="2" align=center><input type="submit" value="Submit Step One"><input type="hidden" name ="DO_STEP_1" value="true"></td></tr>
-          </table>
+          <ul>
+		   <div class="vip-payment-form-left">
+		    <h4> Billing Details</h4>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Customer Vault Id
+				   <span class="required">*</span>
+				  </label>
+			    </div>  
+			    <div class="vip-fields">
+			     <input type="text" name="customer-vault-id" value="'.$customer_vid.'">
+		        </div>	
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Company
+				   <span class="required">*</span>
+				  </label>
+			    </div>  
+				<div class="vip-fields">
+				 <input type="text" name="billing-address-company" value="Acme, Inc.">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   First Name
+				   <span class="required">*</span>
+				  </label>
+			    </div>  
+				<div class="vip-fields">
+				 <input type="text" name="billing-address-first-name" value="'.$first_name.'">
+				</div>
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Last Name
+				   <span class="required">*</span>
+				  </label>
+			    </div>
+				 <div class="vip-fields">   
+				  <input type="text" name="billing-address-last-name" value="'.$last_name.'">
+				 </div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				    Address
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields"> 
+				 <input type="text" name="billing-address-address1" value="'.$address.'">
+				</div>   
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				    Address 2 
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields">
+				 <input type="text" name="billing-address-address2" value="Suite 205">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				    City 
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields">
+				 <input type="text" name="billing-address-city" value="'.$city.'">
+				</div>
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				    State/Province
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields"> 
+				 <input type="text" name="billing-address-state" value="'.$city.'">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				    Zip/Postal
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+			   <div class="vip-fields">  
+				<input type="text" name="billing-address-zip" value="'.$zipcode.'">
+			   </div>	
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				    Country
+				   <span class="required">*</span>
+				  </label>
+			    </div>
+				<div class="vip-fields"> 
+				 <input type="text" name="billing-address-country" value="US">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				    Phone Number
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields">
+				 <input type="text" name="billing-address-phone" value="'.$phone.'">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				    Mobile Number
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields">
+				 <input type="text" name="billing-address-fax" value="'.$mobile_number.'">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Email Address
+				   <span class="required">*</span>
+				  </label>
+			    </div>
+				<div class="vip-fields">  
+				 <input type="text" name="billing-address-email" value="'.$email.'">
+				</div> 
+			</li>
+			</div> 
+			<div class="vip-payment-form-right">
+			 <h4>Shipping Details</h4>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Company				   
+				  </label>
+			    </div>
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-company" value="Acme, Inc.">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   First Name
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-first-name" value="'.$first_name.'">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Last Name
+				   <span class="required">*</span>
+				  </label>
+			    </div>  
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-last-name" value="'.$last_name.'">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Address
+				   <span class="required">*</span>
+				  </label>
+			    </div>   
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-address1" value="'.$address.'">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Address 2
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-address2" value="">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   City
+				   <span class="required">*</span>
+				  </label>
+			    </div>  
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-city" value="'.$city.'">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   State/Province
+				   <span class="required">*</span>
+				  </label>
+			    </div>   
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-state" value="">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Zip/Postal
+				   <span class="required">*</span>
+				  </label>
+			    </div>  
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-zip" value="'.$zipcode.'">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Country
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-country" value="US">
+				</div> 
+			  </li>
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Phone Number
+				   <span class="required">*</span>
+				  </label>
+			    </div> 
+				<div class="vip-fields">
+				 <input type="text" name="shipping-address-phone" value="'.$phone.'">
+				</div> 
+			  </li>        
+			  <li>
+			    <div class="vip-label">
+				  <label>
+				   Total Amount
+				   <span class="required">*</span>
+				  </label>
+			    </div>
+				<div class="vip-fields">
+				  $'.$price_org.' 
+				</div>
+			  </li>
+			  <li>
+			   <input type="submit" value="Submit Step One"><input type="hidden" name ="DO_STEP_1" value="true"></li>
+			 </div> 
+          </ul>
 		</form>
-      </body>
-    </html>
+	   </div>
+	  </div>	
+	 </div>	
 
     ';
 }
@@ -463,7 +724,7 @@ else if (!empty($_POST['DO_STEP_1']))
 		 $uid = $_REQUEST['uid'];
 global $wpdb;
 
-$sql = "Select * from `wp_vip_accounts` where `vip_user_id`=$uid;";
+$sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
 
  $applications = $wpdb->get_results($sql);
 
@@ -625,17 +886,36 @@ foreach ( $application_new as $application_new ) {
     // Uncomment the line below if you would like to print Step One's response
     // print '<pre>' . (htmlentities($data)) . '</pre>';
     print '
-        <p><h2>Step Two: Collect sensitive payment information and POST directly to payment gateway<br /></h2></p>
+	  <div class="payment-vip">
+	   <div class="container">
+	    <div class="payment-vip-box">
+        <h2>Step Two: Collect sensitive payment information and POST directly to payment gateway<br /></h2>
 
-        <form action="'.$formURL. '" method="POST">
-        <h3> Payment Information</h3>
-            <table>
-                <tr><td>Credit Card Number</td><td><INPUT type ="text" name="billing-cc-number" value="4111111111111111"> </td></tr>
-                <tr><td>Expiration Date</td><td><INPUT type ="text" name="billing-cc-exp" value="1012"> </td></tr>
-                <tr><td>CVV</td><td><INPUT type ="text" name="cvv" > </td></tr>
-                <tr><Td colspan="2" align=center><INPUT type ="submit" value="Submit Step Two"></td> </tr>
-            </table>
-        </form>
+         <div class="payment-vip-form">
+          <form action="'.$formURL. '" method="POST">
+           <h3> Payment Information</h3>
+              <ul>
+                <li>
+				  <label> Credit Card Number  </label>				  
+				  <input type ="text" name="billing-cc-number" value="4111111111111111">  
+				</li>
+                <li>
+				  <label> Expiration Date </label>
+				  <input type ="text" name="billing-cc-exp" value="1012"> 
+				</li>
+                <li>
+				  <label> CVV </label>
+				  <input type ="text" name="cvv" > 
+				</li>
+                <li>
+				  <input type ="submit" value="Submit Step Two">
+				</li>
+              </ul>
+            </form>
+		   </div>
+		  </div>
+		 </div>
+		</div>
         </body>
         </html>
         ';
@@ -672,14 +952,15 @@ elseif (!empty($_GET['token-id']))
       <body>';
 
     print "
-        <p><h2>Step Three: Script automatically completes the transaction <br /></h2></p>";
+	  
+        <h2>Step Three: Script automatically completes the transaction</h2>";
 
     if ((string)$gwResponse->result == 1 ) {
         print " <p><h3> Transaction was Approved, XML response was:</h3></p>\n";
         print '<pre>' . (htmlentities($data)) . '</pre>';
         global $wpdb;
 require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-$wpdb->query($wpdb->prepare("UPDATE  `wp_vip_accounts` SET  `is_payment` =  '1' WHERE  `wp_vip_accounts`.`vip_user_id` =$uid;"));
+$wpdb->query($wpdb->prepare("UPDATE  `lav`.`wp_vip_accounts` SET  `is_payment` =  '1' WHERE  `wp_vip_accounts`.`vip_user_id` =$uid;"));
          header('Location: http://localhost/public_html/newwp/lavish/vip-messages?uid='.$uid);  
 
     } elseif((string)$gwResponse->result == 2)  {
@@ -693,7 +974,8 @@ $wpdb->query($wpdb->prepare("UPDATE  `wp_vip_accounts` SET  `is_payment` =  '1' 
         print " <p><h3>XML response was:</h3></p>\n";
         print '<pre>' . (htmlentities($data)) . '</pre>';
     }
-    print "</body></html>";
+    print 
+	  "</body></html>";
 
 
 
