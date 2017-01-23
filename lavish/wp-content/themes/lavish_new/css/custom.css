@@ -2585,31 +2585,33 @@ ul.wpuf-form .rear_view{
 	padding:10px 0 60px 0;
 }
 
-.dropdown dd,
-.dropdown dt {
+
+
+.mutliSelect-box .dropdown dd,
+.mutliSelect-box .dropdown dt {
   margin: 0px;
   padding: 0px;
 }
 
-.dropdown ul {
+.mutliSelect-box .dropdown ul {
   margin: -1px 0 0 0;
 }
 
-.dropdown dd {
+.mutliSelect-box .dropdown dd {
   position: relative;
 }
 
-.dropdown a,
-.dropdown a:visited {
+.mutliSelect-box .dropdown a,
+.mutliSelect-box .dropdown a:visited {
   color: #333;
   text-decoration: none;
   outline: none;
   font-size: 12px;
 }
-.dropdown {
+.mutliSelect-box .dropdown {
     margin: 0;
 }
-.dropdown dt a {
+.mutliSelect-box .dropdown dt a {
   border: 1px solid #5d5d5e !important;
   border-radius: 2px;
   display: block;
@@ -2621,14 +2623,14 @@ ul.wpuf-form .rear_view{
   width: 220px;
 }
 
-.dropdown dt a span,
+.mutliSelect-box .dropdown dt a span,
 .multiSel span {
   cursor: pointer;
   display: inline-block;
   padding: 0 3px 2px 0;
 }
 
-.dropdown ul {
+.mutliSelect-box .dropdown ul {
   background-color: #ad1457;
   border: 0;
   color: #333;
@@ -2643,18 +2645,18 @@ ul.wpuf-form .rear_view{
   overflow: auto;
 }
 
-.dropdown span.value {
+.mutliSelect-box .dropdown span.value {
   display: none;
 }
 
-.dropdown ul li a {
+.mutliSelect-box .dropdown ul li a {
   padding: 5px;
   display: block;
 }
 
-.dropdown ul li a:hover {
+.mutliSelect-box .dropdown ul li a:hover {
   background-color: #fff;
 }
-.mutliSelect ul li{
+.mutliSelect-box .mutliSelect ul li{
 	color:#fff;
 }
