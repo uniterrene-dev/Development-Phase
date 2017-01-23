@@ -143,6 +143,14 @@
 .model-view-box ul li {
     margin: 0 12px;
 }
+.vip-model-about-video {
+    width: 100%;
+}
+.model-fact-div {
+    width: 100%;
+	margin-top:25px
+}
+
 
 }
 @media (max-width:760px) {
