@@ -1,0 +1,146 @@
+.strip-full	{
+	width: 100%;
+	text-align: center;
+	background-color: #6e6462;
+}
+.strip-faq	{
+	width: 100%;
+	text-align: center;
+	background-color: #f7f1ec;
+	border-bottom: 1px solid #dfdad6; 
+}
+.strip-faq h2	{
+	margin-bottom: 0px;
+	padding-top: 26px;
+    padding-bottom: 26px;
+}
+.strip-faq h3	{
+    margin-bottom: 0px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-family: 'EscortFont';
+    font-size: 20pt;
+    line-height: 22pt;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: normal;
+}
+.strip-faq h5	{
+    margin-bottom: 0px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-family: 'EscortFont';
+    font-size: 20pt;
+    line-height: 22pt;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.faq-child { display:none;}
+
+.faq-child .wrap-center {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.strip-faq h2:hover	{
+    display: block;
+    text-decoration: none;
+    background-color: #ad1457;
+    color: #ffffff;
+    cursor: pointer;
+}
+.strip-faq h3:hover	{
+    display: block;
+    text-decoration: none;
+    background-color: #ad1457;
+    color: #ffffff;
+    cursor: pointer;
+}
+.strip-faq h5:hover	{
+    display: block;
+    text-decoration: none;
+    background-color: #ad1457;
+    color: #ffffff;
+    cursor: pointer;
+}
+.left-right	{
+	font-family: times new roman;
+	font-weight: normal;
+	vertical-align: top;
+	margin-left: 20px;
+	margin-right: 20px;
+    cursor: pointer;
+}
+.left-right IMG {
+    margin-bottom: -3px;
+}
+.thumb_list li:hover .thumb-rollover {
+    display: block;
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    cursor: pointer;
+}
+
+.thumb_list li .thumb-rollover {
+    display: none;
+}
+
+.bx-wrapper .thumb-rollover IMG {
+    max-width: 76px;
+}
+
+.wrap-center {  
+    margin: 0 auto; 
+    width: 100%;
+	max-width: 980px;
+	text-align: center;
+	overflow: hidden;
+	
+}
+.wrap-center2 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+    overflow: hidden;
+
+}
+.wrap-center-slide {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.wrap-thumbs	{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.wrap-thumbs UL	{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wrap-thumbs LI	{
+	float: left;
+	margin: 0;
+    padding: 0;
+	width: 25%;
+    position: relative;
+    min-height: 100px;
+ }
+
+.wrap-thumbs IMG	{
+	width: 100%;
+	height: auto;
+    vertical-align: bottom;
+}
