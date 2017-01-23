@@ -132,7 +132,7 @@
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery.easing.js" ></script>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery.bxslider.min.js" ></script>
 
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
+<!--<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>-->
 <script>
 	var l = $('#gupi_ul > li').length;
 	var li_width = $('#gupi_ul > li').outerWidth(true);
