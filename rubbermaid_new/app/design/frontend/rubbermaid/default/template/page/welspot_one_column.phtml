@@ -46,8 +46,7 @@
 	<!--Start Banner Section-->
 <section id="banner">
   <div class="slider-container">
-    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('home_main_banner')->toHtml() ?>;?>
-  </div>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('home_main_banner')->toHtml() ?>
 </section>
 <!--End Banner Section--> 
 
@@ -55,48 +54,8 @@
 <section id="Product_Categories">
   <div class="container clearfix">
     <h3>Our Product Categories</h3>
-    <ul>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Utility_Carts.png" alt="product" title="product"/> </div>
-        <h4>Utility Carts</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Recycling_Solution.png" alt="product" title="product"/> </div>
-        <h4>Recycling Solution</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Material_Handling.png" alt="product" title="product"/> </div>
-        <h4>Material Handling</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Cleaning_Products.png" alt="product" title="product"/> </div>
-        <h4>Cleaning Products</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Food_Service.png" alt="product" title="product"/> </div>
-        <h4>Food Service</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Smoking_Management.png" alt="product" title="product"/> </div>
-        <h4>Smoking Management</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Waste_Containers.png" alt="product" title="product"/> </div>
-        <h4>Waste Containers</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Cleaning_Carts.png" alt="product" title="product"/> </div>
-        <h4>Cleaning Carts</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Safety_Products.png" alt="product" title="product"/> </div>
-        <h4>Safety Products</h4>
-        </a> </li>
-      <li><a href="#">
-        <div class="product_holder"> <img src="images/Storage_Sheds.png" alt="product" title="product"/> </div>
-        <h4>Storage Sheds</h4>
-        </a> </li>
-    </ul>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_categroies')->toHtml() ?>
+
   </div>
   </div>
 </section>
@@ -104,47 +63,7 @@
 
 <!--Start Purchase Orders Section-->
 <section id="Purchase_Orders">
-  <div class="container clearfix">
-    <h3>Purchase Orders Accepted</h3>
-    <div class="Gladly_wrapper">
-      <div class="Gladly_container back_color1">
-        <div class="Gladly_inner_container">
-          <ul>
-            <li>
-              <div class="icon_container"><img src="images/Schools_icon.png"/></div>
-            </li>
-            <li>
-              <h2>Schools & Universities</h2>
-              <span>Fax, mail or email your purchase orders</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="Gladly_container back_color2">
-        <div class="Gladly_inner_container">
-          <ul>
-            <li>
-              <div class="icon_container"><img src="images/Agencies_icon.png"/></div>
-            </li>
-            <li>
-              <h2>Government Agencies </h2>
-              <span>Fax, mail or email your purchase orders</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="Gladly_container back_color3">
-        <div class="Gladly_inner_container">
-          <ul>
-            <li>
-              <div class="icon_container"><img src="images/Business_Approval.png"/></div>
-            </li>
-            <li>
-              <h2>Businesses Upon Approval </h2>
-              <span>Credit application may apply</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('purchase_order')->toHtml() ?>
 </section>
 <!--End Purchase Orders Section--> 
 
@@ -287,29 +206,7 @@
 
 <!--Start Payment Section-->
 <section id="payment_return">
-  <div class="container clearfix">
-    <div class="payment">
-      <div class="payment_wrapper"> <img src="images/customer_pay.png" alt="Safe Payment" title="Safe Payment"/> </div>
-      <div class="payment_content_wrapper">
-        <h5>Safe Payment</h5>
-        <p>Pay with the world’s most popular and secure payment methods.</p>
-      </div>
-    </div>
-    <div class="payment">
-      <div class="payment_wrapper"> <img src="images/Free_Delivery.png" alt="Free Delivery" title="Free Delivery"/> </div>
-      <div class="payment_content_wrapper">
-        <h5>Free Delivery On orders over $1700</h5>
-        <p>Shipping costs under $1700 wont exceed $89.00.</p>
-      </div>
-    </div>
-    <div class="payment">
-      <div class="payment_wrapper"> <img src="images/Easy_Returns.png" alt="Easy Returns" title="Easy Returns"/> </div>
-      <div class="payment_content_wrapper">
-        <h5>Easy Returns</h5>
-        <p>On stocked items. Call Customers service for assistance.</p>
-      </div>
-    </div>
-  </div>
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('payment_block')->toHtml() ?>
 </section>
 <!--End Payment Section--> 
 
