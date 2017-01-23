@@ -113,12 +113,12 @@ function registration_form()
        <li class="vip-form-box-field">
         <div class="vip-label"> <label> Membership <span class="required">*</span></label> </div>
         <div class="vip-fields"> 
-           <select name="total_plans" id="total_plans">
-             <option name="lavishpln" value="">Lavish $150</option>
-             <option name="sliverpln" value="">Silver $100k</option>
-             <option name="goldpln" value="">Gold $250k</option>
-             <option name="platinumpln" value="">Platinum $500k</option>
-             <option name="blackpln" value="">Black $1mill</option>
+           <select name="total_plan" id="total_plan1">
+             <option name="lavishpln" value="lavishpln">Lavish $150</option>
+             <option name="sliverpln" value="sliverpln">Silver $100k</option>
+             <option name="goldpln" value="goldpln">Gold $250k</option>
+             <option name="platinumpln" value="platinumpln">Platinum $500k</option>
+             <option name="blackpln" value="blackpln">Black $1mill</option>
            </select> 
         </div>
        </li>
@@ -258,15 +258,17 @@ $conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toy
         
          $applications = $wpdb->get_results($sql_user_id);
          
- 
+ //~ echo $mem_pln;
+ //~ die;
 
 		foreach ( $applications as $application ) {
 
 		$uid =  $application->ID;
 		}
         
-       $sql = "INSERT INTO `lav`.`wp_vip_accounts` (`vip_account_id`, `vip_account_name`, `vip_account_package_name`, `vip_account_post_limit`, `vip_account_access`, `vip_user_id`, `is_payment`, `vip_first_name`, `vip_last_name`, `vip_nationality`, `vip_address`, `vip_city`, `vip_zipcode`, `vip_email`, `vip_phone`, `vip_mob_num`, `vip_time_call`, `vip_explain`, `vip_hot_spot`, `vip_toys`, `vip_gateway`, `vip_monthy_package`, `vip_total_package`) VALUES 
-       ('', '$username', 'Sliver', '130', 'all', '$uid', '0', '$first_name', '$last_name', '$nationality', '$address', '$city', '$zipcode', '$email', '$phone', '$mob_num', '$time_call', '$explain', '$hot_spot', '$toys', '$gateway', '$mem_pln', '$total_plans');";
+       $sql = "INSERT INTO `wp_vip_accounts` (`vip_account_id`, `vip_account_name`, `vip_account_package_name`, `vip_account_post_limit`, `vip_account_access`, `vip_user_id`, `is_payment`, `vip_first_name`, `vip_last_name`, `vip_nationality`, `vip_address`, `vip_city`, `vip_zipcode`, `vip_email`, `vip_phone`, `vip_mob_num`, `vip_time_call`, `vip_explain`, `vip_hot_spot`, `vip_toys`, `vip_gateway`, `vip_monthy_package`, `vip_total_package`) VALUES 
+       ('', '$username', 'Sliver', '130', 'all', '$uid', '0', '$first_name', '$last_name', '$nationality', '$address', '$city', '$zipcode', '$email', '$phone', '$mob_num', '$time_call', '$explain', '$hot_spot', '$toys', '$gateway', '$mem_pln', 
+       '$total_plans');";
         
         
        
@@ -316,7 +318,7 @@ $conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toy
         $toys  =   sanitize_text_field( $_POST['toys'] );
         $gateway  =   sanitize_text_field( $_POST['gateway'] );
         $mem_pln  =   $_POST['member_plans'];
-		$total_plans  =   $_POST['total_plans'];
+		$total_plans  =   $_POST['total_plan'];
         
      
       // die;
@@ -373,7 +375,7 @@ if (empty($_POST['DO_STEP_1']) && empty($_GET['token-id']))
 
 global $wpdb;
 
-$sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
+$sql = "Select * from `wp_vip_accounts` where `vip_user_id`=$uid;";
 
  $applications = $wpdb->get_results($sql);
 
@@ -390,7 +392,7 @@ $sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
        $email = $application->vip_email;
       $package_name = $application->vip_total_package;
  }
-       $package_name = $application->vip_total_package;
+      $package_name = $application->vip_total_package;
 $query = "SELECT * 
 FROM  `wp_package_price` 
 WHERE  `package_name` =  '$package_name'";
@@ -398,6 +400,9 @@ WHERE  `package_name` =  '$package_name'";
 $application_new = $wpdb->get_results($query);
 
 foreach ( $application_new as $application_new ) {
+	
+	//print_r($application_new);
+	
 	$price = $application_new->package_price;
 	$price_org = (int)str_replace(' ', '', $price);
 	
@@ -458,7 +463,7 @@ else if (!empty($_POST['DO_STEP_1']))
 		 $uid = $_REQUEST['uid'];
 global $wpdb;
 
-$sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
+$sql = "Select * from `wp_vip_accounts` where `vip_user_id`=$uid;";
 
  $applications = $wpdb->get_results($sql);
 
@@ -674,7 +679,7 @@ elseif (!empty($_GET['token-id']))
         print '<pre>' . (htmlentities($data)) . '</pre>';
         global $wpdb;
 require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-$wpdb->query($wpdb->prepare("UPDATE  `lav`.`wp_vip_accounts` SET  `is_payment` =  '1' WHERE  `wp_vip_accounts`.`vip_user_id` =$uid;"));
+$wpdb->query($wpdb->prepare("UPDATE  `wp_vip_accounts` SET  `is_payment` =  '1' WHERE  `wp_vip_accounts`.`vip_user_id` =$uid;"));
          header('Location: http://localhost/public_html/newwp/lavish/vip-messages?uid='.$uid);  
 
     } elseif((string)$gwResponse->result == 2)  {
