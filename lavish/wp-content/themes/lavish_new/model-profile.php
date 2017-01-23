@@ -908,7 +908,7 @@ Florida Lavish Mate® provides exclusive companion services to local and interna
 
 
 
-<!--<script type="text/javascript" src="<?php //echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>-->
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
 <!--<script src="<?php //echo esc_url( get_template_directory_uri() )?>/js/jquery_004.js" type="text/javascript"></script>
 <script src="<?php //echo esc_url( get_template_directory_uri() )?>/js/jquery_dropdown.js" type="text/javascript"></script>
 <script src="<?php //echo esc_url( get_template_directory_uri() )?>/js/javascripts.js" type="text/javascript"></script>
