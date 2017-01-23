@@ -46,27 +46,7 @@
 	<!--Start Banner Section-->
 <section id="banner">
   <div class="slider-container">
-    <div class="slider" id="slider">
-      <div class="slide"> <img src="images/banner1.png" alt="Product Slider" title="Product Slider"/ > <span class="caption">
-        <div class="caption_container">
-          <h1>Your #1 Source for </h1>
-          <h5>Rubbermaid Commercial Products</h5>
-          <a href="#">Shop Now</a> </div>
-        </span> </div>
-      <div class="slide"> <img src="images/banner2.png" alt="Product Slider" title="Product Slider"/ > <span class="caption">
-        <div class="caption_container">
-          <h1>Mop Buckets </h1>
-          <h5>60% Off</h5>
-          <a href="#">Shop Now</a> </div>
-        </span> </div>
-      <div class="slide"> <img src="images/banner1.png" alt="Product Slider" title="Product Slider"/ > <span class="caption">
-        <div class="caption_container">
-          <h1>Your #1 Source for </h1>
-          <h5>Rubbermaid Commercial Products</h5>
-          <a href="#">Shop Now</a> </div>
-        </span> </div>
-      
-      <!-- <a href="" class="switch" id="prev"><span><i class="fa fa-angle-left" aria-hidden="true"></i> </span></a> <a href="" class="switch" id="next"><span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a> --></div>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('home_main_banner')->toHtml() ?>;?>
   </div>
 </section>
 <!--End Banner Section--> 
