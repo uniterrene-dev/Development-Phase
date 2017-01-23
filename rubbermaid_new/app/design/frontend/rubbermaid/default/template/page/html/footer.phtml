@@ -24,120 +24,35 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<!--
-<div class="footer-container">
-    <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <address class="copyright"><?php echo $this->getCopyright() ?></address>
-    </div>
-</div>
--->
 <!--start Footer Section-->
 <footer>
   <div id="footer_nav">
     <div class="container clearfix">
       <div class="footer_address">
-        <div class="footer_logo"> <img src="images/footer_logo.png" alt="logo" title="logo"/> </div>
-        <ul>
-          <li>
-            <ul>
-              <li><i class="fa fa-home" aria-hidden="true"></i> </li>
-              <li>
-                <h5>Address :<br>
-                 Rubbermaid Wholesale</h5>
-                <h5>3980 Broadway Suite 103-118 <br> Boulder CO 80304</h5>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-              <li>
-                <h5>Toll Free: <a href="tel:866-727-6243">866-RBR-MAID (866-727-6243)</a></h5>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li><i class="fa fa-fax" aria-hidden="true"></i></li>
-              <li>
-                <h5>Fax: <a href="fax:303-568-4014"> 303-568-4014 </a> </h5>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li><i class="fa fa-envelope" aria-hidden="true"></i></li>
-              <li>
-                <h5>Email : <a href="mailto:info@rubbermaidwholesale.com">info@rubbermaidwholesale.com</a></h5>
-              </li>
-            </ul>
-          </li>
-        </ul>
+         <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_logo')->toHtml() ?>
+         <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_address')->toHtml() ?>
+        
       </div>
       <div class="footer_group">
-        <h5>MY ACCOUNT</h5>
-        <ul>
-          <li><a href="#">Sitemap</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Your Account</a></li>
-          <li><a href="#">Advanced Search</a></li>
-          <li><a href="#">Contact US</a></li>
-        </ul>
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_my_account')->toHtml() ?>
       </div>
       <div class="footer_group">
-        <h5>PAYMENT SHIPPING</h5>
-        <ul>
-          <li><a href="#">Sitemap</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Your Account</a></li>
-          <li><a href="#">Advanced Search</a></li>
-          <li><a href="#">Contact US</a></li>
-        </ul>
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_payment_shipping')->toHtml() ?>
       </div>
       <div class="footer_group">
-        <h5>CUSTOMER SERVICE</h5>
-        <ul>
-          <li><a href="#">Sitemap</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Your Account</a></li>
-          <li><a href="#">Advanced Search</a></li>
-          <li><a href="#">Contact US</a></li>
-        </ul>
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_customer_service')->toHtml() ?>
       </div>
     </div>
   </div>
   <div class="footer_subsidiaries_right">
     <div class="container clearfix">
-      <ul>
-        <li>Secure Site :</li>
-        <li><a href="#"><img src="images/visa_icon.png"/></a></li>
-        <li><a href="#"><img src="images/mastro_icon.png"/></a></li>
-        <li><a href="#"><img src="images/discover.png"/></a></li>
-        <li><a href="#"><img src="images/dis_co.png"/></a></li>
-        <li><a href="#"><img src="images/secure_icon.png"/></a></li>
-      </ul>
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_secure_site')->toHtml() ?>
     </div>
   </div>
   <div class="footer_subsidiaries">
     <div class="container clearfix">
-      <div class="footer_subsidiaries_left">
-        <p>Rubbermaidwholesale.com is not affiliated with Rubbermaid Commercial Products LLC, Rubbermaid Incorporated or their subsidiaries.</p>
-          <div class="copyright">
-            <div class="container clearfix">
-              <p>Copyright &copy;2016 Rubbermaidwholesale. All rights reserved, designed by Uniterrene Websoft.</p>
-            </div>
-         </div>
-      </div>
-      <!--<div class="footer_subsidiaries_right">
-        <ul>
-          <li><a href="#"><img src="images/visa_icon.png"/></a></li>
-          <li><a href="#"><img src="images/mastro_icon.png"/></a></li>
-          <li><a href="#"><img src="images/discover.png"/></a></li>
-          <li><a href="#"><img src="images/dis_co.png"/></a></li>
-          <li><a href="#"><img src="images/secure_icon.png"/></a></li>
-        </ul>
-      </div>--> 
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_text')->toHtml() ?>
+     
     </div>
   </div>
   
