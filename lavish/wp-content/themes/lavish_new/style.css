@@ -64,3 +64,7 @@ display:none !important;
 float:inherit;
 display:inline-block;
 }
+.model-booking-box-btn a
+{
+text-transform:uppercase;
+}
