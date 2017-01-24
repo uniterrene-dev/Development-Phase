@@ -1661,6 +1661,14 @@ ul.wpuf-form li:nth-child(2n) {
 .vip-form-box-field-textarea {
     text-align: right;
 }
+.vip-form-box .vip-form-box-field .vip-fields select {
+    -moz-appearance: none;
+    background: url("../images/select-dowan-arows.png") no-repeat scroll right center;
+    border: 1px solid #5d5d5e !important;
+    border-radius: 0 !important;
+    height: 39px !important;
+    line-height: 30px;
+}
 .vip-form-text-textarea .vip-form-box-field-textarea .vip-label{
 	width:79%;
 	float:left;
