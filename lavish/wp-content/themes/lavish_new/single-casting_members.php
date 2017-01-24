@@ -272,6 +272,7 @@ if ( $images ) {
                        </select> 
                     </div>
                    </li>
+
                   </div> 
                   <div class="booking-box-right clearfix">
                    
@@ -790,7 +791,7 @@ if ( ! empty( $categories ) ) {
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-15.jpg" alt="">
                         </a>
-                                                    <div class="new_lady"><img src="Escorts-ladis_files/heart-new.png" alt="New"></div>
+                                                    <div class="new_lady"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/heart-new.png" alt="New"></div>
                                                 <div class="lady_overlay">
                             <a class="overlay-name" href="#">
                             Alice                            </a>
@@ -849,7 +850,7 @@ if ( ! empty( $categories ) ) {
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-19.jpg" alt="">
                         </a>
-                                                    <div class="new_lady"><img src="Escorts-ladis_files/heart-new.png" alt="New"></div>
+                                                    <div class="new_lady"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/heart-new.png" alt="New"></div>
                                                 <div class="lady_overlay">
                             <a class="overlay-name" href="#">
                             Alina                            </a>
@@ -971,7 +972,7 @@ function emailClicked()
   }
   else
   {
-	  //~ alert("Please Fill the Form Successfully");
+	  alert("Please Fill the Form Successfully");
   }
 }
 
