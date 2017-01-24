@@ -1041,3 +1041,350 @@ add_action( 'save_post', 'extra_profile_fileds_save' );
 	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_lingerie' )
 	Usage: extra_profile_fileds_get_meta( 'extra_profile_fileds_shave' )
 */
+// Register Custom Post Type
+function booking_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Booking', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Booking', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Booking', 'text_domain' ),
+		'name_admin_bar'        => __( 'Booking', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
+		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+		'all_items'             => __( 'All Items', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Item', 'text_domain' ),
+		'edit_item'             => __( 'Edit Booking', 'text_domain' ),
+		'update_item'           => __( 'Update Booking', 'text_domain' ),
+		'view_item'             => __( 'View Booking', 'text_domain' ),
+		'view_items'            => __( 'View Bookings', 'text_domain' ),
+		'search_items'          => __( 'Search Bookings', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+		'items_list'            => __( 'Items list', 'text_domain' ),
+		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Booking', 'text_domain' ),
+		'description'           => __( 'Booking Description', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'booking_post_type', $args );
+
+}
+add_action( 'init', 'booking_post_type', 0 );
+
+
+
+function booking_forms_get_meta( $value ) {
+	global $post;
+
+	$field = get_post_meta( $post->ID, $value, true );
+	if ( ! empty( $field ) ) {
+		return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+	} else {
+		return false;
+	}
+}
+
+function booking_forms_add_meta_box() {
+	add_meta_box(
+		'booking_forms-booking-forms',
+		__( 'Booking Forms', 'booking_forms' ),
+		'booking_forms_html',
+		'booking_post_type',
+		'normal',
+		'default'
+	);
+}
+add_action( 'add_meta_boxes', 'booking_forms_add_meta_box' );
+
+function booking_forms_html( $post) {
+	wp_nonce_field( '_booking_forms_nonce', 'booking_forms_nonce' ); ?>
+
+	<p>The Booking Form Details are stored here</p>
+
+	<p>
+		<label for="booking_forms_first_name"><?php _e( 'First Name', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_first_name" id="booking_forms_first_name" value="<?php echo booking_forms_get_meta( 'booking_forms_first_name' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_age"><?php _e( 'Age', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_age" id="booking_forms_age" value="<?php echo booking_forms_get_meta( 'booking_forms_age' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_nationality"><?php _e( 'Nationality', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_nationality" id="booking_forms_nationality" value="<?php echo booking_forms_get_meta( 'booking_forms_nationality' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_email"><?php _e( 'Email', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_email" id="booking_forms_email" value="<?php echo booking_forms_get_meta( 'booking_forms_email' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_confirm_email"><?php _e( 'Confirm Email', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_confirm_email" id="booking_forms_confirm_email" value="<?php echo booking_forms_get_meta( 'booking_forms_confirm_email' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_phone_number"><?php _e( 'Phone Number', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_phone_number" id="booking_forms_phone_number" value="<?php echo booking_forms_get_meta( 'booking_forms_phone_number' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_mobile_phone_number"><?php _e( 'Mobile Phone Number', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_mobile_phone_number" id="booking_forms_mobile_phone_number" value="<?php echo booking_forms_get_meta( 'booking_forms_mobile_phone_number' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_address"><?php _e( 'Address', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_address" id="booking_forms_address" value="<?php echo booking_forms_get_meta( 'booking_forms_address' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_city"><?php _e( 'City', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_city" id="booking_forms_city" value="<?php echo booking_forms_get_meta( 'booking_forms_city' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_zip_code"><?php _e( 'Zip Code', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_zip_code" id="booking_forms_zip_code" value="<?php echo booking_forms_get_meta( 'booking_forms_zip_code' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_hotel_room"><?php _e( 'Hotel/Room', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_hotel_room" id="booking_forms_hotel_room" value="<?php echo booking_forms_get_meta( 'booking_forms_hotel_room' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_desired_mate"><?php _e( 'Desired Mate', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_desired_mate" id="booking_forms_desired_mate" value="<?php echo booking_forms_get_meta( 'booking_forms_desired_mate' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_alternative_mate"><?php _e( 'Alternative Mate', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_alternative_mate" id="booking_forms_alternative_mate" value="<?php echo booking_forms_get_meta( 'booking_forms_alternative_mate' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_how_many_mates"><?php _e( 'How many mates', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_how_many_mates" id="booking_forms_how_many_mates" value="<?php echo booking_forms_get_meta( 'booking_forms_how_many_mates' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_date_of_meeting"><?php _e( 'Date of meeting', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_date_of_meeting" id="booking_forms_date_of_meeting" value="<?php echo booking_forms_get_meta( 'booking_forms_date_of_meeting' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_time_of_meeting"><?php _e( 'Time of Meeting', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_time_of_meeting" id="booking_forms_time_of_meeting" value="<?php echo booking_forms_get_meta( 'booking_forms_time_of_meeting' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_best_times_to_call"><?php _e( 'Best times to call', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_best_times_to_call" id="booking_forms_best_times_to_call" value="<?php echo booking_forms_get_meta( 'booking_forms_best_times_to_call' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_duration"><?php _e( 'Duration', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_duration" id="booking_forms_duration" value="<?php echo booking_forms_get_meta( 'booking_forms_duration' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_any_likes_or_dislikes"><?php _e( 'Any likes or Dislikes', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_any_likes_or_dislikes" id="booking_forms_any_likes_or_dislikes" value="<?php echo booking_forms_get_meta( 'booking_forms_any_likes_or_dislikes' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_dress_style"><?php _e( 'Dress Style', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_dress_style" id="booking_forms_dress_style" value="<?php echo booking_forms_get_meta( 'booking_forms_dress_style' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_payment_method"><?php _e( 'Payment Method', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_payment_method" id="booking_forms_payment_method" value="<?php echo booking_forms_get_meta( 'booking_forms_payment_method' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_how_did_you_find_us_"><?php _e( 'How did you find us?', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_how_did_you_find_us_" id="booking_forms_how_did_you_find_us_" value="<?php echo booking_forms_get_meta( 'booking_forms_how_did_you_find_us_' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_what_is_your_desired_message_for_your_mate_"><?php _e( 'What is your desired message for your mate?', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_what_is_your_desired_message_for_your_mate_" id="booking_forms_what_is_your_desired_message_for_your_mate_" value="<?php echo booking_forms_get_meta( 'booking_forms_what_is_your_desired_message_for_your_mate_' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_special_requests"><?php _e( 'Special Requests', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_special_requests" id="booking_forms_special_requests" value="<?php echo booking_forms_get_meta( 'booking_forms_special_requests' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_payment_status"><?php _e( 'Payment Status', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_payment_status" id="booking_forms_payment_status" value="<?php echo booking_forms_get_meta( 'booking_forms_payment_status' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_booking_user_name"><?php _e( 'Booking User Name', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_booking_user_name" id="booking_forms_booking_user_name" value="<?php echo booking_forms_get_meta( 'booking_forms_booking_user_name' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_booking_ip_address"><?php _e( 'Booking Ip Address', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_booking_ip_address" id="booking_forms_booking_ip_address" value="<?php echo booking_forms_get_meta( 'booking_forms_booking_ip_address' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_booking_time"><?php _e( 'Booking Time', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_booking_time" id="booking_forms_booking_time" value="<?php echo booking_forms_get_meta( 'booking_forms_booking_time' ); ?>">
+	</p>	<p>
+		<label for="booking_forms_booking_user_id"><?php _e( 'Booking User Id', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_booking_user_id" id="booking_forms_booking_user_id" value="<?php echo booking_forms_get_meta( 'booking_forms_booking_user_id' ); ?>">
+	</p><?php
+}
+
+function booking_forms_save( $post_id ) {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+	if ( ! isset( $_POST['booking_forms_nonce'] ) || ! wp_verify_nonce( $_POST['booking_forms_nonce'], '_booking_forms_nonce' ) ) return;
+	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+	if ( isset( $_POST['booking_forms_first_name'] ) )
+		update_post_meta( $post_id, 'booking_forms_first_name', esc_attr( $_POST['booking_forms_first_name'] ) );
+	if ( isset( $_POST['booking_forms_age'] ) )
+		update_post_meta( $post_id, 'booking_forms_age', esc_attr( $_POST['booking_forms_age'] ) );
+	if ( isset( $_POST['booking_forms_nationality'] ) )
+		update_post_meta( $post_id, 'booking_forms_nationality', esc_attr( $_POST['booking_forms_nationality'] ) );
+	if ( isset( $_POST['booking_forms_email'] ) )
+		update_post_meta( $post_id, 'booking_forms_email', esc_attr( $_POST['booking_forms_email'] ) );
+	if ( isset( $_POST['booking_forms_confirm_email'] ) )
+		update_post_meta( $post_id, 'booking_forms_confirm_email', esc_attr( $_POST['booking_forms_confirm_email'] ) );
+	if ( isset( $_POST['booking_forms_phone_number'] ) )
+		update_post_meta( $post_id, 'booking_forms_phone_number', esc_attr( $_POST['booking_forms_phone_number'] ) );
+	if ( isset( $_POST['booking_forms_mobile_phone_number'] ) )
+		update_post_meta( $post_id, 'booking_forms_mobile_phone_number', esc_attr( $_POST['booking_forms_mobile_phone_number'] ) );
+	if ( isset( $_POST['booking_forms_address'] ) )
+		update_post_meta( $post_id, 'booking_forms_address', esc_attr( $_POST['booking_forms_address'] ) );
+	if ( isset( $_POST['booking_forms_city'] ) )
+		update_post_meta( $post_id, 'booking_forms_city', esc_attr( $_POST['booking_forms_city'] ) );
+	if ( isset( $_POST['booking_forms_zip_code'] ) )
+		update_post_meta( $post_id, 'booking_forms_zip_code', esc_attr( $_POST['booking_forms_zip_code'] ) );
+	if ( isset( $_POST['booking_forms_hotel_room'] ) )
+		update_post_meta( $post_id, 'booking_forms_hotel_room', esc_attr( $_POST['booking_forms_hotel_room'] ) );
+	if ( isset( $_POST['booking_forms_desired_mate'] ) )
+		update_post_meta( $post_id, 'booking_forms_desired_mate', esc_attr( $_POST['booking_forms_desired_mate'] ) );
+	if ( isset( $_POST['booking_forms_alternative_mate'] ) )
+		update_post_meta( $post_id, 'booking_forms_alternative_mate', esc_attr( $_POST['booking_forms_alternative_mate'] ) );
+	if ( isset( $_POST['booking_forms_how_many_mates'] ) )
+		update_post_meta( $post_id, 'booking_forms_how_many_mates', esc_attr( $_POST['booking_forms_how_many_mates'] ) );
+	if ( isset( $_POST['booking_forms_date_of_meeting'] ) )
+		update_post_meta( $post_id, 'booking_forms_date_of_meeting', esc_attr( $_POST['booking_forms_date_of_meeting'] ) );
+	if ( isset( $_POST['booking_forms_time_of_meeting'] ) )
+		update_post_meta( $post_id, 'booking_forms_time_of_meeting', esc_attr( $_POST['booking_forms_time_of_meeting'] ) );
+	if ( isset( $_POST['booking_forms_best_times_to_call'] ) )
+		update_post_meta( $post_id, 'booking_forms_best_times_to_call', esc_attr( $_POST['booking_forms_best_times_to_call'] ) );
+	if ( isset( $_POST['booking_forms_duration'] ) )
+		update_post_meta( $post_id, 'booking_forms_duration', esc_attr( $_POST['booking_forms_duration'] ) );
+	if ( isset( $_POST['booking_forms_any_likes_or_dislikes'] ) )
+		update_post_meta( $post_id, 'booking_forms_any_likes_or_dislikes', esc_attr( $_POST['booking_forms_any_likes_or_dislikes'] ) );
+	if ( isset( $_POST['booking_forms_dress_style'] ) )
+		update_post_meta( $post_id, 'booking_forms_dress_style', esc_attr( $_POST['booking_forms_dress_style'] ) );
+	if ( isset( $_POST['booking_forms_payment_method'] ) )
+		update_post_meta( $post_id, 'booking_forms_payment_method', esc_attr( $_POST['booking_forms_payment_method'] ) );
+	if ( isset( $_POST['booking_forms_how_did_you_find_us_'] ) )
+		update_post_meta( $post_id, 'booking_forms_how_did_you_find_us_', esc_attr( $_POST['booking_forms_how_did_you_find_us_'] ) );
+	if ( isset( $_POST['booking_forms_what_is_your_desired_message_for_your_mate_'] ) )
+		update_post_meta( $post_id, 'booking_forms_what_is_your_desired_message_for_your_mate_', esc_attr( $_POST['booking_forms_what_is_your_desired_message_for_your_mate_'] ) );
+	if ( isset( $_POST['booking_forms_special_requests'] ) )
+		update_post_meta( $post_id, 'booking_forms_special_requests', esc_attr( $_POST['booking_forms_special_requests'] ) );
+	if ( isset( $_POST['booking_forms_payment_status'] ) )
+		update_post_meta( $post_id, 'booking_forms_payment_status', esc_attr( $_POST['booking_forms_payment_status'] ) );
+	if ( isset( $_POST['booking_forms_booking_user_name'] ) )
+		update_post_meta( $post_id, 'booking_forms_booking_user_name', esc_attr( $_POST['booking_forms_booking_user_name'] ) );
+	if ( isset( $_POST['booking_forms_booking_ip_address'] ) )
+		update_post_meta( $post_id, 'booking_forms_booking_ip_address', esc_attr( $_POST['booking_forms_booking_ip_address'] ) );
+	if ( isset( $_POST['booking_forms_booking_time'] ) )
+		update_post_meta( $post_id, 'booking_forms_booking_time', esc_attr( $_POST['booking_forms_booking_time'] ) );
+	if ( isset( $_POST['booking_forms_booking_user_id'] ) )
+		update_post_meta( $post_id, 'booking_forms_booking_user_id', esc_attr( $_POST['booking_forms_booking_user_id'] ) );
+}
+add_action( 'save_post', 'booking_forms_save' );
+
+/*
+	Usage: booking_forms_get_meta( 'booking_forms_first_name' )
+	Usage: booking_forms_get_meta( 'booking_forms_age' )
+	Usage: booking_forms_get_meta( 'booking_forms_nationality' )
+	Usage: booking_forms_get_meta( 'booking_forms_email' )
+	Usage: booking_forms_get_meta( 'booking_forms_confirm_email' )
+	Usage: booking_forms_get_meta( 'booking_forms_phone_number' )
+	Usage: booking_forms_get_meta( 'booking_forms_mobile_phone_number' )
+	Usage: booking_forms_get_meta( 'booking_forms_address' )
+	Usage: booking_forms_get_meta( 'booking_forms_city' )
+	Usage: booking_forms_get_meta( 'booking_forms_zip_code' )
+	Usage: booking_forms_get_meta( 'booking_forms_hotel_room' )
+	Usage: booking_forms_get_meta( 'booking_forms_desired_mate' )
+	Usage: booking_forms_get_meta( 'booking_forms_alternative_mate' )
+	Usage: booking_forms_get_meta( 'booking_forms_how_many_mates' )
+	Usage: booking_forms_get_meta( 'booking_forms_date_of_meeting' )
+	Usage: booking_forms_get_meta( 'booking_forms_time_of_meeting' )
+	Usage: booking_forms_get_meta( 'booking_forms_best_times_to_call' )
+	Usage: booking_forms_get_meta( 'booking_forms_duration' )
+	Usage: booking_forms_get_meta( 'booking_forms_any_likes_or_dislikes' )
+	Usage: booking_forms_get_meta( 'booking_forms_dress_style' )
+	Usage: booking_forms_get_meta( 'booking_forms_payment_method' )
+	Usage: booking_forms_get_meta( 'booking_forms_how_did_you_find_us_' )
+	Usage: booking_forms_get_meta( 'booking_forms_what_is_your_desired_message_for_your_mate_' )
+	Usage: booking_forms_get_meta( 'booking_forms_special_requests' )
+	Usage: booking_forms_get_meta( 'booking_forms_payment_status' )
+	Usage: booking_forms_get_meta( 'booking_forms_booking_user_name' )
+	Usage: booking_forms_get_meta( 'booking_forms_booking_ip_address' )
+	Usage: booking_forms_get_meta( 'booking_forms_booking_time' )
+	Usage: booking_forms_get_meta( 'booking_forms_booking_user_id' )
+*/
+add_action("wp_ajax_get_booking", "get_booking");
+add_action("wp_ajax_nopriv_get_booking", "get_booking");
+
+function get_booking()
+{
+	$post_type = "booking_post_type";
+	
+	$first_name = $_REQUEST['first_name'];
+	$age = $_REQUEST['age'];
+	$nationality = $_REQUEST['nationality'];
+	$email = $_REQUEST['email'];
+	$conemail = $_REQUEST['conemail'];
+	$phn = $_REQUEST['phn'];
+	$mob_phn = $_REQUEST['mob_phn'];
+	$address = $_REQUEST['address'];
+	$city = $_REQUEST['city'];
+	$zip = $_REQUEST['zip'];
+	$hotel = $_REQUEST['hotel'];
+	$mate = $_REQUEST['mate'];
+	$altmate = $_REQUEST['altmate'];
+	$nomate = $_REQUEST['nomate'];
+	$date = $_REQUEST['date'];
+	$time = $_REQUEST['time'];
+	$time_call = $_REQUEST['time_call'];
+	$duration = $_REQUEST['duration'];
+	$dislike = $_REQUEST['dislike'];
+	$dress_type = $_REQUEST['dress_type'];
+	$payment = $_REQUEST['payment'];
+	$find_us = $_REQUEST['find_us'];
+	$message = $_REQUEST['message'];
+	$spcl_request = $_REQUEST['spcl_request'];
+	
+	//the array of arguements to be inserted with wp_insert_post
+	$new_post = array(
+					 'post_title'    => $first_name,
+					 'post_status'   => 'publish',          
+					 'post_type'     => $post_type 
+				   );
+
+	//insert the the post into database by passing $new_post to wp_insert_post
+	//store our post ID in a variable $pid
+	$pid = wp_insert_post($new_post);
+
+	//we now use $pid (post id) to help add out post meta data
+	add_post_meta($pid, 'booking_forms_first_name', $first_name, true);
+	add_post_meta($pid, 'booking_forms_age', $age, true);
+	add_post_meta($pid, 'booking_forms_nationality', $nationality, true);
+	add_post_meta($pid, 'booking_forms_email', $email, true);
+	add_post_meta($pid, 'booking_forms_confirm_email', $conemail, true);
+	add_post_meta($pid, 'booking_forms_phone_number', $phn, true);
+	add_post_meta($pid, 'booking_forms_mobile_phone_number', $mob_phn, true);
+	add_post_meta($pid, 'booking_forms_address', $address, true);
+	add_post_meta($pid, 'booking_forms_city', $city, true);
+	add_post_meta($pid, 'booking_forms_zip_code', $zip, true);
+	add_post_meta($pid, 'booking_forms_hotel_room', $hotel, true);
+	add_post_meta($pid, 'booking_forms_desired_mate', $mate, true);
+	add_post_meta($pid, 'booking_forms_alternative_mate', $altmate, true);
+	add_post_meta($pid, 'booking_forms_how_many_mates', $nomate, true);
+	add_post_meta($pid, 'booking_forms_date_of_meeting', $date, true);
+	add_post_meta($pid, 'booking_forms_time_of_meeting', $time, true);
+	add_post_meta($pid, 'booking_forms_best_times_to_call', $time_call, true);
+	add_post_meta($pid, 'booking_forms_duration', $duration, true);
+	add_post_meta($pid, 'booking_forms_any_likes_or_dislikes', $dislike, true);
+	add_post_meta($pid, 'booking_forms_dress_style', $dress_type, true);
+	add_post_meta($pid, 'booking_forms_payment_method', $payment, true);
+	add_post_meta($pid, 'booking_forms_how_did_you_find_us_', $find_us, true);
+	add_post_meta($pid, 'booking_forms_what_is_your_desired_message_for_your_mate_', $message, true);
+	add_post_meta($pid, 'booking_forms_special_requests', $spcl_request, true);
+
+	echo $pid;
+	
+	exit();
+	
+}
