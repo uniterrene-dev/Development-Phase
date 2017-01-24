@@ -1214,7 +1214,15 @@ function booking_forms_html( $post) {
 	</p>	<p>
 		<label for="booking_forms_booking_user_id"><?php _e( 'Booking User Id', 'booking_forms' ); ?></label><br>
 		<input type="text" name="booking_forms_booking_user_id" id="booking_forms_booking_user_id" value="<?php echo booking_forms_get_meta( 'booking_forms_booking_user_id' ); ?>">
-	</p><?php
+	</p>
+	
+	<p>
+		<label for="booking_forms_booking_user_cardnum"><?php _e( 'Booking User Card Number', 'booking_forms' ); ?></label><br>
+		<input type="text" name="booking_forms_booking_user_cardnum" id="booking_forms_booking_user_cardnum" value="<?php echo booking_forms_get_meta( 'booking_forms_booking_user_cardnum' ); ?>">
+	</p>
+	
+	
+	<?php
 }
 
 function booking_forms_save( $post_id ) {
@@ -1280,6 +1288,8 @@ function booking_forms_save( $post_id ) {
 		update_post_meta( $post_id, 'booking_forms_booking_time', esc_attr( $_POST['booking_forms_booking_time'] ) );
 	if ( isset( $_POST['booking_forms_booking_user_id'] ) )
 		update_post_meta( $post_id, 'booking_forms_booking_user_id', esc_attr( $_POST['booking_forms_booking_user_id'] ) );
+	if ( isset( $_POST['booking_forms_booking_user_cardnum'] ) )
+		update_post_meta( $post_id, 'booking_forms_booking_user_cardnum', esc_attr( $_POST['booking_forms_booking_user_cardnum'] ) );
 }
 add_action( 'save_post', 'booking_forms_save' );
 
@@ -1313,6 +1323,7 @@ add_action( 'save_post', 'booking_forms_save' );
 	Usage: booking_forms_get_meta( 'booking_forms_booking_ip_address' )
 	Usage: booking_forms_get_meta( 'booking_forms_booking_time' )
 	Usage: booking_forms_get_meta( 'booking_forms_booking_user_id' )
+	Usage: booking_forms_get_meta( 'booking_forms_booking_user_cardnum' )
 */
 add_action("wp_ajax_get_booking", "get_booking");
 add_action("wp_ajax_nopriv_get_booking", "get_booking");
