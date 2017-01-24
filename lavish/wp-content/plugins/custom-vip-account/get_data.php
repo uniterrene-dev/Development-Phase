@@ -441,7 +441,14 @@ foreach ( $application_new as $application_new ) {
 		<form action="" method="post">
           <ul>
 		   <div class="vip-payment-form-left">
-		    <h4> Billing Details</h4>
+		   
+			 <div class="casting-tab">
+			  <ul>
+				<li>
+				<a class="casting-tab-name" href="#casting-Contact">Billing Details</a>
+				</li>
+			  </ul>
+			 </div>
 			 
 			  <li>
 			    <div class="vip-label">
