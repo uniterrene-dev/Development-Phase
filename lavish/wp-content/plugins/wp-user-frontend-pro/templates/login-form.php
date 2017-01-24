@@ -11,8 +11,8 @@
 ?>
 
 <div class="login" id="wpuf-login-form">
-
-
+  <div class="container">
+    <div class="login-form-box">
 
     <?php
 
@@ -36,21 +36,22 @@
 
     <form name="loginform" class="wpuf-login-form" id="loginform" action="<?php echo $action_url; ?>" method="post">
 
-        <p>
+       <ul>
+        <li>
 
             <label for="wpuf-user_login"><?php _e( 'Username' ); ?></label>
 
             <input type="text" name="log" id="wpuf-user_login" class="input" value="" size="20" />
 
-        </p>
+        </li>
 
-        <p>
+        <li>
 
             <label for="wpuf-user_pass"><?php _e( 'Password' ); ?></label>
 
             <input type="password" name="pwd" id="wpuf-user_pass" class="input" value="" size="20" />
 
-        </p>
+        </li>
 
 
 
@@ -58,17 +59,17 @@
 
 
 
-        <p class="forgetmenot">
+        <li class="forgetmenot">
 
             <input name="rememberme" type="checkbox" id="wpuf-rememberme" value="forever" />
 
             <label for="wpuf-rememberme"><?php esc_attr_e( 'Remember Me' ); ?></label>
 
-        </p>
+        </li>
 
 
 
-        <p class="submit">
+        <li class="submit">
 
             <input type="submit" name="wp-submit" id="wp-submit" value="<?php esc_attr_e( 'Log In' ); ?>" />
 
@@ -80,13 +81,14 @@
 
             <?php wp_nonce_field( 'wpuf_login_action' ); ?>
 
-        </p>
-
+        </li>
+      </ul>
     </form>
 
 
 
     <?php echo WPUF_Login::init()->get_action_links( array( 'login' => false ) ); ?>
-
+   </div>
+ </div>
 </div>
 
