@@ -2964,3 +2964,55 @@ ul.wpuf-form .rear_view{
 }
 
 /*  mutliSelect End */
+
+
+/* ************************************************************************* 
+************************* login page
+************************************************************************* */
+
+.login-form-box {
+    padding: 12% 28%;
+}
+.login-form-box label {
+    font-family: times new roman;
+    font-style: italic;
+    margin-bottom: 10px;
+	color: #6d6361;
+	font-size: 12pt;
+}
+.login-form-box .forgetmenot > input {
+    display: block;
+    float: left;
+    height: 22px;
+    width: 20px;
+}
+.login-form-box ul il label {
+    font-family: times new roman;
+    font-style: italic;
+}
+.login-form-box ul li{
+	margin-bottom:25px;
+}
+.login-form-box input{
+	border: 1px solid #5d5d5e !important;
+    border-radius: 2px;
+}
+.login-form-box input[type="submit"] {
+    background: #ad1457;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+	border:none !important;
+    width: 100%;
+}
+.login-form-box input[type="submit"]:hover {
+    background: #696868;
+}
+.login-form-box > a {
+    color: #696868;
+}
+.type-page .entry-header{
+	display:none;
+}
