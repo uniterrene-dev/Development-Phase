@@ -2266,7 +2266,7 @@ ul.wpuf-form .rear_view{
 .vip-payment-form-right {
     float: right;
     width: 45%;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 .vip-payment-form-box .vip-label {
     float: left;
@@ -2500,6 +2500,9 @@ ul.wpuf-form .rear_view{
 }
 .payment-vip-form h3{
 	padding-bottom:20px;
+}
+.vip-payment-form-left .casting-tab{
+	padding-bottom:40px
 }
 .payment-vip .payment-vip-form li input[type="submit"]  {
     background: #9c0b46 none repeat scroll 0 0 !important;
@@ -2768,7 +2771,7 @@ ul.wpuf-form .rear_view{
 }
 .booking-div{
 	background:#eae5e0 url("../images/booking-girl-bg.png") no-repeat center center;
-	padding:30px 0;
+	padding:30px 0 50px 0;
 }
 .booking-div .model-booking-description{
 	background:none;
