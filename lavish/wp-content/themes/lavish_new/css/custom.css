@@ -3006,6 +3006,8 @@ ul.wpuf-form .rear_view{
     text-align: center;
 	border:none !important;
     width: 100%;
+	font-family: "Tw Cen MT";
+    font-size: 22px !important;
 }
 .login-form-box input[type="submit"]:hover {
     background: #696868;
@@ -3015,4 +3017,41 @@ ul.wpuf-form .rear_view{
 }
 .type-page .entry-header{
 	display:none;
+}
+.post-41 .entry-content{
+	padding:5% 30%;
+}
+.post-41 .entry-content input {
+    border: 1px solid #5d5d5e !important;
+    border-radius: 2px;
+}
+.post-41 .entry-content .login-username{
+	margin-bottom:20px !important;
+}
+.post-41 .entry-content .login-remember{
+	padding-top:25px;
+}
+.post-41 .entry-content .login-remember input {
+    float: left;
+    height: 25px;
+    width: 22px;
+}
+.post-41 .entry-content input[type="submit"] {
+    background: #ad1457;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+	border:none !important;
+    width: 100%;
+	font-family: "Tw Cen MT";
+    font-size: 22px !important;
+	font-style:normal;
+}
+.post-41 .entry-content .login-submit{
+	padding-top:25px;
+}
+.post-41 .entry-content input[type="submit"]:hover {
+    background: #696868;
 }
