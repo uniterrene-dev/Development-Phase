@@ -24,11 +24,14 @@
  <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() )?>/css/custom.css">
  <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() )?>/css/responsive.css">
  <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() )?>/css/font-awesome.min.css">
- <link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/normalize.css">
+ <!--<link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/normalize.css">-->
  <link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/styles.css">
  <link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/jquery.bxslider.css" >
  <link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/jquery_dropdown.css">
  <link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/model-gallery.css">
+ <!--<link rel="stylesheet" type="text/css"  href="<?php //echo esc_url( get_template_directory_uri() )?>/css/model-listing.css">-->
+<!-- <link rel="stylesheet" type="text/css"  href="<?php //echo esc_url( get_template_directory_uri() )?>/css/jquery-ui.css" media="screen">
+ <link rel="stylesheet" type="text/css"  href="<?php //echo esc_url( get_template_directory_uri() )?>/css/jquery_002.css" media="screen">-->
 
 <?php wp_head(); ?>
 </head>
