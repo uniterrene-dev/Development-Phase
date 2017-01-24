@@ -2,8 +2,8 @@
 
 function registration_form() 
 {
-	$pac_name = $_REQUEST['pac'];
-
+	$pac_name = $_REQUEST['plnname'];
+	
     echo '
     <style>
     div {
@@ -16,7 +16,7 @@ function registration_form()
     </style>
     ';
  
-    echo '
+    ?>
     <div class="container">
 		<div class="vip-form-box">  
     <form action="" method="post" name="vip-form" id="vip-form" class="form-vip">
@@ -100,6 +100,15 @@ function registration_form()
        <li class="vip-form-box-field">
         <div class="vip-label">
          <label> Best times to call: </label> </div>
+
+         <div class="vip-fields"> 
+           <select name="time_call" id="time_call">
+             <option name="morning" value="morning">morning</option>
+             <option name="afternoon" value="afternoon">afternoon</option>
+             <option name="evening" value="evening">evening </option>
+           </select> 
+        </div>
+
          <div class="vip-fields"> 
            <select name="total_plan" id="total_plans">
              <option name="morning" value="morning">morning</option>
@@ -107,6 +116,7 @@ function registration_form()
              <option name="evening" value="evening">evening </option>
            </select> 
         </div>
+
        </li>
        <li class="vip-form-box-field">
         <div class="vip-label"> <label> If wish not be contacted </label> </div>
@@ -119,11 +129,11 @@ function registration_form()
         <div class="vip-label"> <label> Membership <span class="required">*</span></label> </div>
         <div class="vip-fields"> 
            <select name="total_plan" id="total_plans">
-             <option name="lavishpln" value="lavishpln">Lavish $150</option>
-             <option name="sliverpln" value="sliverpln">Silver $100k</option>
-             <option name="goldpln" value="goldpln">Gold $250k</option>
-             <option name="platinumpln" value="platinumpln">Platinum $500k</option>
-             <option name="blackpln" value="blackpln">Black $1mill</option>
+             <option name="lavishpln" value="lavishpln" <?php if($pac_name == "lavishpln") echo "selected";?>>Lavish $150</option>
+             <option name="sliverpln" value="sliverpln" <?php if($pac_name == "sliverpln") echo "selected";?>>Silver $100k</option>
+             <option name="goldpln" value="goldpln" <?php if($pac_name == "goldpln") echo "selected";?>>Gold $250k</option>
+             <option name="platinumpln" value="platinumpln" <?php if($pac_name == "platinumpln") echo "selected";?>>Platinum $500k</option>
+             <option name="blackpln" value="blackpln" <?php if($pac_name == "blackpln") echo "selected";?>>Black $1mill</option>
            </select> 
         </div>
        </li>
@@ -217,11 +227,11 @@ function registration_form()
     </form>
    </div>
  </div>
-</section>';
+</section>;
 
 
 
-}
+<?php }
 
 function registration_validation( $username, $password, $email)  
 {
@@ -341,7 +351,7 @@ $conpassword,$email,$conemail,$phone,$mob_num,$time_call,$explain,$hot_spot,$toy
         $zipcode  =   sanitize_text_field( $_POST['zipcode'] );
         $phone  =   sanitize_text_field( $_POST['phone'] );
         $mob_num  =   sanitize_text_field( $_POST['mob_num'] );
-        $time_call  =   sanitize_text_field( $_POST['time_call'] );
+        $time_call  =   $_POST['time_call'];
         $explain  =   sanitize_text_field( $_POST['explain'] );
         $hot_spot  =   sanitize_text_field( $_POST['hot_spot'] );
         $toys  =   sanitize_text_field( $_POST['toys'] );
@@ -401,7 +411,10 @@ if (empty($_POST['DO_STEP_1']) && empty($_GET['token-id']))
 {
 	
 	 $uid = $_REQUEST['uid'];
-
+	 
+	 $pid = $_REQUEST['pid'];
+		 
+		 
 global $wpdb;
 
 $sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
@@ -435,7 +448,17 @@ foreach ( $application_new as $application_new ) {
 	
 	
 }
-
+   if($pid !="")
+   {
+	  $first_name = get_post_meta( $pid, 'booking_forms_first_name', true );
+	  $address = get_post_meta( $pid, 'booking_forms_address', true );
+	  $city = get_post_meta( $pid, 'booking_forms_city', true );
+	  $zipcode = get_post_meta( $pid, 'booking_forms_zip_code', true );
+	  $phone = get_post_meta( $pid, 'booking_forms_phone_number', true );
+	  $mobile_number = get_post_meta( $pid, 'booking_forms_mobile_phone_number', true );
+	  $email = get_post_meta( $pid, 'booking_forms_email', true );
+	  $price_org ="10000";
+   }
 
     print '  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
     print '
@@ -606,6 +629,7 @@ foreach ( $application_new as $application_new ) {
 else if (!empty($_POST['DO_STEP_1']))
  {
 		 $uid = $_REQUEST['uid'];
+		 
 global $wpdb;
 
 $sql = "Select * from `lav`.`wp_vip_accounts` where `vip_user_id`=$uid;";
@@ -809,6 +833,7 @@ foreach ( $application_new as $application_new ) {
 elseif (!empty($_GET['token-id'])) 
 {
  $uid = $_REQUEST['uid'];
+ $pid = $_REQUEST['pid'];
     // Step Three: Once the browser has been redirected, we can obtain the token-id and complete
     // the transaction through another XML HTTPS POST including the token-id which abstracts the
     // sensitive payment information that was previously collected by the Payment Gateway.
@@ -839,20 +864,60 @@ elseif (!empty($_GET['token-id']))
 	  
         <h2>Step Three: Script automatically completes the transaction</h2>";
 
-    if ((string)$gwResponse->result == 1 ) {
+    if ((string)$gwResponse->result == 1 ) 
+    {
         print " <p><h3> Transaction was Approved, XML response was:</h3></p>\n";
-        print '<pre>' . (htmlentities($data)) . '</pre>';
-        global $wpdb;
-require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-$wpdb->query($wpdb->prepare("UPDATE  `lav`.`wp_vip_accounts` SET  `is_payment` =  '1' WHERE  `wp_vip_accounts`.`vip_user_id` =$uid;"));
-         header('Location: http://localhost/public_html/newwp/lavish/vip-messages?uid='.$uid);  
+		if($pid!="")
+		{
+			$xml= simplexml_load_string($data);
+			function xml2array($xml)
+			{
+			$arr = array();
 
-    } elseif((string)$gwResponse->result == 2)  {
+				foreach ($xml as $element)
+				{
+					$tag = $element->getName();
+					$e = get_object_vars($element);
+					if (!empty($e))
+					{
+						$arr[$tag] = $element instanceof SimpleXMLElement ? xml2array($element) : $e;
+					}
+					else
+					{
+						$arr[$tag] = trim($element);
+					}
+				}
+
+				return $arr;
+			}
+
+			$xml = new SimpleXMLElement($data);
+
+			$all_data = (xml2array($xml));
+
+			$cc_number = $all_data['billing']['cc-number'];
+			add_post_meta($pid, 'booking_forms_booking_user_cardnum', $cc_number, true);
+			
+			header('Location: http://localhost/public_html/newwp/lavish/dashboard?pid='.$pid); 
+		}
+		else
+		{
+			global $wpdb;
+			require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+			$wpdb->query($wpdb->prepare("UPDATE  `lav`.`wp_vip_accounts` SET  `is_payment` =  '1' WHERE  `wp_vip_accounts`.`vip_user_id` =$uid;"));
+			 header('Location: http://localhost/public_html/newwp/lavish/dashboard?uid='.$uid);  
+		}
+    } 
+    elseif((string)$gwResponse->result == 2)  
+    {
+		
         print " <p><h3> Transaction was Declined.</h3>\n";
         print " Decline Description : " . (string)$gwResponse->{'result-text'} ." </p>";
         print " <p><h3>XML response was:</h3></p>\n";
         print '<pre>' . (htmlentities($data)) . '</pre>';
-    } else {
+    } 
+    else 
+    {
         print " <p><h3> Transaction caused an Error.</h3>\n";
         print " Error Description: " . (string)$gwResponse->{'result-text'} ." </p>";
         print " <p><h3>XML response was:</h3></p>\n";
