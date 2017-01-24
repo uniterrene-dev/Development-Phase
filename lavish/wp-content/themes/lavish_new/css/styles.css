@@ -13,7 +13,7 @@ Slider transition fix
 }
 .bx-controls-direction {
     position: absolute;
-    top: 50%;
+    top: 42%;
     width: 100%;
     z-index: 999;
 }
@@ -267,7 +267,7 @@ block-lady_list .bx-wrapper {
 }
 
 .lady_overlay {
-    background: none repeat scroll 0 0 rgba(173, 20, 87, 0.75);
+    background: none repeat scroll 0 0 rgba(173, 20, 87, 0.25);
     bottom: 0;
     color: white;
     height: 100%;
@@ -278,8 +278,9 @@ block-lady_list .bx-wrapper {
     text-align: center;
     font-family: "Tw Cen MT";
     text-transform: uppercase;
-    bottom: -100%;
-    display: none;
+    /*bottom: -100%;*/
+    /*display: none;*/
+	display: block;
     overflow: hidden;
 }
 
