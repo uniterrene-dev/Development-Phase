@@ -972,7 +972,8 @@ function emailClicked()
   }
   else
   {
-	  alert("Please Fill the Form Successfully");
+	  //alert("Please Fill the Form Successfully");
+	  //alert("------------------------------------------------");
   }
 }
 
