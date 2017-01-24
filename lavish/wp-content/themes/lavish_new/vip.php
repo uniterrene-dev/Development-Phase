@@ -9,16 +9,11 @@ get_header();
  <div class="container">
   <div class="vip-member-box">
     <div class="vip-member-box-top">
-     <h3> Lavish Mate® VIP Member <br/> Lounge Benefits </h3>
+     <h3> <?php echo get_option('webq_vip_lounge_head');?> </h3>
      <div class="about-box-divider"><span> </span></div>
     </div> 
     <div class="vip-member-box-content">
-     <p>Even though it is not essential is join Lavish Mate®’s member program, there are a number of benefits to becoming a member. Membership is ideal for clients who wish to have regular weekly or monthly dates with our exclusive companions. </p>
-     <p> In our exclusive VIP member lounge we provide pictures of our charming ladies where you may admire also their beautiful faces. This makes it a lot easier to choose someone suitable for your next date. </p>
-    <p> We have made our VIP Lounge an access-only area, to protect the privacy of companions as many of them pursue full-time careers, are students or models, and require the utmost discretion at all times. </p>
-    <p> Once you are an agency client you have immediate access so you can start planning your date. </p>
-    <p> Lavish Mate® members are privileged to receive exclusive benefits from our travel partners. Our travel program and concierge service has been crafted carefully to complement the needs of the frequent traveler. Lavish Mate® membership entitles you to perks from airlines, hotels and luxury tours, a privilege reserved only for our VIP members. </p>
-    <p> We hope you enjoy your time in the member lounge. </p>
+     <?php echo get_option('webq_vip_lounge');?>
     </div>
   </div>
  </div>
@@ -30,289 +25,152 @@ get_header();
     <div class="vip-member-acrodian-box">
   
      <ul class="accordion">
-          <!--<li>
-            <div class="accordion-tab">
-             The Benefit of being a VIP Member is Endless 
-            </div> 
-            <div class="accordion-panel accordian-active">
-             <div class="container">
-               <div class="accordion-pane-box">
-                 <p>Unlimited exotic models, Luxury Jets, Yachts, Helicopters, Private Island, Hotels, Luxury Vehicles, and more</p>
-                 <p> <strong>Become a VIP Member Today</strong> </p>
-                 <p> With our portfolio of exclusive companions and luxury hotels, private islands, helicopters, vehicles and yachts, the possibilities are endless. </p>
-                 <p> Access to these sophisticated service is strictly reserved for the interests of VIP members, the most prestigious of Lavish Mate® clientele. The specifics of each package will vary according to the vendor and location, so please enquire with us directly so we can tailor-make a package just for you. Remember: we here to make your vacation, date or romantic getaway a reality so please tell us exactly how we can help you</p>
-                 <p> You can send us your booking request via e-mail, chat and/or of course for telephone booking you can reach us 24/7; Text booking only for existing client.  We will do our best to make your last minute booking possible! </p>
-                </div> 
-               </div> 
-            </div> 
-        </li>-->
+         s
           <li>
             <div class="accordion-tab">
-             The Benefit of being a VIP Member is Endless 
+             <?php echo get_option('webq_vip_ben_head');?>
             </div>
             <div class="accordion-panel">
              <div class="container">
                <div class="accordion-pane-box">
-                 <p>Unlimited exotic models, Luxury Jets, Yachts, Helicopters, Private Island, Hotels, Luxury Vehicles, and more</p>
-                 <p> <strong>Become a VIP Member Today</strong> </p>
-                 <p> With our portfolio of exclusive companions and luxury hotels, private islands, helicopters, vehicles and yachts, the possibilities are endless. </p>
-                 <p> Access to these sophisticated service is strictly reserved for the interests of VIP members, the most prestigious of Lavish Mate® clientele. The specifics of each package will vary according to the vendor and location, so please enquire with us directly so we can tailor-make a package just for you. Remember: we here to make your vacation, date or romantic getaway a reality so please tell us exactly how we can help you</p>
-                 <p> You can send us your booking request via e-mail, chat and/or of course for telephone booking you can reach us 24/7; Text booking only for existing client.  We will do our best to make your last minute booking possible! </p>
+                <?php echo get_option('webq_vip_ben');?>
                 </div>
              </div> 
             </div> 
         </li>
           <li>
             <div class="accordion-tab">
-             Luxury Private Helicopter: VIP Package 
+             <?php echo get_option('webq_vip_lux_head');?>
             </div>
             <div class="accordion-panel">
              <div class="container">
                <div class="accordion-pane-box">
-                <p> <strong> Start your romantic adventure with an gourmet lunch or dinner date on our private island beach </strong></p>
-                <p> This is an experience not-to-be-missed! Enjoy a flight or yacht trip to Lavish Mate®’s private island and dine at sunset. Make this an unforgettable experience for one or more of our companions and prepare to be pampered! </p>
-                <p> <strong> An Unforgettable Romantic Experience in South Florida </strong></p>
-                <p> Allow the Lavish Mate® limousine to collect you, to board a private helicopter or seaplane before being taken away to the south of Florida for some pampering and play. </p>
-                <p> Land in a private Florida Keys airport and be driven in a Cadillac Escalade to the shore station before boarding a luxury boat. From here you sail off to our private island where a delicious meal awaits you. Dine on lunch or dinner by the seaside and taken in the beauty of your surroundings. After your meal you will be treated to a tour of the island. </p>
-                <p> Once your trip is over the luxury yacht will start the home-bound voyage. An unforgettable experience that is a top favorite among our VIP clients. </p>
-               <p> Agenda </p>
-               <p> Travel from Palm Beach to South Beach via luxury transport. </p>
-               <p> Experience the thrill of flying 300ft over the beautiful South Florida coastline and its high profile mansions South Beach and downtown Miami. Get up, close and personal with Millionaires Row before flying over the Florida Keys. All this scenic beauty is on offer for the duration of the flight, enjoyed with a bottle of Dom Perignon. </p>
-               <p> Once you land at the private airport you will be transported to Island Shore Station. </p>
-               <p> Hop onto a private boat to enjoy the 12-minute journey to your private island. </p>
-               <p> Meet the Lavish Mate® team before being taken to your seaside dining table, set atop white beach sand. Let the evening come alive as you are surrounded by fires and fire torches. Don’t be surprised if one of the island’s deer stops by to say hello. </p>
-               <p> Post dinner drinks and cigars are offered around the fire pit. </p>
-               <p> Get ready to return home, enjoying the night-time sights of Miami as you jet off. </p>
-               <p> Total duration of the experience: 9 to 10 hours. </p>
-               <p> <strong> The most luxurious and unique sightseeing experience, see the world from a different view </strong> </p>
-               <p> Indulge in a once-in-a-lifetime experience and forget about your day-to-day concerns as Lavish Mate®’s private helicopter whisks you through the clouds at speeds of around 120mph. experience the freedom and exhilaration of flying at 200ft above some of the area’s most beautiful areas. </p>
-               <h4> Indulge in an exciting New York Helicopter experience </h4>
-               <p> Lavish Mate® is pleased to offer a helicopter charter service in New York and the Hamptons where your every whim is taken care of: refreshments, accommodation and limo services. Above and beyond that, we can also arrange exciting sightseeing tours at some really gorgeous destinations. Treat yourself to a New York helicopter experience. </p>
+                 <?php echo get_option('webq_vip_lux');?>
               </div>
              </div> 
             </div> 
         </li>
           <li>
             <div class="accordion-tab">
-            Super car dates 
+            <?php echo get_option('webq_vip_car_head');?>
             </div>
              <div class="accordion-panel">
               <div class="container">
                <div class="accordion-pane-box">
-                <p> Lavish Mate® has conceptualized this packaged especially for owners of super cars and those who have a passion for them. Select an exquisite date with one of our companions and enjoy being driven in a luxury car or super car of your choice. Enjoy the thrill of sheer power and performance, and excite your date. If you’re the thrill-seeking type who loves a fast-paced lifestyle, this is the package for you. You can look forward to the highest caliber Michelin dining experiences, high art, the best vacations, equestrian events and motor sports, you need look no further.</p>
+                <?php echo get_option('webq_vip_car');?>
                 </div>
                </div> 
              </div>
         </li>
           <li>
             <div class="accordion-tab">
-            Lavish Yacht experiences 
+            <?php echo get_option('webq_vip_youth_head');?>
             </div> 
             <div class="accordion-panel">
              <div class="container">
               <div class="accordion-pane-box">
-               <p> As a multi-service company Lavish Mate® organizes the most exclusive luxury travel experiences and concierge services to give our clients the time of their lives. Our yachting specialists cater to the most discerning clients, making it quick, easy and oh-so enjoyable to get away on a luxury yacht. Your perfect luxury vacation is just a few steps away. </p>
-               <p> Sit back and let Lavish Mate® take care of your yacht arrangements, and enjoy a leisurely Marina cruise or visit a private bay in the company of your companion. Have a delicious lunch with chilled champagne while your companion tops up her tan. Find out more about your model, enjoy a cooling swim or poolside cocktails. You can enjoy all these luxuries in complete privacy. Stay for the day or overnight, while you sleep and awake to the sound of the ocean. Revitalize yourself and feel completely stress-free as your every whim is taken care of. Lavish Mate® respects your discretion and will provide a transparent invoice that details the chartered yacht and related expenses for your accounting needs. </p>
+               <?php echo get_option('webq_vip_youth');?>
                </div>
               </div> 
             </div> 
         </li>
           <li>
             <div class="accordion-tab">
-            Jet off in a private jet and escape from it all 
+            <?php echo get_option('webq_vip_jet_head');?>
             </div> 
             <div class="accordion-panel">
-             <div class="container">
-               <div class="accordion-pane-box">
-               <p>Lavish Mate® membership entitles you to discounted rates that can’t easily be arranged elsewhere. Lavish Mate® enjoys good relationships with all global airlines, so you are assured of the best services at the lowest rates at all times.</p>
-               <p> Lavish Mate® jets are ready for action, just waiting to whisk you and your companion off on an unforgettable date. Full a full suite of options that span light jets to extended range, Lavish Mate® is well positioned to offer you the very best for your date with your companion. We ensure that all jets adhere to stringent safety guidelines. Our jets are available for quick trips, as well as coast-to-coast excursions and international trips. Our Lavish Mate® companions are also available to make the journey with you, so you all have to do is get in touch with us. Let comfort and style accommodate you wherever you may go. </p>
-               
-              <div class="accordion-details">
-               <ul>
-                <li> Complimentary companion airfare </li>
-                <li> Private terminal access / Security and absolute confidentiality  </li>
-                <li> Bespoke luxury catering / Multimedia resources on board / Lie-flat beds if required  </li>
-               </ul>
-              </div>
-              </div>
-             </div>
+             <?php echo get_option('webq_vip_jet');?>
             </div> 
         </li>
           <li>
             <div class="accordion-tab">
-            Hotel accommodation 
+            <?php echo get_option('webq_vip_hotel_head');?>
             </div> 
-            <div class="accordion-panel">
-             <div class="container">
-              <div class="accordion-pane-box">
-               <p>Thanks to our long standing relationships and access to the global travelers network Lavish Mate® is proud to offer our clients one of the world’s largest amenity programs to participate in. This means our VIP members have access to exclusive amenities at more than 850 resorts and hotels worldwide.</p>
-              <p> Sit back and let Lavish Mate® reserve an exotic location on your behalf. Look forward to five-star luxury while you live the dream of freedom and prestige at one of our hand selected hotels. </p>
-              <p> Take a time out with a gorgeous companion, and enjoy total relaxation and a rejuvenation of your energy. Allow yourself to unwind in the beauty of nature and your companion’s loving touch and leave the business world behind for a short sojourn. </p>
-              <p> What else can you look forward to?</p>
-             
-             <div class="accordion-details">
-              <ul>
-               <li> Selective room upgrades, which may be confirmed upon reservation </li>
-               <li> Fully-inclusive breakfast every day  </li>
-               <li> Credit at the resort or hotel. </li>
-               <li> Complimentary airport transfer at select venues </li>
-               <li> Complimentary bottle of wine or champagne at select venues </li>
-               <li> Welcome basket with fruit and nuts </li>
-               <li> Additional suite amenities are available at over 150 of our hotel partners </li>
-              </ul>
-             </div>
-             
-              <p> Please note that benefits vary and are dependent on the venue booked. </p>
-             
-              <div class="accordion-details">
-               <ul>
-                <li> Canyon Ranch </li>
-                <li> Hôtel Plaza Athénée Paris </li>
-                <li> InterContinental </li>
-                <li> Kasbah Tamadot </li>
-                <li> The Leading Hotels of The World </li>
-                <li> Lion Sands Sabi Sand </li>
-                <li> Mandarin Oriental </li>
-                <li> Orient-Express </li>
-                <li> Raffles </li>
-                <li> Relais & Châteaux </li>
-                <li> Singita Game Reserve </li>
-                <li> Small Luxury Hotels of The World </li>
-                <li> St. Regis </li>
-                <li> The Luxury Collection Hotels & Resorts </li>
-                <li> The Regent </li>
-                <li> The Ritz-Carlton </li>
-                <li> Ulusaba </li>
-               </ul>
-              </div>
-              </div>
-             </div> 
-            </div>
+           <?php echo get_option('webq_vip_hotel');?>
         </li>
           <li>
             <div class="accordion-tab">
-            Experience the thrill of a Safari 
+            <?php echo get_option('webq_vip_safari_head');?>
             </div> 
             <div class="accordion-panel">
              <div class="container">
               <div class="accordion-pane-box">
-               <p>If you’re looking for an adventure like no other, an exotic safari is the answer. Experience the beauty of nature in a luxurious setting and complete pampering for the duration of your stay. Book a companion to make the experience even more enjoyable, while you book a luxury safari lodge or tented camp accommodation. Go back to the basics of absolute luxury and relive the charisma of a time gone by.</p>
+               <?php echo get_option('webq_vip_safari');?>
               </div>
              </div>  
             </div>
         </li>
           <li>
             <div class="accordion-tab">
-            Gourmet Candlelight Experience 
+            <?php echo get_option('webq_vip_candel_head');?>
             </div> 
             <div class="accordion-panel">
              <div class="container">
               <div class="accordion-pane-box">
-            <p>A number of the Lavish Mate® companions are excellent cooks, while others can ensure food is delivered to your door. Enjoy a delicious meal served by a beautiful companion and dine alone with her in a romantic environment. Let her tease you and feed you, while you explore different tastes and textures with your tongue. You tell her what your favorite is and she will arrange it on your behalf.</p>
+            <?php echo get_option('webq_vip_candel');?>
               </div>
              </div> 
             </div>
         </li>
           <li>
             <div class="accordion-tab">
-            The Private Island Experience 
-            </div> 
+            <?php echo get_option('webq_vip_private_head');?>
             <div class="accordion-panel">
              <div class="container">
               <div class="accordion-pane-box">
-               <p>Enjoy the world in ways that are reserved for the most elite. Make yourself available for a cruise or jet off to private locations and enjoy exclusivity. Let Lavish Mate® assist with a booking for a private or semi-private destination. Let our experienced team of luxury travel specialists plan everything for you, including a few companions to make the experience even more unforgettable.</p>
-               <p>When you want to escape to a private island, Lavish Mate® will organize a completely secluded getaway, just for you. The only person who needs to know about it is the attractive companion sitting in the seat next to you. Take a weekend off, a week away or indulge in an entire month of leisure with a beautiful and entertaining lady at your side. Lavish Mate® can arrange for your companion to greet you at your exotic location of choice, so that you are not seen traveling in her company. Staff on-site will cater to your every whim, and Lavish Mate® will supply you with an invoice for all services rendered.</p>
+               <?php echo get_option('webq_vip_private');?>
                </div>
               </div> 
              </div>
         </li>
           <li>
             <div class="accordion-tab">
-            Lavish Posh Pistes 
+            <?php echo get_option('webq_vip_post_head');?> 
             </div> 
             <div class="accordion-panel">
              <div class="container">
               <div class="accordion-pane-box">
-               <p>From the Walserhof Hotel to Cartier’s St Moritz polo tournament, Lavish Mate® can book a lavish pistes experience on your behalf. Enjoy some of the most picturesque locations on offer and be pampered by one of our world-class companions. Enjoy red wine and wood burning fires and the delicious taste of cocoa with a refined woman at your side. Not a care in the world for a few moments. If you have a penchant for crisp air and a desire to be seen in the right place with the right person, this is one VIP package just for you. Lavish Mate® can arrange pistes for a weekend or a full week. Please contact for more information on packages and pricing.</p>
+               <?php echo get_option('webq_vip_post');?>
               </div>
              </div> 
             </div>
         </li>
           <li>
             <div class="accordion-tab">
-            Tour operators 
+             <?php echo get_option('webq_vip_tour_head');?>
             </div> 
             <div class="accordion-panel">
              <div class="container">
               <div class="accordion-pane-box">
-               <p>Lavish Mate® is fortunate to have long term relationships with some of the most popular adventure and travel companies in the world. It is thanks to our operator ties that Lavish Mate® is able to offer our discerning clientele backstage passes to some of the most exciting events and destinations in the world. Let our travel network take care of your travel needs and treat with discretion and confidentiality. Allow us to personalize your luxury travel experience and make arrangements that you cannot get elsewhere.</p>
+            <?php echo get_option('webq_vip_tour');?>
               </div>
              </div>  
             </div>
         </li>
           <li>
             <div class="accordion-tab">
-            Our preferred partner network 
+             <?php echo get_option('webq_vip_prf_head');?>
             </div> 
             <div class="accordion-panel">
-             <div class="container">
-              <div class="accordion-pane-box">
-               <p>Lavish Mate® is proud to deliver an exceptional travel service. Our association with leading travel brands means we can offer the most exclusive and affordable luxury travel services so that your fantasies come true. We work closely with Antara Destination Spa & Resort and Four Seasons Resort Nevis in the West Indies. We can assist with arrangements for:</p>
-              
-                  <div class="accordion-details">
-                   <ul>
-                    <li> Private Yachts </li>
-                    <li> Forest Travel </li>
-                    <li> Ultimate Jet Vacations </li>
-                    <li> Bodyguards 4 Hire </li>
-                   </ul>
-                  </div>
-               </div>
-              </div>
+             <?php echo get_option('webq_vip_prf');?>
              </div>
          </li>
           <li>
             <div class="accordion-tab">
-            Sit back, relax and let our concierge service take care of everything 
+           <?php echo get_option('webq_vip_sit_head');?>
             </div> 
             <div class="accordion-panel">
-             <div class="container">
-              <div class="accordion-pane-box">
-               <p>In addition to transporting you to and from your dream destinations in complete luxury, Lavish Mate® is pleased to deliver extended services that take care of all the fine details. Our concierge will assist with:</p>
-              
-              <div class="accordion-details">
-               <ul>
-                <li> Concierge service that is available seven days a week, 24 hours per day </li>
-                <li> Assistance with yacht chartering </li>
-                <li> Hotel reservations </li>
-                <li> Specials on luxury cruises </li>
-                <li> Preferential air fares for business and first class travel </li>
-                <li> Luggage delivery and porter service </li>
-                <li> Bookings for theater tickets </li>
-                <li> Bookings for restaurants </li>
-                <li> Mobile phone rentals </li>
-                <li> Professional guides for city tours </li>
-                <li> Booking service for private cars and limousines </li>
-                <li> Assistance with Visa and passports </li>
-               </ul>
-              </div>
-             <p> Additional benefits are available when you book through Lavish Mate®. These benefits may include hotel upgrades, credit at hotels and breakfast. Benefits depend on the hotel booked and time of booking. Please confirm with your concierge at time of booking. </p>
-             <p> Regardless of whether you are traveling for business or pleasure, our companions will be with you every step of the way. They will ensure that your every whim is taken care of and that your getaway is something you will never forget. </p>
-             <p> Our companions are waiting to give you a VIP travel experience. </p>
-             <p> For further details please get in touch with us. Please note that Lavish Mate® does not own or operate the yacht, helicopters and jets advertised. Amenities and benefits are dependent on the provider and area. </p>
-              </div>
-             </div> 
+             <?php echo get_option('webq_vip_sit');?>
             </div>
         </li>
           <li>
             <div class="accordion-tab">
-            Special Requests
+            <?php echo get_option('webq_vip_spcl_head');?>
             </div> 
             <div class="accordion-panel">
              <div class="container">
               <div class="accordion-pane-box">
-               <p>For VIP Members who have special requests or specifications as to their ideal companion, Lavish Mate® is pleased to receive your correspondence. If you do not see the companion of your dreams on our pages, please let us know and we will find someone to fit your requirements, within reason.</p>
-               <p> For the ultimate in convenience and value please select a program appropriate to your needs. Take advantage of our bulk buying power and experience the ultimate in luxury travel services. </p>
+              <?php echo get_option('webq_vip_spcl');?>
               </div>
              </div>  
             </div>
@@ -329,10 +187,8 @@ get_header();
 <section id="vip-packeges" class="vip-packeges-div">
   <div class="container">
     <div class="vip-packeges-box">
-      <h3> Value & Convenience for Private amenities with our VIP program, choose a plan that suits your luxury lifestyle to the fullest. </h3>
-      <p> The Lavish Mate® Luxury packages offers unprecedented convenience and flexibility for all your private needs. As a cost-effective alternative to the high cost of fractional aircraft, 
-yacht and helicopter ownership, the Lavish Mate® entitles members to special privileges and services designed 
-to make your charter flight experience the best it can be </p>
+      <h3> <?php echo get_option('webq_vip_values_head');?> </h3>
+     <?php echo get_option('webq_vip_values');?>
    </div>    
   </div>
   
@@ -355,7 +211,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form?plnname=lavishpln"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -375,7 +231,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form?plnname=sliverpln"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -397,7 +253,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form?plnname=goldpln"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -421,7 +277,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form?plnname=platinumpln"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -445,7 +301,7 @@ to make your charter flight experience the best it can be </p>
                   </div>
                   <div class="packeg-apply-btn-div">
                     <div class="packeg-apply-btn">
-                     <a href="<?php echo get_home_url(); ?>/vip-form"> Apply Now </a>
+                     <a href="<?php echo get_home_url(); ?>/vip-form?plnname=blackpln"> Apply Now </a>
                     </div>
                   </div>
                 </li>
@@ -473,35 +329,31 @@ to make your charter flight experience the best it can be </p>
         
         <li>
             <div class="accordion-tab">
-             The Perfect Girlfriend Experience
+            <?php echo get_option('webq_vip_gf_head');?> 
             </div>
             <div class="accordion-panel">
              <div class="container">
               <div class="accordion-pane-box">
-               <p> At Lavish Mate® escort agency, a girlfriend experience simply refers to a beautiful woman of equal sophistication to yourself; with whom you get along, who can provide enjoyable companionship, whatever that entails for the both of you which is pretty much what a girlfriend does. The elite companion offering a girlfriend experience is usually very warm-hearted, empathetic, compassionate and caring. </p>
-               <p>Our models can keep you entertained at whatever social event you attend. All Lavish Mate® companions are loving, confident models who enjoy spending their time with quality people. Our companions are well skilled in the art of pampering; they are empathetic and giving individuals. Our models are well groomed and take immense pride in their appearances. Her appearance, style and knowledge base are all very important to her. Our companions are social, confident and caring models. Our companions invest significantly in maintaining their beauty, style, general knowledge and social etiquette. In a nutshell, the ideal date!</p>
+               <?php echo get_option('webq_vip_gf_head');?> 
                </div>
               </div>   
             </div> 
         </li>
         <li>
             <div class="accordion-tab">
-              Booking a Lavish Date 
+             <?php echo get_option('webq_vip_booking_head');?> 
             </div>
              <div class="accordion-panel">
               <div class="container">
                <div class="accordion-pane-box">
-                 <p> Lavish Mate® companions offer an experience that is classy and driven by their choices. They are upper class women who want to work as companions to further their own dreams. They make themselves available for a select number of dates with discerning gentlemen every month. These are normal, intelligent, fresh and beautiful women who just happen to be available for a small window in their lives to be a professional companion. </p>
-                 <p> When you set a date with a Lavish Mate® companion you can expect a mutually beneficial experience with no strings attached. You will be matched with an independently minded companion who will cater to your desires. </p>
-                 <p> Your past experiences with blind dates and match making friends are nothing like working through Lavish Mate®. It's a bit embarrassing and often a disaster because you have nothing in common. You do not have to spend valuable time scrolling through dating websites, looking for someone to spend your free time with. On dating sites appearances can be deceiving and when you finally get to go on that date, it’s highly likely that you will end up disappointed or underwhelmed because the person you meet is nothing like the profile that attracted you in the first place. </p>
-                 <p> If you’ve tried your luck at a regular dating agency you probably already know the success rates are really low. And, a lot of the time those testimonials they post are fake. Besides which, people who are on dating sites are there for a reason: they can’t actually get dates or meet up with people because they fall short in one or more areas. If you think back to your previous dating experiences, Lavish Mate® is a much better option with a lot less risk. </p>
+               <?php echo get_option('webq_vip_booking');?> 
                </div>
               </div>  
              </div>
         </li>
          <li>
             <div class="accordion-tab">
-             Our Agency
+              <?php echo get_option('webq_vip_agn_head');?> 
             </div> 
             <div class="accordion-panel">
              <div class="container">
