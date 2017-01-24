@@ -574,14 +574,17 @@ if ( ! empty( $categories ) ) {
     <div class="strip-full"><h3><span class="left-right slider-custom-left"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/left-arrow.png" alt="left" border="0"></span> Escort Ladies <span class="left-right slider-custom-right"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/right-arrow.png" alt="right" border="0"></span></h3></div>
     <div class="wrap-thumbs">
         <div class="bx-wrapper">
-          <div class="bx-viewport">
-             <ul class="lady_list">
+          <div class="bx-viewport flexslider">
+             <ul class="lady_list slides">
          
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-1.jpg" alt="">
                         </a>
-                        <div class="lady_overlay">
+                        <div class="book-caption">
+                         <a href="#">book<br>now!</a>
+                        </div>
+                        <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Kiara                            </a>
                             <div class="lady_age">Age: Mid 20´s </div>
@@ -591,12 +594,16 @@ if ( ! empty( $categories ) ) {
                             </a>
                             <div>Dusseldorf, Cologne, Bonn</div>
                         </div>
+                  
                     </li>
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-2.jpg" alt="">
                         </a>
-                          <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                          <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Mia                            </a>
                             <div class="lady_age">Age: Mid 20s </div>
@@ -607,11 +614,14 @@ if ( ! empty( $categories ) ) {
                             <div>Cannes, St. Tropez, Monaco, Geneva</div>
                         </div>
                     </li>
-                     <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                     <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-3.jpg" alt="">
                         </a>
-                         <div class="lady_overlay">
+                         <div class="book-caption">
+                          <a href="#">book<br>now!</a>
+                         </div>
+                         <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Aaliyah                            </a>
                             <div class="lady_age">Age: Mid 30s </div>
@@ -622,11 +632,14 @@ if ( ! empty( $categories ) ) {
                             <div>Paris, Brussels, Geneva, London, Frankfurt</div>
                         </div>
                     </li>
-                                                                <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-4.jpg" alt="">
                         </a>
-                          <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                          <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Victoria                            </a>
                             <div class="lady_age">Age: Mid 20´s</div>
@@ -637,11 +650,14 @@ if ( ! empty( $categories ) ) {
                             <div>Stuttgart, Munich, Frankfurt, Zurich</div>
                         </div>
                     </li>
-                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="#">
                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-5.jpg" alt="">
                         </a>
-                          <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                          <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Stella                            </a>
                             <div class="lady_age">Age: Late 20´s</div>
@@ -652,11 +668,14 @@ if ( ! empty( $categories ) ) {
                             <div>Hanover, Berlin, Hamburg, Frankfurt</div>
                         </div>
                     </li>
-                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="#">
                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-6.jpg" alt="">
                         </a>
-                          <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                          <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Claudia                            </a>
                             <div class="lady_age">Age: Early 30s </div>
@@ -667,11 +686,14 @@ if ( ! empty( $categories ) ) {
                             <div>Innsbruck, Salzburg, Vienna, Stuttgart</div>
                         </div>
                     </li>
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-7.jpg" alt="">
                         </a>
-                          <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                          <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Anna                            </a>
                             <div class="lady_age">Age: Mid 20s </div>
@@ -682,11 +704,14 @@ if ( ! empty( $categories ) ) {
                             <div>Hanover, Hamburg, Berlin, Marbella</div>
                         </div>
                     </li>
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="http://www.targetescorts.com/evelyn-escort-service.htm">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-8.jpg" alt="">
                         </a>
-                          <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                          <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Evelyn                            </a>
                             <div class="lady_age">Age: Early 20</div>
@@ -697,11 +722,14 @@ if ( ! empty( $categories ) ) {
                             <div>Berlin, Hamburg, Hanover, Leipzig</div>
                         </div>
                     </li>
-                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="http://www.targetescorts.com/julia-escort-service.htm">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-9.jpg" alt="">
                         </a>
-                           <div class="lady_overlay">
+                           <div class="book-caption">
+                            <a href="#">book<br>now!</a>
+                           </div>
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Julia                            </a>
                             <div class="lady_age">Age: Late 20´s </div>
@@ -712,11 +740,14 @@ if ( ! empty( $categories ) ) {
                             <div>Munich, Nuremberg, Stuttgart, Salzburg</div>
                         </div>
                     </li>
-                       <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                       <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-10.jpg" alt="">
                         </a>
-                            <div class="lady_overlay">
+                            <div class="book-caption">
+                             <a href="#">book<br>now!</a>
+                            </div>
+                            <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Amelie                            </a>
                             <div class="lady_age">Age: Early 20s</div>
@@ -727,11 +758,14 @@ if ( ! empty( $categories ) ) {
                             <div>Dusseldorf, Cologne, Bonn, Frankfurt</div>
                         </div>
                     </li>
-                        <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-11.jpg" alt="">
                         </a>
-                           <div class="lady_overlay">
+                           <div class="book-caption">
+                            <a href="#">book<br>now!</a>
+                           </div>
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Carolina                            </a>
                             <div class="lady_age">Age: Early 20</div>
@@ -742,11 +776,14 @@ if ( ! empty( $categories ) ) {
                             <div>Vienna, Salzburg, Graz, Munich</div>
                         </div>
                     </li>
-                      <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-12.jpg" alt="">
                         </a>
-                         <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                         <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Jasmin                            </a>
                             <div class="lady_age">Age: Mid 20´s</div>
@@ -757,11 +794,14 @@ if ( ! empty( $categories ) ) {
                             <div>Nuremberg, Munich, Mainz, Frankfurt</div>
                         </div>
                     </li>
-                        <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                        <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-13.jpg" alt="">
                         </a>
-                           <div class="lady_overlay">
+                           <div class="book-caption">
+                            <a href="#">book<br>now!</a>
+                           </div> 
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Emily                            </a>
                             <div class="lady_age">Age: Mid 20´s </div>
@@ -772,11 +812,14 @@ if ( ! empty( $categories ) ) {
                             <div>Mannheim, Frankfurt, Stuttgart</div>
                         </div>
                     </li>
-                         <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                         <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-14.jpg" alt="">
                         </a>
-                           <div class="lady_overlay">
+                           <div class="book-caption">
+                            <a href="#">book<br>now!</a>
+                           </div>
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Sophie                            </a>
                             <div class="lady_age">Age: Mid 20´s </div>
@@ -787,12 +830,15 @@ if ( ! empty( $categories ) ) {
                             <div>Zurich, Basel, Bern, Geneva</div>
                         </div>
                     </li>
-                                                                <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                      <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-15.jpg" alt="">
                         </a>
-                                                    <div class="new_lady"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/heart-new.png" alt="New"></div>
-                                                <div class="lady_overlay">
+                         <div class="book-caption">
+                          <a href="#">book<br>now!</a>
+                         </div>
+                         <div class="new_lady"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/heart-new.png" alt="New"></div>
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Alice                            </a>
                             <div class="lady_age">Age: Early 20s </div>
@@ -803,11 +849,14 @@ if ( ! empty( $categories ) ) {
                             <div>Stuttgart, Karlsruhe, Frankfurt</div>
                         </div>
                     </li>
-                         <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;">
+                         <li id="got_overlay">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-16.jpg" alt="">
                         </a>
-                           <div class="lady_overlay">
+                           <div class="book-caption">
+                            <a href="#">book<br>now!</a>
+                           </div>
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Isabelle                            </a>
                             <div class="lady_age">Age: 30</div>
@@ -818,11 +867,14 @@ if ( ! empty( $categories ) ) {
                             <div>Cologne, Dusseldorf, Frankfurt</div>
                         </div>
                     </li>
-                                    <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                      <li id="got_overlay" class="bx-clone">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-17.jpg" alt="">
                         </a>
-                           <div class="lady_overlay">
+                           <div class="book-caption">
+                            <a href="#">book<br>now!</a>
+                           </div>
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Lina                            </a>
                             <div class="lady_age">Age: Mid 20s </div>
@@ -832,11 +884,14 @@ if ( ! empty( $categories ) ) {
                             </a>
                             <div>Mannheim, Karlsruhe, Frankfurt, Stuttgart</div>
                         </div>
-                    </li><li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    </li><li id="got_overlay" class="bx-clone">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-18.jpg" alt="">
                         </a>
-                                                <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                          <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Laura                            </a>
                             <div class="lady_age">Age: Mid 20´s</div>
@@ -846,12 +901,16 @@ if ( ! empty( $categories ) ) {
                             </a>
                             <div>Dresden, Leipzig, Berlin</div>
                         </div>
-                    </li><li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                    </li>
+                       <li id="got_overlay" class="bx-clone">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-19.jpg" alt="">
                         </a>
-                                                    <div class="new_lady"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/heart-new.png" alt="New"></div>
-                                                <div class="lady_overlay">
+                          <div class="book-caption">
+                           <a href="#">book<br>now!</a>
+                          </div>
+                          <div class="new_lady"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/heart-new.png" alt="New"></div>
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Alina                            </a>
                             <div class="lady_age">Age: Early 30´s </div>
@@ -862,11 +921,14 @@ if ( ! empty( $categories ) ) {
                             <div>Zurich, Basel, Bern, Geneva</div>
                         </div>
                     </li>
-                     <li id="got_overlay" style="float: left; list-style: outside none none; position: relative; width: 300px;" class="bx-clone">
+                     <li id="got_overlay" class="bx-clone">
                         <a href="#">
                             <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-20.jpg" alt="">
                         </a>
-                           <div class="lady_overlay">
+                           <div class="book-caption">
+                            <a href="#">book<br>now!</a>
+                           </div>
+                           <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
                             Sasha                            </a>
                             <div class="lady_age">Age: 20</div>
@@ -972,14 +1034,15 @@ function emailClicked()
   }
   else
   {
-	  //alert("Please Fill the Form Successfully");
-	  //alert("------------------------------------------------");
+    //alert("Please Fill the Form Successfully");
   }
 }
 
 </script>
 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
+<!--<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery_003.js" ></script>
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery_005.js" ></script>-->
 <?php
 get_footer();
 ?>
