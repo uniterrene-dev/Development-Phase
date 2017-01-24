@@ -176,13 +176,13 @@ function registration_form()
 				<div class="mutliSelect">
 					<ul>
 						<li>
-						   <label><input type="checkbox" value="Apple" />Yvonno </label>
+						   <label><input type="checkbox" value="Yvonno" />Yvonno </label>
 						<li>
-							<label><input type="checkbox" value="Blackberry" />Angelina</label>
+							<label><input type="checkbox" value="Angelina" />Angelina</label>
 						<li>
 							<label><input type="checkbox" value="HTC" />Angelina</label>
 						<li>
-							<label><input type="checkbox" value="Sony Ericson" />Yvonno</label>
+							<label><input type="checkbox" value="Yvonno" />Yvonno</label>
 						<li>
 							<label><input type="checkbox" value="Motorola" />Angelina</label>
 						<li>
@@ -442,28 +442,7 @@ foreach ( $application_new as $application_new ) {
           <ul>
 		   <div class="vip-payment-form-left">
 		    <h4> Billing Details</h4>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Customer Vault Id
-				   <span class="required">*</span>
-				  </label>
-			    </div>  
-			    <div class="vip-fields">
-			     <input type="text" name="customer-vault-id" value="'.$customer_vid.'">
-		        </div>	
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Company
-				   <span class="required">*</span>
-				  </label>
-			    </div>  
-				<div class="vip-fields">
-				 <input type="text" name="billing-address-company" value="Acme, Inc.">
-				</div> 
-			  </li>
+			 
 			  <li>
 			    <div class="vip-label">
 				  <label>
@@ -587,116 +566,8 @@ foreach ( $application_new as $application_new ) {
 			</li>
 			</div> 
 			<div class="vip-payment-form-right">
-			 <h4>Shipping Details</h4>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Company				   
-				  </label>
-			    </div>
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-company" value="Acme, Inc.">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   First Name
-				   <span class="required">*</span>
-				  </label>
-			    </div> 
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-first-name" value="'.$first_name.'">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Last Name
-				   <span class="required">*</span>
-				  </label>
-			    </div>  
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-last-name" value="'.$last_name.'">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Address
-				   <span class="required">*</span>
-				  </label>
-			    </div>   
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-address1" value="'.$address.'">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Address 2
-				   <span class="required">*</span>
-				  </label>
-			    </div> 
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-address2" value="">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   City
-				   <span class="required">*</span>
-				  </label>
-			    </div>  
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-city" value="'.$city.'">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   State/Province
-				   <span class="required">*</span>
-				  </label>
-			    </div>   
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-state" value="">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Zip/Postal
-				   <span class="required">*</span>
-				  </label>
-			    </div>  
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-zip" value="'.$zipcode.'">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Country
-				   <span class="required">*</span>
-				  </label>
-			    </div> 
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-country" value="US">
-				</div> 
-			  </li>
-			  <li>
-			    <div class="vip-label">
-				  <label>
-				   Phone Number
-				   <span class="required">*</span>
-				  </label>
-			    </div> 
-				<div class="vip-fields">
-				 <input type="text" name="shipping-address-phone" value="'.$phone.'">
-				</div> 
-			  </li>        
+			 
+			       
 			  <li>
 			    <div class="vip-label">
 				  <label>
