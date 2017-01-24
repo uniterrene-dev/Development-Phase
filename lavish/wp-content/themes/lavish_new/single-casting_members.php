@@ -174,66 +174,66 @@ if ( $images ) {
              <div class="accordion-panel">
               <div class="accordion-pane-box">
                <div class="booking-form-div">
-                <form>
+                <form action="" method="post">
                   <div class="booking-box-left clearfix">
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Your Full name <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="firstname" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Age <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="age" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
-                     <label> Nationally <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                     <label> Nationality <span class="required">*</span> </label> </div>
+                    <div class="vip-fields"> <input id="nationality" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Your E-mail <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="email" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Conform E-mail </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="email" required> </div>
+                    <div class="vip-fields"> <input id="conemail" placeholder="" value="" type="email" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Your phone number </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="phn" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Mobile phone number <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="mob_phn" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Address <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="address" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> City </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="city" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Zip Code <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="password" required> </div>
+                    <div class="vip-fields"> <input id="zip" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Hotel/room </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="password" required> </div>
+                    <div class="vip-fields"> <input id="hotel" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Desired Mate </label> </div>
-                    <div class="vip-fields"> 
+                    <div class="vip-fields" id="mate"> 
                        <select class="xxxxxxxxxxxxxx">
                          <option value="Lavish">Yvonno</option>
                          <option value="Silver">Angelina</option>
@@ -245,7 +245,7 @@ if ( $images ) {
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Alternative Mate </label> </div>
-                    <div class="vip-fields"> 
+                    <div class="vip-fields" id="altmate"> 
                        <select>
                          <option value="Yvonno">Yvonno</option>
                          <option value="Angelina">Angelina</option>
@@ -257,24 +257,7 @@ if ( $images ) {
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> How many mates </label> </div>
-                    <div class="vip-fields"> 
-                       <select>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                         <option value="6">6</option>
-                         <option value="7">7</option>
-                         <option value="8">8</option>
-                         <option value="9">9</option>
-                         <option value="10">10</option>
-                       </select> 
-                    </div>
-                   </li>
-                   <li class="booking-box-field">
-                    <div class="vip-label"> <label> How many mates </label> </div>
-                    <div class="vip-fields"> 
+                    <div class="vip-fields" id="nomate"> 
                        <select>
                          <option value="1">1</option>
                          <option value="2">2</option>
@@ -296,21 +279,21 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Date of meeting </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="date" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Time of Meeting </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="time" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Best times to call </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="time_call" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Duration </label> </div>
-                    <div class="vip-fields"> 
+                    <div class="vip-fields" id="duration"> 
                        <select>
                          <option value="1hr">1hr</option>
                          <option value="2hrs">2hrs</option>
@@ -329,11 +312,11 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Any likes or Dislikes </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="dislike" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Dress Style </label> </div>
-                    <div class="vip-fields"> 
+                    <div class="vip-fields" id="dress_type"> 
                        <select>
                          <option value="short">short dress</option>
                          <option value="maxi">maxi dress</option>
@@ -346,7 +329,7 @@ if ( $images ) {
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Payment Method </label> </div>
-                    <div class="vip-fields"> 
+                    <div class="vip-fields" id="payment"> 
                        <select>
                          <option value="Cash Payment">Cash Payment</option>
                          <option value="Bank Card">Bank Card</option>
@@ -357,24 +340,32 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> How did you find us? <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="find_us" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> What is your desired message for your mate?  <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="message" placeholder="" value="" type="text" required> </div>
                    </li>
                    <li class="vip-form-box-field-textarea">
                     <div class="vip-label"> <label> (Any special requests you have of your girl example special wardrobe etc.)	 </label> </div>
                     <div class="vip-fields">
-                     <textarea placeholder="" rows="3" cols="20" required></textarea>
+                     <textarea id="spcl_request" placeholder="" rows="3" cols="20" required></textarea>
                     </div>
+                   </li>
+                   <li class="booking-box-checkbox">
+                     <span> 
+                       <label>
+                         <input name="wpuf_accept_toc" required="required" type="checkbox">
+                       </label> 
+                       </span> <p> Yes, I understand and agree to the Lavish Mate®. Terms of Service, including the Disclaimer and <a href="#">Privacy Policy. *</a> </p>
+
                    </li>
                   </div> 
                   
                   
                   <div class="booking-form-submit-btn">
-                   <input name="submit" value="Submit" type="submit">
+                   <input name="submit" value="Submit" type="submit" onClick="emailClicked()">
                   </div> 
                 </form>
                </div> 
@@ -904,7 +895,87 @@ if ( ! empty( $categories ) ) {
 				endwhile; // End of the loop.
 			?>
 
+<script type="text/javascript">
+function emailClicked() 
+{
+	var ajaxurl='<?php echo admin_url('admin-ajax.php'); ?>';
+	var first_name = $('#firstname').val();
+	var age = $('#age').val();
+	var nationality = $('#nationality').val();
+	var email = $('#email').val();
+	var conemail = $('#conemail').val();
+	var phn = $('#phn').val();
+	var mob_phn = $('#mob_phn').val();
+	var address = $('#address').val();
+	var city = $('#city').val();
+	var zip = $('#zip').val();
+	var hotel = $('#hotel').val();
+	var mate = $( "#mate option:selected" ).text();
+	var altmate = $( "#altmate option:selected" ).text();
+	var nomate = $( "#nomate option:selected" ).text();
+	var date = $( "#date").val();
+	var time = $( "#time").val();
+	var time_call = $( "#time_call").val();
+	var duration = $( "#duration option:selected").text();
+	var dislike = $( "#dislike").val();
+	var dress_type = $( "#dress_type option:selected").text();
+	var payment = $( "#payment option:selected").text();
+	var find_us = $("#find_us").val();
+	var message = $("#message").val();
+	
+	//~ alert(message);
+	var spcl_request = $( "#spcl_request" ).val();
+	
+	if(first_name !='' && age!='' && nationality !='' && email !='' && mob_phn !='' && address!='' && zip!='' && message!='')
+	{
+	
+	var data = {
+        action: 'get_booking',
+		dataType: 'json',
+		first_name: first_name,
+		age: age,
+		nationality: nationality,
+		
+		email:email,
+		conemail:conemail,
+		phn:phn,
+		
+		
+		mob_phn:mob_phn,
+		address:address,
+		city:city,
+		
+		zip:zip,
+		hotel:hotel,
+		mate:mate,
+		
+		altmate: altmate,
+		nomate: nomate,
+        date: date,
+		time:time,
+		time_call:time_call,
+		duration:duration,
+		
+		dislike:dislike,
+	    dress_type:dress_type,
+	    
+	    payment:payment,
+	    find_us:find_us,
+	    message:message,
+	    spcl_request:spcl_request
+    };
+	$.post(ajaxurl, data, function(response) { 
+		 window.location.href = "http://localhost/public_html/newwp/lavish/payment-vip/?pid="+response;
+     
+   });
+  }
+  else
+  {
+	  //~ alert("Please Fill the Form Successfully");
+  }
+}
 
+</script>
 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
 <?php
