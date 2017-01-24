@@ -1350,7 +1350,7 @@ ul.wpuf-form li:nth-child(2n) {
 	background:#696868 !important;
 }
 .casting-from-box {
-    padding: 0 45px 0 15px;
+    padding: 0 60px 0 30px;
 }
 .casting-from-box .head_shoot_ {
     display: block;
@@ -1812,8 +1812,9 @@ ul.wpuf-form .rear_view{
 	-ms-transition:all 0.4s ease-in-out 0s;
 	-o-transition:all 0.4s ease-in-out 0s;
 }
-.accordion .accordion-tab:hover{
-	background:#ad1457;
+.accordion .accordion-tab:hover {
+    background: #ad1457 none repeat scroll 0 0;
+    color: #fff;
 }
 .accordion-tab.active {
     background: #ad1457;
@@ -2480,6 +2481,10 @@ ul.wpuf-form .rear_view{
     line-height: 20px;
     width: 200px;
 }
+.payment-vip .payment-vip-form li input[type="submit"]:hover {
+    background: #696868 !important;
+	color:#fff
+}
 .model-booking-box-btn{
 	padding:40px 0;
 }
@@ -2648,6 +2653,7 @@ ul.wpuf-form .rear_view{
     border: 1px solid #5d5d5e !important;
     border-radius: 0 !important;
     height: 39px !important;
+	line-height:30px;
 }
 .booking-form-div .vip-label > label {
     color: #6d6361;
@@ -2681,6 +2687,160 @@ ul.wpuf-form .rear_view{
 .booking-form-submit-btn input:hover {
     background: #696868 none repeat scroll 0 0 !important;
     color: #fff;
+}
+
+/* **********************************************************
+************************** booking page
+********************************************************** */
+.booking-details-top{
+	padding-top:40px
+}
+.booking-details-content {
+    padding: 2% 7%;
+}
+.booking-about-div{
+	background: #eaeaea;
+    padding: 60px 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+.booking-about-div:after{
+	background:url("../images/decoration.png") repeat-x;
+	position:absolute;
+	content:"";
+	width:100%;
+	height:30px;
+	top:0;
+	left:0;
+}
+.booking-about-div:before{
+	background:url("../images/decoration-1.png") repeat-x;
+	position:absolute;
+	content:"";
+	width:100%;
+	height:30px;
+	bottom:-12px;
+	left:0;
+}
+.booking-details-content > p {
+    padding-top: 15px;
+}
+.booking-div{
+	background:#eae5e0 url("../images/booking-girl-bg.png") no-repeat center center;
+	padding:30px 0;
+}
+.booking-div .model-booking-description{
+	background:none;
+	padding:0;
+}
+.booking-login-details-div{
+	padding:90px 0;
+}
+.booking-login-details-box .accordion-panel .booking-login-form{
+	padding:5% 25% 0 25%;
+}
+.booking-login-details-box .login-box-field {
+    margin-bottom: 20px;
+}
+.booking-login-details-box .vip-label {
+    padding-bottom: 10px;
+	font-family: "Times New Roman",Times,serif;
+    font-size: 17px;
+    font-style: italic;
+	font-weight:500;
+}
+.booking-login-details-box .vip-fields > input {
+    border: 1px solid #5d5d5e !important;
+    border-radius: 2px;
+}
+.booking-login-details-box .login-box-submit-btn input{
+	background: #9c0b46 none repeat scroll 0 0 !important;
+    border: medium none !important;
+    border-radius: 5px;
+    float: right;
+    font-family: "Tw Cen MT";
+    font-size: 22px !important;
+    height: 40px;
+    line-height: 20px;
+    
+}
+.booking-login-details-box .login-box-submit-btn input:hover {
+    background: #696868 none repeat scroll 0 0 !important;
+    color: #fff;
+}
+.booking-login-details-box .vip-label span {
+    color: red;
+}
+.login-content-box{
+	text-align:center;
+}
+.login-content-box p{
+	padding:3% 7% 0 7%;
+}
+.lavish-free-guide-content{
+	padding:70px 0;
+	text-align:center;
+}
+.lavish-free-guide-details{
+	text-align:center;
+}
+.lavish-free-guide-content p{
+	padding-top:15px;
+}
+.lavish-free-guide-div{
+	position:relative;
+	padding-bottom:50px;
+}
+
+.lavish-free-guide-div:after{
+	background:url("../images/decoration.png") repeat-x;
+	position:absolute;
+	content:"";
+	width:100%;
+	height:30px;
+	top:0;
+	left:0;
+}
+.booking-copy-space-div{
+	text-align:center;
+	padding:50px 0;
+	position:relative;
+}
+.booking-copy-space-div:after{
+	background:url("../images/decoration.png") repeat-x;
+	position:absolute;
+	content:"";
+	width:100%;
+	height:30px;
+	top:0;
+	left:0;
+}
+.copy-text-accordion{
+	padding:60px 0;
+}
+.booking-box-checkbox > span label {
+    display: inline-block;
+    float: left;
+    height: 22px;
+    padding-top: 7px;
+    vertical-align: top;
+    width: 20px;
+}
+.booking-box-checkbox {
+    float: right;
+    width: 78%;
+}
+.booking-box-checkbox a {
+    background: none;
+    color: #9c0b46;
+    font-size: 12px;
+    padding: 0px;
+	text-transform:inherit;
+	font-family: "Times New Roman",Times,serif;
+}
+.booking-box-checkbox a:hover{
+	background: none;
 }
 
 
