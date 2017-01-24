@@ -253,7 +253,379 @@ $options[] = array( "name" => "Lavish Mate fees guide Description",
 					"desc" => "Here you can enter any content",
 					"id" => "webq_lavish_des",
 					"std" => "",
-					"type" => "webq_editor");															
+					"type" => "webq_editor");		
+					
+/***********************************Vip Page***************************************/
+
+$options[] = array( "name" => "General Settings For Vip Page",
+                    "type" => "heading");	
+                    
+                  $options[] = array( "name" => "Lounge Benefits Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_lounge_head",
+					"std" => "",
+					"type" => "webq_editor");  		
+					
+					
+					$options[] = array( "name" => "Lounge Benefits",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_lounge",
+					"std" => "",
+					"type" => "webq_editor");  	
+					
+					$options[] = array( "name" => "Benefits Vip Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_ben_head",
+					"std" => "",
+					"type" => "webq_editor");  	
+					
+						$options[] = array( "name" => "Benefits Vip",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_ben",
+					"std" => "",
+					"type" => "webq_editor");  	
+					
+					
+						$options[] = array( "name" => "Vip Luxury Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_lux_head",
+					"std" => "",
+					"type" => "webq_editor");  
+					
+					
+						$options[] = array( "name" => "Vip Luxury",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_lux",
+					"std" => "",
+					"type" => "webq_editor");  														
+	
+	                  /*Car*/
+	
+					$options[] = array( "name" => "Super Car Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_car_head",
+					"std" => "",
+					"type" => "webq_editor");  
+	
+	
+	                $options[] = array( "name" => "Super Car",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_car",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Yacht*/
+					$options[] = array( "name" => "Yacht Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_youth_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+						$options[] = array( "name" => "Yacht",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_youth",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Jet Off*/
+						$options[] = array( "name" => "Jet Off Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_jet_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Jet Off",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_jet",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Hotel*/
+					$options[] = array( "name" => "Hotel Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_hotel_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Hotel",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_hotel",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Safari*/
+					$options[] = array( "name" => "Safari Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_safari_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Safari",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_safari",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Candelelight*/
+					
+					$options[] = array( "name" => "Candelelight Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_candel_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Candelelight",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_candel",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					
+					/*Private*/
+					
+					$options[] = array( "name" => "Private Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_private_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Private",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_private",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+						
+					/*Post Pistes*/
+					
+					$options[] = array( "name" => "Post Pistes Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_post_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Post Pistes",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_post",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+						/*Tour*/
+					
+					$options[] = array( "name" => "Tour Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_tour_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Tour",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_tour",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Preferrd*/
+					
+					$options[] = array( "name" => "Preferrd Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_prf_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Preferrd",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_prf",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Sit Back*/
+					
+					$options[] = array( "name" => "Sit Back Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_sit_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Sit Back",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_sit",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					
+					/*Special*/
+					
+					$options[] = array( "name" => "Special Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_spcl_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Special",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_spcl",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Value & Convenience*/
+					$options[] = array( "name" => "Value & Convenience Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_values_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Value & Convenience",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_values",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Girl Friend*/
+					$options[] = array( "name" => "Girl Friend Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_gf_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Girl Friend",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_gf",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Booking*/
+					$options[] = array( "name" => "Booking Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_booking_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Booking",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_booking",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					
+					/*Agency*/
+					$options[] = array( "name" => "Agency Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_agn_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Agency",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_agn",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Excellence*/
+					$options[] = array( "name" => "Excellence Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_exc_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Excellence",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_exc",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					/*Complenning*/
+					$options[] = array( "name" => "Complenning Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_com_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Complenning",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_com",
+					"std" => "",
+					"type" => "webq_editor");
+					
+					/*Discretion*/
+					$options[] = array( "name" => "Discretion Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_dis_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Discretion",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_dis",
+					"std" => "",
+					"type" => "webq_editor");
+					
+					/*Luxury*/
+					$options[] = array( "name" => "Luxury Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_luxury_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Luxury",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_luxury",
+					"std" => "",
+					"type" => "webq_editor");
+					
+					/*Life*/
+					$options[] = array( "name" => "Life Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_life_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Life",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_life",
+					"std" => "",
+					"type" => "webq_editor");
+					
+					 /*Luxurious*/
+					 $options[] = array( "name" => "Luxurious Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_luxu_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Luxurious",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_luxu",
+					"std" => "",
+					"type" => "webq_editor");
+					
+					/*Internationally*/
+					
+					$options[] = array( "name" => "Internationally Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_inter_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Internationally",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_inter",
+					"std" => "",
+					"type" => "webq_editor");
+					
+					/* Beautiful Companion Dates*/
+					
+					$options[] = array( "name" => "Beautiful Companion Dates Heading",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_beatiful_head",
+					"std" => "",
+					"type" => "webq_editor"); 
+					
+					$options[] = array( "name" => "Beautiful Companion Dates",
+					"desc" => "Here you can enter any text",
+					"id" => "webq_vip_beatiful",
+					"std" => "",
+					"type" => "webq_editor");
+					
 	
 update_option('of_template',$options); 					  
 update_option('of_themename',$themename);   
