@@ -1604,6 +1604,7 @@ ul.wpuf-form li:nth-child(2n) {
     font-size: 12pt;
     font-style: italic;
     vertical-align: middle;
+	color: #6d6361;
 }
 .vip-form-box .vip-form-box-field .vip-label span{
 	color:red;
@@ -1615,6 +1616,16 @@ ul.wpuf-form li:nth-child(2n) {
 .vip-form-box .vip-form-box-field .vip-fields input{
 	border: 1px solid #5d5d5e !important;
     border-radius: 2px;
+}
+.vip-form-box .vip-form-box-field .vip-fields input:focus {
+    border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
+}
+.vip-form-box .vip-form-box-field .vip-fields textarea:focus {
+    border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
 }
 .vip-form-box .vip-form-box-left{
 	float:left;
@@ -1658,6 +1669,7 @@ ul.wpuf-form li:nth-child(2n) {
     font-style: italic;
     text-align: right;
 	padding-right: 22px;
+	color: #6d6361;
 }
 .vip-form-text-textarea .vip-form-box-field-textarea .vip-fields {
     float: right;
@@ -1668,6 +1680,11 @@ ul.wpuf-form li:nth-child(2n) {
 	padding-top:8px;
 	border: 1px solid #5d5d5e !important;
     border-radius: 2px;
+}
+.vip-form-text-textarea .vip-form-box-field-textarea .vip-fields textarea:focus {
+    border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
 }
 .footer-top {
     padding: 0 5%;
@@ -2249,6 +2266,7 @@ ul.wpuf-form .rear_view{
 .vip-payment-form-right {
     float: right;
     width: 45%;
+    padding-top: 100px;
 }
 .vip-payment-form-box .vip-label {
     float: left;
@@ -2259,6 +2277,12 @@ ul.wpuf-form .rear_view{
     padding-right: 22px;
     text-align: right;
     vertical-align: middle;
+	color: #6d6361;
+}
+.vip-payment-form-box input:focus {
+    border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
 }
 .vip-payment-form-box .vip-fields {
     float: right;
@@ -2283,6 +2307,7 @@ ul.wpuf-form .rear_view{
 }
 .vip-payment-form-left > h4 {
     padding: 35px 0;
+	color: #6d6361;
 }
 .vip-payment-form-right > h4 {
     padding: 35px 0;
@@ -2465,6 +2490,11 @@ ul.wpuf-form .rear_view{
 	border: 1px solid #5d5d5e !important;
     border-radius: 2px;
 }
+.payment-vip .payment-vip-form li input:focus {
+    border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
+}
 .payment-vip-form{
 	padding-top:20px;
 }
@@ -2633,6 +2663,11 @@ ul.wpuf-form .rear_view{
     border:1px solid #5d5d5e !important;
     border-radius: 2px;
 }
+.booking-form-div .vip-fields > input:focus {
+    border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
+}
 .model-booking-box-btn .accordion-pane-box {
     padding: 0 2%;
 }
@@ -2667,6 +2702,11 @@ ul.wpuf-form .rear_view{
     border-radius: 2px;
     min-height: 300px;
     padding-top: 10px;
+}
+.booking-form-div textarea:focus {
+    border-color: #5d5d5e;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(156, 11, 70, 0.6) !important;
+    outline: 0 none;
 }
 .booking-form-submit-btn {
     padding-top: 30px;
