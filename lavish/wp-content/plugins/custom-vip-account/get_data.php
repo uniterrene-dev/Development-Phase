@@ -108,16 +108,7 @@ function registration_form()
              <option name="evening" value="evening">evening </option>
            </select> 
         </div>
-
-         <div class="vip-fields"> 
-           <select name="total_plan" id="total_plans">
-             <option name="morning" value="morning">morning</option>
-             <option name="afternoon" value="afternoon">afternoon</option>
-             <option name="evening" value="evening">evening </option>
-           </select> 
-        </div>
-
-       </li>
+		</li>
        <li class="vip-form-box-field">
         <div class="vip-label"> <label> If wish not be contacted </label> </div>
         <div class="vip-fields">
