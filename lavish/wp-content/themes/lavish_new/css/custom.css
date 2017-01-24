@@ -377,13 +377,13 @@ header{
     text-align: center;
     z-index: 999;
 }
-.index-slide::before {
+.index-slide::after {
     background: rgba(0, 0, 0, 0) url("../images/decoration.png") repeat-x scroll 0 0;
+    bottom: -31px;
     content: "";
     height: 30px;
     left: 0;
     position: absolute;
-    top: 0;
     width: 100%;
 }
 .about-div{
