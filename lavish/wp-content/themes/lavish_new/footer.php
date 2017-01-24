@@ -125,7 +125,8 @@
  </div>
 </footer>
 
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery-1.11.0.js"></script> 
+<!--<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery-1.11.0.js"></script>-->
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/custom.js"></script> 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery_dropdown.js"></script>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/javascripts.js"></script>
