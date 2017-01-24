@@ -101,17 +101,81 @@ class WPUF_Frontend_Dashboard {
 
         if ( wpuf_get_option( 'show_user_bio', 'wpuf_dashboard', 'on' ) == 'on' ) {
             ?>
-            <div class="wpuf-author">
+            <div class="dashboard-get_option">
+             <div class="container">
+              <div class="wpuf-author">
                 <h3><?php _e( 'Author Info', 'wpuf' ); ?></h3>
                 <div class="wpuf-author-inside odd">
                     <div class="wpuf-user-image"><?php echo get_avatar( $userdata->user_email, 80 ); ?></div>
                     <div class="wpuf-author-body">
                         <p class="wpuf-user-name"><a href="<?php echo get_author_posts_url( $userdata->ID ); ?>"><?php printf( esc_attr__( '%s', 'wpuf' ), $userdata->display_name ); ?></a></p>
-                        <p class="wpuf-author-info"><?php echo $userdata->description; ?></p>
+                        <p class="wpuf-author-info">
+						  <?php //echo $userdata->description; ?>
+                          
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                     </div>
                 </div>
+                
+                <div class="dashboard-box">
+                  <table class="rwd-table">
+                      <tr class="odd">
+                        <th>Dress Style</th>
+                        <th>Location</th>
+                        <th>Hotel</th>
+                        <th>Date of meeting</th>
+                        <th>Time of Date</th>
+                        <th>Duration</th>
+                        <th>Duration</th>
+                        <th>Client Message</th>
+                      </tr>
+                      <tr class="even">
+                        <td data-th="Dress Style">Sporty Chic</td>
+                        <td data-th="Location">Hotel Visit</td>
+                        <td data-th="Hotel"></td>
+                        <td data-th="Date of meeting">2017-1-24</td>
+                        <td data-th="Time of Date">3</td>
+                        <td data-th="Duration">1 Hours</td>
+                        <td data-th="Duration">Name:Test name</br> Age: 28</td>
+                        <td data-th="Client Message"></td>
+                      </tr>
+                      <tr class="odd">
+                        <td data-th="Dress Style">Sporty Chic</td>
+                        <td data-th="Location">Hotel Visit</td>
+                        <td data-th="Hotel"></td>
+                        <td data-th="Date of meeting">2017-1-24</td>
+                        <td data-th="Time of Date">3</td>
+                        <td data-th="Duration">1 Hours</td>
+                        <td data-th="Duration">Name:Test name</br> Age: 28</td>
+                        <td data-th="Client Message"></td>
+                      </tr>
+                      <tr class="even">
+                        <td data-th="Dress Style">Sporty Chic</td>
+                        <td data-th="Location">Hotel Visit</td>
+                        <td data-th="Hotel"></td>
+                        <td data-th="Date of meeting">2017-1-24</td>
+                        <td data-th="Time of Date">3</td>
+                        <td data-th="Duration">1 Hours</td>
+                        <td data-th="Duration">Name:Test name</br> Age: 28</td>
+                        <td data-th="Client Message"></td>
+                      </tr>
+                      <tr class="odd">
+                        <td data-th="Dress Style">Sporty Chic</td>
+                        <td data-th="Location">Hotel Visit</td>
+                        <td data-th="Hotel"></td>
+                        <td data-th="Date of meeting">2017-1-24</td>
+                        <td data-th="Time of Date">3</td>
+                        <td data-th="Duration">1 Hours</td>
+                        <td data-th="Duration">Name:Test name</br> Age: 28</td>
+                        <td data-th="Client Message"></td>
+                      </tr>
+                 </table>
+                </div>
+                
+                
+                </div>
+             </div>   
             </div><!-- .author -->
-<div class="clear"></div>
+
             <?php
         }
     }
