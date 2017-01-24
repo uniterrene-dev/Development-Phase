@@ -180,13 +180,13 @@ function registration_form()
 						<li>
 							<label><input type="checkbox" value="Angelina" />Angelina</label>
 						<li>
-							<label><input type="checkbox" value="HTC" />Angelina</label>
+							<label><input type="checkbox" value="Angelina" />Angelina</label>
 						<li>
 							<label><input type="checkbox" value="Yvonno" />Yvonno</label>
 						<li>
-							<label><input type="checkbox" value="Motorola" />Angelina</label>
+							<label><input type="checkbox" value="Angelina" />Angelina</label>
 						<li>
-						   <label> <input type="checkbox" value="Nokia" />Angelina</label>
+						   <label> <input type="checkbox" value="Angelina" />Angelina</label>
 					</ul>
 				</div>
 			</dd>
@@ -436,7 +436,7 @@ foreach ( $application_new as $application_new ) {
     <div class="vip-payment-form">
 	 <div class="container">
 	  <div class="vip-payment-form-box clearfix">
-        <h2>Step One: Collect non-sensitive payment information.</h2>
+        <h3>Step One: Collect non-sensitive payment information.</h3>
 		<h3> Customer Information</h3>
 		<form action="" method="post">
           <ul>
@@ -469,7 +469,7 @@ foreach ( $application_new as $application_new ) {
 			    <div class="vip-label">
 				  <label>
 				    Address
-				   <span class="required">*</span>
+				   
 				  </label>
 			    </div> 
 				<div class="vip-fields"> 
@@ -509,6 +509,10 @@ foreach ( $application_new as $application_new ) {
 				 <input type="text" name="billing-address-state" value="'.$city.'">
 				</div> 
 			  </li>
+			  
+			</div> 
+			<div class="vip-payment-form-right">
+			 
 			  <li>
 			    <div class="vip-label">
 				  <label>
@@ -563,11 +567,7 @@ foreach ( $application_new as $application_new ) {
 				<div class="vip-fields">  
 				 <input type="text" name="billing-address-email" value="'.$email.'">
 				</div> 
-			</li>
-			</div> 
-			<div class="vip-payment-form-right">
-			 
-			       
+			  </li>    
 			  <li>
 			    <div class="vip-label">
 				  <label>
@@ -760,7 +760,7 @@ foreach ( $application_new as $application_new ) {
 	  <div class="payment-vip">
 	   <div class="container">
 	    <div class="payment-vip-box">
-        <h2>Step Two: Collect sensitive payment information and POST directly to payment gateway<br /></h2>
+        <h3>Step Two: Collect sensitive payment information and POST directly to payment gateway<br /></h3>
 
          <div class="payment-vip-form">
           <form action="'.$formURL. '" method="POST">
