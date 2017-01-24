@@ -79,14 +79,14 @@ class WPUF_Frontend_Dashboard {
         $dashboard_query = new WP_Query( apply_filters( 'wpuf_dashboard_query', $args ) );
         $post_type_obj = get_post_type_object( $post_type );
 
-        wpuf_load_template( 'dashboard.php', array(
-            'post_type' => $post_type,
-            'userdata' => wp_get_current_user(),
-            'dashboard_query' => $dashboard_query,
-            'post_type_obj' => $post_type_obj,
-            'post' => $post,
-            'pagenum' => $pagenum
-        ) );
+        //~ wpuf_load_template( 'dashboard.php', array(
+            //~ 'post_type' => $post_type,
+            //~ 'userdata' => wp_get_current_user(),
+            //~ 'dashboard_query' => $dashboard_query,
+            //~ 'post_type_obj' => $post_type_obj,
+            //~ 'post' => $post,
+            //~ 'pagenum' => $pagenum
+        //~ ) );
 
         wp_reset_postdata();
 
