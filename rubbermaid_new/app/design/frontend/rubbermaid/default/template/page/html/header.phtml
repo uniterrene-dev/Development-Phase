@@ -117,13 +117,18 @@ if (count($_categories) > 0){
         $_category = Mage::getModel('catalog/category')->load($_category->getId());
         $_subcategories = $_category->getChildrenCategories();
         if (count($_subcategories) > 0){
-            //~ echo $_category->getName();
+             //print_r($_category->getImageUrl());
           ?>
           <li class=""><a href="#"><?php echo $_category->getName();?> <i class="fa fa-angle-down" aria-hidden="true"></i></a><ul class="sub_menu">
           <?php  
-            foreach($_subcategories as $_subcategory){?>
+            foreach($_subcategories as $_subcategory){
+				
+				//$op = $_subcategory->getData(); 
+				  //print_r($_subcategory->getEntityID());
+				$subcat = Mage::getModel('catalog/category')->load($_subcategory->getEntityID());
+				?>
                  
-                  <li><a href="#"><span><img src="images/submenu_icon1.png"/></span><?php echo $_subcategory->getName();?></a></li>
+                  <li><a href="#"><span><img src="<?php echo $subcat->getThumbnailImageUrl(); ?>"/></span><?php echo $_subcategory->getName();?></a></li>
                   
                 
            <?php }?>
