@@ -110,25 +110,22 @@
             <ul>
               
               <?php 
+              $url = Mage::getBaseUrl();
 $_helper = Mage::helper('catalog/category');
 $_categories = $_helper->getStoreCategories();
 if (count($_categories) > 0){
     foreach($_categories as $_category){
         $_category = Mage::getModel('catalog/category')->load($_category->getId());
+        print_r($_category->getBannerImageUrl());
         $_subcategories = $_category->getChildrenCategories();
         if (count($_subcategories) > 0){
-             //print_r($_category->getImageUrl());
+             //print_r($_category->getThumbnailImageUrl());
           ?>
-          <li class=""><a href="#"><?php echo $_category->getName();?> <i class="fa fa-angle-down" aria-hidden="true"></i></a><ul class="sub_menu">
+          <li class=""><a href="<?php echo $url.$_category->getUrlPath()?>"><?php echo $_category->getName();?> <i class="fa fa-angle-down" aria-hidden="true"></i></a><ul class="sub_menu">
           <?php  
-            foreach($_subcategories as $_subcategory){
-				
-				//$op = $_subcategory->getData(); 
-				  //print_r($_subcategory->getEntityID());
-				$subcat = Mage::getModel('catalog/category')->load($_subcategory->getEntityID());
-				?>
+            foreach($_subcategories as $_subcategory){?>
                  
-                  <li><a href="#"><span><img src="<?php echo $subcat->getThumbnailImageUrl(); ?>"/></span><?php echo $_subcategory->getName();?></a></li>
+                  <li><a href="<?php echo $url.$_subcategory->getRequestPath();?>"><span><img src="images/submenu_icon1.png"/></span><?php echo $_subcategory->getName();?></a></li>
                   
                 
            <?php }?>
