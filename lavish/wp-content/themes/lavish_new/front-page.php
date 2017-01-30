@@ -238,7 +238,7 @@ foreach($recent_posts as $recent_posts)
 
 			global $dynamic_featured_image;
 
-			$featured_images = $dynamic_featured_image->get_featured_images($recent_posts['ID'] );
+	$featured_images = $dynamic_featured_image->get_featured_images($recent_posts['ID'] );
 
 			//print_r($featured_images);
 
