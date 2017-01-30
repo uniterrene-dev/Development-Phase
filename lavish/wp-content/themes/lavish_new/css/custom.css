@@ -1671,6 +1671,8 @@ ul.wpuf-form li:nth-child(2n) {
     text-align: right;
 }
 .vip-form-box .vip-form-box-field .vip-fields select {
+	appearance: none;
+	-webkit-appearance: none;
     -moz-appearance: none;
     background: url("../images/select-dowan-arows.png") no-repeat scroll right center;
     border: 1px solid #5d5d5e !important;
@@ -2121,7 +2123,7 @@ ul.wpuf-form .rear_view{
 .back-to-ladies-btn a:hover {
     background:#6d6361;
 }
-.vip-footer .footer-div:after{
+.vip-page-footer .footer-div:after{
 	background:none;
 }
 
@@ -2419,7 +2421,7 @@ ul.wpuf-form .rear_view{
     font-size: 48px;
 }
 .gallery-nav .btn-next, .gallery-nav .btn-prev {
-    top: 215px !important;
+    top: 230px !important;
 }
 .gallery-container{
 	background:#fff;
@@ -2749,6 +2751,7 @@ ul.wpuf-form .rear_view{
     color: #fff;
 }
 
+
 /* **********************************************************
 ************************** booking page
 ********************************************************** */
@@ -2889,7 +2892,7 @@ ul.wpuf-form .rear_view{
 }
 .booking-box-checkbox {
     float: right;
-    width: 78%;
+    width: 95%;
 }
 .booking-box-checkbox a {
     background: none;
@@ -3182,4 +3185,164 @@ h1 {
 }
 .dashboard-get_option .odd {
     background: #f6f6f6 none repeat scroll 0 0;
+}
+.dashboard-btn{
+	text-align:right;
+}
+.dashboard-btn a{
+	padding:8px 20px;
+	background: #9c0b46;
+    color: #fff;
+	border-radius:7px;
+	font-size:14px;
+}
+.dashboard-btn a:hover{
+	background: #696868;
+}
+
+.vip-model-feedback .feedback-box {
+    background: #9c0b46;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 4px;
+    width: 47%;
+	border-radius:7px;
+	margin-top:30px;
+	color:#fff;
+}
+.vip-model-feedback .feedback-box h3{
+	color:#fff;
+}
+.vip-model-feedback .feedback-box:hover{
+	background: #696868;
+}
+
+.vip-model-feedback .feedback-box-div {
+  display: none;
+}
+.feedback-box-div{
+	padding-top:15px;
+}
+.feedback-box-div h3{
+	padding-bottom:25px;
+}
+.feedback-box-div .feadback-box-left {
+    float: left;
+    width: 45%;
+}
+.feedback-box-div .feadback-box-right {
+    float: right;
+    width: 45%;
+}
+.feedback-box-div .feadback-box-field {
+    margin-bottom: 15px;
+}
+.feedback-box-div .vip-label {
+    float: left;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.feedback-box-div .vip-label > label{
+	font-family: times new roman;
+    font-style: italic;
+    text-align: right;
+}
+.feedback-box-div .vip-fields > input {
+    border: 1px solid #5d5d5e !important;
+    border-radius: 2px;
+}
+.feedback-box-div .vip-fields > textarea {
+    border: 1px solid #5d5d5e !important;
+    border-radius: 2px;
+	min-height:300px;
+	padding:8px 0 0 0;
+	margin-bottom:20px;
+}
+.vip-model-about-video .index-slide {
+    border-bottom: none;
+}
+.vip-model-about-video .index-slide:after{
+	background:none;
+}
+
+.feedback-box-div .vip-fields > select {
+    -moz-appearance: none;
+	appearance: none;
+	-webkit-appearance: none;
+    background: #eae5e0 url("../images/select-dowan-arows.png") no-repeat scroll right center;
+    border: 1px solid #5d5d5e !important;
+}
+
+/* ************************************************************************
+************************* members dashboard
+************************************************************************* */
+
+.members-dashboard-div{
+	padding:70px 0;
+	background:#f3e6e0;
+}
+.members-dashboard-heading-tag{
+	background:#ad1457;
+}
+.members-dashboard-heading-tag ul li{
+	display:inline-block;
+}
+.members-dashboard-heading-tag ul li {
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 66px;
+    text-align: center;
+    width: 33%;
+	font-family: "Tw Cen MT";
+}
+.members-dashboard-box{
+	padding-top:80px;
+}
+.payment-method-box {
+    background: #eae5e1 none repeat scroll 0 0;
+    line-height: 40px;
+    padding: 30px;
+    text-align: center;
+}
+.payment-method-box > a {
+    background: #929292 none repeat scroll 0 0;
+    border-radius: 7px;
+    color: #fff;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 15px;
+    padding: 0 27px;
+	font-family: "Tw Cen MT";
+}
+.billing-payment-box{
+	background:#ad1457;
+	margin:20px 0;
+	text-align:center;
+	border-radius: 7px;
+}
+.billing-payment-box h3 {
+    color: #fff;
+    line-height: 50px;
+}
+.payment-info-box table{
+	width:100%;
+}
+
+
+.payment-info-box .payment-info-top li {
+    display: inline-block;
+    font-family: "Tw Cen MT";
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 15px;
+    text-align: center;
+    width: 33%;
+	color:#8a8888;
+}
+.payment-info-box .payment-info-top{
+	border-bottom:1px #ddd solid;
+	padding-bottom:7px;
 }
