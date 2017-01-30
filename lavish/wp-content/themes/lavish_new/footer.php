@@ -132,14 +132,18 @@
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/javascripts.js"></script>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery.easing.js" ></script>
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery.bxslider.min.js" ></script>
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/vertical-tab.js" ></script>
 
-<!--<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>-->
 <script>
-	var l = $('#gupi_ul > li').length;
-	var li_width = $('#gupi_ul > li').outerWidth(true);
-	var total_width = li_width*l;
-	var tw = total_width+(10*l);	
-	$('#gupi_ul').css({'width': tw+'px'});
+$('.feedback-box').on('click', function() {
+	$parent_box = $(this).closest('.vip-model-feedback');
+	$parent_box.siblings().find('.feedback-box-div').slideUp();
+	$parent_box.find('.feedback-box-div').slideToggle(800, 'swing');
+});
+
+//$('.flexslider ul li').bxSlider({
+  // slideWidth: 150
+//});
 </script>
 <?php wp_footer(); ?>
 </body>
