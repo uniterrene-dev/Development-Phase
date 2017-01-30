@@ -46,7 +46,7 @@ get_header('model');
          Weight
        </div>
        <div class="modelprofile-details-des">
-          <?php echo get_post_meta( $post->ID, 'weight_', true ); ?>
+          <?php echo get_post_meta( $post->ID, 'weight', true ); ?>
        </div>
       </li>
       <li>
@@ -100,10 +100,10 @@ get_header('model');
 		<div class="row">
 			<div class="gallery-arrow-div">
 				<div class="btn-prev arrow arrow-lg">
-					<span class="icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+					<!--<span class="icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>-->
 				</div>
 				<div class="btn-next arrow arrow-lg">
-					<span class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+					<!--<span class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>-->
 				</div>
 			</div>
 		</div>
@@ -114,7 +114,20 @@ get_header('model');
 								<ul id="gupi_ul" >
 									
 									<?php
-$images = get_post_meta( $post->ID, 'all_images_slider_images' );
+									
+$login=0;
+		if ( is_user_logged_in() ) 
+		{
+			
+			$images = get_post_meta( $post->ID, 'all_images_slider_images_full_body' );
+		} 
+		else 
+		{
+			$images = get_post_meta( $post->ID, 'all_images_slider_images' );
+		}									
+									
+									
+
 
 if ( $images ) {
 	$j=0;
@@ -144,7 +157,7 @@ if ( $images ) {
    <div class="model-descrip-box clearfix">
      <div class="model-descrip-left">
        <h3> My Location </h3>
-       <p>  <?php echo get_post_meta( $post->ID, 'address_', true ); ?> </p>
+       <p>  <?php echo get_post_meta( $post->ID, 'address', true ); ?> </p>
      </div>
      <div class="model-descrip-right">
        <h3> Travel Expenses </h3>
@@ -199,12 +212,12 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Conform E-mail </label> </div>
-                    <div class="vip-fields"> <input id="conemail" placeholder="" value="" type="email" required> </div>
+                    <div class="vip-fields"> <input id="conemail" placeholder="" value="" type="email"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Your phone number </label> </div>
-                    <div class="vip-fields"> <input id="phn" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="phn" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
@@ -219,7 +232,7 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> City </label> </div>
-                    <div class="vip-fields"> <input id="city" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="city" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
@@ -229,7 +242,7 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Hotel/room </label> </div>
-                    <div class="vip-fields"> <input id="hotel" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="hotel" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Desired Mate </label> </div>
@@ -280,17 +293,17 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Date of meeting </label> </div>
-                    <div class="vip-fields"> <input id="date" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="date" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Time of Meeting </label> </div>
-                    <div class="vip-fields"> <input id="time" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="time" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Best times to call </label> </div>
-                    <div class="vip-fields"> <input id="time_call" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="time_call" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Duration </label> </div>
@@ -313,7 +326,7 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Any likes or Dislikes </label> </div>
-                    <div class="vip-fields"> <input id="dislike" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="dislike" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Dress Style </label> </div>
@@ -351,7 +364,7 @@ if ( $images ) {
                    <li class="vip-form-box-field-textarea">
                     <div class="vip-label"> <label> (Any special requests you have of your girl example special wardrobe etc.)	 </label> </div>
                     <div class="vip-fields">
-                     <textarea id="spcl_request" placeholder="" rows="3" cols="20" required></textarea>
+                     <textarea id="spcl_request" placeholder="" rows="3" cols="20"></textarea>
                     </div>
                    </li>
                    <li class="booking-box-checkbox">
@@ -422,8 +435,76 @@ if ( $images ) {
         <div class="vip-model-feedback">
           <h3> Feedback </h3>
           <h4> Peter 07.2017 </h4>
-          <p> Helen is one of the most charming escort models that I have met in recent years. From our dinner date to the sensualmoments in intimate togetherness I never had the impression I booked an escort. I will definitely see Helen again. Thank you Scarlett for your recommendation! </p>
-        </div>  
+          <p> Helen is one of the most charming escort models that I have met in recent years. From our dinner date to the sensualmoments in intimate togetherness I never had the impression I booked an escort. I will definitely see Helen again. Thank you Scarlett for your recommendation!  </p>
+          <div class="feedback-box">
+           <h3> Write Feedback </h3>
+           
+          </div>
+          <div class="feedback-box-div">
+            <h3> We look forward to your feedback! </h3>
+           <div class="feadback-form-div">
+             <form action="" method="post">
+                  <div class="feadback-box-left clearfix">
+                   <li class="feadback-box-field">
+                    <div class="vip-label">
+                     <label> Your name or nickname: </label> </div>
+                    <div class="vip-fields"> <input id="firstname" placeholder="" value="" type="text"> </div>
+                   </li>
+                   <li class="feadback-box-field">
+                    <div class="vip-label">
+                     <label> Your email address: </label> </div>
+                    <div class="vip-fields"> <input id="age" placeholder="" value="" type="text"> </div>
+                   </li>
+                   <li class="feadback-box-field">
+                    <div class="vip-label">
+                     <label> Name of the escort lady: </label> </div>
+                    <div class="vip-fields"> <input id="nationality" placeholder="" value="" type="text"> </div>
+                   </li>
+                   <li class="feadback-box-field">
+                    <div class="vip-label">
+                     <label> Place and date: </label> </div>
+                    <div class="vip-fields"> <input id="email" placeholder="" value="" type="text" required> </div>
+                   </li>
+                   <li class="feadback-box-field">
+                    <div class="vip-label">
+                     <label> Enter Captcha-Code: </label> </div>
+                    <div class="vip-fields"> <input id="conemail" placeholder="" value="" type="text"> </div>
+                   </li>
+                 
+
+                  </div> 
+                  <div class="feadback-box-right clearfix">
+                               
+                   <li class="vip-form-box-field-textarea">
+                    <div class="vip-label"> <label> Feedback: </label> </div>
+                    <div class="vip-fields">
+                     <textarea id="spcl_request" placeholder="" rows="3" cols="20"></textarea>
+                    </div>
+                   </li>
+                   
+                   <li class="feadback-box-field">
+                    <div class="vip-label"> <label> May we release your feedback to the public? </label> </div>
+                    <div class="vip-fields"> 
+                       <select>
+                         <option value="1hr">Yes</option>
+                         <option value="2hrs">No</option>
+                         <option value="3hrs" selected="selected">Please Choose</option>
+                       </select> 
+                    </div>
+                   </li>
+                   
+                  </div> 
+                  
+                  
+                  <div class="booking-form-submit-btn clearfix">
+                   <input name="submit" value="Submit" type="submit">
+                  </div> 
+                </form>
+           </div> 
+          </div>
+         
+          
+        </div>
           
     </div>
     <div class="model-fact-div">
@@ -589,10 +670,11 @@ if ( ! empty( $categories ) ) {
                             Kiara                            </a>
                             <div class="lady_age">Age: Mid 20´s </div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Dusseldorf, Cologne, Bonn</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Dusseldorf, Cologne, Bonn</div>
                         </div>
                   
                     </li>
@@ -608,10 +690,11 @@ if ( ! empty( $categories ) ) {
                             Mia                            </a>
                             <div class="lady_age">Age: Mid 20s </div>
                             <div class="trips">Europe</div>
+                            
+                            <div>Cannes, St. Tropez, Monaco, Geneva</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Cannes, St. Tropez, Monaco, Geneva</div>
                         </div>
                     </li>
                      <li id="got_overlay">
@@ -626,10 +709,11 @@ if ( ! empty( $categories ) ) {
                             Aaliyah                            </a>
                             <div class="lady_age">Age: Mid 30s </div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Paris, Brussels, Geneva, London, Frankfurt</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Paris, Brussels, Geneva, London, Frankfurt</div>
                         </div>
                     </li>
                        <li id="got_overlay">
@@ -644,10 +728,11 @@ if ( ! empty( $categories ) ) {
                             Victoria                            </a>
                             <div class="lady_age">Age: Mid 20´s</div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Stuttgart, Munich, Frankfurt, Zurich</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Stuttgart, Munich, Frankfurt, Zurich</div>
                         </div>
                     </li>
                        <li id="got_overlay">
@@ -662,10 +747,11 @@ if ( ! empty( $categories ) ) {
                             Stella                            </a>
                             <div class="lady_age">Age: Late 20´s</div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Hanover, Berlin, Hamburg, Frankfurt</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Hanover, Berlin, Hamburg, Frankfurt</div>
                         </div>
                     </li>
                        <li id="got_overlay">
@@ -680,10 +766,11 @@ if ( ! empty( $categories ) ) {
                             Claudia                            </a>
                             <div class="lady_age">Age: Early 30s </div>
                             <div class="trips">Europe</div>
+                            
+                            <div>Innsbruck, Salzburg, Vienna, Stuttgart</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Innsbruck, Salzburg, Vienna, Stuttgart</div>
                         </div>
                     </li>
                       <li id="got_overlay">
@@ -698,10 +785,11 @@ if ( ! empty( $categories ) ) {
                             Anna                            </a>
                             <div class="lady_age">Age: Mid 20s </div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Hanover, Hamburg, Berlin, Marbella</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Hanover, Hamburg, Berlin, Marbella</div>
                         </div>
                     </li>
                       <li id="got_overlay">
@@ -716,10 +804,11 @@ if ( ! empty( $categories ) ) {
                             Evelyn                            </a>
                             <div class="lady_age">Age: Early 20</div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Berlin, Hamburg, Hanover, Leipzig</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Berlin, Hamburg, Hanover, Leipzig</div>
                         </div>
                     </li>
                        <li id="got_overlay">
@@ -734,10 +823,11 @@ if ( ! empty( $categories ) ) {
                             Julia                            </a>
                             <div class="lady_age">Age: Late 20´s </div>
                             <div class="trips">Europe</div>
+                            
+                            <div>Munich, Nuremberg, Stuttgart, Salzburg</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Munich, Nuremberg, Stuttgart, Salzburg</div>
                         </div>
                     </li>
                        <li id="got_overlay">
@@ -752,10 +842,11 @@ if ( ! empty( $categories ) ) {
                             Amelie                            </a>
                             <div class="lady_age">Age: Early 20s</div>
                             <div class="trips">Europe</div>
+                            
+                            <div>Dusseldorf, Cologne, Bonn, Frankfurt</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Dusseldorf, Cologne, Bonn, Frankfurt</div>
                         </div>
                     </li>
                         <li id="got_overlay">
@@ -770,10 +861,11 @@ if ( ! empty( $categories ) ) {
                             Carolina                            </a>
                             <div class="lady_age">Age: Early 20</div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Vienna, Salzburg, Graz, Munich</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Vienna, Salzburg, Graz, Munich</div>
                         </div>
                     </li>
                       <li id="got_overlay">
@@ -788,10 +880,11 @@ if ( ! empty( $categories ) ) {
                             Jasmin                            </a>
                             <div class="lady_age">Age: Mid 20´s</div>
                             <div class="trips">Europe</div>
+                            
+                            <div>Nuremberg, Munich, Mainz, Frankfurt</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Nuremberg, Munich, Mainz, Frankfurt</div>
                         </div>
                     </li>
                         <li id="got_overlay">
@@ -806,10 +899,11 @@ if ( ! empty( $categories ) ) {
                             Emily                            </a>
                             <div class="lady_age">Age: Mid 20´s </div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Mannheim, Frankfurt, Stuttgart</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Mannheim, Frankfurt, Stuttgart</div>
                         </div>
                     </li>
                          <li id="got_overlay">
@@ -824,10 +918,11 @@ if ( ! empty( $categories ) ) {
                             Sophie                            </a>
                             <div class="lady_age">Age: Mid 20´s </div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Zurich, Basel, Bern, Geneva</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Zurich, Basel, Bern, Geneva</div>
                         </div>
                     </li>
                       <li id="got_overlay">
@@ -843,10 +938,11 @@ if ( ! empty( $categories ) ) {
                             Alice                            </a>
                             <div class="lady_age">Age: Early 20s </div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Stuttgart, Karlsruhe, Frankfurt</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Stuttgart, Karlsruhe, Frankfurt</div>
                         </div>
                     </li>
                          <li id="got_overlay">
@@ -861,10 +957,11 @@ if ( ! empty( $categories ) ) {
                             Isabelle                            </a>
                             <div class="lady_age">Age: 30</div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Cologne, Dusseldorf, Frankfurt</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Cologne, Dusseldorf, Frankfurt</div>
                         </div>
                     </li>
                       <li id="got_overlay" class="bx-clone">
@@ -879,10 +976,11 @@ if ( ! empty( $categories ) ) {
                             Lina                            </a>
                             <div class="lady_age">Age: Mid 20s </div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Mannheim, Karlsruhe, Frankfurt, Stuttgart</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Mannheim, Karlsruhe, Frankfurt, Stuttgart</div>
                         </div>
                     </li><li id="got_overlay" class="bx-clone">
                         <a href="#">
@@ -896,10 +994,11 @@ if ( ! empty( $categories ) ) {
                             Laura                            </a>
                             <div class="lady_age">Age: Mid 20´s</div>
                             <div class="trips">Europe</div>
+                            
+                            <div>Dresden, Leipzig, Berlin</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Dresden, Leipzig, Berlin</div>
                         </div>
                     </li>
                        <li id="got_overlay" class="bx-clone">
@@ -915,10 +1014,11 @@ if ( ! empty( $categories ) ) {
                             Alina                            </a>
                             <div class="lady_age">Age: Early 30´s </div>
                             <div class="trips">Worldwide</div>
+                            
+                            <div>Zurich, Basel, Bern, Geneva</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Zurich, Basel, Bern, Geneva</div>
                         </div>
                     </li>
                      <li id="got_overlay" class="bx-clone">
@@ -933,10 +1033,11 @@ if ( ! empty( $categories ) ) {
                             Sasha                            </a>
                             <div class="lady_age">Age: 20</div>
                             <div class="trips">Worldwide</div>
+            
+                            <div>Nuremberg, Frankfurt, Munich, Wiesbaden</div>
                             <a class="button" href="#">
                                 More
                             </a>
-                            <div>Nuremberg, Frankfurt, Munich, Wiesbaden</div>
                         </div>
                        </li>
                      </ul>
@@ -1041,8 +1142,18 @@ function emailClicked()
 </script>
 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
-<!--<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery_003.js" ></script>
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/jquery_005.js" ></script>-->
+
+<script>
+	var l = $('#gupi_ul > li').length;
+	var li_width = $('#gupi_ul > li').outerWidth(true);
+	var total_width = li_width*l;
+	var tw = total_width+(10*l);	
+	$('#gupi_ul').css({'width': tw+'px'});
+</script>
+
+
+<!--<script type="text/javascript" src="<?php //echo esc_url( get_template_directory_uri() )?>/js/jquery_003.js" ></script>
+<script type="text/javascript" src="<?php //echo esc_url( get_template_directory_uri() )?>/js/jquery_005.js" ></script>-->
 <?php
 get_footer();
 ?>
