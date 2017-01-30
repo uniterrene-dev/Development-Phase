@@ -1,41 +1,36 @@
-$('.vertical-tab .vertical-panel').click(function(event) {
-  event.preventDefault();
-  $(this).addClass('active');
-  $(this).siblings().removeClass('active');
+$(".tab_content").hide();
+    $(".tab_content:first").show();
 
-  var ph = $(this).parent().height();
-  var ch = $(this).next().height();
+  /* if in tab mode */
+    $("ul.tabs li").click(function() {
+		
+      $(".tab_content").hide();
+      var activeTab = $(this).attr("rel"); 
+      $("#"+activeTab).fadeIn();		
+		
+      $("ul.tabs li").removeClass("active");
+      $(this).addClass("active");
 
-  if (ch > ph) {
-    $(this).parent().css({
-      'min-height': ch + 'px'
+	  $(".tab_drawer_heading").removeClass("d_active");
+	  $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+	  
     });
-  } else {
-    $(this).parent().css({
-      'height': 'auto'
+	/* if in drawer mode */
+	$(".tab_drawer_heading").click(function() {
+      
+      $(".tab_content").hide();
+      var d_activeTab = $(this).attr("rel"); 
+      $("#"+d_activeTab).fadeIn();
+	  
+	  $(".tab_drawer_heading").removeClass("d_active");
+      $(this).addClass("d_active");
+	  
+	  $("ul.tabs li").removeClass("active");
+	  $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
     });
-  }
-});
-
-function tabParentHeight() {
-  var ph = $('.vertical-tab').height();
-  var ch = $('.vertical-tab ul').height();
-  if (ch > ph) {
-    $('div').css({
-      'height': ch + 'px'
-    });
-  } else {
-    $(this).parent().css({
-      'height': 'auto'
-    });
-  }
-}
-
-$(window).resize(function() {
-  tabParentHeight();
-});
-
-$(document).resize(function() {
-  tabParentHeight();
-});
-tabParentHeight();
+	
+	
+	/* Extra class "tab_last" 
+	   to add border to right side
+	   of last tab */
+	$('ul.tabs li').last().addClass("tab_last");
