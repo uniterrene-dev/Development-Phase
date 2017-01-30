@@ -26,6 +26,19 @@ get_header();
 </section>
 <!--Mate of the year and mate of the month section-->
 <section id="home-model" class="home-model-div">
+	<?php
+		$login=0;
+		if ( is_user_logged_in() ) 
+		{
+			$login =1;
+		} 
+		else 
+		{
+
+		}
+	
+	?>
+	
  <div class="container">
 	 <div class="home-model-box clearfix">
 	 <?php
@@ -41,11 +54,43 @@ if ( have_posts() ) :
     $id = get_the_ID();
     $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' ); 
     
-     ?>
-        
+    
+    
+        if( class_exists('Dynamic_Featured_Image') ) 
+		{
+
+			global $dynamic_featured_image;
+
+			$featured_images = $dynamic_featured_image->get_featured_images( );
+
+			//print_r($featured_images);
+
+			foreach($featured_images as $featured_image) 
+			{
+
+				$fullSizedImage = $dynamic_featured_image->get_image_url($featured_image['attachment_id'], 'full');
+
+			 
+			}  
+		 
+		 } 
+		 
+		 if($login==1)
+		 {
+			 $image_final = $fullSizedImage;
+		 }
+		 else
+		 {
+			 $image_final = $image[0];
+		 }
+		 
+		 
+		 ?>
     <div class="home-model-box-left model-box">
       <div class="home-model-box-img">
-       <a href="<?php echo get_permalink();?>"><img src="<?php echo $image[0];?>" /></a>
+       <a href="<?php echo get_permalink();?>">
+			<img src="<?php echo $image_final;?>" />
+       </a>
       </div>
       <div class="home-model-box-content">
        <div class="home-model-box-content-top">
@@ -89,13 +134,40 @@ if ( have_posts() ) :
     while (have_posts()) : the_post();
     
     $id = get_the_ID();
-    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' ); 
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' );
+    
+     if( class_exists('Dynamic_Featured_Image') ) 
+		{
+
+			global $dynamic_featured_image;
+
+			$featured_images = $dynamic_featured_image->get_featured_images( );
+
+			//print_r($featured_images);
+
+			foreach($featured_images as $featured_image) 
+			{
+
+				$fullSizedImage = $dynamic_featured_image->get_image_url($featured_image['attachment_id'], 'full');
+
+			 
+			}  
+		 
+		 }
+		 if($login==1)
+		 {
+			 $image_final = $fullSizedImage;
+		 }
+		 else
+		 {
+			 $image_final = $image[0];
+		 }
     
      ?>
    
     <div class="home-model-box-right model-box">
       <div class="home-model-box-img">
-       <a href="<?php echo get_permalink();?>"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-home-2.jpg" / alt=""></a>
+       <a href="<?php echo get_permalink();?>"><img src="<?php echo $image_final;?>" / alt=""></a>
       </div>
       <div class="home-model-box-content">
        <div class="home-model-box-content-top">
@@ -160,12 +232,40 @@ foreach($recent_posts as $recent_posts)
 { 
 	
 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
+	
+	if( class_exists('Dynamic_Featured_Image') ) 
+		{
+
+			global $dynamic_featured_image;
+
+			$featured_images = $dynamic_featured_image->get_featured_images($recent_posts['ID'] );
+
+			//print_r($featured_images);
+
+			foreach($featured_images as $featured_image) 
+			{
+
+				$fullSizedImage = $dynamic_featured_image->get_image_url($featured_image['attachment_id'], 'full');
+
+			 
+			}  
+		 
+		 }
+		if($login==1)
+		 {
+			 $image_final = $fullSizedImage;
+		 }
+		 else
+		 {
+			 $image_final = $image[0];
+		 }
+	
 	?>
 	
 
     <li>
      <div class="model-view-img">
-      <a href="<?php echo $recent_posts['guid']?>"><img src="<?php echo $image[0];?>" /></a>
+      <a href="<?php echo $recent_posts['guid']?>"><img src="<?php echo $image_final;?>" /></a>
      </div>
      <div class="model-view-content">
       <div class="model-view-content-top">
