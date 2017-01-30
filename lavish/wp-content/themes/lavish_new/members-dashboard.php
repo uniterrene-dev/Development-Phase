@@ -19,11 +19,16 @@ get_header('model');
      </div>  
    </div>
    <div class="container">
-     <div class="members-dashboard-box">
+     <div class="members-dashboard-box clearfix">
        
      <div class="vertical-tab">
-   <div class="vertical-panel active">My Info <span> <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/dashboard-icon-1.png" alt=""> </span></div>
-   <ul class="vertical-content">
+     <ul class="tabs">
+      <li class="vertical-panel active" rel="tab1">My Info <span> <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/dashboard-icon-1.png" alt=""> </span></li>
+      <li class="vertical-panel" rel="tab2">Password & Security <span> <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/dashboard-icon-2.png" alt=""> </span></li>
+      <li class="vertical-panel" rel="tab3">Notification Settings<span> <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/dashboard-icon-3.png" alt=""> </span></li>
+     </ul>
+    <div class="tab_container">
+      <h3 class="d_active tab_drawer_heading" rel="tab1">
       <div class="payment-method-box">
        <h3> Payment  Methods </h3>
        <a href="#"> Add  payment method </a>
@@ -31,40 +36,102 @@ get_header('model');
       <div class="billing-payment-box">
        <h3> Billing & Payment Processing </h3>
       </div>
-      <div class="payment-info-box">
-         <ol class="payment-info-top">
-          <li> Payment method </li>
-          <li> Actions </li>
-          <li> Autopay status </li>
-         </ol>
-        
+      
+      </h3>
+      <div id="tab1" class="tab_content">
+       <div class="payment-method-box">
+       <h3> Payment  Methods </h3>
+       <a href="#"> Add  payment method </a>
       </div>
-   </ul>
-   <div class="vertical-panel">Previous History <span> <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/dashboard-icon-2.png" alt=""> </span></div>
-   <ul>
-    <li>Potius inflammat, ut coercendi magis quam dedocendi esse videantur.</li>
-    <li>Atqui reperies, inquit, in hoc quidem pertinacem;</li>
-    <li>Verba tu fingas et ea dicas, quae non sentias?</li>
-  </ul>
-   <div class="vertical-panel">Payment Methods<span> <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/dashboard-icon-3.png" alt=""> </span></div>
-   <ul>
-    <li>Omnes enim iucundum motum, quo sensus hilaretur.</li>
-    <li>Oratio me istius philosophi non offendit;</li>
-    <li>Ut pulsi recurrant?</li>
-    <li>Cur fortior sit, si illud, quod tute concedis, asperum et vix ferendum putabit?</li>
-  </ul>
-   <div class="vertical-panel">Password & Security<span> <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/dashboard-icon-4.png" alt=""> </span></div>
-   <ul>
-    <li>Et ille ridens: Video, inquit, quid agas;</li>
-    <li>Sed tu istuc dixti bene Latine, parum plane.</li>
-    <li>Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia;</li>
-  </ul>
-   <div class="vertical-panel">Notification Settings<span> <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/dashboard-icon-5.png" alt=""> </span></div>
-   <ul>
-    <li>Et ille ridens: Video, inquit, quid agas;</li>
-    <li>Sed tu istuc dixti bene Latine, parum plane.</li>
-    <li>Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia;</li>
-  </ul>
+       <div class="billing-payment-box">
+       <h3> Billing & Payment Processing </h3>
+      </div>
+       <div class="payment-info-box">
+        <table class="rwd-table">
+  <tr>
+    <th>Payment method</th>
+    <th>Actions</th>
+    <th>Autopay status</th>
+  </tr>
+  <tr>
+    <td data-th="Movie Title"><span><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/payment-icon.png" alt=""></span>Visa ending in 4650</td>
+    <td data-th="Genre"><a href="#">Edit | remove</a></td>
+    <td data-th="Year">Primary </td>
+  </tr>
+  <tr>
+    <td data-th="Movie Title"><span><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/payment-icon.png" alt=""></span>Visa ending in 7474</td>
+    <td data-th="Genre"><a href="#">Edit | remove</a></td>
+    <td data-th="Year">Set as primary</td>
+  </tr>
+</table>
+      </div>
+       <p> We accept all major credit cards, as well as electronic transfers and cash payments
+We accept the following credit cards </p>
+      </div>
+  <!-- #tab1 -->
+  <h3 class="tab_drawer_heading" rel="tab2">Tab 2</h3>
+  <div id="tab2" class="tab_content">
+       <div class="payment-method-box">
+       <h3> Payment  Methods </h3>
+       <a href="#"> Add  payment method </a>
+      </div>
+       <div class="billing-payment-box">
+       <h3> Billing & Payment Processing </h3>
+      </div>
+       <div class="payment-info-box">
+        <table class="rwd-table">
+  <tr>
+    <th>Payment method</th>
+    <th>Actions</th>
+    <th>Autopay status</th>
+  </tr>
+  <tr>
+    <td data-th="Movie Title"><span><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/payment-icon.png" alt=""></span>Visa ending in 4650</td>
+    <td data-th="Genre"><a href="#">Edit | remove</a></td>
+    <td data-th="Year">Primary </td>
+  </tr>
+  <tr>
+    <td data-th="Movie Title"><span><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/payment-icon.png" alt=""></span>Visa ending in 7474</td>
+    <td data-th="Genre"><a href="#">Edit | remove</a></td>
+    <td data-th="Year">Set as primary</td>
+  </tr>
+</table>
+      </div>
+  </div>
+  <!-- #tab2 -->
+  <h3 class="tab_drawer_heading" rel="tab3">Tab 3</h3>
+  <div id="tab3" class="tab_content">
+       <div class="payment-method-box">
+       <h3> Payment  Methods </h3>
+       <a href="#"> Add  payment method </a>
+      </div>
+       <div class="billing-payment-box">
+       <h3> Billing & Payment Processing </h3>
+      </div>
+       <div class="payment-info-box">
+        <table class="rwd-table">
+  <tr>
+    <th>Payment method</th>
+    <th>Actions</th>
+    <th>Autopay status</th>
+  </tr>
+  <tr>
+    <td data-th="Movie Title"><span><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/payment-icon.png" alt=""></span>Visa ending in 4650</td>
+    <td data-th="Genre"><a href="#">Edit | remove</a></td>
+    <td data-th="Year">Primary </td>
+  </tr>
+  <tr>
+    <td data-th="Movie Title"><span><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/payment-icon.png" alt=""></span>Visa ending in 7474</td>
+    <td data-th="Genre"><a href="#">Edit | remove</a></td>
+    <td data-th="Year">Set as primary</td>
+  </tr>
+</table>
+      </div>
+  </div>
+  <!-- #tab3 -->
+  
+</div>
+    
 </div>
        
        <?php //echo(the_content()); ?>
