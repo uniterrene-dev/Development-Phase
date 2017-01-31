@@ -3155,6 +3155,7 @@ h1 {
     font-size: 17px;
     font-weight: 300;
     line-height: 18px;
+	border:1px #d4c9c4 solid;
 }
 .dashboard-get_option .rwd-table tr {
   /*border-color: #46637f;*/
@@ -3164,8 +3165,9 @@ h1 {
 }
 
   .dashboard-get_option .rwd-table th, .dashboard-get_option .rwd-table td {
-    padding: 1em !important;	
-	border: 1px #ddd solid;
+   /* padding: 1em !important;*/	
+	border-right: 1px #d4c9c4 solid;
+	text-align:center;
   }
 
 .dashboard-get_option .rwd-table th, .dashboard-get_option .rwd-table td:before {
@@ -3173,9 +3175,9 @@ h1 {
   font-family: "Tw Cen MT";
   font-size: 17px;
 }
-.dashboard-get_option{
+/*.dashboard-get_option{
 	padding:80px 0;
-}
+}*/
 .dashboard-get_option .wpuf-author h3{
 	background:#9c0b46;
 	color:#fff;
@@ -3184,7 +3186,7 @@ h1 {
     padding: 20px;
 }
 .dashboard-get_option .odd {
-    background: #f6f6f6 none repeat scroll 0 0;
+    background: #eae5e1;
 }
 .dashboard-btn{
 	text-align:right;
@@ -3307,7 +3309,7 @@ h1 {
     text-align: center;
 }
 .payment-method-box > a {
-    background: #929292 none repeat scroll 0 0;
+    background: #ad1457;
     border-radius: 7px;
     color: #fff;
     display: inline-block;
@@ -3316,6 +3318,10 @@ h1 {
     margin-top: 15px;
     padding: 0 27px;
 	font-family: "Tw Cen MT";
+}
+.payment-method-box > a:hover {
+    background: #fff;
+    color: #ad1457;
 }
 .billing-payment-box{
 	background:#ad1457;
@@ -3423,8 +3429,11 @@ h1 {
   margin: .5em 1em;
 }
 @media (min-width: 480px) {
-  .rwd-table th, .rwd-table td {
+.payment-info-box .rwd-table td {
     color: #8a8888;
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	padding-top:20px;
 }
 }
 .rwd-table th, .rwd-table td:before {
@@ -3434,5 +3443,95 @@ h1 {
   font-weight: 300;
 }
 .rwd-table span {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.rwd-table a {
+    background: #fff;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 7px;
+	color:#ad1457;
+	font-size:18px;
+}
+.payment-info-box .rwd-table a:hover {
+    background: #ad1457;
+	color:#fff;
+}
+.payment-info-box-top > th {
+    border-bottom: 1px solid #a9a9a9;
+	padding-bottom:15px;
+}
+.payment-info-box-top > th:nth-child(2){
+	border-bottom: 3px solid #ad1457;
+}
+.payment-info-box-bottom > td{
+	border-bottom: 1px solid #a9a9a9;
+	padding-bottom:15px;
+}
+.payment-info-box-bottom > td:nth-child(2){
+	border-bottom: 3px solid #ad1457;
+}
+.payment-info-box{
+	background:#eae5e1;
+	text-align:center;
+}
+.payment-info-box-personal{
+	color:#ad1457;
+	padding-bottom:15px;
+}
+.vertical-panel img {
+    display: inline-block;
+    vertical-align: sub;
+}
+.payment-email a{
+	background: none;
+    padding: 0px;
+	color:#898787 !important;
+}
+.payment-email a:hover{
+	background:none !important;
+	color:#898787 !important;
+}
+/*.payment-info-box-bottom td{
+	padding-bottom:40px;
+}*/
+.Back-to-Escort-Ladies-btn{
+	padding:40px 0;
+}
+.Back-to-Escort-Ladies-btn a{
+	background: #ad1457;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 7px;
+	color:#fff;
+	font-size:28px;
+	font-family: "Tw Cen MT";
+	font-weight: normal;
+}
+.Back-to-Escort-Ladies-btn a:hover{
+	background: #fff;
+	color:#ad1457;
+}
+.payment-method-client {
     float: left;
+}
+.payment-method-client img{
+	width:80%;
+	display:block;
+}
+.dashbord-model-name a{
+	padding:2px 4px;
+	font-size:14px;
+	font-family: "Tw Cen MT";
+	font-weight: normal;
+	background:#ad1457;
+	color:#fff;
+}
+.dashbord-model-name {
+    width: 18%;
+}
+.dashboard-member-details tr > th {
+    background: #d4c9c4;
 }
