@@ -14,20 +14,20 @@ ul.tabs li {
 	font-family: "Tw Cen MT";
     font-size: 30px;
     font-weight: 300;
-	line-height: 31px;
 	color: #898787;
 	overflow: hidden;
 	position: relative;
 	width:100%;
 	text-align:right;
-	line-height: 60px;
+	line-height: 50px;
 	padding:0 10px;
+	margin-bottom:12px;
 }
 
 /*.tab_last { border-right: 1px solid #333; }*/
 
 ul.tabs li:hover {
-	background-color: #ccc;
+	/*background-color: #ccc;*/
 	color: #333;
 }
 
@@ -74,16 +74,7 @@ ul.tabs li.active {
 		user-select: none;
 	}
 	.d_active {
-		background-color: #666;
+		background-color: #ccc;
 		color: #fff;
 	}
-}
-
-.rwd-table a {
-    background: #fff;
-    display: inline-block;
-    padding: 7px 20px;
-    border-radius: 7px;
-	color:#ad1457;
-	font-size:18px;
 }
