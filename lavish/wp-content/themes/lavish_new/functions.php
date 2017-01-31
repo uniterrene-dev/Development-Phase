@@ -73,10 +73,27 @@ function twentyseventeen_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	
+	if ( has_post_thumbnail() ) 
+	{ 
+    the_post_thumbnail( 'home-size' ); 
+	}
 
 	add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
 
 	add_image_size( 'twentyseventeen-thumbnail-avatar', 100, 100, true );
+	
+	/*Add New Image Size For The Home Page Images Of The Models*/
+	add_image_size('featuredImageCropped', 250, 200, true);
+
+	
+		function wpse_setup_theme() 
+		{
+			add_theme_support( 'post-thumbnails' );
+			add_image_size( 'home-size', 377, 437,true );
+		}
+
+		add_action( 'after_setup_theme', 'wpse_setup_theme' );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -1325,6 +1342,48 @@ add_action( 'save_post', 'booking_forms_save' );
 	Usage: booking_forms_get_meta( 'booking_forms_booking_user_id' )
 	Usage: booking_forms_get_meta( 'booking_forms_booking_user_cardnum' )
 */
+add_action("wp_ajax_save_feedback", "save_feedback");
+add_action("wp_ajax_nopriv_save_feedback", "save_feedback");
+
+function save_feedback()
+{
+	$first_name = $_REQUEST['first_name'];
+	$email = $_REQUEST['email'];
+	$name_of_lady = $_REQUEST['name_of_lady'];
+	$place = $_REQUEST['place'];
+	$feedback = $_REQUEST['request'];
+	$place_or_not = $_REQUEST['place_or_not'];
+	
+	 $current_user = wp_get_current_user();
+	 $user_name = $current_user->user_login;
+	 $user_email = $current_user->user_email;
+	 $user_fname = $current_user->user_firstname;
+	 $user_lname = $current_user->user_lastname;
+	 $user_id = $current_user->ID;
+	
+	
+	$time = current_time('mysql');
+
+	$data = array(
+	'comment_post_ID' => 281,
+	'comment_author' => $user_name,
+	'comment_author_email' => $user_email,
+	'comment_content' => $feedback,
+	'comment_type' => '',
+	'comment_parent' => 0,
+	'user_id' => $user_id,
+	'comment_author_IP' => '127.0.0.1',
+	'comment_agent' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10 (.NET CLR 3.5.30729)',
+	'comment_date' => $time,
+	'comment_approved' => 1,
+	);
+
+	wp_insert_comment($data);
+
+exit();
+}
+
+
 add_action("wp_ajax_get_booking", "get_booking");
 add_action("wp_ajax_nopriv_get_booking", "get_booking");
 
@@ -1368,34 +1427,172 @@ function get_booking()
 	//store our post ID in a variable $pid
 	$pid = wp_insert_post($new_post);
 
-	//we now use $pid (post id) to help add out post meta data
-	add_post_meta($pid, 'booking_forms_first_name', $first_name, true);
-	add_post_meta($pid, 'booking_forms_age', $age, true);
-	add_post_meta($pid, 'booking_forms_nationality', $nationality, true);
-	add_post_meta($pid, 'booking_forms_email', $email, true);
-	add_post_meta($pid, 'booking_forms_confirm_email', $conemail, true);
-	add_post_meta($pid, 'booking_forms_phone_number', $phn, true);
-	add_post_meta($pid, 'booking_forms_mobile_phone_number', $mob_phn, true);
-	add_post_meta($pid, 'booking_forms_address', $address, true);
-	add_post_meta($pid, 'booking_forms_city', $city, true);
-	add_post_meta($pid, 'booking_forms_zip_code', $zip, true);
-	add_post_meta($pid, 'booking_forms_hotel_room', $hotel, true);
-	add_post_meta($pid, 'booking_forms_desired_mate', $mate, true);
-	add_post_meta($pid, 'booking_forms_alternative_mate', $altmate, true);
-	add_post_meta($pid, 'booking_forms_how_many_mates', $nomate, true);
-	add_post_meta($pid, 'booking_forms_date_of_meeting', $date, true);
-	add_post_meta($pid, 'booking_forms_time_of_meeting', $time, true);
-	add_post_meta($pid, 'booking_forms_best_times_to_call', $time_call, true);
-	add_post_meta($pid, 'booking_forms_duration', $duration, true);
-	add_post_meta($pid, 'booking_forms_any_likes_or_dislikes', $dislike, true);
-	add_post_meta($pid, 'booking_forms_dress_style', $dress_type, true);
-	add_post_meta($pid, 'booking_forms_payment_method', $payment, true);
-	add_post_meta($pid, 'booking_forms_how_did_you_find_us_', $find_us, true);
-	add_post_meta($pid, 'booking_forms_what_is_your_desired_message_for_your_mate_', $message, true);
-	add_post_meta($pid, 'booking_forms_special_requests', $spcl_request, true);
+	
+	
+	
+	$user_id = username_exists( $first_name );
+	if ( !$user_id and email_exists($email) == false ) 
+	{
+		$random_password = wp_generate_password( $length=12, $include_standard_special_chars=false );
+		//~ $user_id = wp_create_user( $first_name, $random_password, $email );
+		$userdata = array(
+        'user_login'    =>   $first_name,
+        'user_email'    =>   $email,
+        'user_pass'     =>   $random_password,
+		'first_name'    =>   $first_name,
+        );
+		
+		$user = wp_insert_user( $userdata );
+		$lastid = $wpdb->insert_id;
+		update_usermeta( $lastid, 'address', $address );
+		
+		$message = "Thanks For Registration. Your user id is ".$first_name." email is ".$email." password is --- ".$random_password;
+		$headers[] = 'From: Me Myself <me@example.net>';
+		$headers[] = 'Cc: Aditya <projectsforadi@gmail.com>';
+		
+		wp_mail( $email, 'New User Resistration', $message,$headers);
+		
+		add_post_meta($pid, 'booking_forms_first_name', $first_name, true);
+		add_post_meta($pid, 'booking_forms_age', $age, true);
+		add_post_meta($pid, 'booking_forms_nationality', $nationality, true);
+		add_post_meta($pid, 'booking_forms_email', $email, true);
+		add_post_meta($pid, 'booking_forms_confirm_email', $conemail, true);
+		add_post_meta($pid, 'booking_forms_phone_number', $phn, true);
+		add_post_meta($pid, 'booking_forms_mobile_phone_number', $mob_phn, true);
+		add_post_meta($pid, 'booking_forms_address', $address, true);
+		add_post_meta($pid, 'booking_forms_city', $city, true);
+		add_post_meta($pid, 'booking_forms_zip_code', $zip, true);
+		add_post_meta($pid, 'booking_forms_hotel_room', $hotel, true);
+		add_post_meta($pid, 'booking_forms_desired_mate', $mate, true);
+		add_post_meta($pid, 'booking_forms_alternative_mate', $altmate, true);
+		add_post_meta($pid, 'booking_forms_how_many_mates', $nomate, true);
+		add_post_meta($pid, 'booking_forms_date_of_meeting', $date, true);
+		add_post_meta($pid, 'booking_forms_time_of_meeting', $time, true);
+		add_post_meta($pid, 'booking_forms_best_times_to_call', $time_call, true);
+		add_post_meta($pid, 'booking_forms_duration', $duration, true);
+		add_post_meta($pid, 'booking_forms_any_likes_or_dislikes', $dislike, true);
+		add_post_meta($pid, 'booking_forms_dress_style', $dress_type, true);
+		add_post_meta($pid, 'booking_forms_payment_method', $payment, true);
+		add_post_meta($pid, 'booking_forms_how_did_you_find_us_', $find_us, true);
+		add_post_meta($pid, 'booking_forms_what_is_your_desired_message_for_your_mate_', $message, true);
+		add_post_meta($pid, 'booking_forms_special_requests', $spcl_request, true);
 
-	echo $pid;
+		echo $pid;
+		
+		exit();
+	} 
+	else 
+	{
+		add_post_meta($pid, 'booking_forms_first_name', $first_name, true);
+		add_post_meta($pid, 'booking_forms_age', $age, true);
+		add_post_meta($pid, 'booking_forms_nationality', $nationality, true);
+		add_post_meta($pid, 'booking_forms_email', $email, true);
+		add_post_meta($pid, 'booking_forms_confirm_email', $conemail, true);
+		add_post_meta($pid, 'booking_forms_phone_number', $phn, true);
+		add_post_meta($pid, 'booking_forms_mobile_phone_number', $mob_phn, true);
+		add_post_meta($pid, 'booking_forms_address', $address, true);
+		add_post_meta($pid, 'booking_forms_city', $city, true);
+		add_post_meta($pid, 'booking_forms_zip_code', $zip, true);
+		add_post_meta($pid, 'booking_forms_hotel_room', $hotel, true);
+		add_post_meta($pid, 'booking_forms_desired_mate', $mate, true);
+		add_post_meta($pid, 'booking_forms_alternative_mate', $altmate, true);
+		add_post_meta($pid, 'booking_forms_how_many_mates', $nomate, true);
+		add_post_meta($pid, 'booking_forms_date_of_meeting', $date, true);
+		add_post_meta($pid, 'booking_forms_time_of_meeting', $time, true);
+		add_post_meta($pid, 'booking_forms_best_times_to_call', $time_call, true);
+		add_post_meta($pid, 'booking_forms_duration', $duration, true);
+		add_post_meta($pid, 'booking_forms_any_likes_or_dislikes', $dislike, true);
+		add_post_meta($pid, 'booking_forms_dress_style', $dress_type, true);
+		add_post_meta($pid, 'booking_forms_payment_method', $payment, true);
+		add_post_meta($pid, 'booking_forms_how_did_you_find_us_', $find_us, true);
+		add_post_meta($pid, 'booking_forms_what_is_your_desired_message_for_your_mate_', $message, true);
+		add_post_meta($pid, 'booking_forms_special_requests', $spcl_request, true);
+
+		echo $pid;
+		
+		exit();
+	}
+}
+
+function feed_back_add_meta_box() {
+	add_meta_box(
+		'feed_back-feed-back',
+		__( 'Feed Back', 'feed_back' ),
+		'feed_back_html',
+		'post',
+		'normal',
+		'default'
+	);
+}
+add_action( 'add_meta_boxes', 'feed_back_add_meta_box' );
+
+function feed_back_html( $post) {
+	wp_nonce_field( '_feed_back_nonce', 'feed_back_nonce' ); ?>
+
+	<p>
+		<label for="feed_back_customer_feedback"><?php _e( 'Customer Feedback', 'feed_back' ); ?></label><br>
+		<textarea name="feed_back_customer_feedback" id="feed_back_customer_feedback" ><?php echo feed_back_get_meta( 'feed_back_customer_feedback' ); ?></textarea>
 	
-	exit();
-	
+	</p><?php
+}
+
+function feed_back_save( $post_id ) {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+	if ( ! isset( $_POST['feed_back_nonce'] ) || ! wp_verify_nonce( $_POST['feed_back_nonce'], '_feed_back_nonce' ) ) return;
+	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+	if ( isset( $_POST['feed_back_customer_feedback'] ) )
+		update_post_meta( $post_id, 'feed_back_customer_feedback', esc_attr( $_POST['feed_back_customer_feedback'] ) );
+}
+add_action( 'save_post', 'feed_back_save' );
+
+
+add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
+add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
+
+function my_show_extra_profile_fields( $user ) { ?>
+
+	<h3>Extra profile information</h3>
+
+	<table class="form-table">
+
+		<tr>
+			<th><label for="address">Address</label></th>
+
+			<td>
+				<input type="text" name="address" id="address" value="<?php echo esc_attr( get_the_author_meta( 'address', $user->ID ) ); ?>" class="regular-text" /><br />
+				<span class="description">Please enter your address.</span>
+						
+			</td>
+			<th><label for="address">Phone</label></th>
+
+			<td>
+				<input type="text" name="phone" id="phone" value="<?php echo esc_attr( get_the_author_meta( 'phone', $user->ID ) ); ?>" class="regular-text" /><br />
+				<span class="description">Please enter your phone.</span>
+						
+			</td>
+			
+			<th><label for="address">Mobile Phone</label></th>
+
+			<td>
+				<input type="text" name="mobphone" id="mobphone" value="<?php echo esc_attr( get_the_author_meta( 'mobphone', $user->ID ) ); ?>" class="regular-text" /><br />
+				<span class="description">Please enter your mobphone.</span>
+					
+			</td>
+		</tr>
+
+	</table>
+<?php }
+add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+
+function my_save_extra_profile_fields( $user_id ) {
+
+	if ( !current_user_can( 'edit_user', $user_id ) )
+		return false;
+
+	/* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
+	update_usermeta( $user_id, 'address', $_POST['address'] );
+	update_usermeta( $user_id, 'phone', $_POST['phone'] );
+	update_usermeta( $user_id, 'mobphone', $_POST['mobphone'] );
 }
