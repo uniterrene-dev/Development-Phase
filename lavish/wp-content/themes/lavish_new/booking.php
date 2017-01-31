@@ -131,12 +131,12 @@ Please note that online booking requires 2 hours in advance in order to process 
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Conform E-mail </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="email" required> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="email"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Your phone number </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
@@ -151,7 +151,7 @@ Please note that online booking requires 2 hours in advance in order to process 
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> City </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
@@ -161,7 +161,7 @@ Please note that online booking requires 2 hours in advance in order to process 
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Hotel/room </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="password" required> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="password"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Desired Mate </label> </div>
@@ -212,17 +212,25 @@ Please note that online booking requires 2 hours in advance in order to process 
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Date of meeting </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Time of Meeting </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> 
+                     <input placeholder="" value="" type="text"> 
+                    </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Best times to call </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> 
+                       <select>
+                         <option value="morning">morning</option>
+                         <option value="afternoon">afternoon</option>
+                         <option value="evening">evening </option>
+                       </select>
+                    </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Duration </label> </div>
@@ -245,7 +253,7 @@ Please note that online booking requires 2 hours in advance in order to process 
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> Any likes or Dislikes </label> </div>
-                    <div class="vip-fields"> <input placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Dress Style </label> </div>
@@ -407,7 +415,11 @@ for more details on booking a beautiful experience with one of our gorgeous ange
    </div>
   </div>
   
-  <div class="copy-text-accordion">
+  <div class="copy-right-booking-box">
+    <div class="about-box-divider">
+     <span> </span>
+    </div>
+   <div class="copy-text-accordion">
     <ul class="accordion">
     <li>
     <div class="accordion-tab"> Copyright </div>
@@ -421,7 +433,10 @@ for more details on booking a beautiful experience with one of our gorgeous ange
     </li>
     </ul>
    </div>
-  
+    <div class="about-box-divider">
+     <span> </span>
+    </div>
+  </div>
 </section>
 
 
