@@ -433,9 +433,58 @@ if ( $images ) {
         </div><!--End Div-->  
          
         <div class="vip-model-feedback">
-          <h3> Feedback </h3>
-          <h4> Peter 07.2017 </h4>
-          <p> Helen is one of the most charming escort models that I have met in recent years. From our dinner date to the sensualmoments in intimate togetherness I never had the impression I booked an escort. I will definitely see Helen again. Thank you Scarlett for your recommendation!  </p>
+			 <h3> Feedback </h3>
+			<?php
+			$args = array(
+	'author_email' => '',
+	'author__in' => '',
+	'author__not_in' => '',
+	'include_unapproved' => '',
+	'fields' => '',
+	'ID' => '',
+	'comment__in' => '',
+	'comment__not_in' => '',
+	'karma' => '',
+	'number' => '',
+	'offset' => '',
+	'orderby' => '',
+	'order' => 'DESC',
+	'parent' => '',
+	'post_author__in' => '',
+	'post_author__not_in' => '',
+	'post_ID' => $post->ID, // ignored (use post_id instead)
+	'post_id' => $post->ID,
+	'post__in' => '',
+	'post__not_in' => '',
+	'post_author' => '',
+	'post_name' => '',
+	'post_parent' => '',
+	'post_status' => '',
+	'post_type' => '',
+	'status' => 'all',
+	'type' => '',
+        'type__in' => '',
+        'type__not_in' => '',
+	'user_id' => '',
+	'search' => '',
+	'count' => false,
+	'meta_key' => '',
+	'meta_value' => '',
+	'meta_query' => '',
+	'date_query' => null, // See WP_Date_Query
+);
+$comments = get_comments( $args );
+
+
+foreach ($comments as $comments)
+{
+	?>
+
+         
+          <h4> <?php echo $comments->comment_author;?> <?php echo $comments->comment_date;?> </h4>
+          <p> <?php echo $comments->comment_content;?></p>
+        <?php   }
+			?>
           <div class="feedback-box">
            <h3> Write Feedback </h3>
            
@@ -443,49 +492,44 @@ if ( $images ) {
           <div class="feedback-box-div">
             <h3> We look forward to your feedback! </h3>
            <div class="feadback-form-div">
+
              <form action="" method="post">
                   <div class="feadback-box-left clearfix">
                    <li class="feadback-box-field">
                     <div class="vip-label">
                      <label> Your name or nickname: </label> </div>
-                    <div class="vip-fields"> <input id="firstname" placeholder="" value="" type="text"> </div>
+                    <div class="vip-fields"> <input id="firstname_" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="feadback-box-field">
                     <div class="vip-label">
                      <label> Your email address: </label> </div>
-                    <div class="vip-fields"> <input id="age" placeholder="" value="" type="text"> </div>
+                    <div class="vip-fields"> <input id="email_" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="feadback-box-field">
                     <div class="vip-label">
                      <label> Name of the escort lady: </label> </div>
-                    <div class="vip-fields"> <input id="nationality" placeholder="" value="" type="text"> </div>
+                    <div class="vip-fields"> <input id="name_lady_" placeholder="" value="" type="text"> </div>
                    </li>
                    <li class="feadback-box-field">
                     <div class="vip-label">
                      <label> Place and date: </label> </div>
-                    <div class="vip-fields"> <input id="email" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> <input id="place_" placeholder="" value="" type="text"> </div>
                    </li>
-                   <li class="feadback-box-field">
-                    <div class="vip-label">
-                     <label> Enter Captcha-Code: </label> </div>
-                    <div class="vip-fields"> <input id="conemail" placeholder="" value="" type="text"> </div>
-                   </li>
-                 
-
+                  
                   </div> 
                   <div class="feadback-box-right clearfix">
                                
                    <li class="vip-form-box-field-textarea">
                     <div class="vip-label"> <label> Feedback: </label> </div>
                     <div class="vip-fields">
-                     <textarea id="spcl_request" placeholder="" rows="3" cols="20"></textarea>
+                     <textarea id="spcl_request_new" placeholder="" rows="3" cols="20"></textarea>
                     </div>
                    </li>
                    
                    <li class="feadback-box-field">
                     <div class="vip-label"> <label> May we release your feedback to the public? </label> </div>
                     <div class="vip-fields"> 
-                       <select>
+                       <select id="place_feedback">
                          <option value="1hr">Yes</option>
                          <option value="2hrs">No</option>
                          <option value="3hrs" selected="selected">Please Choose</option>
@@ -497,9 +541,10 @@ if ( $images ) {
                   
                   
                   <div class="booking-form-submit-btn clearfix">
-                   <input name="submit" value="Submit" type="submit">
+                   <input name="submit" value="Submit" type="submit" onClick="saveFeedBack()">
                   </div> 
                 </form>
+
            </div> 
           </div>
          
@@ -658,388 +703,51 @@ if ( ! empty( $categories ) ) {
           <div class="bx-viewport flexslider">
              <ul class="lady_list slides">
          
+          <?php
+$args = array(
+	'numberposts' => 10,
+	'offset' => 0,
+	'category' => 0,
+	'orderby' => 'rand',
+	'order' => 'ASC',
+	'tag__not_in' => array( 62,63 ),
+	'include' => '',
+	'exclude' => '',
+	'meta_key' => '',
+	'meta_value' =>'',
+	'post_type' => 'casting_members',
+	'post_status' => 'publish',
+	'suppress_filters' => true
+);
+
+$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+$j=1;
+$input = array();
+foreach($recent_posts as $recent_posts)
+{
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
+?>
                       <li id="got_overlay">
                         <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-1.jpg" alt="">
+                            <img src="<?php echo $image[0];?>" alt="">
                         </a>
-                        <div class="book-caption">
-                         <a href="#">book<br>now!</a>
-                        </div>
+                        
                         <div class="lady_overlay flex-caption">
                             <a class="overlay-name" href="#">
-                            Kiara                            </a>
-                            <div class="lady_age">Age: Mid 20´s </div>
+                            <?php print_r($recent_posts['post_title'] );?>                            
+                            </a>
+                            <div class="lady_age">Age: <?php echo get_post_meta( $recent_posts['ID'], 'extra_profile_fileds_age', true ); ?> </div>
                             <div class="trips">Worldwide</div>
                             
-                            <div>Dusseldorf, Cologne, Bonn</div>
-                            <a class="button" href="#">
+                            <div><?php echo get_post_meta( $recent_posts['ID'], 'extra_profile_fileds_cuisine', true ); ?></div>
+                            <a class="button" href="<?php echo $recent_posts['guid']?>">
                                 More
                             </a>
                         </div>
                   
                     </li>
-                      <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-2.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                          <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Mia                            </a>
-                            <div class="lady_age">Age: Mid 20s </div>
-                            <div class="trips">Europe</div>
-                            
-                            <div>Cannes, St. Tropez, Monaco, Geneva</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                     <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-3.jpg" alt="">
-                        </a>
-                         <div class="book-caption">
-                          <a href="#">book<br>now!</a>
-                         </div>
-                         <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Aaliyah                            </a>
-                            <div class="lady_age">Age: Mid 30s </div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Paris, Brussels, Geneva, London, Frankfurt</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                       <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-4.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                          <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Victoria                            </a>
-                            <div class="lady_age">Age: Mid 20´s</div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Stuttgart, Munich, Frankfurt, Zurich</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                       <li id="got_overlay">
-                        <a href="#">
-                           <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-5.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                          <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Stella                            </a>
-                            <div class="lady_age">Age: Late 20´s</div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Hanover, Berlin, Hamburg, Frankfurt</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                       <li id="got_overlay">
-                        <a href="#">
-                           <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-6.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                          <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Claudia                            </a>
-                            <div class="lady_age">Age: Early 30s </div>
-                            <div class="trips">Europe</div>
-                            
-                            <div>Innsbruck, Salzburg, Vienna, Stuttgart</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                      <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-7.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                          <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Anna                            </a>
-                            <div class="lady_age">Age: Mid 20s </div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Hanover, Hamburg, Berlin, Marbella</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                      <li id="got_overlay">
-                        <a href="http://www.targetescorts.com/evelyn-escort-service.htm">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-8.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                          <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Evelyn                            </a>
-                            <div class="lady_age">Age: Early 20</div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Berlin, Hamburg, Hanover, Leipzig</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                       <li id="got_overlay">
-                        <a href="http://www.targetescorts.com/julia-escort-service.htm">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-9.jpg" alt="">
-                        </a>
-                           <div class="book-caption">
-                            <a href="#">book<br>now!</a>
-                           </div>
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Julia                            </a>
-                            <div class="lady_age">Age: Late 20´s </div>
-                            <div class="trips">Europe</div>
-                            
-                            <div>Munich, Nuremberg, Stuttgart, Salzburg</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                       <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-10.jpg" alt="">
-                        </a>
-                            <div class="book-caption">
-                             <a href="#">book<br>now!</a>
-                            </div>
-                            <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Amelie                            </a>
-                            <div class="lady_age">Age: Early 20s</div>
-                            <div class="trips">Europe</div>
-                            
-                            <div>Dusseldorf, Cologne, Bonn, Frankfurt</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                        <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-11.jpg" alt="">
-                        </a>
-                           <div class="book-caption">
-                            <a href="#">book<br>now!</a>
-                           </div>
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Carolina                            </a>
-                            <div class="lady_age">Age: Early 20</div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Vienna, Salzburg, Graz, Munich</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                      <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-12.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                         <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Jasmin                            </a>
-                            <div class="lady_age">Age: Mid 20´s</div>
-                            <div class="trips">Europe</div>
-                            
-                            <div>Nuremberg, Munich, Mainz, Frankfurt</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                        <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-13.jpg" alt="">
-                        </a>
-                           <div class="book-caption">
-                            <a href="#">book<br>now!</a>
-                           </div> 
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Emily                            </a>
-                            <div class="lady_age">Age: Mid 20´s </div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Mannheim, Frankfurt, Stuttgart</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                         <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-14.jpg" alt="">
-                        </a>
-                           <div class="book-caption">
-                            <a href="#">book<br>now!</a>
-                           </div>
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Sophie                            </a>
-                            <div class="lady_age">Age: Mid 20´s </div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Zurich, Basel, Bern, Geneva</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                      <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-15.jpg" alt="">
-                        </a>
-                         <div class="book-caption">
-                          <a href="#">book<br>now!</a>
-                         </div>
-                         <div class="new_lady"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/heart-new.png" alt="New"></div>
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Alice                            </a>
-                            <div class="lady_age">Age: Early 20s </div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Stuttgart, Karlsruhe, Frankfurt</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                         <li id="got_overlay">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-16.jpg" alt="">
-                        </a>
-                           <div class="book-caption">
-                            <a href="#">book<br>now!</a>
-                           </div>
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Isabelle                            </a>
-                            <div class="lady_age">Age: 30</div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Cologne, Dusseldorf, Frankfurt</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                      <li id="got_overlay" class="bx-clone">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-17.jpg" alt="">
-                        </a>
-                           <div class="book-caption">
-                            <a href="#">book<br>now!</a>
-                           </div>
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Lina                            </a>
-                            <div class="lady_age">Age: Mid 20s </div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Mannheim, Karlsruhe, Frankfurt, Stuttgart</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li><li id="got_overlay" class="bx-clone">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-18.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                          <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Laura                            </a>
-                            <div class="lady_age">Age: Mid 20´s</div>
-                            <div class="trips">Europe</div>
-                            
-                            <div>Dresden, Leipzig, Berlin</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                       <li id="got_overlay" class="bx-clone">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-19.jpg" alt="">
-                        </a>
-                          <div class="book-caption">
-                           <a href="#">book<br>now!</a>
-                          </div>
-                          <div class="new_lady"><img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/heart-new.png" alt="New"></div>
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Alina                            </a>
-                            <div class="lady_age">Age: Early 30´s </div>
-                            <div class="trips">Worldwide</div>
-                            
-                            <div>Zurich, Basel, Bern, Geneva</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                    </li>
-                     <li id="got_overlay" class="bx-clone">
-                        <a href="#">
-                            <img src="<?php echo esc_url( get_template_directory_uri() )?>/images/model-listing/model-listing-20.jpg" alt="">
-                        </a>
-                           <div class="book-caption">
-                            <a href="#">book<br>now!</a>
-                           </div>
-                           <div class="lady_overlay flex-caption">
-                            <a class="overlay-name" href="#">
-                            Sasha                            </a>
-                            <div class="lady_age">Age: 20</div>
-                            <div class="trips">Worldwide</div>
-            
-                            <div>Nuremberg, Frankfurt, Munich, Wiesbaden</div>
-                            <a class="button" href="#">
-                                More
-                            </a>
-                        </div>
-                       </li>
+                     <?php   }
+?>
                      </ul>
                     </div>
                       
@@ -1128,17 +836,55 @@ function emailClicked()
 	    message:message,
 	    spcl_request:spcl_request
     };
-	$.post(ajaxurl, data, function(response) { 
-		 window.location.href = "http://localhost/public_html/newwp/lavish/payment-vip/?pid="+response;
+	jQuery.post(ajaxurl, data, function(response) {
+		//alert(response); 
+		
+		//~ window.location = "http://onlinedevserver.biz/dev/lavish/";
      
    });
   }
   else
   {
-    //alert("Please Fill the Form Successfully");
+    //alert("Please Fill the Form Successfully");	
   }
 }
-
+function saveFeedBack()
+{
+	
+	var ajaxurl='<?php echo admin_url('admin-ajax.php'); ?>';
+	
+	var first_name = $('#firstname_').val();
+	var email = $('#email_').val();
+	var name_of_lady = $('#name_lady_').val();
+	var place = $('#place_').val();
+	var request = $( "#spcl_request_new" ).val();
+	var place_or_not = $('#place_feedback option:selected').text();
+	//~ alert(first_name);
+	alert(request);
+	
+	var data = {
+	 action: 'save_feedback',
+		dataType: 'json',
+		
+		first_name:first_name,
+		email:email,
+		name_of_lady:name_of_lady,
+		place:place,
+		request:request,
+		place_or_not:place_or_not
+	}
+	jQuery.post(ajaxurl, data, function(response) {
+		
+     $('#firstname_').text("");
+     $('#email_').text("");
+     $('#name_lady_').text("");
+     $('#place_').text("");
+     $('#spcl_request_new').text("");
+     $('#place_feedback option:selected').text("");
+   });
+  
+  
+}
 </script>
 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
