@@ -887,7 +887,11 @@ elseif (!empty($_GET['token-id']))
 			$all_data = (xml2array($xml));
 
 			$cc_number = $all_data['billing']['cc-number'];
-			add_post_meta($pid, 'booking_forms_booking_user_cardnum', $cc_number, true);
+			
+			
+			if (  $cc_number !='' )
+		update_post_meta( $pid, 'booking_forms_booking_user_cardnum', $cc_number );
+
 			
 			header('Location: http://localhost/public_html/newwp/lavish/dashboard?pid='.$pid); 
 		}
