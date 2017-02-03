@@ -104,6 +104,7 @@ class WPUF_Frontend_Dashboard {
              <link rel="stylesheet" type="text/css"  href="<?php echo esc_url( get_template_directory_uri() )?>/css/vertical-tab.css">
 
 <section id="members-dashboard" class="members-dashboard-div">
+<!--
    <div class="members-dashboard-heading-tag">
      <div class="container">
        <ul>
@@ -113,6 +114,7 @@ class WPUF_Frontend_Dashboard {
        </ul>
      </div>  
    </div>
+-->
    <div class="container">
      <div class="members-dashboard-box clearfix">
        
@@ -163,14 +165,14 @@ class WPUF_Frontend_Dashboard {
           </tr>
           <tr class="payment-info-box-bottom">
             <td data-th="Client name/User name"> </td>
-            <td data-th="Address"><a href="#">Edit</a></td>
-            <td data-th="Phone"><a href="#">Edit</a></td>
-            <td data-th="Email"><a href="#">Edit</a></td>
+            <td data-th="Address"><a href="http://onlinedevserver.biz/dev/lavish/wp-admin/profile.php">Edit</a></td>
+            <td data-th="Phone"><a href="http://onlinedevserver.biz/dev/lavish/wp-admin/profile.php">Edit</a></td>
+            <td data-th="Email"><a href="http://onlinedevserver.biz/dev/lavish/wp-admin/profile.php">Edit</a></td>
           </tr>
         </table>
         
         <div class="Back-to-Escort-Ladies-btn">
-          <a href="#"> Back to Escort Ladies </a>
+          <a href="http://onlinedevserver.biz/dev/lavish/escort-ladies/"> Back to Escort Ladies </a>
         </div>
         
       </div>
@@ -191,10 +193,17 @@ class WPUF_Frontend_Dashboard {
                         <th>Time of meeting</th>
                         <th>Duration</th>
                         <th>Message</th>
+                        <th>Payment Status</th>
+                        <th>Booking Status</th>
                       </tr>
-		   <?php
+                      
+                      
+		  
+                
+    <?php
 $args = array(
-	'author' =>  $userdata->ID,
+	
+	's' => $userdata->display_name,
 	'numberposts' => -1,
 	'offset' => 0,
 	'category' => 0,
@@ -205,7 +214,8 @@ $args = array(
 	'meta_key' => '',
 	'meta_value' =>'',
 	'post_type' => 'booking_post_type',
-	'post_status' => 'publish',
+	
+	
 	'suppress_filters' => true
 );
 
@@ -214,8 +224,8 @@ $j=1;
 $input = array();
 foreach($recent_posts as $recent_posts)
 {
-	
-	$url = "http://localhost/public_html/newwp/lavish/payment-vip?pid=".$recent_posts['ID'];
+	//print_r($recent_posts);
+	$url = "http://onlinedevserver.biz/dev/lavish/payment-vip?pid=".$recent_posts['ID'];
 	//print_r($recent_posts['ID']);
 	
 	$class_name="";
@@ -244,14 +254,47 @@ foreach($recent_posts as $recent_posts)
                         <td data-th="Message"> 
                          <p> <?php echo get_post_meta( $recent_posts['ID'], 'booking_forms_what_is_your_desired_message_for_your_mate_', true ); ?></p>
                         </td>
+                        
+                        <td data-th="Payment Status"> 
+                         <p> <?php 
+                         
+								if(get_post_meta( $recent_posts['ID'], 'booking_forms_payment_status', true ) == "1")
+								{
+									echo get_post_meta( $recent_posts['ID'], 'booking_forms_payment_status', true ); 
+								}
+							else
+							{
+								$yrl = "http://onlinedevserver.biz/dev/lavish/payment-vip?pid=".$recent_posts['ID'];
+								?>
+								<a href="<?php echo $yrl; ?>"> Go For Payment </a>
+						<?php
+							}
+                         
+                         ?>
+                         </p>
+                        </td>
+							
+						<td data-th="Booking Status"> 
+                         <p> <?php 
+                         
+							if(get_post_meta( $recent_posts['ID'], 'booking_forms_payment_status', true )=="")
+							{
+								echo "pending";
+							}
+							else
+							{
+								echo get_post_meta( $recent_posts['ID'], 'booking_forms_payment_status', true ); 
+							}
+                         ?>
+                         </p>
+                        </td>	
+                     
                       </tr>  
 	
 	<?php
 	$j++;  
 }
-?>
-                
-                      
+?>                  
                       
                  </table>
                 </div>          
