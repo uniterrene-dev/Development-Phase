@@ -1342,6 +1342,99 @@ add_action( 'save_post', 'booking_forms_save' );
 	Usage: booking_forms_get_meta( 'booking_forms_booking_user_id' )
 	Usage: booking_forms_get_meta( 'booking_forms_booking_user_cardnum' )
 */
+
+/*Add Function For Getting The Desire Model Images */
+add_action("wp_ajax_get_model_image", "get_model_image");
+add_action("wp_ajax_nopriv_get_model_image", "get_model_image");
+
+function get_model_image()
+{
+	
+	$model_name = $_REQUEST['model_name'];
+	$post = get_page_by_title( $model_name, OBJECT, 'casting_members' );
+	//echo $post->ID;
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+
+							if( class_exists('Dynamic_Featured_Image') ) 
+							{
+
+								global $dynamic_featured_image;
+
+								$featured_images = $dynamic_featured_image->get_featured_images($post->ID );
+
+							//print_r($featured_images);
+
+								foreach($featured_images as $featured_image) 
+								{
+
+									$fullSizedImage = $dynamic_featured_image->get_image_url($featured_image['attachment_id'], 'full');
+
+
+								}  
+
+							}
+							
+							if ( is_user_logged_in() ) 
+							{
+
+								$image_link = $fullSizedImage;
+							} 
+							else 
+							{
+								$image_link = $image[0];
+							}
+							echo $image_link;
+	exit();
+}
+
+add_action("wp_ajax_get_model_image_alt", "get_model_image_alt");
+add_action("wp_ajax_nopriv_get_model_image_alt", "get_model_image_alt");
+
+function get_model_image_alt()
+{
+	
+	$model_name = $_REQUEST['model_name_alt'];
+	$post = get_page_by_title( $model_name, OBJECT, 'casting_members' );
+	//echo $post->ID;
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+
+							if( class_exists('Dynamic_Featured_Image') ) 
+							{
+
+								global $dynamic_featured_image;
+
+								$featured_images = $dynamic_featured_image->get_featured_images($post->ID );
+
+							//print_r($featured_images);
+
+								foreach($featured_images as $featured_image) 
+								{
+
+									$fullSizedImage = $dynamic_featured_image->get_image_url($featured_image['attachment_id'], 'full');
+
+
+								}  
+
+							}
+							
+							if ( is_user_logged_in() ) 
+							{
+
+								$image_link = $fullSizedImage;
+							} 
+							else 
+							{
+								$image_link = $image[0];
+							}
+							echo $image_link;
+	exit();
+}
+
+
+
+
+
+/**/
 add_action("wp_ajax_save_feedback", "save_feedback");
 add_action("wp_ajax_nopriv_save_feedback", "save_feedback");
 
@@ -1365,7 +1458,7 @@ function save_feedback()
 	$time = current_time('mysql');
 
 	$data = array(
-	'comment_post_ID' => 281,
+	'comment_post_ID' => $user_id,
 	'comment_author' => $user_name,
 	'comment_author_email' => $user_email,
 	'comment_content' => $feedback,
@@ -1389,6 +1482,7 @@ add_action("wp_ajax_nopriv_get_booking", "get_booking");
 
 function get_booking()
 {
+	//global $wpdb;
 	$post_type = "booking_post_type";
 	
 	$first_name = $_REQUEST['first_name'];
@@ -1413,7 +1507,7 @@ function get_booking()
 	$dress_type = $_REQUEST['dress_type'];
 	$payment = $_REQUEST['payment'];
 	$find_us = $_REQUEST['find_us'];
-	$message = $_REQUEST['message'];
+	$message_book = $_REQUEST['message'];
 	$spcl_request = $_REQUEST['spcl_request'];
 	
 	//the array of arguements to be inserted with wp_insert_post
@@ -1444,14 +1538,17 @@ function get_booking()
 		
 		$user = wp_insert_user( $userdata );
 		$lastid = $wpdb->insert_id;
-		update_usermeta( $lastid, 'address', $address );
+		update_usermeta( $lastid, 'address', $address);
+		update_usermeta( $lastid, 'phone', $phn );
+		update_usermeta( $lastid, 'mobphone', $mob_phn );
 		
 		$message = "Thanks For Registration. Your user id is ".$first_name." email is ".$email." password is --- ".$random_password;
 		$headers[] = 'From: Me Myself <me@example.net>';
 		$headers[] = 'Cc: Aditya <projectsforadi@gmail.com>';
 		
 		wp_mail( $email, 'New User Resistration', $message,$headers);
-		
+	
+	}
 		add_post_meta($pid, 'booking_forms_first_name', $first_name, true);
 		add_post_meta($pid, 'booking_forms_age', $age, true);
 		add_post_meta($pid, 'booking_forms_nationality', $nationality, true);
@@ -1474,45 +1571,18 @@ function get_booking()
 		add_post_meta($pid, 'booking_forms_dress_style', $dress_type, true);
 		add_post_meta($pid, 'booking_forms_payment_method', $payment, true);
 		add_post_meta($pid, 'booking_forms_how_did_you_find_us_', $find_us, true);
-		add_post_meta($pid, 'booking_forms_what_is_your_desired_message_for_your_mate_', $message, true);
+		add_post_meta($pid, 'booking_forms_what_is_your_desired_message_for_your_mate_', $message_book, true);
 		add_post_meta($pid, 'booking_forms_special_requests', $spcl_request, true);
-
-		echo $pid;
 		
-		exit();
-	} 
-	else 
-	{
-		add_post_meta($pid, 'booking_forms_first_name', $first_name, true);
-		add_post_meta($pid, 'booking_forms_age', $age, true);
-		add_post_meta($pid, 'booking_forms_nationality', $nationality, true);
-		add_post_meta($pid, 'booking_forms_email', $email, true);
-		add_post_meta($pid, 'booking_forms_confirm_email', $conemail, true);
-		add_post_meta($pid, 'booking_forms_phone_number', $phn, true);
-		add_post_meta($pid, 'booking_forms_mobile_phone_number', $mob_phn, true);
-		add_post_meta($pid, 'booking_forms_address', $address, true);
-		add_post_meta($pid, 'booking_forms_city', $city, true);
-		add_post_meta($pid, 'booking_forms_zip_code', $zip, true);
-		add_post_meta($pid, 'booking_forms_hotel_room', $hotel, true);
-		add_post_meta($pid, 'booking_forms_desired_mate', $mate, true);
-		add_post_meta($pid, 'booking_forms_alternative_mate', $altmate, true);
-		add_post_meta($pid, 'booking_forms_how_many_mates', $nomate, true);
-		add_post_meta($pid, 'booking_forms_date_of_meeting', $date, true);
-		add_post_meta($pid, 'booking_forms_time_of_meeting', $time, true);
-		add_post_meta($pid, 'booking_forms_best_times_to_call', $time_call, true);
-		add_post_meta($pid, 'booking_forms_duration', $duration, true);
-		add_post_meta($pid, 'booking_forms_any_likes_or_dislikes', $dislike, true);
-		add_post_meta($pid, 'booking_forms_dress_style', $dress_type, true);
-		add_post_meta($pid, 'booking_forms_payment_method', $payment, true);
-		add_post_meta($pid, 'booking_forms_how_did_you_find_us_', $find_us, true);
-		add_post_meta($pid, 'booking_forms_what_is_your_desired_message_for_your_mate_', $message, true);
-		add_post_meta($pid, 'booking_forms_special_requests', $spcl_request, true);
-
-		echo $pid;
+		
+		
+		echo $pid.'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+		
+		//header('Location: http://onlinedevserver.biz/dev/lavish/'); 
 		
 		exit();
 	}
-}
+
 
 function feed_back_add_meta_box() {
 	add_meta_box(
@@ -1596,3 +1666,29 @@ function my_save_extra_profile_fields( $user_id ) {
 	update_usermeta( $user_id, 'phone', $_POST['phone'] );
 	update_usermeta( $user_id, 'mobphone', $_POST['mobphone'] );
 }
+/*Remove the dashboard link from the backend for the subscriber user role*/
+function sb_remove_dashboard () {
+    global $current_user, $menu, $submenu;
+    get_currentuserinfo();
+
+    if(  in_array( 'subscriber', $current_user->roles ) ) {
+        reset( $menu );
+        $page = key( $menu );
+        while( ( __( 'Dashboard' ) != $menu[$page][0] ) && next( $menu ) ) {
+            $page = key( $menu );
+        }
+        if( __( 'Dashboard' ) == $menu[$page][0] ) {
+            unset( $menu[$page] );
+        }
+        reset($menu);
+        $page = key($menu);
+        while ( ! $current_user->has_cap( $menu[$page][1] ) && next( $menu ) ) {
+            $page = key( $menu );
+        }
+        if ( preg_match( '#wp-admin/?(index.php)?$#', $_SERVER['REQUEST_URI'] ) &&
+            ( 'index.php' != $menu[$page][2] ) ) {
+                wp_redirect( get_option( 'siteurl' ) . '/wp-admin/edit.php');
+        }
+    }
+}
+add_action('admin_menu', 'sb_remove_dashboard');
