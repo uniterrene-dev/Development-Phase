@@ -3,12 +3,31 @@
  * Template Name: modelprofile Page
  */
 get_header('model');
+
 ?>
+<?php
+if ( is_user_logged_in() ) 
+		{
+			global $userdata;
+			$uid = $userdata->ID;
+			$usre_name = $userdata->display_name;
+			$usre_email = $userdata->user_email;
+			$mobile_phone = esc_attr( get_the_author_meta( 'mobphone', $userdata->ID ) );
+			$phone = esc_attr( get_the_author_meta( 'phone', $userdata->ID ) ); 
+			$address = esc_attr( get_the_author_meta( 'address', $userdata->ID ) );
+			
+			
+			}?>
+			
+		
+		
+		
 <?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 				
-				//echo get_the_ID();?>
+				//echo get_the_ID();
+				?>
 				
 				<section id="modelprofile-about" class="modelprofile-about-div">
   <div class="container">
@@ -187,9 +206,9 @@ if ( $images ) {
              <div class="accordion-panel">
               <div class="accordion-pane-box">
                <div class="booking-form-div">
-                <form action="" method="post">
+                <form action="" method="post" onSubmit="return emailClicked();">
                   <div class="booking-box-left clearfix">
-                   <li class="booking-box-field">
+                   <li class="booking-box-field firstname">
                     <div class="vip-label">
                      <label> Your Full name <span class="required">*</span> </label> </div>
                     <div class="vip-fields"> <input id="firstname" placeholder="" value="" type="text" required> </div>
@@ -204,27 +223,27 @@ if ( $images ) {
                      <label> Nationality <span class="required">*</span> </label> </div>
                     <div class="vip-fields"> <input id="nationality" placeholder="" value="" type="text" required> </div>
                    </li>
-                   <li class="booking-box-field">
+                   <li class="booking-box-field email">
                     <div class="vip-label">
                      <label> Your E-mail <span class="required">*</span> </label> </div>
                     <div class="vip-fields"> <input id="email" placeholder="" value="" type="text" required> </div>
                    </li>
-                   <li class="booking-box-field">
+                   <li class="booking-box-field conemail">
                     <div class="vip-label">
                      <label> Conform E-mail </label> </div>
                     <div class="vip-fields"> <input id="conemail" placeholder="" value="" type="email"> </div>
                    </li>
-                   <li class="booking-box-field">
+                   <li class="booking-box-field phn">
                     <div class="vip-label">
                      <label> Your phone number </label> </div>
                     <div class="vip-fields"> <input id="phn" placeholder="" value="" type="text"> </div>
                    </li>
-                   <li class="booking-box-field">
+                   <li class="booking-box-field mob_phn">
                     <div class="vip-label">
                      <label> Mobile phone number <span class="required">*</span> </label> </div>
                     <div class="vip-fields"> <input id="mob_phn" placeholder="" value="" type="text" required> </div>
                    </li>
-                   <li class="booking-box-field">
+                   <li class="booking-box-field address">
                     <div class="vip-label">
                      <label> Address <span class="required">*</span> </label> </div>
                     <div class="vip-fields"> <input id="address" placeholder="" value="" type="text" required> </div>
@@ -247,25 +266,106 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Desired Mate </label> </div>
                     <div class="vip-fields" id="mate"> 
-                       <select class="xxxxxxxxxxxxxx">
-                         <option value="Lavish">Yvonno</option>
-                         <option value="Silver">Angelina</option>
-                         <option value="Gold">Angelina</option>
-                         <option value="Platinum">Kristinak</option>
-                         <option value="Black">Jade</option>
+                       <select class="select_field">
+						   <?php
+$args = array(
+	'numberposts' => -1,
+	'offset' => 0,
+	'category' => 0,
+	'orderby' => 'rand',
+	'order' => 'ASC',
+	
+	'include' => '',
+	'exclude' => '',
+	'meta_key' => '',
+	'meta_value' =>'',
+	'post_type' => 'casting_members',
+	'post_status' => 'publish',
+	'suppress_filters' => true
+);
+$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+$j=1;
+$input = array();
+foreach($recent_posts as $recent_posts)
+{ 
+?>
+                         <option value="<?php print_r($recent_posts['post_title'] );?>"
+                         <?php if($recent_posts['post_title'] == $post->post_title) echo "selected";?> ><?php print_r($recent_posts['post_title'] );?></option>
+                         
+                   <?php } ?>      
                        </select> 
+						<?php
+							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+
+							if( class_exists('Dynamic_Featured_Image') ) 
+							{
+
+								global $dynamic_featured_image;
+
+								$featured_images = $dynamic_featured_image->get_featured_images($post->ID );
+
+							//print_r($featured_images);
+
+								foreach($featured_images as $featured_image) 
+								{
+
+									$fullSizedImage = $dynamic_featured_image->get_image_url($featured_image['attachment_id'], 'full');
+
+
+								}  
+
+							}
+							
+							if ( is_user_logged_in() ) 
+							{
+
+								$image_link = $fullSizedImage;
+							} 
+							else 
+							{
+								$image_link = $image[0];
+							}
+						?>
+						  <div class="select-image-mate">
+							<img id="img-mate" src="<?php echo $image_link;?>"/>
+						  </div> 
                     </div>
                    </li>
                    <li class="booking-box-field">
                     <div class="vip-label"> <label> Alternative Mate </label> </div>
                     <div class="vip-fields" id="altmate"> 
-                       <select>
-                         <option value="Yvonno">Yvonno</option>
-                         <option value="Angelina">Angelina</option>
-                         <option value="Marie">Marie</option>
-                         <option value="Kristinak">Kristinak</option>
-                         <option value="Jade">Jade</option>
+                       <select class="slect-alt">
+                          <?php
+$args = array(
+	'numberposts' => -1,
+	'offset' => 0,
+	'category' => 0,
+	'orderby' => 'rand',
+	'order' => 'ASC',
+	
+	'include' => '',
+	'exclude' => '',
+	'meta_key' => '',
+	'meta_value' =>'',
+	'post_type' => 'casting_members',
+	'post_status' => 'publish',
+	'suppress_filters' => true
+);
+$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+$j=1;
+$input = array();
+foreach($recent_posts as $recent_posts)
+{ 
+?>
+                         <option value="<?php print_r($recent_posts['post_title'] );?>"
+                         ><?php print_r($recent_posts['post_title'] );?></option>
+                         
+                   <?php } ?> 
+                    <option value="-1" selected="selected">— Select —</option>
                        </select> 
+                       <div class="select-image-mate-alt">
+							<img id="img-mate-alt" src=""/>
+						  </div> 
                     </div>
                    </li>
                    <li class="booking-box-field">
@@ -309,6 +409,7 @@ if ( $images ) {
                     <div class="vip-label"> <label> Duration </label> </div>
                     <div class="vip-fields" id="duration"> 
                        <select>
+						   <option value="-1" selected="selected">— Select —</option>
                          <option value="1hr">1hr</option>
                          <option value="2hrs">2hrs</option>
                          <option value="3hrs">3hrs</option>
@@ -332,6 +433,7 @@ if ( $images ) {
                     <div class="vip-label"> <label> Dress Style </label> </div>
                     <div class="vip-fields" id="dress_type"> 
                        <select>
+						   <option value="-1" selected="selected">— Select —</option>
                          <option value="short">short dress</option>
                          <option value="maxi">maxi dress</option>
                          <option value="cocktail">cocktail dress, </option>
@@ -345,6 +447,7 @@ if ( $images ) {
                     <div class="vip-label"> <label> Payment Method </label> </div>
                     <div class="vip-fields" id="payment"> 
                        <select>
+						   <option value="-1" selected="selected">— Select —</option>
                          <option value="Cash Payment">Cash Payment</option>
                          <option value="Bank Card">Bank Card</option>
                          <option value="Credit Card Payment">Credit Card Payment </option>
@@ -359,14 +462,11 @@ if ( $images ) {
                    <li class="booking-box-field">
                     <div class="vip-label">
                      <label> What is your desired message for your mate?  <span class="required">*</span> </label> </div>
-                    <div class="vip-fields"> <input id="message" placeholder="" value="" type="text" required> </div>
+                    <div class="vip-fields"> 
+						<textarea id="spcl_request" placeholder="(Any special requests you have of your girl example special wardrobe etc.)" rows="3" cols="20"></textarea>
+				    </div>
                    </li>
-                   <li class="vip-form-box-field-textarea">
-                    <div class="vip-label"> <label> (Any special requests you have of your girl example special wardrobe etc.)	 </label> </div>
-                    <div class="vip-fields">
-                     <textarea id="spcl_request" placeholder="" rows="3" cols="20"></textarea>
-                    </div>
-                   </li>
+                   
                    <li class="booking-box-checkbox">
                      <span> 
                        <label>
@@ -379,7 +479,7 @@ if ( $images ) {
                   
                   
                   <div class="booking-form-submit-btn">
-                   <input name="submit" value="Submit" type="submit" onClick="emailClicked()">
+                   <input name="submit" value="Submit" type="submit">
                   </div> 
                 </form>
                </div> 
@@ -495,12 +595,12 @@ foreach ($comments as $comments)
 
              <form action="" method="post">
                   <div class="feadback-box-left clearfix">
-                   <li class="feadback-box-field">
+                   <li class="feadback-box-field firstname_">
                     <div class="vip-label">
                      <label> Your name or nickname: </label> </div>
                     <div class="vip-fields"> <input id="firstname_" placeholder="" value="" type="text"> </div>
                    </li>
-                   <li class="feadback-box-field">
+                   <li class="feadback-box-field email_">
                     <div class="vip-label">
                      <label> Your email address: </label> </div>
                     <div class="vip-fields"> <input id="email_" placeholder="" value="" type="text"> </div>
@@ -530,9 +630,12 @@ foreach ($comments as $comments)
                     <div class="vip-label"> <label> May we release your feedback to the public? </label> </div>
                     <div class="vip-fields"> 
                        <select id="place_feedback">
-                         <option value="1hr">Yes</option>
-                         <option value="2hrs">No</option>
-                         <option value="3hrs" selected="selected">Please Choose</option>
+						   <option value="-1">— Select —</option>
+                         <option value="Yes">Yes</option>
+                         <option value="No">No</option>
+<!--
+                         <option value="Please Choose">Please Choose</option>
+-->
                        </select> 
                     </div>
                    </li>
@@ -701,23 +804,22 @@ if ( ! empty( $categories ) ) {
     <div class="wrap-thumbs">
         <div class="bx-wrapper">
           <div class="bx-viewport flexslider">
-             <ul class="lady_list slides">
-         
-          <?php
+           <ul class="lady_list slides">
+                       <?php
 $args = array(
-	'numberposts' => 10,
-	'offset' => 0,
-	'category' => 0,
-	'orderby' => 'rand',
-	'order' => 'ASC',
-	'tag__not_in' => array( 62,63 ),
-	'include' => '',
-	'exclude' => '',
-	'meta_key' => '',
-	'meta_value' =>'',
-	'post_type' => 'casting_members',
-	'post_status' => 'publish',
-	'suppress_filters' => true
+ 'numberposts' => 10,
+ 'offset' => 0,
+ 'category' => 0,
+ 'orderby' => 'rand',
+ 'order' => 'ASC',
+ 'tag__not_in' => array( 62,63 ),
+ 'include' => '',
+ 'exclude' => '',
+ 'meta_key' => '',
+ 'meta_value' =>'',
+ 'post_type' => 'casting_members',
+ 'post_status' => 'publish',
+ 'suppress_filters' => true
 );
 
 $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
@@ -725,11 +827,47 @@ $j=1;
 $input = array();
 foreach($recent_posts as $recent_posts)
 {
-	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
+ $login=0;
+  if ( is_user_logged_in() ) 
+  {
+   $login =1;
+  } 
+  else 
+  {
+
+  }
+ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts['ID'] ), 'single-post-thumbnail' ); 
+ 
+ if( class_exists('Dynamic_Featured_Image') ) 
+  {
+
+   global $dynamic_featured_image;
+
+ $featured_images = $dynamic_featured_image->get_featured_images($recent_posts['ID'] );
+
+   //print_r($featured_images);
+
+   foreach($featured_images as $featured_image) 
+   {
+
+    $fullSizedImage = $dynamic_featured_image->get_image_url($featured_image['attachment_id'], 'full');
+
+    
+   }  
+   
+   }
+  if($login==1)
+   {
+    $image_final = $fullSizedImage;
+   }
+   else
+   {
+    $image_final = $image[0];
+   }
 ?>
                       <li id="got_overlay">
                         <a href="#">
-                            <img src="<?php echo $image[0];?>" alt="">
+                            <img src="<?php echo $image_final;?>" alt="">
                         </a>
                         
                         <div class="lady_overlay flex-caption">
@@ -766,8 +904,78 @@ foreach($recent_posts as $recent_posts)
 			<?php	
 				endwhile; // End of the loop.
 			?>
+			<?php
+			if ( is_user_logged_in() ) 
+		{
+			?>
+<script>
+var uid = '<?php echo $uid; ?>';
+var usre_name = '<?php echo $usre_name; ?>';
+var usre_email = '<?php echo $usre_email; ?>';
+var mobile_phone = '<?php echo $mobile_phone; ?>';
+var phone = '<?php echo $phone; ?>';
+var address = '<?php echo $address; ?>';
 
+jQuery('#firstname').val(usre_name);
+jQuery('#firstname_').val(usre_name);
+jQuery('#email').val(usre_email);
+jQuery('#email_').val(usre_email);
+jQuery('#conemail').val(usre_email);
+jQuery('#phn').val(phone);
+jQuery('#mob_phn').val(mobile_phone);
+jQuery('#address').val(address);
+
+jQuery('.firstname').hide();
+jQuery('.firstname_').hide();
+jQuery('.email').hide();
+jQuery('.email_').hide();
+jQuery('.conemail').hide();
+jQuery('.phn').hide();
+jQuery('.mob_phn').hide();
+jQuery('.address').hide();
+
+			</script>
+			<?php
+			
+		}
+		?>
 <script type="text/javascript">
+	jQuery('.select_field').on('change', function(){
+		var model_name = jQuery(this).val();
+		var ajaxurl='<?php echo admin_url('admin-ajax.php'); ?>';
+		var data = 
+		{
+		action: 'get_model_image',
+		dataType: 'json',
+
+		model_name:model_name,
+
+		}
+		jQuery.post(ajaxurl, data, function(response) {
+
+			$('#img-mate').attr("src", response)
+		});
+	});
+	
+	jQuery('.slect-alt').on('change', function(){
+		var model_name_alt = jQuery(this).val();
+		//alert(model_name_alt);
+		var ajaxurl='<?php echo admin_url('admin-ajax.php'); ?>';
+		
+		var data = 
+		{
+		action: 'get_model_image_alt',
+		dataType: 'json',
+
+		model_name_alt:model_name_alt,
+
+		}
+		jQuery.post(ajaxurl, data, function(response) {
+
+			$('#img-mate-alt').attr("src", response)
+		});
+
+	});
 function emailClicked() 
 {
 	var ajaxurl='<?php echo admin_url('admin-ajax.php'); ?>';
@@ -836,10 +1044,10 @@ function emailClicked()
 	    message:message,
 	    spcl_request:spcl_request
     };
-	jQuery.post(ajaxurl, data, function(response) {
+	$.post(ajaxurl, data, function(response) {
 		//alert(response); 
 		
-		//~ window.location = "http://onlinedevserver.biz/dev/lavish/";
+		window.location.href  = "http://onlinedevserver.biz/dev/lavish/dashboard/";
      
    });
   }
@@ -847,6 +1055,7 @@ function emailClicked()
   {
     //alert("Please Fill the Form Successfully");	
   }
+  return false;
 }
 function saveFeedBack()
 {
@@ -886,6 +1095,7 @@ function saveFeedBack()
   
 }
 </script>
+
 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() )?>/js/scripts.js" ></script>
 
