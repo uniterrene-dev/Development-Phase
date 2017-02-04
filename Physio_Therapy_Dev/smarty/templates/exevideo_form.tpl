@@ -30,12 +30,11 @@
 						</div>	
 						</div>
 					</div>
-					<input type="hidden" name="action" value="video">
 					<div class="form-group">
 						<div class="col-sm-3">
 						</div>
 						<div class="col-sm-9">					
-							<input type="hidden" id="action" name="action" value="edit_steps">
+							<input type="hidden" id="action" name="action" value="edit_video">
 							<button class="btn btn-lg btn-success" id="submitNewBtn" type="submit" value="edit_steps">Submit</button>
 						</div>
 					</div>
