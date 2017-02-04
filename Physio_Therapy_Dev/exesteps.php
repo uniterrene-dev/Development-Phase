@@ -30,7 +30,6 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
 	}
 	function get_image($file_id){
 		$sql = "SELECT *  FROM `storage_files` WHERE `file_id` = '{$file_id}'";
-		/* $utils->log("SQL : $sql", "INFO", "Exercises");*/
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
 		return $row['name'].'.'.$row['extension']; 
