@@ -13,15 +13,16 @@ $utils = new utils();
 $exercises = new exercises();
 $pdf = new PDF();
 
-if(!empty($_POST) && $_POST['action'] == 'search'){
+if(!empty($_GET) && $_GET['action'] == 'search'){
 	
-	$exercise_id = $_POST['exer_dropdown'];
+	$exercise_id = $_GET['exer_dropdown'];
 	$utils->log("Params :$exercise_id ",'INFO', 'Exe Steps');
 	$steps_data['count'] = 0;
-	if($exercise_id){
-        $steps_data = $exercises->list_steps($utils, $exercise_id);
+	if($exercise_id && $_GET['type']=='step'){
+        $steps_data = $exercises->list_steps($utils, $exercise_id);       
+	} else if($exercise_id && $_GET['type']=='video'){
+		$video_data = $exercises->list_video($utils, $exercise_id);
 	}
-		//var_dump($steps_data);
 	$exercise_data = $exercises->list_exercises($utils);
 	
 	if($exercise_id){
@@ -34,6 +35,10 @@ if(!empty($_POST) && $_POST['action'] == 'search'){
 		$row = mysql_fetch_assoc($result);
 		return $row['name'].'.'.$row['extension']; 
 	}
+	@$type = '';
+	if(@$_GET['type']){
+		@$type = $_GET['type'];
+	}
 	
 	$exer_data = $exr_data['exercise'];
 	$smarty->assign('exercise_id', $exercise_id); 
@@ -41,6 +46,8 @@ if(!empty($_POST) && $_POST['action'] == 'search'){
 	$smarty->assign('exercise_data', $exercise_data);
 	$smarty->assign('show_steps', 1);
 	$smarty->assign('steps_data', $steps_data);
+	$smarty->assign('video_data', $video_data);
+	$smarty->assign('type', $type);
 	
 
 	$smarty->assign('role_id', $role_id);	
@@ -150,7 +157,6 @@ if(!empty($_POST) && $_POST['action'] == 'search'){
 			$unique_id = uniqid();
 			$filename = $unique_id.$_FILES['upload_img']['name'];
 			$uploadfile = $uploaddir ."\/". $filename;
-			//$file_id = $uploadfile;
 			$path = '/uploads/steps';
 			$file_id = $exercises->upload_img($utils, $filename,$path,$_FILES);
 			$utils->log("Uploaded pic name : $uploadfile, save_path : $save_path",'INFO', 'Exe Steps');
@@ -188,6 +194,56 @@ if(!empty($_POST) && $_POST['action'] == 'search'){
 	$smarty->assign('exercise_data', $exercise_data);
 	$smarty->assign('show_steps', 1);
 	$smarty->assign('steps_data', $steps_data);
+	$smarty->assign('role_id', $role_id);
+	$smarty->assign('logout_no_show', 0);
+	$smarty->display('exesteps.tpl');
+
+}else if(!empty($_POST) && $_POST['action'] == 'edit_video'){
+        $exercise_id = $_POST['exercise_id'];
+        $type = $_POST['type'];
+		$path = $_POST['upload_video'];
+        $utils->log("Params :$exercise_id, $type",'INFO', 'Exe Steps');
+
+        $error = '';
+		if($type == 'local'){
+			$root = __DIR__;
+			$uploaddir = $root.'\uploads\videos';
+			$uploadfile = '';
+			if(!empty($_FILES['upload_video']) && ($_FILES['upload_video']['size'] > 0 )){
+				$utils->log("found upload pic!!",'INFO', 'Exe Steps');				
+				$unique_id = uniqid();
+				$filename = $unique_id.$_FILES['upload_video']['name'];
+				$uploadfile = $uploaddir ."\/". $filename;
+				$path = '/uploads/steps';
+				$utils->log("Uploaded pic name : $uploadfile, save_path : $path",'INFO', 'Exe Steps');
+				if(move_uploaded_file($_FILES['upload_video']['tmp_name'], $uploadfile)) {
+					$utils->log("File is valid, and was successfully uploaded",'INFO', 'Exe Steps');
+				} else {
+					$utils->log("Possible file upload attack!!",'INFO', 'Exe Steps');
+					$error = "Possible file upload attack!!";
+				}
+				$exercises->upload_video($utils,$exercise_id,$type,$path,$filename);
+			}else{
+				$utils->log("No file Params!!",'INFO', 'Exe Steps');
+			} 
+		} else {
+			$exercises->upload_video($utils,$exercise_id,$type,$path);
+		}
+	if($error){
+		$result = $error; // Upload image failed!!
+	}else{
+		$result = '';
+		
+	}
+	
+	$exercise_data = $exercises->list_exercises($utils);
+	$exr_data = $exercises->get_exercise_data($utils, $exercise_id);
+	$exer_data = $exr_data['exercise'];
+
+	$smarty->assign('return_info', $result);
+	$smarty->assign('exercise_id', $exercise_id);
+	$smarty->assign('exer_data', $exer_data);
+	$smarty->assign('exercise_data', $exercise_data);
 	$smarty->assign('role_id', $role_id);
 	$smarty->assign('logout_no_show', 0);
 	$smarty->display('exesteps.tpl');
