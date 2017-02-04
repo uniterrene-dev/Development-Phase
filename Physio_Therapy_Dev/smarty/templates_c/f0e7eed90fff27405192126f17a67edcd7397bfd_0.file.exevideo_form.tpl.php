@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-03 13:35:33
+/* Smarty version 3.1.30, created on 2017-02-03 13:48:19
   from "C:\xampp\htdocs\prabhu3482\smarty\templates\exevideo_form.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_589479153ee0e0_65133833',
+  'unifunc' => 'content_58947c1321dfa3_08442861',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f0e7eed90fff27405192126f17a67edcd7397bfd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\prabhu3482\\smarty\\templates\\exevideo_form.tpl',
-      1 => 1486125325,
+      1 => 1486126098,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_589479153ee0e0_65133833 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58947c1321dfa3_08442861 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 		<form id="myform" class="form-horizontal" role="form" method="post" action="exesteps.php" enctype="multipart/form-data">
@@ -58,12 +58,11 @@ echo $_smarty_tpl->tpl_vars['steps_id']->value;
 						</div>	
 						</div>
 					</div>
-					<input type="hidden" name="action" value="video">
 					<div class="form-group">
 						<div class="col-sm-3">
 						</div>
 						<div class="col-sm-9">					
-							<input type="hidden" id="action" name="action" value="edit_steps">
+							<input type="hidden" id="action" name="action" value="edit_video">
 							<button class="btn btn-lg btn-success" id="submitNewBtn" type="submit" value="edit_steps">Submit</button>
 						</div>
 					</div>
