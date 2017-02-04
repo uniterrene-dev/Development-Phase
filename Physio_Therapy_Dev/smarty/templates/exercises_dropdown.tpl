@@ -1,6 +1,6 @@
 
 
-<form id="myform" class="form-horizontal" role="form" method="post" action="exesteps.php">
+<form id="myform" class="form-horizontal" role="form" method="get" action="exesteps.php">
     <div class="container-fluid">
         <div class="row">
           <div class="col-md-2" id="createFaultReport">
@@ -15,7 +15,8 @@
                             <option value="{$row.exercise_id}">{$row.name} </option>
                         {/foreach}
                     </select>
-			<input type="hidden" id="action" name="action" value="search">
+					<input type="hidden" id="action" name="action" value="search">
+					<input type="hidden" id="type" name="type" value="step">
                     </td>
                     <td><button class="btn btn-lg btn-success" id="submitNewBtn" type="submit" value="search">Submit</button></td>
                 </tr>
