@@ -35,6 +35,10 @@ if(!empty($_POST) && $_POST['submitButton'] == 'Reports'){
 
         header("location: exesteps.php");
 
+}else if(!empty($_POST) && $_POST['submitButton'] == 'Categories'){
+
+        header("location: categories.php");
+
 }else if(!empty($_POST) && $_POST['submitButton'] == 'Patients'){
 
         header("location: patients.php");

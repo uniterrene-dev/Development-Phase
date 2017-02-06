@@ -43,6 +43,18 @@ if(!empty($_POST) && $_POST['action'] == 'add_exercise'){
         $utils->log("Message : ".$msg['output'], 'INFO', 'Exercises');
         echo json_encode($msg);
 
+}else if(!empty($_POST) && $_POST['action'] == 'sub_category'){
+		$category_value = $exercises->getSubCategory($utils,$_POST);
+		$smarty->assign('category_value', $category_value);
+		$smarty->display('get_subcategory.tpl');
+      
+
+	  /*  $exercise_id = $_POST['exercise_id'];
+	$utils->log("Params :$exercise_id",'INFO', 'Exercises');
+	$msg['output'] = $exercises->delete_exercise($utils, $exercise_id);
+        $utils->log("Message : ".$msg['output'], 'INFO', 'Exercises');
+        echo json_encode($msg); */
+
 }else{
 	$cond_data  = $exercises->conditions_list($utils, 'conditions');
 	$bp_data = $exercises->bodypart_list($utils, 'bodyparts');
@@ -51,7 +63,7 @@ if(!empty($_POST) && $_POST['action'] == 'add_exercise'){
 	$equipment_data = $exercises->equipment_list($utils, 'equipment');
 	$muscle_data = $exercises->muscle_list($utils, 'muscle');
 	$movement_data = $exercises->movement_list($utils, 'movement');
-
+	print_r($cond_data);
 	$exercise_data = $exercises->list_exercises($utils);
         
 	$smarty->assign('cond_data', $cond_data);
