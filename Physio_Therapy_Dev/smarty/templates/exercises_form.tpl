@@ -1,5 +1,4 @@
                     <div class="col-md-4">
-
                         <h2>Add / Edit Exercise </h2>
                         <p>Please enter the exercise details below</p>
                         <div class="container-fluid">
@@ -8,7 +7,7 @@
                                 <label for="registration" class="col-sm-3 control-label">Name</label>
                                 <div class="col-sm-9">
                                     <input type="text" id="name" name="name" class="form-control" >
-				</div>
+								</div>
                             </div>
 
                             <div class="form-group">
@@ -18,14 +17,14 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group conditions">
                                 <label for="color" class="col-sm-3 control-label">Conditions</label>
                                 <div class="col-sm-9">
-                                    <select id="conditions" name="conditions" class="form-control">
+                                    <select id="conditions" name="conditions" class="category_list form-control">
                                         <option value="">Select Conditions</option>;
-					{foreach key=k item=val from=$cond_data}
-						<option value="{$k}">{$val}</option>;
-					{/foreach}
+											{foreach key=k item=val from=$cond_data}
+												<option value="{$k}">{$val}</option>;
+											{/foreach}
                                     </select>
                                 </div>
                             </div>
@@ -33,7 +32,7 @@
                             <div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Position</label>
                                 <div class="col-sm-9">
-				    <select id="position" name="position" class="form-control">
+									<select id="position" name="position" class="category_list form-control">
                                         <option value="">Select Position</option>;
                                         {foreach key=k item=val from=$pos_data}
                                                 <option value="{$k}">{$val}</option>;
@@ -43,10 +42,10 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group bodypart">
                                 <label for="color" class="col-sm-3 control-label">Bodyparts</label>
                                 <div class="col-sm-9">
-                                    <select id="bodypart" name="bodypart" class="form-control">
+                                    <select id="bodypart" name="bodypart" class="category_list form-control">
 										<option value="">Select Bodypart</option>;
                                         {foreach key=k item=val from=$bp_data}
                                                 <option value="{$k}">{$val}</option>;
@@ -57,7 +56,7 @@
                             <div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Purpose</label>
                                 <div class="col-sm-9">
-                                    <select id="purpose" name="purpose" class="form-control">
+                                    <select id="purpose" name="purpose" class="category_list form-control">
 									<option value="">Select Purpose</option>;
                                         {foreach key=k item=val from=$purpose_data}
                                                 <option value="{$k}">{$val}</option>;
@@ -68,7 +67,7 @@
                             <div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Equipments</label>
                                 <div class="col-sm-9">
-                                    <select id="equipment" name="equipment" class="form-control">
+                                    <select id="equipment" name="equipment" class="category_list form-control">
 										<option value="">Select Equipment</option>;
                                         {foreach key=k item=val from=$equip_data}
                                                 <option value="{$k}">{$val}</option>;
@@ -77,7 +76,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <!--div class="form-group">
+                            <div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Muscle</label>
                                 <div class="col-sm-9">
                                     <select id="muscle" name="muscle" class="form-control">
@@ -100,7 +99,7 @@
 
                                     </select>
                                 </div>
-                            </div>-->
+                            </div>
 							<div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Keywords</label>
                                 <div class="col-sm-9">
@@ -115,8 +114,8 @@
                                     <button class="btn btn-lg btn-success" id="submitNewBtn" type="button" value="add_exercise">Submit</button>
                                 </div>
                             </div>
-			</div>
-		    </div>
+						</div>
+					</div>
 			
 <!-- <link rel="stylesheet" type="text/css" href="static/css/jquery.tagsinput.css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
