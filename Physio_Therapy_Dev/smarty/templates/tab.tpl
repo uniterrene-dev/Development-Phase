@@ -9,6 +9,7 @@
 				<button class="btn-primary" value="Reports" type="submit" name="submitButton">Reports</button>
 				<button class="btn-primary" value="Exercises" type="submit" name="submitButton">Exercises</button>
 				<button class="btn-primary" value="ExeSteps" type="submit" name="submitButton">Exe - Steps</button>
+				<button class="btn-primary" value="Categories" type="submit" name="submitButton">Categories</button>
 			{/if}
 		
 			<button class="btn-primary" value="Images" type="submit" name="submitButton">Images</button>

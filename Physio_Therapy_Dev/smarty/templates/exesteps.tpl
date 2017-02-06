@@ -15,7 +15,6 @@
 <h3><a href="?exer_dropdown={$exercise_id}&action=search&type=step">View Steps</a></h3>
 <h3><a href="?exer_dropdown={$exercise_id}&action=search&type=video">View Video Tutorial</a></h3>
 	{if !empty($type) && $type eq "step"}
-
 		{if !empty($show_steps)}
 			<h2>Exercise Steps for "{$exer_data}" <a href="exesteps.php?action=add_steps&exercise_id={$exercise_id}"> Add new Steps</a>
 			|
