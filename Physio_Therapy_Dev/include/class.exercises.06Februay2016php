@@ -87,7 +87,7 @@ class exercises{
         }
 
         function conditions_list($utils, $type){
-			$sql = "SELECT cond_id, conditions, parent_id from conditions WHERE `parent_id` = 0 ";
+			$sql = "SELECT cond_id, conditions, parent_id from conditions ";
 			$utils->log("SQL : $sql", "INFO", "Exercises");
 
 			$result=mysql_query($sql);
@@ -95,55 +95,38 @@ class exercises{
 			$temp = array();
 			if($count){
 					while($row= mysql_fetch_assoc($result)){
-							$temp[$row['cond_id']] = $row['conditions'];
+							$temp[$row['parent_id']][$row['cond_id']] = $row['conditions'];
 					}
 			}
-			return $temp;
+			$ret_array = array();
+			foreach($temp[0] as $parent_id => $p_cond) {
+					$inside = $this->prepare_tree($utils, $parent_id, $p_cond, $temp, $type);
+					if(count($inside)){
+							foreach($inside as $key => $val){
+									$ret_array[$key] = $val;
+							}
+					}
+			}
+			return $ret_array;
         }
 
-        function getSubCategory($utils, $params=array()){
-			
-				switch($params['type']){
-						case 'conditions':
-						$sql = "SELECT * FROM `conditions` WHERE `parent_id` = {$params['parent_id']}";
-						$result = mysql_query($sql);
-						if(mysql_num_rows($result) > 0){
-							//$selectOption ='<option value="0" >Select equipment</option>';
-							while($row =  mysql_fetch_assoc($result)){
-								$selectOption .= "<option value='".$row['cond_id']."'>".$row['conditions']."</option>";
-							}					
-						}		
-					break;	
-					case 'positions':
-						$sql = "SELECT * FROM `positions` WHERE `parent_id` = {$params['parent_id']}";
-						
-					break;
-					case 'bodyparts':
-						$sql = "SELECT * FROM `bodyparts` WHERE `parent_id` = {$params['parent_id']}";
-						$utils->log("SQL : $sql", "INFO", "{$params['main']}");
-						$result = mysql_query($sql);
-						
-					break;	
-						case 'purpose':
-						$sql = "SELECT * FROM `purpose` WHERE `parent_id` = {$params['parent_id']}";
-						$utils->log("SQL : $sql", "INFO", "{$params['main']}");
-						$result = mysql_query($sql);
-						
-					break;	
-					case 'equipment':
-						$sql = "SELECT * FROM `equipment` WHERE `parent_id` = {$params['parent_id']}";
-						$utils->log("SQL : $sql", "INFO", "{$params['main']}");
-						$result = mysql_query($sql);
-							
-					break;	
-				}
-				
-				return $selectOption;
-        }
-		
         function prepare_tree($utils, $parent_id, $p_cond, $temp, $type){
 
-		
+		$out_array = array();
+		$out_array[$parent_id] = $p_cond;
+                $inside = array();
+                if(isset($temp[$parent_id])){
+                        foreach($temp[$parent_id] as $child_id => $c_cond){
+				$concate_str = $p_cond .' / ' .$c_cond;
+                                $inside = $this->prepare_tree($utils, $child_id, $concate_str, $temp, $type);
+		                if(count($inside)){
+                		        foreach($inside as $key => $val){
+                                		$out_array[$key] = $val;
+		                        }
+                		}
+                        }
+                }
+                return $out_array;
         }
 
         function bodypart_list($utils, $type){

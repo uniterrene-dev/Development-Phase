@@ -1,5 +1,5 @@
 <?php
-$host_name = 'localhost';
+$host_name = '192.168.10.137';
 $user_name = 'root';
 $pass_word = '';
 $database_name = 'therexpo_physio';
