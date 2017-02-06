@@ -277,41 +277,50 @@ class exercises{
 	}
 
         function list_steps($utils, $exercise_id = 0, $steps_id = 0){
+			$sql="SELECT steps_id, es.exercise_id, e.exercise, es.description, file_id, english, hindi, urdu, telugu, tamil, bengali FROM exercise_steps es, exercises e  WHERE es.exercise_id = e.exercise_id";
+			$sql .= ($exercise_id) ? " AND es.exercise_id = $exercise_id" : "";
+			$sql .= ($steps_id) ? " AND steps_id = $steps_id" : "";
+			$utils->log("SQL: $sql", 'INFO', 'Exercises');
+			$result=mysql_query($sql);
+			$count=mysql_num_rows($result);
 
-                $sql="SELECT steps_id, es.exercise_id, e.exercise, es.description, file_id, english, hindi, urdu, telugu, tamil, bengali FROM exercise_steps es, exercises e  WHERE es.exercise_id = e.exercise_id";
-				$sql .= ($exercise_id) ? " AND es.exercise_id = $exercise_id" : "";
-				$sql .= ($steps_id) ? " AND steps_id = $steps_id" : "";
-                $utils->log("SQL: $sql", 'INFO', 'Exercises');
-                $result=mysql_query($sql);
-                $count=mysql_num_rows($result);
-
-                $data = array();
-                $data['count'] = $count;
-                $temp_data = array();
-				$exer_data = '';
-                if($count){
-					$incr = 0;
-					while($row= mysql_fetch_assoc($result)){
-						$incr = $incr + 1;
-						$exer_data = $row['exercise'];
-						$temp_data[$incr]['exercise_id'] = $row['exercise_id'];
-						$temp_data[$incr]['exercise'] = $row['exercise'];
-						$temp_data[$incr]['steps_id'] = $row['steps_id'];
-						$temp_data[$incr]['description'] = $row['description'];
-						$temp_data[$incr]['file_id'] = $row['file_id'];
-						$temp_data[$incr]['english'] = $row['english'];
-						$temp_data[$incr]['hindi'] = $row['hindi'];
-						$temp_data[$incr]['urdu'] = $row['urdu'];
-						$temp_data[$incr]['telugu'] = $row['telugu'];
-						$temp_data[$incr]['tamil'] = $row['tamil'];
-						$temp_data[$incr]['bengali'] = $row['bengali'];
-					}
-                }
-                $data['table_data'] = $temp_data;
-				$data['exer_data'] = $exer_data;
-						return $data;
+			$data = array();
+			$data['count'] = $count;
+			$temp_data = array();
+			$exer_data = '';
+			if($count){
+				$incr = 0;
+				while($row= mysql_fetch_assoc($result)){
+					$incr = $incr + 1;
+					$exer_data = $row['exercise'];
+					$temp_data[$incr]['exercise_id'] = $row['exercise_id'];
+					$temp_data[$incr]['exercise'] = $row['exercise'];
+					$temp_data[$incr]['steps_id'] = $row['steps_id'];
+					$temp_data[$incr]['description'] = $row['description'];
+					$temp_data[$incr]['file_id'] = $row['file_id'];
+					$temp_data[$incr]['english'] = $row['english'];
+					$temp_data[$incr]['hindi'] = $row['hindi'];
+					$temp_data[$incr]['urdu'] = $row['urdu'];
+					$temp_data[$incr]['telugu'] = $row['telugu'];
+					$temp_data[$incr]['tamil'] = $row['tamil'];
+					$temp_data[$incr]['bengali'] = $row['bengali'];
 				}
-
+			}
+			$data['table_data'] = $temp_data;
+			$data['exer_data'] = $exer_data;
+					return $data;
+		}
+		
+		function list_video($utils, $exercise_id = 0){			
+			$sql="SELECT video_id, path, exercise_id, type, name, extension  FROM `exercise_video` WHERE `exercise_id` = {$exercise_id}";
+			$utils->log("SQL: $sql", 'INFO', 'Exercises');
+			$result=mysql_query($sql);
+			$count=mysql_num_rows($result);
+			if($count > 0){
+				$rows = mysql_fetch_assoc($result);
+				return $rows;
+			}
+		}
 
         function add_steps($utils, $exercise_id, $description, $file_id, $english, $hindi, $urdu, $telugu, $tamil, $bengali){
                 $sql="INSERT INTO exercise_steps (exercise_id, description, file_id, english, hindi, urdu, telugu, tamil, bengali, created_date, updated_date) VALUES ($exercise_id, '$description', '$file_id', '$english', '$hindi', '$urdu', '$telugu', '$tamil', '$bengali', now(), now()) ";
@@ -351,9 +360,20 @@ class exercises{
         function delete_steps($utils, $exercise_id, $steps_id){
 
                 $sql="DELETE FROM exercise_steps WHERE exercise_id = $exercise_id";
-		$sql .= $steps_id ? " AND steps_id = $steps_id " : " ";
+				$sql .= $steps_id ? " AND steps_id = $steps_id " : " ";
                 $utils->log("SQL : $sql", "INFO", "Exercises");
 
+                if(mysql_query($sql)){
+                        return "Deleted successfully!!";
+                }else{
+                        return "Deletion Failed!!";
+                }
+        }
+		
+		function delete_video($utils, $exercise_id, $video_id){
+                $sql="DELETE FROM `therexpo_physio`.`exercise_video` WHERE `exercise_video`.`exercise_id` = {$exercise_id}";
+				$sql .= $video_id ? " AND `exercise_video`.`video_id` = {$video_id} " : " ";
+                $utils->log("SQL : $sql", "INFO", "Exercises");
                 if(mysql_query($sql)){
                         return "Deleted successfully!!";
                 }else{
@@ -391,8 +411,26 @@ class exercises{
 		
 		}
 		
-		function gt_img_name($file_id){
-			echo "hello".$file_id;
+		function upload_video($utils,$exercise_id,$type,$path,$filename = '',$file = array()){
+			$ext = explode('.',$filename); 
+			$extsn = end($ext); 
+			$sql = "INSERT INTO `therexpo_physio`.`exercise_video` (
+					`exercise_id` ,
+					`type` ,
+					`name` ,
+					`extension` ,
+					`path`,
+					`mime_type`
+					)
+					VALUES (
+					'{$exercise_id}', '{$type}', '{$filename}', '{$extsn}', '{$path}', '{$file['upload_video']['type']}'
+					);";
+			if(mysql_query($sql)){
+				return "insertd successfully!!";
+			}else{
+				return "insertion Failed!!";
+			}		
+			
 		}
 		
 		function set_keywords($utils, $keywords){
