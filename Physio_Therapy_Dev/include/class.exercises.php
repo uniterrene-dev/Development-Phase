@@ -102,43 +102,54 @@ class exercises{
         }
 
         function getSubCategory($utils, $params=array()){
-			
-				switch($params['type']){
+				$options = array();
+				switch($params['type']){						
 						case 'conditions':
 						$sql = "SELECT * FROM `conditions` WHERE `parent_id` = {$params['parent_id']}";
+						$utils->log("SQL : $sql", "INFO", "$sql");
 						$result = mysql_query($sql);
 						if(mysql_num_rows($result) > 0){
-							//$selectOption ='<option value="0" >Select equipment</option>';
 							while($row =  mysql_fetch_assoc($result)){
-								$selectOption .= "<option value='".$row['cond_id']."'>".$row['conditions']."</option>";
+								$options[$row['cond_id']] = $row['conditions'];
 							}					
 						}		
 					break;	
 					case 'positions':
 						$sql = "SELECT * FROM `positions` WHERE `parent_id` = {$params['parent_id']}";
-						
+						$utils->log("SQL : $sql", "INFO", "$sql");
+						$result = mysql_query($sql);
+						if(mysql_num_rows($result) > 0){
+							while($row =  mysql_fetch_assoc($result)){
+								$options[$row['position_id']] = $row['position'];
+							}					
+						}
 					break;
 					case 'bodyparts':
 						$sql = "SELECT * FROM `bodyparts` WHERE `parent_id` = {$params['parent_id']}";
-						$utils->log("SQL : $sql", "INFO", "{$params['main']}");
+						$utils->log("SQL : $sql", "INFO", "$sql");
 						$result = mysql_query($sql);
+						if(mysql_num_rows($result) > 0){
+							while($row =  mysql_fetch_assoc($result)){
+								$options[$row['bodypart_id']] = $row['bodypart'];
+							}					
+						}
 						
 					break;	
 						case 'purpose':
 						$sql = "SELECT * FROM `purpose` WHERE `parent_id` = {$params['parent_id']}";
-						$utils->log("SQL : $sql", "INFO", "{$params['main']}");
+						$utils->log("SQL : $sql", "INFO", "$sql");
 						$result = mysql_query($sql);
 						
 					break;	
 					case 'equipment':
 						$sql = "SELECT * FROM `equipment` WHERE `parent_id` = {$params['parent_id']}";
-						$utils->log("SQL : $sql", "INFO", "{$params['main']}");
+						$utils->log("SQL : $sql", "INFO", "$sql");
 						$result = mysql_query($sql);
 							
 					break;	
 				}
 				
-				return $selectOption;
+				return $options;
         }
 		
         function prepare_tree($utils, $parent_id, $p_cond, $temp, $type){
@@ -147,26 +158,17 @@ class exercises{
         }
 
         function bodypart_list($utils, $type){
-                $sql = "select bodypart_id, bodypart, parent_id from bodyparts";
-                $utils->log("SQL : $sql", "INFO", "Exercises");
-                $result=mysql_query($sql);
-                $count=mysql_num_rows($result);
-                $temp = array();
-                if($count){
-                        while($row= mysql_fetch_assoc($result)){
-                                $temp[$row['parent_id']][$row['bodypart_id']] = $row['bodypart'];
-                        }
-                }
-                $ret_array = array();
-                foreach($temp[0] as $parent_id => $p_cond) {
-                        $inside = $this->prepare_tree($utils, $parent_id, $p_cond, $temp, $type);
-                        if(count($inside)){
-                                foreach($inside as $key => $val){
-                                        $ret_array[$key] = $val;
-                                }
-                        }
-                }
-                return $ret_array;
+                $sql = "select bodypart_id, bodypart, parent_id from bodyparts WHERE `parent_id` = 0 ";
+				$utils->log("SQL : $sql", "INFO", "Exercises");
+				$result=mysql_query($sql);
+				$count=mysql_num_rows($result);
+				$temp = array();
+				if($count){
+					while($row= mysql_fetch_assoc($result)){
+							$temp[$row['bodypart_id']] = $row['bodypart'];
+					}
+				}
+				return $temp;
         }
 
         function position_list($utils, $type){
