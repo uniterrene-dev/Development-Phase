@@ -32,7 +32,7 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
 		$sql = "SELECT *  FROM `storage_files` WHERE `file_id` = '{$file_id}'";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
-		return $row['name'].'.'.$row['extension']; 
+		return $row['name']; 
 	}
 	@$type = '';
 	if(@$_GET['type']){
@@ -45,7 +45,7 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
 	$smarty->assign('exercise_data', $exercise_data);
 	$smarty->assign('show_steps', 1);
 	$smarty->assign('steps_data', $steps_data);
-	$smarty->assign('video_data', $video_data);
+	$smarty->assign('video_data', @$video_data);
 	$smarty->assign('type', $type);
 	
 
@@ -94,13 +94,13 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
                 $steps_data = $exercises->list_steps($utils, $exercise_id, $steps_id);
         }
         //var_dump($steps_data);
-	$exercise_name = $exr_data['exercise'];
+		$exercise_name = $exr_data['exercise'];
         $smarty->assign('steps_id', $steps_id);
         $smarty->assign('exercise_id', $exercise_id);
         $smarty->assign('exercise_name', $exercise_name);
         $smarty->assign('show_steps', 1);
         $smarty->assign('steps_data', $steps_data);
-	$smarty->assign('role_id', $role_id);
+		$smarty->assign('role_id', $role_id);
         $smarty->assign('logout_no_show', 0);
         $smarty->display('edit_exesteps.tpl');
 
@@ -127,6 +127,26 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
         $smarty->assign('exercise_data', $exercise_data);
         $smarty->assign('show_steps', 1);
         $smarty->assign('steps_data', $steps_data);
+		$smarty->assign('role_id', $role_id);
+        $smarty->assign('logout_no_show', 0);
+        $smarty->display('exesteps.tpl');
+
+
+}else if(!empty($_GET) && $_GET['action'] == 'delete_video'){
+
+        $exercise_id = $_GET['exercise_id'];
+        $video_id = $_GET['video_id'];
+        $utils->log("Params :$exercise_id, $video_id",'INFO', 'Exe Steps');
+		$result = $exercises->delete_video($utils, $exercise_id, $video_id);
+
+		$exercise_data = $exercises->list_exercises($utils);
+		$exr_data = $exercises->get_exercise_data($utils, $exercise_id);
+        $exer_data = $exr_data['exercise'];
+
+		$smarty->assign('return_info', $result);
+        $smarty->assign('exercise_id', $exercise_id);
+        $smarty->assign('exer_data', $exer_data);
+        $smarty->assign('exercise_data', $exercise_data);
 		$smarty->assign('role_id', $role_id);
         $smarty->assign('logout_no_show', 0);
         $smarty->display('exesteps.tpl');
@@ -213,7 +233,7 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
 				$unique_id = uniqid();
 				$filename = $unique_id.$_FILES['upload_video']['name'];
 				$uploadfile = $uploaddir ."\/". $filename;
-				$path = '/uploads/steps';
+				$path = '/uploads/videos';
 				$utils->log("Uploaded pic name : $uploadfile, save_path : $path",'INFO', 'Exe Steps');
 				if(move_uploaded_file($_FILES['upload_video']['tmp_name'], $uploadfile)) {
 					$utils->log("File is valid, and was successfully uploaded",'INFO', 'Exe Steps');
@@ -221,7 +241,7 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
 					$utils->log("Possible file upload attack!!",'INFO', 'Exe Steps');
 					$error = "Possible file upload attack!!";
 				}
-				$exercises->upload_video($utils,$exercise_id,$type,$path,$filename);
+				$exercises->upload_video($utils,$exercise_id,$type,$path,$filename,$_FILES);
 			}else{
 				$utils->log("No file Params!!",'INFO', 'Exe Steps');
 			} 
