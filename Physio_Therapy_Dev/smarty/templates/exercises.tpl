@@ -102,7 +102,34 @@
 							}
 					   });
 					});
-                });
+                
+					$('.category_list').change(function(){
+						var call_url = "exercises.php";
+						var id = $(this).attr('id');
+						$.ajax({
+							type: "POST",
+							url: call_url,
+							data: {
+									parent_id: $(this).val(),
+									type: id,
+									action: 'sub_category'
+							},
+							success: function(result){
+									$('.'+id).append(result);
+							},
+							error: function(XMLHttpRequest, textStatus, errorThrown){
+									alert("Error" +XMLHttpRequest);
+									alert("test status :" + textStatus);
+									alert(" error thrown" + errorThrown);
+							}
+					   });			
+					});		
+				
+				
+				
+				
+				
+				});
         </script>
         <script type="text/javascript">
                 function deleteExe(){

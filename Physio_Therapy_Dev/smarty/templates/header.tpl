@@ -26,7 +26,7 @@
                                 <div class="row">
                                         <div class="col-md-8">
                                                 <p class="form-signin-heading">Welcome to My Health</p>
-                                                {if $logout_no_show > 0 }{else} <a class="pad_left0" href="logout.php" role="button">Logout</a></br>
+                                                {if !empty($logout_no_show) && $logout_no_show > 0 }{else} <a class="pad_left0" href="logout.php" role="button">Logout</a></br>
                                                 <a class="pad_left0" href="index.php" role="button">Home</a>{/if}
                                         </div>
                                         <div class="col-md-4">
