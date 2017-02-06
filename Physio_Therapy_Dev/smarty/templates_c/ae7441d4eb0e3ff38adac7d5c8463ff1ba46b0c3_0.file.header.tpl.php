@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-04 07:33:46
+/* Smarty version 3.1.30, created on 2017-02-06 08:13:12
   from "C:\xampp\htdocs\Physio_Therapy_Dev\smarty\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_589575ca59b422_19056827',
+  'unifunc' => 'content_589822083b05a2_74757508',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ae7441d4eb0e3ff38adac7d5c8463ff1ba46b0c3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Physio_Therapy_Dev\\smarty\\templates\\header.tpl',
-      1 => 1485860008,
+      1 => 1486365181,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_589575ca59b422_19056827 (Smarty_Internal_Template $_smarty_tpl) {
+function content_589822083b05a2_74757508 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +58,7 @@ function content_589575ca59b422_19056827 (Smarty_Internal_Template $_smarty_tpl)
                                 <div class="row">
                                         <div class="col-md-8">
                                                 <p class="form-signin-heading">Welcome to My Health</p>
-                                                <?php if ($_smarty_tpl->tpl_vars['logout_no_show']->value > 0) {
+                                                <?php if (!empty($_smarty_tpl->tpl_vars['logout_no_show']->value) && $_smarty_tpl->tpl_vars['logout_no_show']->value > 0) {
 } else { ?> <a class="pad_left0" href="logout.php" role="button">Logout</a></br>
                                                 <a class="pad_left0" href="index.php" role="button">Home</a><?php }?>
                                         </div>

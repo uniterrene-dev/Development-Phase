@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-04 07:45:31
+/* Smarty version 3.1.30, created on 2017-02-06 11:21:51
   from "C:\xampp\htdocs\Physio_Therapy_Dev\smarty\templates\exercises_form.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5895788b6ec7b6_06589994',
+  'unifunc' => 'content_58984e3f3d44a1_52267711',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '555834004b3ab88819514588351741d0697f82af' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Physio_Therapy_Dev\\smarty\\templates\\exercises_form.tpl',
-      1 => 1486107298,
+      1 => 1486376468,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5895788b6ec7b6_06589994 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58984e3f3d44a1_52267711 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
                     <div class="col-md-4">
-
                         <h2>Add / Edit Exercise </h2>
                         <p>Please enter the exercise details below</p>
                         <div class="container-fluid">
@@ -32,7 +31,7 @@ function content_5895788b6ec7b6_06589994 (Smarty_Internal_Template $_smarty_tpl)
                                 <label for="registration" class="col-sm-3 control-label">Name</label>
                                 <div class="col-sm-9">
                                     <input type="text" id="name" name="name" class="form-control" >
-				</div>
+								</div>
                             </div>
 
                             <div class="form-group">
@@ -42,20 +41,20 @@ function content_5895788b6ec7b6_06589994 (Smarty_Internal_Template $_smarty_tpl)
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group conditions">
                                 <label for="color" class="col-sm-3 control-label">Conditions</label>
                                 <div class="col-sm-9">
-                                    <select id="conditions" name="conditions" class="form-control">
+                                    <select id="conditions" name="conditions" class="category_list form-control">
                                         <option value="">Select Conditions</option>;
-					<?php
+											<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['cond_data']->value, 'val', false, 'k');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['val']->value) {
 ?>
-						<option value="<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+												<option value="<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['val']->value;?>
 </option>;
-					<?php
+											<?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
@@ -68,7 +67,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                             <div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Position</label>
                                 <div class="col-sm-9">
-				    <select id="position" name="position" class="form-control">
+									<select id="position" name="position" class="category_list form-control">
                                         <option value="">Select Position</option>;
                                         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['pos_data']->value, 'val', false, 'k');
@@ -89,10 +88,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group bodypart">
                                 <label for="color" class="col-sm-3 control-label">Bodyparts</label>
                                 <div class="col-sm-9">
-                                    <select id="bodypart" name="bodypart" class="form-control">
+                                    <select id="bodypart" name="bodypart" class="category_list form-control">
 										<option value="">Select Bodypart</option>;
                                         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['bp_data']->value, 'val', false, 'k');
@@ -114,7 +113,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                             <div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Purpose</label>
                                 <div class="col-sm-9">
-                                    <select id="purpose" name="purpose" class="form-control">
+                                    <select id="purpose" name="purpose" class="category_list form-control">
 									<option value="">Select Purpose</option>;
                                         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['purpose_data']->value, 'val', false, 'k');
@@ -136,7 +135,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                             <div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Equipments</label>
                                 <div class="col-sm-9">
-                                    <select id="equipment" name="equipment" class="form-control">
+                                    <select id="equipment" name="equipment" class="category_list form-control">
 										<option value="">Select Equipment</option>;
                                         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['equip_data']->value, 'val', false, 'k');
@@ -156,7 +155,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     </select>
                                 </div>
                             </div>
-                            <!--div class="form-group">
+                            <div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Muscle</label>
                                 <div class="col-sm-9">
                                     <select id="muscle" name="muscle" class="form-control">
@@ -201,7 +200,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
                                     </select>
                                 </div>
-                            </div>-->
+                            </div>
 							<div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Keywords</label>
                                 <div class="col-sm-9">
@@ -216,8 +215,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     <button class="btn btn-lg btn-success" id="submitNewBtn" type="button" value="add_exercise">Submit</button>
                                 </div>
                             </div>
-			</div>
-		    </div>
+						</div>
+					</div>
 			
 <!-- <link rel="stylesheet" type="text/css" href="static/css/jquery.tagsinput.css" />
 <?php echo '<script'; ?>
