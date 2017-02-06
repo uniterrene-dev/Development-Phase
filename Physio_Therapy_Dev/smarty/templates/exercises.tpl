@@ -4,7 +4,12 @@
 <br/>
 {include file='tab.tpl'}
 <br/>
-
+<style>
+.category_wrap {
+  margin-bottom: 17px;
+  overflow: hidden;
+}
+</style>
 <div id="response" name="response"></div>
 <form id="myform" class="form-horizontal" role="form" method="post" action="exercises.php">
     <div class="container-fluid">
@@ -103,26 +108,30 @@
 					   });
 					});
                 
-					$('.category_list').change(function(){
+					$('#myform').on('change','.container-fluid #exe_form .col-md-4 .container-fluid .form-group .category_wrap .category_list',function(){
 						var call_url = "exercises.php";
 						var id = $(this).attr('id');
-						$.ajax({
-							type: "POST",
-							url: call_url,
-							data: {
+						var parent_id = $(this).val();
+						if(parent_id != ''){
+							$.ajax({
+								type: "POST",
+								url: call_url,
+								data: {
 									parent_id: $(this).val(),
 									type: id,
 									action: 'sub_category'
-							},
-							success: function(result){
+								},
+								success: function(result){
+									
 									$('.'+id).append(result);
-							},
-							error: function(XMLHttpRequest, textStatus, errorThrown){
-									alert("Error" +XMLHttpRequest);
-									alert("test status :" + textStatus);
-									alert(" error thrown" + errorThrown);
-							}
-					   });			
+								},
+								error: function(XMLHttpRequest, textStatus, errorThrown){
+										alert("Error" +XMLHttpRequest);
+										alert("test status :" + textStatus);
+										alert(" error thrown" + errorThrown);
+								}
+						   });
+						}
 					});		
 				
 				

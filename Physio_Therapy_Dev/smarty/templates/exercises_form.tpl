@@ -18,6 +18,7 @@
                             </div>
 
                             <div class="form-group conditions">
+							 <div class="category_wrap">
                                 <label for="color" class="col-sm-3 control-label">Conditions</label>
                                 <div class="col-sm-9">
                                     <select id="conditions" name="conditions" class="category_list form-control">
@@ -27,9 +28,10 @@
 											{/foreach}
                                     </select>
                                 </div>
+							  </div> 	
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group position">
                                 <label for="color" class="col-sm-3 control-label">Position</label>
                                 <div class="col-sm-9">
 									<select id="position" name="position" class="category_list form-control">
@@ -42,29 +44,31 @@
                                 </div>
                             </div>
 
-                            <div class="form-group bodypart">
+                            <div class="form-group bodyparts">
+							   <div class="category_wrap">
                                 <label for="color" class="col-sm-3 control-label">Bodyparts</label>
                                 <div class="col-sm-9">
-                                    <select id="bodypart" name="bodypart" class="category_list form-control">
+                                    <select id="bodyparts" name="bodypart" class="category_list form-control">
 										<option value="">Select Bodypart</option>;
                                         {foreach key=k item=val from=$bp_data}
-                                                <option value="{$k}">{$val}</option>;
+											<option value="{$k}">{$val}</option>;
                                         {/foreach}
                                     </select>
                                 </div>
+                               </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group purpose">
                                 <label for="color" class="col-sm-3 control-label">Purpose</label>
                                 <div class="col-sm-9">
                                     <select id="purpose" name="purpose" class="category_list form-control">
-									<option value="">Select Purpose</option>;
+										<option value="">Select Purpose</option>;
                                         {foreach key=k item=val from=$purpose_data}
                                                 <option value="{$k}">{$val}</option>;
                                         {/foreach}
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group equipment">
                                 <label for="color" class="col-sm-3 control-label">Equipments</label>
                                 <div class="col-sm-9">
                                     <select id="equipment" name="equipment" class="category_list form-control">
@@ -76,7 +80,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group muscle">
                                 <label for="color" class="col-sm-3 control-label">Muscle</label>
                                 <div class="col-sm-9">
                                     <select id="muscle" name="muscle" class="form-control">
@@ -88,7 +92,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group movement">
                                 <label for="color" class="col-sm-3 control-label">Movement</label>
                                 <div class="col-sm-9">
                                     <select id="movement" name="movement" class="form-control">
