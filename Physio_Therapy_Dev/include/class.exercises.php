@@ -31,10 +31,8 @@ class exercises{
 		return $data;
 	}
 
-	function add_exercises($utils, $exercise, $description, $conditions, $position, $bodypart, $purpose, $equipment, $muscle, $movement, $exp_keys){
-	/* $sql="INSERT INTO exercises (exercise, description, condition_id, position_id, bodypart_id, purpose_id, equipment_id, muscle_id, movement_id, keywords, created_date, updated_date) VALUES ('$exercise', '$description', $conditions, $position, $bodypart, $purpose, $equipment,  $muscle, $movement,$exp_keys, now(), now()) ";
-		 */		
-	$sql= "INSERT INTO `therexpo_physio`.`exercises` (`exercise` ,`description` ,`condition_id` ,`position_id` ,`purpose_id` ,`equipment_id` ,`muscle_id` ,`movement_id` ,`bodypart_id` ,`keywords` ,`created_date` ,`updated_date`)VALUES ('{$exercise}', '{$description}', '{$conditions}', '{$position}', '{$bodypart}', '{$purpose}', '{$equipment}', '{$muscle}', '{$movement}', '{$exp_keys}', '{now()}', '2017-02-03 00:00:00')";
+	function add_exercises($utils, $params){
+		$sql= "INSERT INTO `therexpo_physio`.`exercises` (`exercise` ,`description` ,`condition_id` ,`position_id` ,`purpose_id` ,`equipment_id`,`bodypart_id` ,`keywords` ,`created_date` ,`updated_date`)VALUES ('{$params['name']}', '{$params['description']}', '{$params['condition']}', '{$params['position']}', '{$params['purpose']}', '{$params['equipment']}','{$params['bodypart']}', '{$params['keyword']}', 'now()', 'now()')";
 		$utils->log("SQL : $sql", "INFO", "Exercises");
 		if(mysql_query($sql)){
 			return "Inserted successfully!!";
@@ -104,7 +102,7 @@ class exercises{
         function getSubCategory($utils, $params=array()){
 				$options = array();
 				switch($params['type']){						
-						case 'conditions':
+						case 'condition':
 						$sql = "SELECT * FROM `conditions` WHERE `parent_id` = {$params['parent_id']}";
 						$utils->log("SQL : $sql", "INFO", "$sql");
 						$result = mysql_query($sql);
@@ -114,7 +112,7 @@ class exercises{
 							}					
 						}		
 					break;	
-					case 'positions':
+					case 'position':
 						$sql = "SELECT * FROM `positions` WHERE `parent_id` = {$params['parent_id']}";
 						$utils->log("SQL : $sql", "INFO", "$sql");
 						$result = mysql_query($sql);
@@ -124,7 +122,7 @@ class exercises{
 							}					
 						}
 					break;
-					case 'bodyparts':
+					case 'bodypart':
 						$sql = "SELECT * FROM `bodyparts` WHERE `parent_id` = {$params['parent_id']}";
 						$utils->log("SQL : $sql", "INFO", "$sql");
 						$result = mysql_query($sql);
@@ -145,7 +143,11 @@ class exercises{
 						$sql = "SELECT * FROM `equipment` WHERE `parent_id` = {$params['parent_id']}";
 						$utils->log("SQL : $sql", "INFO", "$sql");
 						$result = mysql_query($sql);
-							
+						if(mysql_num_rows($result) > 0){
+							while($row =  mysql_fetch_assoc($result)){
+								$options[$row['equipment_id']] = $row['equipment'];
+							}					
+						}	
 					break;	
 				}
 				
@@ -172,72 +174,45 @@ class exercises{
         }
 
         function position_list($utils, $type){
-                $sql = "select position_id, position, parent_id from positions";
+                $sql = "select position_id, position, parent_id from positions WHERE `parent_id` = 0 ";
                 $utils->log("SQL : $sql", "INFO", "Exercises");
-                $result=mysql_query($sql);
-                $count=mysql_num_rows($result);
-                $temp = array();
-                if($count){
-                        while($row= mysql_fetch_assoc($result)){
-                                $temp[$row['parent_id']][$row['position_id']] = $row['position'];
-                        }
-                }
-                $ret_array = array();
-                foreach($temp[0] as $parent_id => $p_cond) {
-                        $inside = $this->prepare_tree($utils, $parent_id, $p_cond, $temp, $type);
-                        if(count($inside)){
-                                foreach($inside as $key => $val){
-                                        $ret_array[$key] = $val;
-                                }
-                        }
-                }
-                return $ret_array;
+				$result=mysql_query($sql);
+				$count=mysql_num_rows($result);
+				$temp = array();
+				if($count){
+					while($row= mysql_fetch_assoc($result)){
+							$temp[$row['position_id']] = $row['position'];
+					}
+				}
+				return $temp;
         }
 
         function purpose_list($utils, $type){
-                $sql = "select purpose_id, purpose, parent_id from purpose";
+                $sql = "select purpose_id, purpose, parent_id from purpose WHERE `parent_id` = 0 ";
                 $utils->log("SQL : $sql", "INFO", "Exercises");
                 $result=mysql_query($sql);
-                $count=mysql_num_rows($result);
-                $temp = array();
-                if($count){
-                        while($row= mysql_fetch_assoc($result)){
-                                $temp[$row['parent_id']][$row['purpose_id']] = $row['purpose'];
-                        }
-                }
-                $ret_array = array();
-                foreach($temp[0] as $parent_id => $p_cond) {
-                        $inside = $this->prepare_tree($utils, $parent_id, $p_cond, $temp, $type);
-                        if(count($inside)){
-                                foreach($inside as $key => $val){
-                                        $ret_array[$key] = $val;
-                                }
-                        }
-                }
-                return $ret_array;
+				$count=mysql_num_rows($result);
+				$temp = array();
+				if($count){
+					while($row= mysql_fetch_assoc($result)){
+							$temp[$row['purpose_id']] = $row['purpose'];
+					}
+				}
+				return $temp;
         }
 
         function equipment_list($utils, $type){
-                $sql = "select equipment_id, equipment, parent_id from equipment";
+                $sql = "select equipment_id, equipment, parent_id from equipment WHERE `parent_id` = 0 ";
                 $utils->log("SQL : $sql", "INFO", "Exercises");
                 $result=mysql_query($sql);
                 $count=mysql_num_rows($result);
-                $temp = array();
-                if($count){
-                        while($row= mysql_fetch_assoc($result)){
-                                $temp[$row['parent_id']][$row['equipment_id']] = $row['equipment'];
-                        }
-                }
-                $ret_array = array();
-                foreach($temp[0] as $parent_id => $p_cond) {
-                        $inside = $this->prepare_tree($utils, $parent_id, $p_cond, $temp, $type);
-                        if(count($inside)){
-                                foreach($inside as $key => $val){
-                                        $ret_array[$key] = $val;
-                                }
-                        }
-                }
-                return $ret_array;
+				$temp = array();
+				if($count){
+					while($row= mysql_fetch_assoc($result)){
+							$temp[$row['equipment_id']] = $row['equipment'];
+					}
+				}
+				return $temp;;
         }
 
         function muscle_list($utils, $type){
