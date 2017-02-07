@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-06 09:11:57
+/* Smarty version 3.1.30, created on 2017-02-06 13:26:01
   from "C:\xampp\htdocs\Physio_Therapy_Dev\add_category.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58982fcd2ef723_45228653',
+  'unifunc' => 'content_58986b598e9992_11209870',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a76c938964cdd8121f44220bf42d2d630ecfd01' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Physio_Therapy_Dev\\add_category.tpl',
-      1 => 1486368706,
+      1 => 1486375233,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:tab.tpl' => 1,
   ),
 ),false)) {
-function content_58982fcd2ef723_45228653 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58986b598e9992_11209870 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -105,7 +105,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 						alert(" error thrown" + errorThrown);
 				}
 		   });			
-		})		
+		});		
 	});
 <?php echo '</script'; ?>
 ><?php }

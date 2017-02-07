@@ -5,38 +5,43 @@
 {include file='tab.tpl'}
 <br/>
 <style>
-.category_wrap {
+.category_wrap,.subcategory_wrap {
   margin-bottom: 17px;
   overflow: hidden;
 }
 </style>
-<div id="response" name="response"></div>
+<div id="response" name="response">
+{if !empty($message)}
+	{$message}
+{/if}
+</div>
+
 <form id="myform" class="form-horizontal" role="form" method="post" action="exercises.php">
     <div class="container-fluid">
         <div class="row">
           <div class="col-md-2" id="createFaultReport">
             <h2>Exercises</h2>
             <div class="table-responsive">
-				<table id="example" class="table table-bordered table-hover table-striped">
+				<!--table id="example" class="table table-bordered table-hover table-striped">
 					<tr>
 						<td> 
 						<select id="exer_dropdown" name="exer_dropdown" onchange="populateForm(this);">
 							<option value="-1">Select Exercise </option>
 							{foreach item=row from=$exercise_data.drop_down}
-							{$foo = ', '|implode:unserialize($row.keyword)}
-							<option value="{$row.exercise_id}|{$row.name}|{$row.description}|{$row.condition_id}|{$row.position_id}|{$row.purpose_id}|{$row.equipment_id}|{$row.muscle_id}|{$row.movement_id}|{$row.bodypart_id}|{$foo}">{$row.name} </option>
+							<option value="{$row.exercise_id}|{$row.name}|{$row.description}|{$row.condition_id}|{$row.position_id}|{$row.purpose_id}|{$row.equipment_id}|{$row.muscle_id}|{$row.movement_id}|{$row.bodypart_id}|{$row.keyword}">{$row.name} </option>
 							{/foreach}
 						</select>
 						</td>
 						<td>
-						  <a href="javascript:void(0);" onclick="resetForm();">Add Exercise </a>
+						  
 						</td>
 					</tr>
-				</table>
+				</table -->
+				<a href="javascript:void(0);" onclick="resetForm();">Add Exercise </a>
             </div>
           </div>
 		</div>
-		<div id="exe_rem" name="exe_rem" class="row" style="display: none">
+		<!-- div id="exe_rem" name="exe_rem" class="row" style="display: none">
 		  <div class="col-md-4">
 			<table id="exer_table" class="table table-bordered table-hover table-striped">
 				<tr>
@@ -45,15 +50,84 @@
 					</tr>
 				</table>
 		  </div>
-		</div>
+		</div -->
 		<div id="exe_form" name="exe_form" class="row" style="display: none">
 			{include file='exercises_form.tpl'}
 		</div>
     </div>
 </form>
+
+<table class="table">
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Description
+		</th>
+		<th>
+			condition
+		</th>
+		<th>
+			position
+		</th>
+		<th>
+			purpose
+		</th>
+		<th>
+			equipment
+		</th>
+		<th>
+			bodypart_id
+		</th>
+		<th>
+			keyword
+		</th>
+		<th>
+			Option
+		</th>
+		
+	</tr>
+	{foreach item=row from=$exercise_data.drop_down}			
+
+		<tr>
+			<td>
+				{$row.name}
+			</td>
+			<td>
+				{$row.description}
+			</td>
+			<td>
+				{$row.condition_id}
+			</td>
+			<td>
+				{$row.position_id}
+			</td>
+			<td>
+				{$row.purpose_id}
+			</td>
+			<td>
+				{$row.equipment_id}
+			</td>
+			<td>
+				{$row.bodypart_id}
+			</td>
+			<td>
+				{$row.keyword}
+			</td>
+			<td>
+				<a href="?action=edit_exercise&exercise_id={$row.exercise_id}">Edit </a>
+				|
+				<a href="?action=delete_exercise&exercise_id={$row.exercise_id}">Delete </a>
+			</td>
+		</tr>
+	{/foreach}
+	
+		
+</table>
         <script>
                 $(document).ready(function(){
-					$("#submitNewBtn").click(function(){
+					/* $("#submitNewBtn").click(function(){
 						if($('#name').val() == ''){
 							alert("Please provide Exercise Name!!");
 							return false;
@@ -106,9 +180,11 @@
 									alert(" error thrown" + errorThrown);
 							}
 					   });
-					});
+					}); */
                 
-					$('#myform').on('change','.container-fluid #exe_form .col-md-4 .container-fluid .form-group .category_wrap .category_list',function(){
+					$('#myform').on('change','.container-fluid #exe_form .col-md-4 .container-fluid .form-group .category_list',function(){
+						
+						
 						var call_url = "exercises.php";
 						var id = $(this).attr('id');
 						var parent_id = $(this).val();
@@ -141,7 +217,7 @@
 				});
         </script>
         <script type="text/javascript">
-                function deleteExe(){
+               /*  function deleteExe(){
 					var call_url = "exercises.php";
 					var exercise_id = document.getElementById("exercise_id").value;
 					if(exercise_id){
@@ -168,10 +244,10 @@
                                 alert(" error thrown" + errorThrown);
                         }
 				    });
-                }
+                } */
         </script>
         <script type="text/javascript">
-                function populateForm(sel){
+                 function populateForm(sel){
 					var data = sel.value;
 					var str_array = data.split('|');
                         document.getElementById("exe_form").style.display = "block";
@@ -197,7 +273,7 @@
                         document.getElementById("purpose").value='';
                         document.getElementById("equipment").value='';
                         document.getElementById("bodypart").value='';
-				}
+				} 
         </script>
 
 {include file='footer.tpl'}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-06 11:29:28
+/* Smarty version 3.1.30, created on 2017-02-07 09:02:15
   from "C:\xampp\htdocs\Physio_Therapy_Dev\smarty\templates\exercises.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58985008db83a9_91820587',
+  'unifunc' => 'content_58997f07df82a5_43072818',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e09f17bf06a11eb3f81fac8bea167e27572ef21b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Physio_Therapy_Dev\\smarty\\templates\\exercises.tpl',
-      1 => 1486376962,
+      1 => 1486454534,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_58985008db83a9_91820587 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58997f07df82a5_43072818 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -36,15 +36,26 @@ function content_58985008db83a9_91820587 (Smarty_Internal_Template $_smarty_tpl)
 ?>
 
 <br/>
+<style>
+.category_wrap,.subcategory_wrap {
+  margin-bottom: 17px;
+  overflow: hidden;
+}
+</style>
+<div id="response" name="response">
+<?php if (!empty($_smarty_tpl->tpl_vars['message']->value)) {?>
+	<?php echo $_smarty_tpl->tpl_vars['message']->value;?>
 
-<div id="response" name="response"></div>
+<?php }?>
+</div>
+
 <form id="myform" class="form-horizontal" role="form" method="post" action="exercises.php">
     <div class="container-fluid">
         <div class="row">
           <div class="col-md-2" id="createFaultReport">
             <h2>Exercises</h2>
             <div class="table-responsive">
-				<table id="example" class="table table-bordered table-hover table-striped">
+				<!--table id="example" class="table table-bordered table-hover table-striped">
 					<tr>
 						<td> 
 						<select id="exer_dropdown" name="exer_dropdown" onchange="populateForm(this);">
@@ -53,8 +64,6 @@ function content_58985008db83a9_91820587 (Smarty_Internal_Template $_smarty_tpl)
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['exercise_data']->value['drop_down'], 'row');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
-?>
-							<?php $_smarty_tpl->_assignInScope('foo', implode(', ',unserialize($_smarty_tpl->tpl_vars['row']->value['keyword'])));
 ?>
 							<option value="<?php echo $_smarty_tpl->tpl_vars['row']->value['exercise_id'];?>
 |<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
@@ -66,7 +75,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
 |<?php echo $_smarty_tpl->tpl_vars['row']->value['muscle_id'];?>
 |<?php echo $_smarty_tpl->tpl_vars['row']->value['movement_id'];?>
 |<?php echo $_smarty_tpl->tpl_vars['row']->value['bodypart_id'];?>
-|<?php echo $_smarty_tpl->tpl_vars['foo']->value;?>
+|<?php echo $_smarty_tpl->tpl_vars['row']->value['keyword'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
  </option>
 							<?php
@@ -78,14 +87,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 						</select>
 						</td>
 						<td>
-						  <a href="javascript:void(0);" onclick="resetForm();">Add Exercise </a>
+						  
 						</td>
 					</tr>
-				</table>
+				</table -->
+				<a href="javascript:void(0);" onclick="resetForm();">Add Exercise </a>
             </div>
           </div>
 		</div>
-		<div id="exe_rem" name="exe_rem" class="row" style="display: none">
+		<!-- div id="exe_rem" name="exe_rem" class="row" style="display: none">
 		  <div class="col-md-4">
 			<table id="exer_table" class="table table-bordered table-hover table-striped">
 				<tr>
@@ -94,7 +104,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 					</tr>
 				</table>
 		  </div>
-		</div>
+		</div -->
 		<div id="exe_form" name="exe_form" class="row" style="display: none">
 			<?php $_smarty_tpl->_subTemplateRender("file:exercises_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -102,10 +112,98 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 		</div>
     </div>
 </form>
+
+<table class="table">
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Description
+		</th>
+		<th>
+			condition
+		</th>
+		<th>
+			position
+		</th>
+		<th>
+			purpose
+		</th>
+		<th>
+			equipment
+		</th>
+		<th>
+			bodypart_id
+		</th>
+		<th>
+			keyword
+		</th>
+		<th>
+			Option
+		</th>
+		
+	</tr>
+	<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['exercise_data']->value['drop_down'], 'row');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
+?>			
+
+		<tr>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['row']->value['name'];?>
+
+			</td>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['row']->value['description'];?>
+
+			</td>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['row']->value['condition_id'];?>
+
+			</td>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['row']->value['position_id'];?>
+
+			</td>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['row']->value['purpose_id'];?>
+
+			</td>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['row']->value['equipment_id'];?>
+
+			</td>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['row']->value['bodypart_id'];?>
+
+			</td>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['row']->value['keyword'];?>
+
+			</td>
+			<td>
+				<a href="?action=edit_exercise&exercise_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['exercise_id'];?>
+">Edit </a>
+				|
+				<a href="?action=delete_exercise&exercise_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['exercise_id'];?>
+">Delete </a>
+			</td>
+		</tr>
+	<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+	
+		
+</table>
         <?php echo '<script'; ?>
 >
                 $(document).ready(function(){
-					$("#submitNewBtn").click(function(){
+					/* $("#submitNewBtn").click(function(){
 						if($('#name').val() == ''){
 							alert("Please provide Exercise Name!!");
 							return false;
@@ -158,28 +256,34 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 									alert(" error thrown" + errorThrown);
 							}
 					   });
-					});
+					}); */
                 
-					$('.category_list').change(function(){
+					$('#myform').on('change','.container-fluid #exe_form .col-md-4 .container-fluid .form-group .category_list',function(){
+						
+						
 						var call_url = "exercises.php";
 						var id = $(this).attr('id');
-						$.ajax({
-							type: "POST",
-							url: call_url,
-							data: {
+						var parent_id = $(this).val();
+						if(parent_id != ''){
+							$.ajax({
+								type: "POST",
+								url: call_url,
+								data: {
 									parent_id: $(this).val(),
 									type: id,
 									action: 'sub_category'
-							},
-							success: function(result){
+								},
+								success: function(result){
+									
 									$('.'+id).append(result);
-							},
-							error: function(XMLHttpRequest, textStatus, errorThrown){
-									alert("Error" +XMLHttpRequest);
-									alert("test status :" + textStatus);
-									alert(" error thrown" + errorThrown);
-							}
-					   });			
+								},
+								error: function(XMLHttpRequest, textStatus, errorThrown){
+										alert("Error" +XMLHttpRequest);
+										alert("test status :" + textStatus);
+										alert(" error thrown" + errorThrown);
+								}
+						   });
+						}
 					});		
 				
 				
@@ -191,7 +295,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 >
         <?php echo '<script'; ?>
  type="text/javascript">
-                function deleteExe(){
+               /*  function deleteExe(){
 					var call_url = "exercises.php";
 					var exercise_id = document.getElementById("exercise_id").value;
 					if(exercise_id){
@@ -218,12 +322,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                 alert(" error thrown" + errorThrown);
                         }
 				    });
-                }
+                } */
         <?php echo '</script'; ?>
 >
         <?php echo '<script'; ?>
  type="text/javascript">
-                function populateForm(sel){
+                 function populateForm(sel){
 					var data = sel.value;
 					var str_array = data.split('|');
                         document.getElementById("exe_form").style.display = "block";
@@ -249,7 +353,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                         document.getElementById("purpose").value='';
                         document.getElementById("equipment").value='';
                         document.getElementById("bodypart").value='';
-				}
+				} 
         <?php echo '</script'; ?>
 >
 

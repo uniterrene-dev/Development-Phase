@@ -17,11 +17,11 @@
                                 </div>
                             </div>
 
-                            <div class="form-group conditions">
+                            <div class="form-group condition">
 							 <div class="category_wrap">
                                 <label for="color" class="col-sm-3 control-label">Conditions</label>
                                 <div class="col-sm-9">
-                                    <select id="conditions" name="conditions" class="category_list form-control">
+                                    <select id="condition" name="condition[]" class="category_list form-control">
                                         <option value="">Select Conditions</option>;
 											{foreach key=k item=val from=$cond_data}
 												<option value="{$k}">{$val}</option>;
@@ -34,7 +34,7 @@
                             <div class="form-group position">
                                 <label for="color" class="col-sm-3 control-label">Position</label>
                                 <div class="col-sm-9">
-									<select id="position" name="position" class="category_list form-control">
+									<select id="position" name="position[]" class="category_list form-control">
                                         <option value="">Select Position</option>;
                                         {foreach key=k item=val from=$pos_data}
                                                 <option value="{$k}">{$val}</option>;
@@ -44,11 +44,11 @@
                                 </div>
                             </div>
 
-                            <div class="form-group bodyparts">
+                            <div class="form-group bodypart">
 							   <div class="category_wrap">
                                 <label for="color" class="col-sm-3 control-label">Bodyparts</label>
                                 <div class="col-sm-9">
-                                    <select id="bodyparts" name="bodypart" class="category_list form-control">
+                                    <select id="bodypart" name="bodypart[]" class="category_list form-control">
 										<option value="">Select Bodypart</option>;
                                         {foreach key=k item=val from=$bp_data}
 											<option value="{$k}">{$val}</option>;
@@ -60,7 +60,7 @@
                             <div class="form-group purpose">
                                 <label for="color" class="col-sm-3 control-label">Purpose</label>
                                 <div class="col-sm-9">
-                                    <select id="purpose" name="purpose" class="category_list form-control">
+                                    <select id="purpose" name="purpose[]" class="category_list form-control">
 										<option value="">Select Purpose</option>;
                                         {foreach key=k item=val from=$purpose_data}
                                                 <option value="{$k}">{$val}</option>;
@@ -69,9 +69,10 @@
                                 </div>
                             </div>
                             <div class="form-group equipment">
+							  <div class="category_wrap">
                                 <label for="color" class="col-sm-3 control-label">Equipments</label>
                                 <div class="col-sm-9">
-                                    <select id="equipment" name="equipment" class="category_list form-control">
+                                    <select id="equipment" name="equipment[]" class="category_list form-control">
 										<option value="">Select Equipment</option>;
                                         {foreach key=k item=val from=$equip_data}
                                                 <option value="{$k}">{$val}</option>;
@@ -79,8 +80,9 @@
 
                                     </select>
                                 </div>
+                              </div>								
                             </div>
-                            <div class="form-group muscle">
+                            <!--div class="form-group muscle">
                                 <label for="color" class="col-sm-3 control-label">Muscle</label>
                                 <div class="col-sm-9">
                                     <select id="muscle" name="muscle" class="form-control">
@@ -103,19 +105,19 @@
 
                                     </select>
                                 </div>
-                            </div>
+                            </div -->
 							<div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Keywords</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" class='tags' id="keyword" name="keyword">
                                 </div>
                             </div>
-							
+							<input type="hidden" name="action" value="add_exercise">
                             <div class="form-group">
                                 <div class="col-sm-3">
                                 </div>
                                 <div class="col-sm-9">
-                                    <button class="btn btn-lg btn-success" id="submitNewBtn" type="button" value="add_exercise">Submit</button>
+                                    <button class="btn btn-lg btn-success" id="submitNewBtn" type="submit">Submit</button>
                                 </div>
                             </div>
 						</div>
