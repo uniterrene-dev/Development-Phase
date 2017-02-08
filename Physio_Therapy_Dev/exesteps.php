@@ -38,7 +38,6 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
 	if(@$_GET['type']){
 		@$type = $_GET['type'];
 	}
-	
 	$exer_data = $exr_data['exercise'];
 	$smarty->assign('exercise_id', $exercise_id); 
 	$smarty->assign('exer_data', $exer_data);
@@ -171,6 +170,7 @@ if(!empty($_GET) && $_GET['action'] == 'search'){
         $uploaddir = $root.'\uploads\steps';
         $uploadfile = '';
         $save_path = '';
+		$file_id = 0;
         if(!empty($_FILES['upload_img']) && ($_FILES['upload_img']['size'] > 0 )){
 			$utils->log("found upload pic!!",'INFO', 'Exe Steps');				
 			$unique_id = uniqid();
