@@ -33,8 +33,7 @@ class patients{
 
 		$sql="INSERT INTO patients (patient_name, disease, DOB, gender, mobile, email, address, clinic_id, created_date) VALUES ('$name', '$disease', '$dob', '$gender', '$phone', '$email', '$address', $clinic_id, now()) ";
 		$utils->log("SQL : $sql", "INFO", "Patients");
-
-                if(mysql_query($sql)){
+		if(mysql_query($sql)){
 			return "Inserted successfully!!";
 		}else{
 			return "Insertion Failed!!";
@@ -78,14 +77,14 @@ class patients{
 
 	}
 
-	function patient_info($utils, $user_id){
-		$sql = "SELECT user_id, first_name, last_name, u.role_id, r.role_name from users u, role_master r where u.role_id = r.role_id and user_id = $user_id ";
+	function patient_info($utils, $patient_id){
+		$sql = "SELECT *  FROM `patients` WHERE `patient_id` = {$patient_id}";
                 $utils->log("SQL : $sql", "INFO", "Patients");
 
                 $result=mysql_query($sql);
                 $count=mysql_num_rows($result);
 		
-		if(count){
+		if($count){
 			$row= mysql_fetch_assoc($result);
 			return $row;			
 		}else{
