@@ -1,20 +1,19 @@
 <?php
 class homes{
-	
 function home_conditions_dropdown($utils, $type){
 		$sql = "SELECT cond_id, conditions, parent_id from conditions ";
 		$utils->log("SQL : $sql", "INFO", "Images");
 
 		$result=mysql_query($sql);
 		$count=mysql_num_rows($result);
-$temp = array();
+		$temp = array();
 		if($count){
-	while($row= mysql_fetch_assoc($result)){
-					$temp[$row['parent_id']][$row['cond_id']] = $row['conditions'];
-				}
-}
+			while($row= mysql_fetch_assoc($result)){
+				$temp[$row['parent_id']][$row['cond_id']] = $row['conditions'];
+			}
+		}
 $str = '';
-$lable = '';
+$lable = 0;
 foreach($temp[0] as $parent_id => $p_cond) {
 	$str .= $this->home_child_div_prepare($utils, $parent_id, $p_cond, $temp, $type,$lable);
 }
@@ -34,6 +33,7 @@ function home_bodypart_dropdown($utils, $type){
 				}
 		}
 		$str = '';
+		$lable = 0;
 		foreach($temp[0] as $parent_id => $p_cond) {
 				$str .= $this->home_child_div_prepare($utils, $parent_id, $p_cond, $temp, $type,$lable);
 		}
@@ -52,6 +52,7 @@ function home_position_dropdown($utils, $type){
 				}
 		}
 		$str = '';
+		$lable = 0;
 		foreach($temp[0] as $parent_id => $p_cond) {
 				$str .= $this->home_child_div_prepare($utils, $parent_id, $p_cond, $temp, $type,$lable);
 		}
@@ -69,6 +70,7 @@ function home_purpose_dropdown($utils, $type){
 						$temp[$row['parent_id']][$row['purpose_id']] = $row['purpose'];
 				}
 		}
+		$lable = 0;
 		$str = '';
 		foreach($temp[0] as $parent_id => $p_cond) {
 				$str .= $this->home_child_div_prepare($utils, $parent_id, $p_cond, $temp, $type,$lable);
@@ -88,6 +90,7 @@ function home_equipment_dropdown($utils, $type){
 				}
 		}
 		$str = '';
+		$lable = 0;
 		foreach($temp[0] as $parent_id => $p_cond) {
 				$str .= $this->home_child_div_prepare($utils, $parent_id, $p_cond, $temp, $type,$lable);
 		}
@@ -99,6 +102,7 @@ $iclab=1;
 //$str = '<li class="menu-item" ><a href="#">'.$p_cond.'</a></li>';
 $lable++;
 $inside = '';
+
 if(isset($temp[$parent_id])){
 			foreach($temp[$parent_id] as $child_id => $c_cond){
 				
@@ -109,9 +113,10 @@ if(isset($temp[$parent_id])){
 }
 $ic=rand(1, 9);
 
-
+$more='';
 if($lable==1){
 	$icon='';
+	
 	}else{
 	$icon='<img src="static/home/images/ic_'.$ic.'.png" alt="">';
 	}
@@ -148,9 +153,6 @@ if($lable==1){
 				$iclab=2;
 				}
 			}
-$countlable = '';
-$more = '';
-			
 if($inside){	
 		if($type=='bodyparts'){
 		if($lable>=3){
@@ -176,7 +178,7 @@ $str .= '<ul class="'.$cssclass.'">'.$inside.'</ul>';
 	}
 	$str .= '</li>';
 }else{
-	$countlable++;
+		//$countlable++;
 	$str = '<li'.$more.'><a href="#" onclick="image_select(\''.$type.'\', '.$parent_id.');" >'.$icon.$p_cond.'</a></li>';
 }
 		//$str .= '</li>';
