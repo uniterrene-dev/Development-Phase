@@ -9,33 +9,6 @@
   margin-bottom: 17px;
   overflow: hidden;
 }
-ul.keyword_list {
-  padding: 0;
-  background: #ededed none repeat scroll 0 0;
-  border: 1px solid #cccccc;
-}
-ul.keyword_list {
-  margin: 0;
-  padding: 0;
-}
-#get_keyword ul.keyword_list li:last-child {
-  border-bottom: 0 none;
-  padding-bottom: 4px;
-}
-#get_keyword ul.keyword_list li {
-  border-bottom: 1px solid #c3c3c3;
-  padding: 5px 5px 5px 16px;
-}
-span.key-tag {
-  background: #dfdfdf none repeat scroll 0 0;
-  margin: 5px;
-  padding: 5px;
-}
-.keyword-wrap > div#keyword-tag {
-  display: block;
-  overflow: hidden;
-  padding-top: 12px;
-}
 </style>
 <div id="response" name="response">
 {if !empty($message)}
@@ -49,10 +22,35 @@ span.key-tag {
           <div class="col-md-2" id="createFaultReport">
             <h2>Exercises</h2>
             <div class="table-responsive">
+				<!--table id="example" class="table table-bordered table-hover table-striped">
+					<tr>
+						<td> 
+						<select id="exer_dropdown" name="exer_dropdown" onchange="populateForm(this);">
+							<option value="-1">Select Exercise </option>
+							{foreach item=row from=$exercise_data.drop_down}
+							<option value="{$row.exercise_id}|{$row.name}|{$row.description}|{$row.condition_id}|{$row.position_id}|{$row.purpose_id}|{$row.equipment_id}|{$row.muscle_id}|{$row.movement_id}|{$row.bodypart_id}|{$row.keyword}">{$row.name} </option>
+							{/foreach}
+						</select>
+						</td>
+						<td>
+						  
+						</td>
+					</tr>
+				</table -->
 				<a href="javascript:void(0);" onclick="resetForm();">Add Exercise </a>
             </div>
           </div>
 		</div>
+		<!-- div id="exe_rem" name="exe_rem" class="row" style="display: none">
+		  <div class="col-md-4">
+			<table id="exer_table" class="table table-bordered table-hover table-striped">
+				<tr>
+						<td> Remove selected Exesrcise</td>
+							<td> <a href="javascript:void(0)" onClick="deleteExe();"><i class="fa fa-trash-o"></i></a> </td>
+					</tr>
+				</table>
+		  </div>
+		</div -->
 		<div id="exe_form" name="exe_form" class="row" style="display: none">
 			{include file='exercises_form.tpl'}
 		</div>
@@ -100,19 +98,19 @@ span.key-tag {
 				{$row.description}
 			</td>
 			<td>
-				{$row.condition_id|get_name:"condition"}
+				{$row.condition_id}
 			</td>
 			<td>
-				{$row.position_id|get_name:"position"}
+				{$row.position_id}
 			</td>
 			<td>
-				{$row.purpose_id|get_name:"purpose"}
+				{$row.purpose_id}
 			</td>
 			<td>
-				{$row.equipment_id|get_name:"equipment"}
+				{$row.equipment_id}
 			</td>
 			<td>
-				{$row.bodypart_id|get_name:"bodypart"}
+				{$row.bodypart_id}
 			</td>
 			<td>
 				{$row.keyword}
@@ -129,7 +127,66 @@ span.key-tag {
 </table>
         <script>
                 $(document).ready(function(){
+					/* $("#submitNewBtn").click(function(){
+						if($('#name').val() == ''){
+							alert("Please provide Exercise Name!!");
+							return false;
+						}
+						if($('#conditions').val() == ''){
+								alert("Please select Conditions!!");
+								return false;
+						}
+						if($('#position').val() == ''){
+								alert("Please select Position!!");
+								return false;
+						}
+						if($('#bodypart').val() == ''){
+								alert("Please select Bodyparts!!");
+								return false;
+						}
+						if($('#purpose').val() == ''){
+								alert("Please select Purpose!!");
+								return false;
+						}
+						if($('#equipment').val() == ''){
+								alert("Please select Equipments!!");
+								return false;
+						}
+
+						var URL = $("#myform").attr("action");
+						$.ajax({
+							type: "POST",
+							url: URL,
+							data: {
+									exercise_id: $('#exercise_id').val(),
+									name: $('#name').val(),
+									description: $('#description').val(),
+									conditions: $('#conditions').val(),
+									position: $('#position').val(),
+									bodypart: $('#bodypart').val(),
+									purpose: $('#purpose').val(),
+									equipment: $('#equipment').val(),
+									keyword: $('#keyword').val(),
+									action: $("#submitNewBtn").val()
+							},
+							success: function(result){
+									var newObject = JSON.parse(result);
+									alert(newObject.output);
+									window.location.reload(true);
+							},
+							error: function(XMLHttpRequest, textStatus, errorThrown){
+									alert("Error" +XMLHttpRequest);
+									alert("test status :" + textStatus);
+									alert(" error thrown" + errorThrown);
+							}
+					   });
+					}); */
+					
 					$('#myform').on('change','.container-fluid #exe_form .col-md-4 .container-fluid .form-group .category_list',function(){
+						
+						//var aa = parseInt($('div.w').attr('data-total-id'));
+						//var bb = parseInt($('div.w').attr('id'));
+						
 						var call_url = "exercises.php";
 						var id = $(this).attr('id');
 						var valuee = (($(this).parent().find('select option').length)-1);
@@ -144,7 +201,9 @@ span.key-tag {
 									action: 'sub_category'
 								},
 								success: function(result){									
+									//$('.'+id).append('<div class=chenge '+ chenge +' data-total-id='+ valuee +' id='+ parent_id +'>'+result+'</div>');
 									$('.'+id).append(result);
+									
 								},
 								error: function(XMLHttpRequest, textStatus, errorThrown){
 										alert("Error" +XMLHttpRequest);
@@ -154,49 +213,43 @@ span.key-tag {
 						   });						 
 						}
 					});		
-					
-					$('#myform').on('click','.container-fluid #exe_form .col-md-4 .container-fluid .form-group .keyword_list li',function(){
-						var key = $('#keyword').val();
-						$('#keyword').val(key+$(this).text()+',');
-						$('#get_keyword').html('');
-						$('#dummy_keyword').val('');
-						$('.keyword-wrap #keyword-tag').append('<span class="key-tag">'+$(this).text()+'<a href="javascript:void(0);" class="remove_tag"> x</a></span>')
-					});
-					
-					$('#dummy_keyword').keyup(function (){
-						var call_url = "exercises.php";
-						$.ajax({
-								type: "POST",
-								url: call_url,
-								data: {
-									keyword: $('#dummy_keyword').val(),
-									action: 'get_keyword'
-								},
-								success: function(result){									
-									$('#get_keyword').html(result);
-								},
-								error: function(XMLHttpRequest, textStatus, errorThrown){
-										alert("Error" +XMLHttpRequest);
-										alert("test status :" + textStatus);
-										alert(" error thrown" + errorThrown);
-								}
-						   });
-					});
-					
-					$('#myform').on('click','.container-fluid #exe_form .col-md-4 .container-fluid .form-group #keyword-tag .key-tag .remove_tag',function(){
-						$(this).parent().remove();
-						$('#keyword').val('');
-						//var a = [];
-						$('.container-fluid #exe_form .col-md-4 .container-fluid .form-group #keyword-tag .key-tag').each(function () { 
-							//a.push($(this).clone().children().remove().end().text());
-							$('#keyword').val($('#keyword').val()+$(this).clone().children().remove().end().text()+',');
-							//$('#keyword').val(a.join(', '));
-						});
-					});
-				});
 				
+				
+				
+				
+				
+				});
         </script>
-
+        <script type="text/javascript">
+               /*  function deleteExe(){
+					var call_url = "exercises.php";
+					var exercise_id = document.getElementById("exercise_id").value;
+					if(exercise_id){
+	                        alert("exercise_id is : " + exercise_id);
+					}else{
+						return false;
+					}
+					$.ajax({
+                        type: "POST",
+                        url: call_url,
+                        data: {
+                                exercise_id: exercise_id,
+							action: 'delete_exercise'
+                        },
+                        success: function(result){
+                                console.log(result);
+                                var newObject = JSON.parse(result);
+                                alert(newObject.output);
+                                window.location.reload(true);
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown){
+                                alert("Error" +XMLHttpRequest);
+                                alert("test status :" + textStatus);
+                                alert(" error thrown" + errorThrown);
+                        }
+				    });
+                } */
+        </script>
         <script type="text/javascript">
                  function populateForm(sel){
 					var data = sel.value;

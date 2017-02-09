@@ -54,12 +54,13 @@
                                     <input type="text" id="address" name="address" class="form-control" >
                                 </div>
                             </div>
-
+							<input type="hidden" name="action" value="add_patient">
+							<input type="hidden" name="clinic_id" value="{$user_data.user_id}" />
                             <div class="form-group">
                                 <div class="col-sm-3">
                                 </div>
                                 <div class="col-sm-9">
-                                    <button class="btn btn-lg btn-success" id="submitNewBtn" type="button" value="add_patient">Submit</button>
+                                    <button class="btn btn-lg btn-success" id="submitNewBtn" type="submit" value="">Submit</button>
                                 </div>
                             </div>
 			</div>

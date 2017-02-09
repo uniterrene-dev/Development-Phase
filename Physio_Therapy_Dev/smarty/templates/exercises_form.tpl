@@ -108,8 +108,11 @@
                             </div -->
 							<div class="form-group">
                                 <label for="color" class="col-sm-3 control-label">Keywords</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" class='tags' id="keyword" name="keyword">
+                                <div class="col-sm-9 keyword-wrap">
+                                    <input type="text" class="form-control" class='tags' id="dummy_keyword" name="dummy_keyword" autocomplete="off">
+                                    <input type="hidden" id="keyword" name="keyword">
+									<div id="get_keyword"></div>
+									<div id="keyword-tag"></div>
                                 </div>
                             </div>
 							<input type="hidden" name="action" value="add_exercise">

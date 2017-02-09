@@ -85,15 +85,7 @@
 	</section>
 <!-- End user Status  -->
 
-<style>
-li.More ul{
-    display: none !important;
-}
-li.More ul.showUl
-{
-    display: block !important;
-}
-</style>
+
 <!-- search Area -->
 	<section class="searchArea">
 		<div class="container col-md-5 col-sm-6 coll-xs-12 customSearchBar">
@@ -415,83 +407,581 @@ li.More ul.showUl
 				<div class="midTop forBorder">
 					<div class="row minPanelWrapper">
 						<ul class="list-inline clearfix">
-							{if count($exercise_data.drop_down) > 0 }
-							{foreach item=row from=$exercise_data.drop_down}
-								{$steps = $row.exercise_id|list_steps}
-								{if $steps.count > 0 }
-								<li class="col-md-2 items dragable_Items" title="Click and drag">							
-									<div class="itemWrap items">
-									 
-										{foreach item=value from=$steps.table_data}
-											<div class="imageArea">			
-												{if !empty($value.file_id) }
-													<img src="uploads/steps/{$value.file_id|get_image}"  style="height:75px;"/>
-												{/if}	
-											</div>
-											<div class="ExName">
-												<ul class="list-inline customList">
-													<li><h4>{$row.name}</h4>
-														<div class="customSelect">
-															<select>
-															  <option value="En">En</option>
-															  <option value="En">En</option>
-															  <option value="En">En</option>
-															  <option value="En">En</option>
-															</select>
-														</div>
-														
-													</li>										
-												</ul>
-											</div>
-										{break}
-										{/foreach}
-										<!-- Name and select box -->
-
-										<!-- description -->
-											<div class="itemDescription">
-												<div class="HeadIng">												
-													<i class="fa fa-times"></i>
-												</div>
-												{$steps = $row.exercise_id|list_steps}
-												{assign var=val value=1}
-												<div class="videoPlaceholder">
-													<ul>													
-													{foreach  item=row from=$steps.table_data}
-														<li>
-															{if !empty($row.file_id) }
-															<img src="uploads/steps/{$row.file_id|get_image}"  style="width:100%;height:172px;"/>{/if}
-															<div class="SlideInfo">
-																<span>Step {$val}: </span> {$row.english}
-															</div>
-														</li>
-														{assign var=val value=$val+1}													
-													{/foreach}													
-													</ul>												
-												</div>
-												<!-- <ul class="list-inline thumb_holder_pop">
-													<li class="currnetPopThumb"><img src="static/images/panel/thumb1.jpg" alt="">
-														<span>Step 1</span>
-													</li>
-													<li><img src="static/images/panel/thumb2.jpg" alt="">
-														<span>Step 2</span>
-													</li>
-													<li><img src="static/images/panel/thumb1.jpg" alt="">
-														<span>Step 3</span>
-													</li>
-												</ul> -->
-											</div>
-										<!-- description ends -->
-
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/6_1png.jpg" alt="">
 									</div>
-								</li>
-							{/if}
-							{/foreach}
-							{else}
-								<div class="alert alert-warning">
-								  <strong>Sorry !</strong> no record found
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">												
+												<i class="fa fa-times"></i>
+											</div>
+											<div class="videoPlaceholder">
+											<ul>
+												<li><img src="static/images/panel/6_1png.jpg" alt="#">
+													<div class="SlideInfo">
+														<span>Step 1: </span> Sit in a chair, lean forward to reach for left ankle
+													</div>
+												</li>												
+												<li><img src="static/images/panel/6_2png.jpg" alt="#">
+													<div class="SlideInfo">
+														<span>Step 2: </span> Hold your left ankle with right hand.
+													</div>
+												</li>
+												
+												<li><img src="static/images/panel/6_3png.jpg" alt="#">
+													<div class="SlideInfo">
+													<span>Step 3: </span> Pick your left ankle with right hand, lean back to place the left foot on the right thigh, making a figure 4 with left leg.
+												</div>
+												</li>												
+												<li><img src="static/images/panel/6_4png.jpg" alt="#">
+													<div class="SlideInfo">
+													<span>Step 4: </span> Lean forward, holding the left ankle with right hand, until you feel a stretch in your left buttock muscle.
+												</div>
+												</li>
+												<li><img src="static/images/panel/6_1png.jpg" alt="#">
+													<div class="SlideInfo">
+														<span>चरण 1: </span> एक कुर्सी पर बैठो, आगे झुक बाएं टखने तक पहुँचने के लिए 
+													</div>
+												</li>
+												<li><img src="static/images/panel/6_2png.jpg" alt="#">
+													<div class="SlideInfo">
+														<span>चरण 2: </span> दाहिने हाथ के साथ अपने बाएं टखने पकड़ो।
+													</div>
+												</li>
+												<li><img src="static/images/panel/6_3png.jpg" alt="#">
+													<div class="SlideInfo">
+													<span>चरण 3: </span> दाहिने हाथ के साथ अपने बाएं टखने बाएं पैर के साथ एक आंकड़ा 4 बनाने उठाओ, दुबला वापस दाहिनी जांघ पर बाएं पैर जगह है,।
+												</div>
+												</li>
+												<li><img src="static/images/panel/6_4png.jpg" alt="#">
+													<div class="SlideInfo">
+													<span>चरण 4: </span>आगे झुक, दाहिने हाथ के साथ बाएं टखने पकड़ रहा है, जब तक आप अपने बाएं कूल्हे की मांसपेशी में खिंचाव महसूस होता है।,।
+												</div>
+												</li>
+
+											</ul>
+												
+											</div>
+											<!-- <ul class="list-inline thumb_holder_pop">
+												<li class="currnetPopThumb"><img src="static/images/panel/thumb1.jpg" alt="">
+													<span>Step 1</span>
+												</li>
+												<li><img src="static/images/panel/thumb2.jpg" alt="">
+													<span>Step 2</span>
+												</li>
+												<li><img src="static/images/panel/thumb1.jpg" alt="">
+													<span>Step 3</span>
+												</li>
+											</ul> -->
+										</div>
+									<!-- description ends -->
+
 								</div>
-							{/if}
-							
+							</li>
+							<!-- items item 1 -->
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item2.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>This is a Dummy text</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">												
+												<i class="fa fa-times"></i>
+											</div>
+											<div class="videoPlaceholder">
+											<ul>
+												<li><img src="static/images/panel/6_1png.jpg" alt="#">
+													<div class="SlideInfo">
+														<span>Step 1: </span> Sit in a chair, lean forward to reach for left ankle
+													</div>
+												</li>												
+												<li><img src="static/images/panel/6_2png.jpg" alt="#">
+													<div class="SlideInfo">
+														<span>Step 2: </span> Hold your left ankle with right hand.
+													</div>
+												</li>
+												
+												<li><img src="static/images/panel/6_3png.jpg" alt="#">
+													<div class="SlideInfo">
+													<span>Step 3: </span> Pick your left ankle with right hand, lean back to place the left foot on the right thigh, making a figure 4 with left leg.
+												</div>
+												</li>												
+												<li><img src="static/images/panel/6_4png.jpg" alt="#">
+													<div class="SlideInfo">
+													<span>Step 4: </span> Lean forward, holding the left ankle with right hand, until you feel a stretch in your left buttock muscle.
+												</div>
+												</li>
+												<li><img src="static/images/panel/6_1png.jpg" alt="#">
+													<div class="SlideInfo">
+														<span>चरण 1: </span> एक कुर्सी पर बैठो, आगे झुक बाएं टखने तक पहुँचने के लिए 
+													</div>
+												</li>
+												<li><img src="static/images/panel/6_2png.jpg" alt="#">
+													<div class="SlideInfo">
+														<span>चरण 2: </span> दाहिने हाथ के साथ अपने बाएं टखने पकड़ो।
+													</div>
+												</li>
+												<li><img src="static/images/panel/6_3png.jpg" alt="#">
+													<div class="SlideInfo">
+													<span>चरण 3: </span> दाहिने हाथ के साथ अपने बाएं टखने बाएं पैर के साथ एक आंकड़ा 4 बनाने उठाओ, दुबला वापस दाहिनी जांघ पर बाएं पैर जगह है,।
+												</div>
+												</li>
+												<li><img src="static/images/panel/6_4png.jpg" alt="#">
+													<div class="SlideInfo">
+													<span>चरण 4: </span>आगे झुक, दाहिने हाथ के साथ बाएं टखने पकड़ रहा है, जब तक आप अपने बाएं कूल्हे की मांसपेशी में खिंचाव महसूस होता है।,।
+												</div>
+												</li>
+
+											</ul>
+												
+											</div>
+											<!-- <ul class="list-inline thumb_holder_pop">
+												<li class="currnetPopThumb"><img src="static/images/panel/thumb1.jpg" alt="">
+													<span>Step 1</span>
+												</li>
+												<li><img src="static/images/panel/thumb2.jpg" alt="">
+													<span>Step 2</span>
+												</li>
+												<li><img src="static/images/panel/thumb1.jpg" alt="">
+													<span>Step 3</span>
+												</li>
+											</ul> -->
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 2 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item3.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">												
+												<i class="fa fa-times"></i>
+											</div>
+											<div class="videoPlaceholder">
+												<img src="static/images/panel/gif_placeholder.png" alt="#">
+											</div>
+											<button class="btn btn-success btn-play"><i class="fa fa-play"></i> Play</button>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 3 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item4.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">												
+												<i class="fa fa-times"></i>
+											</div>
+											<div class="videoPlaceholder">
+												<img src="static/images/panel/gif_placeholder.png" alt="#">
+											</div>
+											<button class="btn btn-success btn-play"><i class="fa fa-play"></i> Play</button>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 4 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item5.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">												
+												<i class="fa fa-times"></i>
+											</div>
+											<div class="videoPlaceholder">
+												<img src="static/images/panel/gif_placeholder.png" alt="#">
+											</div>
+											<button class="btn btn-success btn-play"><i class="fa fa-play"></i> Play</button>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 5 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item6.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">
+												<h4>Exercise Name</h4>
+											</div>
+											<h4>Step 1</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 2</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 3</h4>
+											<p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 6 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item1.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">
+												<h4>Exercise Name</h4>
+											</div>
+											<h4>Step 1</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 2</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 3</h4>
+											<p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 1 -->
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item2.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">
+												<h4>Exercise Name</h4>
+											</div>
+											<h4>Step 1</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 2</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 3</h4>
+											<p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 2 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item3.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">
+												<h4>Exercise Name</h4>
+											</div>
+											<h4>Step 1</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 2</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 3</h4>
+											<p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 3 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item4.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">
+												<h4>Exercise Name</h4>
+											</div>
+											<h4>Step 1</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 2</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 3</h4>
+											<p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 4 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item5.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">
+												<h4>Exercise Name</h4>
+											</div>
+											<h4>Step 1</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 2</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 3</h4>
+											<p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 5 -->
+
+							<li class="col-md-2 items dragable_Items" title="Click and drag">
+								<div class="itemWrap items">
+									<div class="imageArea">
+										<img src="static/images/panel/item6.jpg" alt="">
+									</div>
+									<div class="ExName">
+										<ul class="list-inline customList">
+											<li><h4>Supine Hamstring Stretch with Strap</h4>
+												<div class="customSelect">
+													<select>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													  <option value="En">En</option>
+													</select>
+												</div>
+												
+											</li>										
+										</ul>
+									</div>
+									<!-- Name and select box -->
+
+									<!-- description -->
+										<div class="itemDescription">
+											<div class="HeadIng">
+												<h4>Exercise Name</h4>
+											</div>
+											<h4>Step 1</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 2</h4>
+											<p>Lorem ipsum dolor sit amet.</p>
+											<h4>Step 3</h4>
+											<p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+										</div>
+									<!-- description ends -->
+
+								</div>
+							</li>
+							<!-- items item 6 -->
 						</ul>
 					</div>
 				</div>
