@@ -351,10 +351,12 @@ class exercises{
                 }
 	}
 
-        function delete_steps($utils, $exercise_id, $steps_id){
+        function delete_steps($utils, $exercise_id, $steps_id=''){
 
                 $sql="DELETE FROM exercise_steps WHERE exercise_id = $exercise_id";
-				$sql .= $steps_id ? " AND steps_id = $steps_id " : " ";
+				if(!empty($steps_id)){
+					$sql .= $steps_id ? " AND steps_id = $steps_id " : " ";
+				}
                 $utils->log("SQL : $sql", "INFO", "Exercises");
 
                 if(mysql_query($sql)){
@@ -442,6 +444,20 @@ class exercises{
 				}
 			}
 			return serialize($ids);			
+		}
+		
+		function list_keyword($utils,$params=array()){
+			$sql = "SELECT *  FROM `keywords` WHERE `keywords` LIKE '%{$params['keyword']}%' GROUP BY (keywords)";
+			$utils->log("SQL : $sql", "INFO", "Exercises");
+			$result=mysql_query($sql);
+			$count=mysql_num_rows($result);
+			$temp = array();
+			if($count > 0 ){			
+				while($row = mysql_fetch_assoc($result)){
+					$temp[] = $row['keywords'];
+				}
+			}
+			return $temp;
 		}
 }
 
