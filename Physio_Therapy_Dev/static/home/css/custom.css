@@ -51,9 +51,6 @@ a:hover
 {
     text-decoration: none !important;
 }
-a:visited { 
-    text-decoration: none;
-}
 ul
 {
     -webkit-transition: all .3s ease;
@@ -354,7 +351,7 @@ ul.mainItemLists li ul.child li a:hover img
             transition: all .3s ease;
     animation: rotateImg 3s infinite;
 
-    background: url(../../../static/images/panel/dragAndDrop.png) center center no-repeat;
+    background: url(../images/dragAndDrop.png) center center no-repeat;
     background-size: contain;
 }
 @keyframes rotateImg
@@ -452,10 +449,6 @@ ul.mainItemLists li ul.child li a:hover img
     text-align: left;
 
     color: #3d3d3d;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 60px;
-    overflow: hidden;
 }
 .itemDescription
 {
@@ -474,7 +467,7 @@ ul.mainItemLists li ul.child li a:hover img
 }
 .items
 {
-    cursor: move;
+    cursor: pointer;
     -webkit-transition: all .3s ease;
        -moz-transition: all .3s ease;
         -ms-transition: all .3s ease;
@@ -519,10 +512,10 @@ ul.mainItemLists li ul.child li a:hover img
 }
 .areaRow h4
 {
-    // font-family: HelveticaNeueLTStd-Bd;
+    font-family: HelveticaNeueLTStd-Bd;
     font-size: 14px;
-    line-height: 30px;
-    color: #fff;
+
+    color: #202020;
 }
 .drop
 {
@@ -730,18 +723,20 @@ footer p
 {
     position: fixed;
     z-index: 9;
-    top: 70px;
+    top: 165px;
     right: 0;
     left: 0;
+
     display: none;
+
     height: auto;
-    padding-bottom: 11px;
     margin: 0 auto !important;
+
     border: 2px solid #ddd;
     background: rgba(255,255,255, 1);
     -webkit-box-shadow: 0 0 46px -13px #000;
-   -moz-box-shadow: 0 0 46px -13px #000;
-    box-shadow: 0 0 46px -13px #000;
+       -moz-box-shadow: 0 0 46px -13px #000;
+            box-shadow: 0 0 46px -13px #000;
 }
 .slidearea
 {
@@ -763,7 +758,7 @@ footer p
     margin-bottom: 4px;
     padding: 5px 10px !important;
 }
-.mainItemswrapper ul > li:not(#equip):hover
+ul > li:not(#equip):hover
 {
     position: relative !important;
 }
@@ -862,7 +857,6 @@ li.itsAparent
 {
     width: 20%;
     padding: 3px;
-    min-height: 130px;
 }
 .minPanelWrapper > ul li.items .itemWrap.items
 {
@@ -875,9 +869,11 @@ li.itsAparent
     z-index: 9;
     top: -5px;
     left: 100%;
+
     display: none;
+
     width: 280px;
-    padding: 2px;
+    padding: 30px;
     padding-bottom: 15px;
     color: #fff;
     background: rgba(0,0,0, .8);
@@ -924,8 +920,8 @@ li.itsAparent
     font-size: 20px;
 
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 0;
+    right: 0;
 
     width: 25px;
     height: 25px;
@@ -933,7 +929,7 @@ li.itsAparent
     cursor: pointer;
     text-align: center;
 }
-.stepImageOnPop
+#stepImageOnPop
 {
     width: 100%;
 }
@@ -957,12 +953,9 @@ textarea
 
     color: #000;
 }
-.textEdit label{
-    font-weight: bold;
-}
 .textEdit
 {
-    /*! padding-top: 15px; */
+    padding-top: 15px;
 }
 
 label
@@ -1030,11 +1023,6 @@ label
 .textEdit input
 {
     width: 100%;
-    text-indent: 0px;    
-}
-.textEdit textarea
-{    
-    text-indent: 10px;
 }
 .gifItems img
 {
@@ -1094,8 +1082,6 @@ label
     width: 100%;
 
     opacity: .5 ;
-    /*! border: 2px solid double #; */
-    border: 3px double #cbc8c8;
 }
 .thumbnailArea .activeThumb img
 {
@@ -1153,12 +1139,6 @@ label
     float: left;
 
     width: 70%;
-    background: #fff;
-    padding: 0 5px;
-    border: 1px solid #ddd;
-}
-.ItemInfoEditable input{
-    text-align: center;
 }
 .mainDropUl li
 {
@@ -1166,24 +1146,22 @@ label
 }
 .mainDropUl li:not(:first-child)
 {
-    padding: 8px 0;
+    padding: 15px 0;
 
     border-bottom: 1px dashed #ddd;
 }
 .ItemInfoEditable h4
 {
-    font-size: 9px;
-    color: #3a3a3a !important;
+    font-size: 12px;
+
     margin-top: 0;
-    margin-bottom: 3px;
-    line-height: 15px !important;
-    font-weight: bold;
+    margin-bottom: 8px;
 }
 .ItemInfoEditable input
 {
     width: 23px;
     margin-bottom: 3px;
-    // padding-left: 5px;
+    padding-left: 5px;
 
     border: 1px solid #ddd;
     background: transparent;
@@ -1202,11 +1180,11 @@ label
     padding: 0 10px;
 
     border-bottom: 1px solid #ddd;
-    background: #3a3a3a;
+    background: #fff;
 }
 .mainDropUl
 {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .allwrap
 {
@@ -1270,15 +1248,13 @@ label
 {
     display: block !important;
 }
-.itemDescription .HeadIng i {
-    position: absolute;
+.itemDescription .HeadIng i{
+        position: absolute;
     right: 0;
-    top: 7px;
+    top: 10px;
     width: 50px;
     font-size: 20px;
     text-align: center;
-    color: #000;
-    z-index: 999999;
 }
 .btn-play{
     margin-top: 10px;
@@ -1309,7 +1285,7 @@ label
 }
 .slideSection .customSelect{
   z-index: 99;
-  top: 254px;
+  top: 13%;
   right: 3%;
 }
 
@@ -1323,166 +1299,13 @@ label
     width: 100%;
     left: 0;
     list-style: none;
-    transition: all 1s ease-in;
-    -webkit-transition: all 1s ease-in;
-    -moz-transition: all 1s ease-in;
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
 }
-.thumb_holder_pop{
-    margin-top: 30px;
-}
-.currentSlide{
-    z-index: 9999;  
-    opacity: 1 !important; 
-}
-.SlideInfo{
-opacity: 0;   
-    // background: rgba(0,0,0, .9);
-    padding: 10px;
-    font-size: 15px;
-}
-.itemDescription{
-    min-height: 270px;
-}
-.currentSlide .SlideInfo{
-    opacity: 1 !important;
-    text-align: justify;
-}
-.SlideInfo span{
-    font-weight: bold !important;
-}
-#videos .stepImageOnPop{
-    position: relative;
-    top: -35px;
-}
-.thumbsForVideos{
-    display: none;
-}
-.buttonSets li:last-child a{
-    margin-bottom: 0;
-}
-.buttonSets li:last-child ul{
-    margin-top: 0;
-}
-.Hiddenspan{
-    display: none;
-}
-// .minPanelWrapper{
-//     max-height: 400px;
-//     overflow-x: hidden;
-//     overflow-y: auto;
-//     padding-left:10px;
+// .thumb_holder_pop{
+//     margin-top: 40px;
 // }
-
-
-#mceu_20, #mceu_26, #mceu_12, #mceu_19{
-    display: none !important;
-}
-.disply_none{
-    display: block !important;
-}
-
-#mceu_11{
-    display: none;
-    height: 90px;
-    overflow-y: auto;
-}
-.popupEditAble .ItemInfoEditable{
-    float: none;
-    width: 100%;
-    border: none;
-    padding: 0;
-}
-.popupEditAble {
-    padding:10px 0;
-    padding-bottom: 0;
-}
-
-.popupEditAble .ItemInfoEditable input {
-    width: 50px;    
-    height: 30px;
-    font-size: 15px;
-}
-.ItemInfoEditable li span{
-   border-radius: 50%;
-    width: 16px;
-    height: 15px;
-    display: inline-block;
-    background: #ddd;
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-}
-
-.popupEditAble li span:hover{
-    background: #08598d;
-}
-.addNewItem, .editExerciseName{
-    float: right;
-    font-size: 12px;
-    color: #08598d;
-}
-.popupEditAble hr{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.editNameOption{
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    background: gainsboro;
-    padding: 10px;
-    z-index: 99;
-    border: 3px double #cbc8c8;
-}
-.editNameOption input{
-    outline: none;
-    display: inline-block;
-    vertical-align: top;
-    width: 85%;
-    text-indent: 10px;
-}
-.editNameOption a{
-    display: inline-block;
-    vertical-align: top;
-     width: 14%;
-    height: 27px;
-    margin: 0;
-    line-height: 14px;
-    background: #286090;
-    border: 1px solid #286090;
-}
-.editNameOption input[type="radio"]{
-    width: auto;
-}
-.editNameOption ul li span{
-    font-weight: normal;
-    text-indent: 8px;
-    display: inline-block;
-}
-.appendNewName{
-    list-style: none;
-    padding:10px 0 ;
-    margin-bottom:-5px;
-}
-.removeAll{
-    display: none;
-    position: absolute;
-    bottom: -10px;
-    left: 20px;
-    font-size: 10px;
-}
-.mainDropUl  li{
-    cursor:pointer;
-}
-.btn-Plus{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: transparent;
-    border: none;
-    display: inherit;
-    width: auto;
-    font-size: 20px;
-    z-index: 999;
+.currentSlide{
+    z-index: 9999;   
 }

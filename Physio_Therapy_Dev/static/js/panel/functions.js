@@ -49,8 +49,8 @@ function onDropProcessing(aD , thisIs, ip1, ip2, ip3, ip4, ip5){
 	$('.editNameOption ul li:first-child input').val(currentItemName);
 	$('.editNameOption ul li:first-child label span').text(currentItemName);
 	var totalLi = $('.row.minPanelWrapper li#'+dataFromLi).find('.itemDescription .videoPlaceholder li').length;
-	//alert(holeHtml);
-	for(i=0;i<totalLi-5;i++){		
+	//alert(totalLi);
+	for(i=0;i<totalLi;i++){		
 		var currentSrc = $('.row.minPanelWrapper li#'+dataFromLi).find('.itemDescription .videoPlaceholder li').eq(i+1).find('img').attr('src');
 		var currentSrc_with_ = currentSrc.replace('.jpg','-80X80.jpg');
 		var currentdataName	 = $('.row.minPanelWrapper li#'+dataFromLi).find('.itemDescription .videoPlaceholder li').eq(i+1).find('.SlideInfo span').text();	

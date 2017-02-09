@@ -354,7 +354,7 @@ ul.mainItemLists li ul.child li a:hover img
             transition: all .3s ease;
     animation: rotateImg 3s infinite;
 
-    background: url(../../../static/images/panel/dragAndDrop.png) center center no-repeat;
+    background: url(../images/dragAndDrop.png) center center no-repeat;
     background-size: contain;
 }
 @keyframes rotateImg

@@ -1,0 +1,178 @@
+/* CSS Document */
+
+@media (min-width:320px) {
+
+}
+@media (min-width:480px) {
+
+}
+ @media (min-width:768px) {
+
+}
+ @media (min-width:991px) {
+
+}
+ @media (min-width:1200px) {
+
+}
+ @media (min-width:1350px) {
+}
+ @media (min-width:1366px) {
+
+}
+@media (max-width:1365px) {
+}
+@media (max-width:1280px) {
+}
+@media (max-width:1200px) {
+}
+@media (max-width:1095px) {
+}
+@media (max-width:991px) {
+	.curve{
+		display: none;
+	}
+	.minPanelWrapper >ul li.items {
+    width: 24%;   	
+	}
+	.forBorder {
+    border-right: none;
+    padding: 0px;
+	}
+	.gifHolder.forDragAndDropIcon{
+		text-align: center;
+	}
+	.mainDorpHolder{
+		text-align: center;
+	}
+	.mainDorpHolder li .drop{
+		padding: 20px;
+	}
+	.buttonSets{
+		text-align: center;
+	}
+	.main_Content_Container ul ul{
+		position: inherit !important;
+		left: 0;
+	}
+	.main_Content_Container ul ul{
+		position: inherit !important;
+		left: 0;
+	}
+
+	#equip > ul > li{
+	display: block !important;
+	min-width: 170px;
+	left: 0;
+	}
+	#equip > ul{
+		position: inherit;
+		left: 0;
+	}
+
+}
+@media (max-width:940px){
+	#user_Status{
+		text-align: center;
+	}
+	#user_Status li a{
+		padding: 0 20px;
+	}
+	.searchArea{
+		padding-bottom: 0;
+	}
+	.videosDropable{
+		margin-top: 0;
+	}
+}
+ @media (max-width:768px) {
+ 	.videos_area{
+ 		padding-top: 0;
+ 	}
+
+
+}
+ @media (max-width:763px) {
+ 	#user_Status li a{
+ 		padding: 0 5px;
+ 	}
+}
+ @media (max-width:640px) {
+ 	
+}
+@media (max-width:629px){
+	.gifHolder{
+		padding-top: 0;
+	}
+	.user_Details_container{
+ 		padding:15px 0;
+ 	}
+ 	#user_Status li a {
+    padding: 0 3px;
+    font-size: 10px;
+	
+	}
+	.buttonSets li{
+		min-width: 140px;
+	}
+	.btn-bottom-custom{
+		padding: 10px;
+	}
+	.minPanelWrapper >ul li.items{
+		width: 32%;
+	}
+
+
+
+
+}
+
+ @media (max-width: 550px) {
+}
+ @media (max-width:480px) {
+
+ 	footer p{
+ 		text-align: justify;
+ 		width: 100%;
+ 	}
+ 	footer h2{
+ 		font-size: 15px;
+ 	}
+ 	footer span {   
+    font-size: 15px;
+	}
+ 	ul.mainItemLists li{
+ 		list-style-image:none !important;
+ 	}
+ 	.buttonSets li{
+ 		min-width: 220px;
+ 		max-width: 220px;
+ 	}
+ 	.minPanelWrapper >ul li.items{
+ 		width: 49%;
+ 	}
+	.btn.btn-warning.btn-signout{
+		display: none;
+	}
+	.slideSection{
+		bottom: 0;
+		top: 0;
+		overflow-y: scroll;
+	}
+}
+
+ @media (max-width:390px) {
+
+}
+@media(max-width:360px){
+.logoArea {
+    width: 100%;
+    padding-bottom: 0;
+}
+.headingSection h1 {   
+    font-size: 12px;   
+    margin: 0;
+	}
+}
+ @media (max-width:330px) {
+}

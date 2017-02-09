@@ -165,7 +165,7 @@ $(document).ready(function() {
             $(this).find('.drop').find('p').hide();
             $(this).find('.drop').addClass('hoverOnDrop');
             var imgLink = content.split("/");
-            $(this).find('.drop').attr('id', imgLink[1]);
+            $(this).find('.drop').attr('id', imgLink[2]);
             $(this).find('.drop').css({ 'background': 'url(' + content + ') center center no-repeat', 'background-size': 'cover' });
 
         },
@@ -766,11 +766,11 @@ $(document).ready(function() {
         console.log(infoImg);
         console.log(infoText);
         var imgLink = deta.split("/");
-
+		
         var excerName = $('.row.minPanelWrapper ul li#'+removeItem).find('.ExName h4').text();
+	
 
-
-        var htmls = '<li>' + '<div class="allwrap clearfix">' + '<div class="close" title="Remove">' + '<i class="fa fa-times"></i>' + '</div><div data-id="'+ removeItem +'" id="' + imgLink[1] + '" class="drop dropped" style="background:url(' + deta + ') no-repeat center center; background-size:cover">' + '</div>' + '<div class="ItemInfoEditable" style="white-space: nowrap;">' + '<h4>'+ excerName +'</h4>' + '<input type="text" placeholder="3" name="weekly"> x Weekly ' + '<input type="text"  placeholder="5" name="daily"> x Daily ' + '<input type="text"  placeholder="3" name="rips"> Rips ' + '<br/><input type="text"  placeholder="8" name="sets"> Sets ' + '<input type="text"  placeholder="7" name="hold"> Hold' + '</div>' + '</div>' + '</li>';
+        var htmls = '<li>' + '<div class="allwrap clearfix">' + '<div class="close" title="Remove">' + '<i class="fa fa-times"></i>' + '</div><div data-id="'+ removeItem +'" id="' + imgLink[2] + '" class="drop dropped" style="background:url(' + deta + ') no-repeat center center; background-size:cover">' + '</div>' + '<div class="ItemInfoEditable" style="white-space: nowrap;">' + '<h4>'+ excerName +'</h4>' + '<input type="text" placeholder="3" name="weekly"> x Weekly ' + '<input type="text"  placeholder="5" name="daily"> x Daily ' + '<input type="text"  placeholder="3" name="rips"> Rips ' + '<br/><input type="text"  placeholder="8" name="sets"> Sets ' + '<input type="text"  placeholder="7" name="hold"> Hold' + '</div>' + '</div>' + '</li>';
         $(htmls).appendTo('.mainDropUl');
 
     }
@@ -951,15 +951,31 @@ $('.popup_chng_lang').on('change', function() {
 
 
 }); // document ready ends
-//itemSlider(800);
-$('.itemWrap.items').hover(itemSlider(800, $('.videoPlaceholder')));
+//itemSlider(2000);
+//$('.itemWrap.items').hover(itemSlider(800, $('.videoPlaceholder')));
+/* $('.itemWrap.items').hover(function(){
+	var sliderTime = 3000;
+	$(this).find('.videoPlaceholder li').first().addClass('currentSlide');
+	
+	setInterval(function() {	
+		
+        $(this).find('.videoPlaceholder li').last()
+			
+		
+        	
 
+    }, sliderTime);
+	$('.currentSlide').next().addClass('currentSlide').siblings().removeClass('currentSlide');
+	
+	
+}); */
 
 
 function itemSlider(sildeTime) {
     var sliderTime = sildeTime;
     var sliderHolde = $('.videoPlaceholder');
     sliderHolde.each(function(){
+		//alert($(this).find('li').length)
         $(this).find('li').first().addClass('currentSlide');
     });
     
@@ -967,14 +983,18 @@ function itemSlider(sildeTime) {
     var aa = sliderHolde.find('li').first().clone();
     sliderHolde.find('ul').prepend('<li>' + aa + '</li>');
 
-    setInterval(function() {
-
-        if (sliderHolde.find('li').last().hasClass('currentSlide') == true) {
-             sliderHolde.each(function(){
+    setInterval(function(e) {
+		if ($(this).find('li').last().hasClass('currentSlide') == true) {
+            /*  sliderHolde.each(function(){
             $(this).find('li').first().addClass('currentSlide');
-            });
+            }); */
+			alert();
+			
         }
+        
         $('.currentSlide').next().addClass('currentSlide').siblings().removeClass('currentSlide');
+		
+		
 
     }, sliderTime);
 }
