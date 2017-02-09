@@ -114,11 +114,10 @@ if(isset($temp[$parent_id])){
 $ic=rand(1, 9);
 
 $more='';
-if($lable==1){
-	$icon='';
-	
+	if($lable==1){
+		$icon='';	
 	}else{
-	$icon='<img src="static/home/images/ic_'.$ic.'.png" alt="">';
+		$icon='<img src="static/home/images/ic_'.$ic.'.png" alt="">';
 	}
 			if($type=='bodyparts'){
 			$cssclass='child mainChild mainChild_hide';
@@ -127,6 +126,8 @@ if($lable==1){
 				}
 				if($lable>=2){
 				$cssclass='childs evenChild childHide';
+				}
+				if($lable>2){
 				$more=' class="More"';
 				}
 			}
@@ -155,17 +156,17 @@ if($lable==1){
 			}
 if($inside){	
 		if($type=='bodyparts'){
-		if($lable>=3){
-			$iconr='';
-		}else{
-			$iconr='<span class="fa fa-caret-right"></span>';
+			if($lable>=3){
+				$iconr='';
+			}else{
+				$iconr='<span class="fa fa-caret-right"></span>';
 			}
 		}elseif($type=='equipment'){
 			$iconr='<span class="fa fa-caret-down"></span>';
 		}else{
 			$iconr='<span class="fa fa-caret-right"></span>';
-			}
-	$str = '<li'.$more.'><a href="#" >'.$icon.$p_cond.$iconr.'</a>';
+		}
+		$str = '<li'.$more.'><a href="#" >'.$icon.$p_cond.$iconr.'</a>';
 	//$str .= '<ul class="sub-menu">'.$inside.'</ul>';
 	//$str .= '<ul class="'.$cssclass.'">'.$lable.'-'.$countlable.$inside.'</ul>';
 	
