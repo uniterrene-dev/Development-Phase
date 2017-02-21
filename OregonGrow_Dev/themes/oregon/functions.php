@@ -4,16 +4,18 @@
 		//styles
 		wp_enqueue_style( 'fontawesome',  get_template_directory_uri() . '/css/font-awesome.min.css' );		
 		wp_enqueue_style( 'commons',  get_template_directory_uri() . '/css/common.css' );	
-		wp_enqueue_style( 'custom',  get_template_directory_uri() . '/css/custom.css' );		
+		wp_enqueue_style( 'custom',  get_template_directory_uri() . '/css/custom.css' );	
+			
 		wp_enqueue_style( 'responsive',  get_template_directory_uri() . '/css/responsive.css' );
 		wp_enqueue_style( 'main',  get_template_directory_uri() . '/style.css' );
 		
 		//js
-		wp_enqueue_script( 'oregon-js', get_template_directory_uri().'/js/oregon.js', array('jquery'), true );
+		wp_enqueue_script( 'oregon-js', get_template_directory_uri().'/js/oregon.js', array('jquery'), true );		
 		wp_enqueue_script( 'bx-js', get_template_directory_uri().'/js/jquery.bxslider.min.js', array('jquery'), true );
 		wp_enqueue_script( 'zoom-js', get_template_directory_uri().'/js/jquery.zoom.min.js', array('jquery'), true );
 		wp_enqueue_script( 'jquery1110', get_template_directory_uri().'/js/jquery-1.11.0.js', true );
 		wp_enqueue_script( 'custom', get_template_directory_uri().'/js/custom.js', true );
+		wp_enqueue_script( 'slidx', get_template_directory_uri().'/js/slidx.js', array('jquery'), true );
 	}
 	add_action( 'wp_enqueue_scripts', 'sb_oregon_enqueue_script' );
 
@@ -239,7 +241,7 @@
 
 	/*--woocommerce additional tabs--*/
 	//highlight tab
-	add_filter( 'woocommerce_product_tabs', 'woo_highlights_product_tab' );
+	//add_filter( 'woocommerce_product_tabs', 'woo_highlights_product_tab' );
 	function woo_highlights_product_tab( $highlight_tab ) {		
 		// Highlights tab	
 		$high_var1 = get_field('highlight_tab_title');	
@@ -372,16 +374,16 @@
 
 	//other model tab
 	add_filter( 'woocommerce_product_tabs', 'woo_other_models_product_tab' );
-	function woo_other_models_product_tab( $accessories_tab ) {		
+	function woo_other_models_product_tab( $models_tab ) {		
 		// other model tab	
 		$other_var1 = get_field('other_models_tab_title');	
-		$accessories_tab['other_models'] = Array
+		$models_tab['other_models'] = Array
 			(
 			'title' => $other_var1,
 			'priority' => 30,
 			'callback' => 'woo_other_models_product_tab_content'
 			);
-			return $accessories_tab;
+			return $models_tab;
 	}
 	function woo_other_models_product_tab_content() {
 		// The new tab content
@@ -399,7 +401,7 @@
 	//woocommerce remove existing tabs
 	add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 	function woo_remove_product_tabs( $tabs ) {
-	    unset( $tabs['description'] );      	// Remove the description tab
+	    //unset( $tabs['description'] );      	// Remove the description tab
 	    unset( $tabs['reviews'] ); 			// Remove the reviews tab
 	    unset( $tabs['additional_information'] );  	// Remove the additional information tab
 	    return $tabs;
@@ -420,3 +422,59 @@
 	//remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 	//remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
 	//add_action('woocommerce_before_single_product', 'woocommerce_show_product_images', 20);
+	remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
+	//re-oredering woocommerce tabs
+	add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
+	function woo_reorder_tabs( $tabs ) {
+		$tabs['description']['priority'] = 5;			// Description
+		return $tabs;
+	}
+
+	//sb custom product display by product ids
+	//use shortcode [sb_woocommerce_products ids="54,59"]
+	function sb_custom_product_display( $atts ) {
+	    $atts = shortcode_atts( array(
+	        'ids' => 'ids',
+	    ), $atts, 'sb_woocommerce_products' );
+
+	    $pro_ids = explode(',', $atts['ids']); //taking product ids
+
+	    //print_r($pro_ids);
+
+	    $sb_args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => -1, 'post__in' => $pro_ids, 'orderby' =>'date','order' => 'ASC' );
+        
+        ob_start();
+
+        $sb_loop = new WP_Query( $sb_args );
+
+        //title for the models tab
+        echo "<h5>".get_field('other_models_tab_title')."</h5>";
+
+        while ( $sb_loop->have_posts() ) : $sb_loop->the_post(); global $product; ?>
+      	
+      		<div class='sb_product_box'> 
+      			<a id='id-<?php the_id(); ?>' href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'>
+		        	<div class='sb_product-wrapper'>
+			          <?php if (has_post_thumbnail( $sb_loop->post->ID )) echo get_the_post_thumbnail($sb_loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="65px" height="115px" />'; ?>
+			        </div>
+			        <h4>
+			          <?php the_title(); ?>
+			        </h4>
+        		</a>
+	        	<div class='sb_cart_wrapper clearfix'>
+	          		<div class='sb_f_left rate'> 
+	          			<span class='price'><?php echo $product->get_price_html(); ?></span>
+	          		</div>
+	          		<div class='sb_f_right cart'>
+			            <a href='<?php echo esc_url( home_url( '/' ) ); ?>?add-to-cart=<?php the_id(); ?>'><i class='fa fa-shopping-cart'></i></a> 
+			        </div>
+	        	</div>
+	      	</div>
+
+	    <?php 
+	        endwhile; 
+	        
+	        return ob_get_clean();
+	}
+	add_shortcode( 'sb_woocommerce_products', 'sb_custom_product_display' );

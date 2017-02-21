@@ -48,28 +48,28 @@ jQuery(document).ready(function(){
   	  });
 
   //  Banner Down Arrow
-  	  jQuery(".down_arrow a.circle").click(function(e) {
+  	  /*jQuery(".down_arrow a.circle").click(function(e) {
   	  	e.preventDefault();
         jQuery('html, body').animate({
           scrollTop: jQuery("#introduction").offset().top
          }, 2000);
-       });
+       });*/
 
 // Introduction Down Arrow
-  	  jQuery('#introduction .content a.button').on('click', function(e){
+  	  /*jQuery('#introduction .content a.button').on('click', function(e){
          e.preventDefault();
          jQuery('html,body').animate({
          	scrollTop:jQuery("#product_highlight").offset().top
          },2000);
-  	  });
+  	  });*/
 	  
 // Technical Details Down Arrow
-  	  jQuery('#tech_details a.button').on('click', function(e){
+  	  /*jQuery('#tech_details a.button').on('click', function(e){
          e.preventDefault();
          jQuery('html,body').animate({
          	scrollTop:jQuery("#models").offset().top
          },2000);
-  	  });
+  	  });*/
 
 
  // One page navigation smooth scroll
@@ -165,5 +165,16 @@ jQuery(document).ready(function(){
 //       
 //       //$(this).parent().siblings('div.content').toggle();
 //    });
+
+
+
+
+$(document).on('click',function(){
+  if($('.slidx-menu').hasClass('slidx-open') == true){
+    $('#slidx-button').html('<img src="http://onlinedevserver.biz/dev/oregon-grow/wp-content/themes/oregon/images/back_ic.png">')
+  }else{
+    $('#slidx-button').html('<i class="fa fa-align-justify"></i>');
+  }
+});
 
 });	

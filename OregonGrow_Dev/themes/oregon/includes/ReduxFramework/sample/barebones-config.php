@@ -256,6 +256,12 @@
             ),
 
             array(
+                'id'       => 'cabinet-img',
+                'type'     => 'media',
+                'title'    => __( 'Cabinet Image', 'redux-framework-demo' ),
+            ),
+
+            array(
                 'id'       => 'copyright',
                 'type'     => 'text',
                 'title'    => __( 'Copyright information', 'redux-framework-demo' ),

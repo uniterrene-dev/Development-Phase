@@ -8,14 +8,14 @@ get_header();
 <section id="introduction">
   <div class="container clearfix">
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-    <div class="f_left img_part">
+    <div class="f_left img_part" style="display: none;">
       <?php 
           if ( has_post_thumbnail() ) { 
           the_post_thumbnail( 'full' );
         }
       ?>
     </div>
-    <div class="f_right content">
+    <div class="f_right content" style="width: 100%;">
       <?php the_content(); ?>
     </div>
     <?php endwhile; endif; ?>
@@ -31,7 +31,7 @@ get_header();
         <h5>Inside View</h5>
         <div class="img_area">
           <?php
-        $inside_view = new WP_Query( 'page_id=84' );
+        $inside_view = new WP_Query( 'page_id=231' );
         while ($inside_view -> have_posts()) : $inside_view -> the_post();
       
           if ( has_post_thumbnail() ) { 
