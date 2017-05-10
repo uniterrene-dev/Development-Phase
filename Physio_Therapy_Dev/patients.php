@@ -18,12 +18,13 @@ if(!empty($_POST) && $_POST['action'] == 'add_patient'){
 	$dob = $_POST['dob'];
 	$gender = $_POST['gender'];
 	$address = $_POST['address'];
+	$clinic_id = $_POST['clinic_id'];
 	
 	$utils->log("Params :$patient_id, $name, $disease, $email, $mobile, $dob, $gender, $address ",'INFO', 'Patients');
 	if($patient_id){
                 $msg['output'] = $patient->update_patient($utils, $patient_id, $name, $disease, $email, $mobile, $dob, $gender, $address);
 	}else{
-		$msg['output'] = $patient->add_patient($utils, $name, $disease, $email, $mobile, $dob, $gender, $address);
+		$msg['output'] = $patient->add_patient($utils, $name, $disease, $email, $mobile, $dob, $gender, $address, $clinic_id);
 	}
 	$utils->log("Message : ".$msg['output'], 'INFO', 'Patients');
 	echo json_encode($msg);
