@@ -889,13 +889,13 @@ body .swatch-option.text {
   margin-top: 100px;
 }
 .home-group-home1 .left {
-  background: url(../images/bg_testimol.jpg) no-repeat 50% 50%;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/bg_testimol.jpg) no-repeat 50% 50%;
   padding-right: 0;
   background-size: cover;
   min-height: 539px;
 }
 .home-group-home1 .right {
-  background: url(../images/bg_newlester.jpg) no-repeat 50% 50%;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/bg_newlester.jpg) no-repeat 50% 50%;
   padding-left: 0;
   background-size: cover;
   min-height: 539px;
@@ -983,7 +983,7 @@ body .swatch-option.text {
   content: "";
   display: block;
   position: absolute;
-  background: url(../images/bg-icon.png) 50% 50% no-repeat;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/bg-icon.png) 50% 50% no-repeat;
   height: 47px;
   width: 53px;
   top: -25px;
@@ -2346,7 +2346,7 @@ dd {
   padding: 0;
   font-size: 0;
   border: 0;
-  background: url(../images/icon-search.png) no-repeat 50% 50%;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/icon-search.png) no-repeat 50% 50%;
   opacity: 1;
 }
 .top-bar {
@@ -2571,7 +2571,7 @@ dd {
   text-transform: uppercase;
 }
 .switcher-language .switcher-options .action .view-english1 {
-  background: url("../images/england.png") no-repeat 5px 49%;
+  background: url("http://127.0.0.1/public_html/health_care_magento/images/england.png") no-repeat 5px 49%;
   display: inline-block;
 }
 .switcher-language .switcher-options .action .view-english1 span {
@@ -2636,12 +2636,12 @@ dd {
   z-index: 99;
 }
 .switcher-language .switcher-options .switcher-dropdown .view-english2 a {
-  background: url(../images/fr.png) 10px 0px no-repeat;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/fr.png) 10px 0px no-repeat;
   font-size: 0;
   margin-top: 5px;
 }
 .switcher-language .switcher-options .switcher-dropdown .view-english1 {
-  background: url("../images/england.png") no-repeat 5px 49%;
+  background: url("http://127.0.0.1/public_html/health_care_magento/images/england.png") no-repeat 5px 49%;
   display: inline-block;
 }
 .switcher-language .switcher-options .switcher-dropdown .view-english1 span {
@@ -2895,7 +2895,7 @@ dd {
   margin-bottom: 0;
 }
 .static-home-home1 .box-col {
-  background: url(../images/banner-static-home1.jpg) no-repeat 50% 50%;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/banner-static-home1.jpg) no-repeat 50% 50%;
   width: 100%;
   background-size: auto;
   min-height: 760px;
@@ -3785,7 +3785,7 @@ dd {
   display: none;
 }
 .minicart-wrapper .action.showcart {
-  background: url(../images/card.png) no-repeat 50% 50%;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/card.png) no-repeat 50% 50%;
   display: inline-block;
   width: 75%;
   height: 75px;
@@ -4042,7 +4042,7 @@ dd {
 .pt_custommenu .menu-new {
   position: absolute;
   color: #fff;
-  background: url(../images/hot-sale.png) no-repeat center center;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/hot-sale.png) no-repeat center center;
   width: 47px;
   height: 31px;
   line-height: 26px;
@@ -4055,7 +4055,7 @@ dd {
   z-index: 1;
 }
 .pt_custommenu .menu-new {
-  background: url(../images/news.png) no-repeat center center;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/news.png) no-repeat center center;
 }
 .pt_menu_link .parentMenu ul.mobilemenu li {
   float: left;
@@ -4105,11 +4105,11 @@ dd {
   margin-top: 10px;
   border: 0 !important;
   box-shadow: none !important;
-  background: url("../images/bg-menu-mobile.png") no-repeat 50% 50%;
+  background: url("http://127.0.0.1/public_html/health_care_magento/images/bg-menu-mobile.png") no-repeat 50% 50%;
   padding: 10px;
 }
 .navbar .btn-navbar:hover {
-  background: url("../images/bg-menu-mobile.png") no-repeat 50% 50% !important;
+  background: url("http://127.0.0.1/public_html/health_care_magento/images/bg-menu-mobile.png") no-repeat 50% 50% !important;
   font-family: 'helvetica';
 }
 .navbar .btn-navbar .icon-bar {
@@ -4245,7 +4245,7 @@ dd {
   right: 0px;
 }
 .mobilemenu span.head a {
-  background: url(../images/menu_down.png) no-repeat 50% 50%;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/menu_down.png) no-repeat 50% 50%;
   color: #333333;
   display: block;
   height: 15px;
@@ -4255,10 +4255,10 @@ dd {
 }
 /*.mobilemenu span.head a:hover*/
 .mobilemenu li.active > span.head a {
-  background: url(../images/menu_up.png) no-repeat 50% 50%;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/menu_up.png) no-repeat 50% 50%;
 }
 .mobilemenu li.selected span.head a {
-  background: url(../images/menu_up.png) no-repeat 50% 50%;
+  background: url(http://127.0.0.1/public_html/health_care_magento/images/menu_up.png) no-repeat 50% 50%;
 }
 .product-reviews-summary {
   margin: 0 !important;
@@ -4798,7 +4798,7 @@ dd {
     font-size: 10px;
   }
   .static-home-home1 .box-col {
-    background: url(../images/banner-static-home1.jpg) 25% no-repeat;
+    background: url(http://127.0.0.1/public_html/health_care_magento/images/banner-static-home1.jpg) 25% no-repeat;
   }
   .static-home-home1 .box-col .text {
     width: 60%;
