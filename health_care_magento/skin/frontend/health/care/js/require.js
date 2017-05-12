@@ -1911,10 +1911,10 @@ var requirejs, require, define;
                 context.completeLoad(moduleName);
             } catch (e) {
                 context.onError(makeError('importscripts',
-                                'importScripts failed for ' +
-                                    moduleName + ' at ' + url,
-                                e,
-                                [moduleName]));
+				'importScripts failed for ' +
+					moduleName + ' at ' + url,
+				e,
+				[moduleName]));
             }
         }
     };
