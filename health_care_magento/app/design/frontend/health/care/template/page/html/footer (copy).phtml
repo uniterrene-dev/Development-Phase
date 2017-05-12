@@ -221,17 +221,27 @@
 					
 					
 					jQuery("#sale-products-slider .owl-carousel").owlCarousel({
-						autoPlay :          false,
-						slideSpeed :        3000,
-						items :             3,
-						itemsDesktop :      [1200,3],
-						itemsDesktopSmall : [1000,2],
-						itemsTablet:        [680,1],
-						itemsMobile :       [460,1],
-						navigation :        true,
-						stopOnHover :       true,
-						pagination :        false				
-					});
+					items : 4,
+					autoPlay : false,
+					slideSpeed : 1000,
+					navigation : true,
+					stopOnHover : true,
+					pagination : false,
+					pagination : false,
+					itemsDesktop : [1200,4],
+					itemsDesktopSmall : [1000,3],
+					itemsTablet: [680,2],
+					itemsMobile : [460,1],
+					addClassActive: true,
+					
+				}); 
+					
+					
+					
+					
+					
+					
+					
 				});
 			</script>
 			
@@ -274,132 +284,21 @@
 			 });
 			 
 		  </script> 
-          
-          <script>
-		    jQuery(document).ready(function() {
-              jQuery('#banner-slider').owlCarousel({
-			  loop: true,
-			  margin: 10,
-			  nav: true,
-			  navText: [
-				"<i class='fa fa-long-arrow-left'></i>",
-				"<i class='fa fa-long-arrow-right'></i>"
-			  ],
-			  autoplay: true,
-			  autoplayHoverPause: true,
-			  responsive: {
-				0: {
-				  items: 1
-				},
-				600: {
-				  items: 1
-				},
-				1000: {
-				  items: 1
-				}
-			  }
-			})			 
-			});					
-		   </script>
-          
-           <script>
-		    jQuery(document).ready(function() {
-              jQuery('#blog-item').owlCarousel({
-			  loop: true,
-			  margin: 10,
-			  nav: true,
-			  navText: [
-				"<i class='fa fa-long-arrow-left'></i>",
-				"<i class='fa fa-long-arrow-right'></i>"
-			  ],
-			  autoplay: true,
-			  autoplayHoverPause: true,
-			  responsive: {
-				0: {
-				  items: 1
-				},
-				600: {
-				  items: 2
-				},
-				1000: {
-				  items: 3
-				}
-			  }
-			})			 
-			});					
-		   </script>
-           
-           <script>
-		    jQuery(document).ready(function() {
-              jQuery('#brand-item').owlCarousel({
-			  loop: true,
-			  margin: 10,
-			  nav: true,
-			  navText: [
-				"<i class='fa fa-long-arrow-left'></i>",
-				"<i class='fa fa-long-arrow-right'></i>"
-			  ],
-			  autoplay: true,
-			  autoplayHoverPause: true,
-			  responsive: {
-				0: {
-				  items: 1
-				},
-				600: {
-				  items: 4
-				},
-				1000: {
-				  items: 6
-				}
-			  }
-			})			 
-			});					
-		   </script>
-           
-           <script>
-		    jQuery(document).ready(function() {
-              jQuery('#testimo-item').owlCarousel({
-			  loop: true,
-			  margin: 10,
-			  nav: true,
-			  navText: [
-				"<i class='fa fa-long-arrow-left'></i>",
-				"<i class='fa fa-long-arrow-right'></i>"
-			  ],
-			  autoplay: true,
-			  autoplayHoverPause: true,
-			  responsive: {
-				0: {
-				  items: 1
-				},
-				600: {
-				  items: 1
-				},
-				1000: {
-				  items: 1
-				}
-			  }
-			})			 
-			});					
-		   </script>
-          
-          
 		  <script type="text/javascript">                           
 			jQuery(document).ready(function(){
-				jQuery(".pt-testimonial-container .ptowl3").owlCarousel({
+				jQuery(".ptowl3").owlCarousel({
 					items : 1,
-					itemsDesktop : [1199,1],
-					itemsDesktopSmall : [980,1],
-					itemsTablet: [768,1],
-					itemsMobile : [479,1],
+					autoPlay : false,
 					slideSpeed : 1000,
-					paginationSpeed : 1000,
-					rewindSpeed : 1000,
-					addClassActive: true,
 					navigation : true,
 					stopOnHover : true,
 					pagination : false,
-					scrollPerPage:true,
+					pagination : false,
+					itemsDesktop : [1200,4],
+					itemsDesktopSmall : [1000,3],
+					itemsTablet: [680,2],
+					itemsMobile : [460,1],
+					addClassActive: true,
 				});
 				
 				
@@ -412,7 +311,7 @@
 			<script type="text/javascript">
 				jQuery(document).ready(function(){
 					jQuery(".block-recent-posts .ptowl1").owlCarousel({
-										items : 3,
+						items : 3,
 						itemsDesktop : [1199,3],
 						itemsDesktopSmall : [980,3],
 						itemsTablet: [768,2],
@@ -428,8 +327,6 @@
 					});
 				});
 		   </script>
-           
-           
 
 			
                                     
