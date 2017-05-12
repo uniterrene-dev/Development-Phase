@@ -960,16 +960,16 @@ body .swatch-option.text {
   width: 80%;
   float: right;
 }
-.pt-testimonial-container li {
+.pt-testimonial-container {
   margin: 0 0 20px;
 }
-.pt-testimonial-container li .pt-testimonial {
+.pt-testimonial-container .pt-testimonial {
   padding-top: 90px;
   padding-bottom: 0;
   overflow: hidden;
   text-align: center;
 }
-.pt-testimonial-container li .pt-testimonial .des {
+.pt-testimonial-container .pt-testimonial .des {
   line-height: 24px;
   font-size: 16px;
   padding: 0 55px ;
@@ -979,7 +979,7 @@ body .swatch-option.text {
   position: relative;
   display: inline-block;
 }
-.pt-testimonial-container li .pt-testimonial .des:before {
+.pt-testimonial-container .pt-testimonial .des:before {
   content: "";
   display: block;
   position: absolute;
@@ -989,7 +989,7 @@ body .swatch-option.text {
   top: -25px;
   left: 0;
 }
-.pt-testimonial-container li .pt-testimonial .des .info {
+.pt-testimonial-container .pt-testimonial .des .info {
   display: inline-block;
   position: relative;
   margin-top: 30px;
@@ -1002,25 +1002,25 @@ body .swatch-option.text {
   font-family: 'Lobster Two', cursive !important;
   text-transform: capitalize;
 }
-.pt-testimonial-container li .pt-testimonial .des .info .job {
+.pt-testimonial-container .pt-testimonial .des .info .job {
   display: block;
 }
-.pt-testimonial-container li .pt-testimonial .content-tes {
+.pt-testimonial-container .pt-testimonial .content-tes {
   overflow: hidden;
   text-align: center;
   display: block;
 }
-.pt-testimonial-container li .pt-testimonial .content-tes .image {
+.pt-testimonial-container .pt-testimonial .content-tes .image {
   display: inline-block;
   position: relative;
 }
-.pt-testimonial-container li .pt-testimonial .content-tes .image img {
+.pt-testimonial-container .pt-testimonial .content-tes .image img {
   border: 11px solid #98ab3f;
   border-radius: 100%;
   position: relative;
   display: inline-block;
 }
-.pt-testimonial-container li .pt-testimonial .content-tes .image:after {
+.pt-testimonial-container .pt-testimonial .content-tes .image:after {
   content: "";
   display: block;
   position: absolute;
