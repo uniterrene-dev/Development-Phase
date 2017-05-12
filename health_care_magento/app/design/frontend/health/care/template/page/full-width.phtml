@@ -508,7 +508,7 @@
          </script>
          <div id="banner-slider" class="pt-banner-container">
             <ul class="ptowl">
-               <li>
+               <li class="item">
                   <a href="#" class="pt-url">
                   <img alt="" src="http://127.0.0.1/public_html/health_care_magento/images/banner1-home1.jpg"/>
                   </a>								
@@ -523,7 +523,7 @@
                      </div>
                   </div>
                </li>
-               <li>
+               <li class="item">
                   <a href="#" class="pt-url">
                   <img alt="" src="http://127.0.0.1/public_html/health_care_magento/images/banner2-home1.jpg"/>
                   </a>									
@@ -1045,28 +1045,10 @@
          </div>
          <main id="maincontent" class="page-main">
             <a id="contentarea" tabindex="-1"></a>
-            <div class="page messages">
-               <div data-placeholder="messages"></div>
-               <div data-bind="scope: 'messages'">
-                  <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
-                     <div data-bind="attr: {
-                        class: 'message-' + message.type + ' ' + message.type + ' message',
-                        'data-ui-id': 'message-' + message.type
-                        }">
-                        <div data-bind="html: message.text"></div>
-                     </div>
-                  </div>
-                  <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
-                     <div data-bind="attr: {
-                        class: 'message-' + message.type + ' ' + message.type + ' message',
-                        'data-ui-id': 'message-' + message.type
-                        }">
-                        <div data-bind="html: message.text"></div>
-                     </div>
-                  </div>
-               </div>
+           
               
             </div>
+<!--
             <div class="columns">
                <div class="column main">
                   <input name="form_key" type="hidden" value="L2ONhph2riQmo2No" />
@@ -1107,6 +1089,7 @@
                   <div class="page-content"><em style="display: none;">page-content</em></div>
                </div>
             </div>
+-->
          </main>
          <div class="content.home">
             <div class="main-container col2-left-layout">
@@ -2732,10 +2715,9 @@
                         <div class="testimo-slider">
                            <!--<h2 class='ma-title'></h2>-->
                            <div class="pt-testimonial-container">
-                              <div class="owl-container">
-                                 <ul class="ptowl3">
-                                    <li>
-                                       <div class="pt-testimonial">
+                              <div id="testimo-item" class="owl-carousel">
+                                <div class="item">
+                                  <div class="pt-testimonial">
                                           <div class="content-tes">
                                              <a href="#" class="image">
                                              <img alt="utheya" src="http://127.0.0.1/public_html/health_care_magento/images/1_1.png"/>
@@ -2750,9 +2732,9 @@
                                              <div class="email">admin@gmail.com</div>
                                           </div>
                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class="pt-testimonial">
+                                </div>
+                                <div class="item">
+                                  <div class="pt-testimonial">
                                           <div class="content-tes">
                                              <a href="#" class="image">
                                              <img alt="victor" src="http://127.0.0.1/public_html/health_care_magento/images/2_1_1.png"/>
@@ -2767,9 +2749,9 @@
                                              <div class="email">admin@gmail.com</div>
                                           </div>
                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class="pt-testimonial">
+                                </div>
+                                <div class="item">
+                                  <div class="pt-testimonial">
                                           <div class="content-tes">
                                              <a href="#" class="image">
                                              <img alt="Aussiemines" src="http://127.0.0.1/public_html/health_care_magento/images/1_2.png"/>
@@ -2784,8 +2766,7 @@
                                              <div class="email">admin@gmail.com</div>
                                           </div>
                                        </div>
-                                    </li>
-                                 </ul>
+                                </div>
                               </div>
                            </div>
                         </div>                        
@@ -2822,7 +2803,6 @@
                         <h2>Blog posts</h2>
                      </header>
                      <div class="row">
-                     
                         <div class="owl-container">
                             <div class="block-content">
                                <div id="blog-item" class="owl-carousel">
