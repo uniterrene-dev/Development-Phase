@@ -496,13 +496,16 @@ textarea {
 }
 
 a {
-  color: #3399cc;
-  text-decoration: none;
+    color: #444444 !important;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
 }
 
 a:hover {
-  color: #2e8ab8;
-  text-decoration: underline;
+    text-decoration: none;
+    color: #98ab3f !important;
 }
 
 a:focus {
@@ -1292,9 +1295,9 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1260px;
+  /*max-width: 1260px;*/
   margin: 0 auto;
-  padding: 15px;
+  padding: 0px !important;
 }
 .main-container:after,
 .footer-container:after {
