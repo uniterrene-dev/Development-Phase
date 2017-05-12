@@ -211,19 +211,19 @@
 			
 			</script>
 			<script type="text/javascript">
-			 jQuery(document).ready(function(){                     
-				jQuery(".tab_content").hide();
-				jQuery(".tab_content:first").show(); 
-				jQuery("ul.tabs li").removeClass("active");
-				jQuery("ul.tabs li:first-child").addClass("active");
-				jQuery("ul.tabs li").click(function() {
-					jQuery("ul.tabs li").removeClass("active");
-					jQuery(this).addClass("active");
-					jQuery(".tab_content").hide();
-					jQuery(".tab_content").removeClass("animate1");
-					var activeTab = $(this).attr("rel"); 
-					jQuery("#"+activeTab) .addClass("animate1");
-					jQuery("#"+activeTab).fadeIn(); 
+			 jQuery(document).ready(function($){                     
+				$(".tab_content").hide();
+				$(".tab_content:first").show(); 
+				$("ul.tabs li").removeClass("active");
+				$("ul.tabs li:first-child").addClass("active");
+				$("ul.tabs li").click(function() {
+				$("ul.tabs li").removeClass("active");
+				$(this).addClass("active");
+				$(".tab_content").hide();
+				$(".tab_content").removeClass("animate1");
+				var activeTab = $(this).attr("rel"); 
+				$("#"+activeTab) .addClass("animate1");
+				$("#"+activeTab).fadeIn(); 
 				});
 				
 				jQuery(".productTabContent").owlCarousel({
